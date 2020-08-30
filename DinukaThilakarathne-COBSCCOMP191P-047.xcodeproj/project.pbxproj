@@ -25,7 +25,7 @@
 		00B7EAEE24FBD44A009E9DF1 /* LandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B7EAED24FBD44A009E9DF1 /* LandingController.swift */; };
 		00B7EAF124FBE4BC009E9DF1 /* AlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B7EAF024FBE4BC009E9DF1 /* AlertDialog.swift */; };
 		00B7EAF324FBF958009E9DF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00B7EAF224FBF958009E9DF1 /* GoogleService-Info.plist */; };
-		00B7EAF624FC0D88009E9DF1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B7EAF524FC0D88009E9DF1 /* HomeViewController.swift */; };
+		00B7EAF624FC0D88009E9DF1 /* HomeTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B7EAF524FC0D88009E9DF1 /* HomeTabController.swift */; };
 		00B7EAF824FC0D96009E9DF1 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B7EAF724FC0D96009E9DF1 /* Home.storyboard */; };
 		00FE605E24FB754100D93505 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FE605D24FB754100D93505 /* Main.storyboard */; };
 		00FE606224FB75F000D93505 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FE606124FB75F000D93505 /* LaunchScreen.storyboard */; };
@@ -76,7 +76,7 @@
 		00B7EAED24FBD44A009E9DF1 /* LandingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingController.swift; sourceTree = "<group>"; };
 		00B7EAF024FBE4BC009E9DF1 /* AlertDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDialog.swift; sourceTree = "<group>"; };
 		00B7EAF224FBF958009E9DF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		00B7EAF524FC0D88009E9DF1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		00B7EAF524FC0D88009E9DF1 /* HomeTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabController.swift; sourceTree = "<group>"; };
 		00B7EAF724FC0D96009E9DF1 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		00FE605D24FB754100D93505 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		00FE606124FB75F000D93505 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -270,7 +270,7 @@
 		00B7EAF424FC0D6B009E9DF1 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
-				00B7EAF524FC0D88009E9DF1 /* HomeViewController.swift */,
+				00B7EAF524FC0D88009E9DF1 /* HomeTabController.swift */,
 				00B7EAF724FC0D96009E9DF1 /* Home.storyboard */,
 			);
 			path = HomeScreen;
@@ -495,7 +495,7 @@
 				00FE606524FB769500D93505 /* RoundedButton.swift in Sources */,
 				0003E5AA24FB686400661089 /* AppDelegate.swift in Sources */,
 				0003E5AC24FB686400661089 /* SceneDelegate.swift in Sources */,
-				00B7EAF624FC0D88009E9DF1 /* HomeViewController.swift in Sources */,
+				00B7EAF624FC0D88009E9DF1 /* HomeTabController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

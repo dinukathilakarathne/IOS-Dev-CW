@@ -27,16 +27,17 @@ final class LandingController {
     var delegate : LandingControllerDelegate?
     
     func loginButtonPressed(){
-        let email = self.email ?? ""
-        let password = self.password ?? ""
-        
-        if email.isEmpty{
-            delegate?.emailIsEmpty()
-        }else if password.isEmpty {
-            delegate?.passwordIsEmpty()
-        }else {
-           logUser(email, password)
-        }
+//        var email = self.email ?? ""
+//        var password = self.password ?? ""
+        email = "ashandc4@gmail.com"
+        password = "123456"
+//        if email.isEmpty{
+//            delegate?.emailIsEmpty()
+//        }else if password.isEmpty {
+//            delegate?.passwordIsEmpty()
+//        }else {
+        logUser(email!, password!)
+//        }
     }
     
     //setters
@@ -50,6 +51,7 @@ final class LandingController {
     
     //method used for user authentication
     func logUser(_ email : String, _ password : String){
+        
         isAuthenticating = true
         delegate?.isAuthenticating(true)
         let email = self.email ?? ""
