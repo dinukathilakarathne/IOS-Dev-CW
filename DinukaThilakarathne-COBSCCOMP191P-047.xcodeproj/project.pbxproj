@@ -17,6 +17,8 @@
 		0003E60424FB72B700661089 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0003E60124FB72B700661089 /* Fonts.swift */; };
 		0003E60524FB72B700661089 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0003E60224FB72B700661089 /* Strings.swift */; };
 		0003E60624FB72B700661089 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0003E60324FB72B700661089 /* Assets.swift */; };
+		006329D924FBB2E000B418F2 /* Abel-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0003E5FA24FB6A5100661089 /* Abel-Regular.ttf */; };
+		006329DA24FBB2E500B418F2 /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0003E5F924FB6A5100661089 /* BebasNeue-Regular.ttf */; };
 		00FE605E24FB754100D93505 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FE605D24FB754100D93505 /* Main.storyboard */; };
 		00FE606224FB75F000D93505 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FE606124FB75F000D93505 /* LaunchScreen.storyboard */; };
 		00FE606524FB769500D93505 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FE606424FB769500D93505 /* RoundedButton.swift */; };
@@ -178,7 +180,6 @@
 		0003E5DD24FB698F00661089 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				00FE606A24FBA2D300D93505 /* Typography */,
 				0003E5FD24FB6AB200661089 /* Assets.xcassets */,
 				0003E5FC24FB6A6E00661089 /* Generated */,
 				0003E5FB24FB6A5D00661089 /* Strings */,
@@ -214,9 +215,17 @@
 			path = Generated;
 			sourceTree = "<group>";
 		};
+		0093230324FBBD75007427E6 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
 		00FE606324FB767E00D93505 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				0093230324FBBD75007427E6 /* TextField */,
 				00FE606824FB76AF00D93505 /* Buttons */,
 			);
 			path = UI;
@@ -237,13 +246,6 @@
 				00FE606624FB76A300D93505 /* RoundedButton.xib */,
 			);
 			path = RoundedButton;
-			sourceTree = "<group>";
-		};
-		00FE606A24FBA2D300D93505 /* Typography */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Typography;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,7 +354,9 @@
 			files = (
 				0003E60024FB6AC600661089 /* Localizable.strings in Resources */,
 				0003E5FE24FB6AB200661089 /* Assets.xcassets in Resources */,
+				006329DA24FBB2E500B418F2 /* BebasNeue-Regular.ttf in Resources */,
 				00FE606224FB75F000D93505 /* LaunchScreen.storyboard in Resources */,
+				006329D924FBB2E000B418F2 /* Abel-Regular.ttf in Resources */,
 				00FE606724FB76A300D93505 /* RoundedButton.xib in Resources */,
 				00FE605E24FB754100D93505 /* Main.storyboard in Resources */,
 			);

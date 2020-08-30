@@ -3,9 +3,15 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Abel-Regular.ttf">
+            <string>Abel-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Landing View Controller-->
         <scene sceneID="J8y-VU-bGr">
@@ -14,13 +20,47 @@
                     <view key="view" contentMode="scaleToFill" id="hgP-8L-GQo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="FXz-vb-RuL">
+                                <rect key="frame" x="20" y="75" width="374" height="41"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4r1-l0-UcN">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="Abel-Regular" family="Abel" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yh9-eW-YTN">
+                                        <rect key="frame" x="0.0" y="15.5" width="374" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="Abel-Regular" family="Abel" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="PrimaryColor"/>
+                        <constraints>
+                            <constraint firstItem="FXz-vb-RuL" firstAttribute="leading" secondItem="zoC-3q-J8U" secondAttribute="leading" constant="20" id="PSS-HN-bLK"/>
+                            <constraint firstItem="FXz-vb-RuL" firstAttribute="top" secondItem="zoC-3q-J8U" secondAttribute="top" constant="31" id="pGd-yb-gxH"/>
+                            <constraint firstItem="zoC-3q-J8U" firstAttribute="trailing" secondItem="FXz-vb-RuL" secondAttribute="trailing" constant="20" id="xx7-wL-zth"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zoC-3q-J8U"/>
                     </view>
+                    <connections>
+                        <outlet property="contentView" destination="hgP-8L-GQo" id="UeZ-lm-S12"/>
+                        <outlet property="landingPageHeadingOutline" destination="4r1-l0-UcN" id="x7B-Be-1wb"/>
+                        <outlet property="landingPageTitle" destination="Yh9-eW-YTN" id="Wk8-mL-rvk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hhw-C7-Xn6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="122"/>
+            <point key="canvasLocation" x="137.68115942028987" y="121.875"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="PrimaryColor">
+            <color red="0.28600001335144043" green="0.55699998140335083" blue="0.86699998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

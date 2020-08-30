@@ -1,2 +1,7 @@
 //App
 app_name = "NIBM COVID19";
+
+//Landing Page
+heading_outline = "Welcome to";
+login = "LOGIN";
+sign_up = "SIGN UP";

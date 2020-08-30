@@ -7,39 +7,31 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RoundedButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RoundedButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="pKy-Xp-NDp"/>
+                <outlet property="roundButton" destination="gUN-W8-J58" id="bmk-56-LRP"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="99"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pef-ao-fOb">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="99"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDJ-ey-li6">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="99"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                            <state key="normal" title="Button"/>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <constraints>
-                        <constraint firstItem="rDJ-ey-li6" firstAttribute="top" secondItem="Pef-ao-fOb" secondAttribute="top" id="0Sx-7L-KIN"/>
-                        <constraint firstItem="rDJ-ey-li6" firstAttribute="leading" secondItem="Pef-ao-fOb" secondAttribute="leading" id="48b-mt-tXW"/>
-                        <constraint firstAttribute="trailing" secondItem="rDJ-ey-li6" secondAttribute="trailing" id="Bn1-Op-33t"/>
-                        <constraint firstAttribute="bottom" secondItem="rDJ-ey-li6" secondAttribute="bottom" id="IWi-TU-48K"/>
-                    </constraints>
-                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUN-W8-J58">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
+                    <state key="normal" title="Button"/>
+                </button>
             </subviews>
             <constraints>
-                <constraint firstItem="Pef-ao-fOb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="H4K-1Q-nZa"/>
-                <constraint firstItem="Pef-ao-fOb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZKr-hF-dfJ"/>
-                <constraint firstAttribute="bottom" secondItem="Pef-ao-fOb" secondAttribute="bottom" id="jJj-7l-5EY"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Pef-ao-fOb" secondAttribute="trailing" id="sbE-ZG-f0g"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="gUN-W8-J58" secondAttribute="bottom" id="7ly-c6-SZi"/>
+                <constraint firstItem="gUN-W8-J58" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="9pn-CS-0BR"/>
+                <constraint firstItem="gUN-W8-J58" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="O0m-ww-ZoD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gUN-W8-J58" secondAttribute="trailing" id="s7o-GG-84a"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="137.68115942028987" y="399.44196428571428"/>
+            <point key="canvasLocation" x="137.68115942028987" y="352.23214285714283"/>
         </view>
     </objects>
 </document>
