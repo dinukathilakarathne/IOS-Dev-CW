@@ -21,6 +21,7 @@
 		006329DA24FBB2E500B418F2 /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0003E5F924FB6A5100661089 /* BebasNeue-Regular.ttf */; };
 		0093230524FBBE17007427E6 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093230424FBBE17007427E6 /* RoundedTextField.swift */; };
 		0093230724FBBE22007427E6 /* RoundedTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0093230624FBBE22007427E6 /* RoundedTextField.xib */; };
+		0093230A24FBCC93007427E6 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093230924FBCC93007427E6 /* String+Extension.swift */; };
 		00FE605E24FB754100D93505 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FE605D24FB754100D93505 /* Main.storyboard */; };
 		00FE606224FB75F000D93505 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FE606124FB75F000D93505 /* LaunchScreen.storyboard */; };
 		00FE606524FB769500D93505 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FE606424FB769500D93505 /* RoundedButton.swift */; };
@@ -65,6 +66,7 @@
 		0003E60324FB72B700661089 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		0093230424FBBE17007427E6 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		0093230624FBBE22007427E6 /* RoundedTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundedTextField.xib; sourceTree = "<group>"; };
+		0093230924FBCC93007427E6 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		00FE605D24FB754100D93505 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		00FE606124FB75F000D93505 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00FE606424FB769500D93505 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		0003E5A824FB686400661089 /* DinukaThilakarathne-COBSCCOMP191P-047 */ = {
 			isa = PBXGroup;
 			children = (
+				0093230824FBCC4C007427E6 /* Extensions */,
 				0003E5D924FB695F00661089 /* App */,
 				0003E5DA24FB696700661089 /* Scenes */,
 				00FE606324FB767E00D93505 /* UI */,
@@ -226,6 +229,14 @@
 				0093230624FBBE22007427E6 /* RoundedTextField.xib */,
 			);
 			path = TextField;
+			sourceTree = "<group>";
+		};
+		0093230824FBCC4C007427E6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0093230924FBCC93007427E6 /* String+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		00FE606324FB767E00D93505 /* UI */ = {
@@ -391,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0003E60424FB72B700661089 /* Fonts.swift in Sources */,
+				0093230A24FBCC93007427E6 /* String+Extension.swift in Sources */,
 				0003E5AE24FB686400661089 /* LandingViewController.swift in Sources */,
 				0003E60624FB72B700661089 /* Assets.swift in Sources */,
 				0093230524FBBE17007427E6 /* RoundedTextField.swift in Sources */,

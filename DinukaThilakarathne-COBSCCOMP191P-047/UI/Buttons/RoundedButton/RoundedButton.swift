@@ -10,9 +10,18 @@ import UIKit
 
 class RoundedButton: UIView {
 
-    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var contentView: UIView!{
+        didSet{
+            contentView.backgroundColor = Asset.white.color
+        }
+    }
     
-    @IBOutlet weak var roundButton: UIButton!
+    @IBOutlet weak var roundButton: UIButton!{
+        didSet{
+            roundButton.titleLabel?.font = FontFamily.Abel.regular.font(size: 16)
+            roundButton.titleLabel
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,9 +44,7 @@ class RoundedButton: UIView {
     
     func setUI(){
         contentView.layer.cornerRadius = contentView.frame.height/2
-        contentView.layer.shadowOffset = CGSize(width: 0, height: 10)
-        contentView.layer.shadowRadius = 5
-        contentView.layer.shadowOpacity = 0.5
+
     }
 }
 

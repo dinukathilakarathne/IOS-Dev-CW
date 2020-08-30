@@ -50,6 +50,12 @@
                                     <constraint firstAttribute="height" constant="40" id="cqk-iX-AaX"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4X-J7-Ayn" customClass="RoundedButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="30" y="588" width="354" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ovp-c6-KtE"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="PrimaryColor"/>
                         <constraints>
@@ -59,8 +65,11 @@
                             <constraint firstItem="FXz-vb-RuL" firstAttribute="leading" secondItem="zoC-3q-J8U" secondAttribute="leading" constant="20" id="PSS-HN-bLK"/>
                             <constraint firstItem="zoC-3q-J8U" firstAttribute="trailing" secondItem="upB-yb-ePZ" secondAttribute="trailing" constant="20" id="Zly-D2-Itj"/>
                             <constraint firstItem="Hrf-P4-la8" firstAttribute="leading" secondItem="zoC-3q-J8U" secondAttribute="leading" constant="20" id="eyB-px-5eG"/>
+                            <constraint firstItem="d4X-J7-Ayn" firstAttribute="leading" secondItem="zoC-3q-J8U" secondAttribute="leading" constant="30" id="hY7-mr-3iZ"/>
                             <constraint firstItem="Hrf-P4-la8" firstAttribute="top" secondItem="upB-yb-ePZ" secondAttribute="bottom" constant="30" id="l63-a4-Wio"/>
+                            <constraint firstItem="zoC-3q-J8U" firstAttribute="trailing" secondItem="d4X-J7-Ayn" secondAttribute="trailing" constant="30" id="pE6-40-2JG"/>
                             <constraint firstItem="FXz-vb-RuL" firstAttribute="top" secondItem="zoC-3q-J8U" secondAttribute="top" constant="31" id="pGd-yb-gxH"/>
+                            <constraint firstItem="d4X-J7-Ayn" firstAttribute="top" secondItem="Hrf-P4-la8" secondAttribute="bottom" constant="50" id="tz8-Tv-1NN"/>
                             <constraint firstItem="zoC-3q-J8U" firstAttribute="trailing" secondItem="FXz-vb-RuL" secondAttribute="trailing" constant="20" id="xx7-wL-zth"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zoC-3q-J8U"/>
