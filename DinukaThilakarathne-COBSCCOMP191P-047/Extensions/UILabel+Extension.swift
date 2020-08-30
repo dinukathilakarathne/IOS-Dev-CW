@@ -8,18 +8,10 @@
 
 import UIKit
 
+//https://medium.com/flawless-app-stories/spacing-between-each-character-in-uilabel-swift-ios-7c7e61cacb59
 
 extension UILabel {
-    static func spaceLabel() -> UILabel {
-        let spacingLabel = UILabel()
-        spacingLabel.frame = CGRect(x: 0, y: 0, width: 150, height: 50)
-        spacingLabel.textColor = .white
-        spacingLabel.textAlignment = .center
-        spacingLabel.font = UIFont.boldSystemFont(ofSize: 18)
-        spacingLabel.text = "LIKE ME"
-        spacingLabel.backgroundColor = .red
-        return spacingLabel
-    }
+    
     // adding space between each characters
     func addCharacterSpacing(value: Double = 3) {
         if let labelText = text, labelText.isEmpty == false {

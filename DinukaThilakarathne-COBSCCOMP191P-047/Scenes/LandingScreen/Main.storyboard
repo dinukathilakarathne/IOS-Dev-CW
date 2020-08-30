@@ -22,16 +22,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="FXz-vb-RuL">
-                                <rect key="frame" x="20" y="75" width="374" height="37"/>
+                                <rect key="frame" x="20" y="75" width="374" height="41"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4r1-l0-UcN">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="23.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="25.5"/>
                                         <fontDescription key="fontDescription" name="Abel-Regular" family="Abel" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yh9-eW-YTN">
-                                        <rect key="frame" x="0.0" y="13.5" width="374" height="23.5"/>
+                                        <rect key="frame" x="0.0" y="15.5" width="374" height="25.5"/>
                                         <fontDescription key="fontDescription" name="Abel-Regular" family="Abel" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -76,8 +76,11 @@
                     </view>
                     <connections>
                         <outlet property="contentView" destination="hgP-8L-GQo" id="UeZ-lm-S12"/>
+                        <outlet property="emailTextField" destination="upB-yb-ePZ" id="Mlr-FM-zaj"/>
                         <outlet property="landingPageHeadingOutline" destination="4r1-l0-UcN" id="x7B-Be-1wb"/>
                         <outlet property="landingPageTitle" destination="Yh9-eW-YTN" id="Wk8-mL-rvk"/>
+                        <outlet property="loginButton" destination="d4X-J7-Ayn" id="Ies-A5-wI8"/>
+                        <outlet property="passwordTextField" destination="Hrf-P4-la8" id="HT3-V6-Xm0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hhw-C7-Xn6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

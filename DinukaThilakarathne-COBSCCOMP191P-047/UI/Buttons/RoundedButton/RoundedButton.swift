@@ -18,8 +18,8 @@ class RoundedButton: UIView {
     
     @IBOutlet weak var roundButton: UIButton!{
         didSet{
-            roundButton.titleLabel?.font = FontFamily.Abel.regular.font(size: 16)
-            roundButton.titleLabel
+            roundButton.titleLabel?.font = FontFamily.BebasNeue.regular.font(size: 20)
+            roundButton.tintColor = Asset.primaryColor.color
         }
     }
     

@@ -3,5 +3,9 @@ app_name = "NIBM COVID19";
 
 //Landing Page
 heading_outline = "Welcome to";
-login = "LOGIN";
-sign_up = "SIGN UP";
+login = "L O G I N";
+sign_up = "S I G N  U P";
+
+//Placeholders
+enter_email_placeholder = "Email";
+enter_password_placeholder = "Password";
