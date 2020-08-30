@@ -11,15 +11,15 @@ import UIKit
 class SingleActionAlert {
     
     let alert : UIAlertController
+    let viewController : UIViewController
     
-    init(withTitle title : String, withMessage message : String, actionName action : String) {
+    init(withTitle title : String, withMessage message : String, actionName action : String, _ vc : UIViewController) {
+        self.viewController = vc
         self.alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: action, style: .default, handler: nil))
-        
     }
     
     func present(){
-        alert.present(alert, animated: true)
+        viewController.present(alert, animated: true)
     }
-    
 }

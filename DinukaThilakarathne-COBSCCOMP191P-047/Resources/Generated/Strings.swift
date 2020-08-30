@@ -20,6 +20,8 @@ internal enum L10n {
   internal static let headingOutline = L10n.tr("Localizable", "heading_outline")
   /// L O G I N
   internal static let login = L10n.tr("Localizable", "login")
+  /// OK
+  internal static let ok = L10n.tr("Localizable", "ok")
   /// S I G N  U P
   internal static let signUp = L10n.tr("Localizable", "sign_up")
 }

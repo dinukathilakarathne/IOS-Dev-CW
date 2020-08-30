@@ -22,16 +22,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="FXz-vb-RuL">
-                                <rect key="frame" x="20" y="75" width="374" height="41"/>
+                                <rect key="frame" x="20" y="75" width="374" height="37"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4r1-l0-UcN">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="25.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Abel-Regular" family="Abel" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yh9-eW-YTN">
-                                        <rect key="frame" x="0.0" y="15.5" width="374" height="25.5"/>
+                                        <rect key="frame" x="0.0" y="13.5" width="374" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Abel-Regular" family="Abel" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

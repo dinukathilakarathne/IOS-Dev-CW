@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 class LandingViewController: UIViewController {
     
-    let viewModel = LandingViewModel()
+    //instantiating controller
+    let controller = LandingController()
     
+    //linking and setting UI components
     @IBOutlet weak var contentView: UIView!{
         didSet{
             let gradientLayer = CAGradientLayer()
@@ -40,8 +43,8 @@ class LandingViewController: UIViewController {
         didSet{
             emailTextField.roundedTextField.delegate = self
             emailTextField.roundedTextField.returnKeyType = .done
+            emailTextField.roundedTextField.keyboardType = .emailAddress
             emailTextField.roundedTextField.attributedPlaceholder = NSAttributedString(string: L10n.enterEmailPlaceholder, attributes: [NSAttributedString.Key.foregroundColor : Asset.lightPlaceholderColor.color])
-
         }
     }
     
@@ -51,12 +54,12 @@ class LandingViewController: UIViewController {
             passwordTextField.roundedTextField.returnKeyType = .done
             passwordTextField.roundedTextField.isSecureTextEntry = true
             passwordTextField.roundedTextField.attributedPlaceholder = NSAttributedString(string: L10n.enterPasswordPlaceholder, attributes: [NSAttributedString.Key.foregroundColor : Asset.lightPlaceholderColor.color])
-
         }
     }
     
     @IBOutlet weak var loginButton: RoundedButton!{
         didSet{
+            //adding Objective-C selectors
             loginButton.roundButton.addTarget(self, action: #selector(loginPressed), for: .touchUpInside)
             
             loginButton.roundButton.titleLabel?.addCharacterSpacing(value: 5)
@@ -66,26 +69,19 @@ class LandingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //setting controller delegate for passing data
+        controller.delegate = self
     }
     
     @objc func loginPressed(){
+        let email = emailTextField.roundedTextField.text ?? ""
+        let password = passwordTextField.roundedTextField.text ?? ""
         
-        guard let email = emailTextField.roundedTextField.text else {
-            //unused
-            print("email empty")
-            return
-        }
-        guard let password = passwordTextField.roundedTextField.text else {
-            //unused
-            print("password empty")
-            return
-        }
-        viewModel.setEmail(email)
-        viewModel.setPassword(password)
-        viewModel.loginButtonPressed()
+        //passing data
+        controller.setEmail(email)
+        controller.setPassword(password)
+        controller.loginButtonPressed()
     }
-    
-    
 }
 
 
@@ -96,6 +92,51 @@ extension LandingViewController : UITextFieldDelegate {
         return true
     }
 }
+
+extension LandingViewController : LandingControllerDelegate {
+    
+    //controller delegate methods
+    func showHomeScreen() {
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+    }
+    
+    
+    func isAuthenticating(_ value: Bool) {
+        print(value)
+        //unused
+    }
+    
+    func passwordIsEmpty() {
+        SingleActionAlert(
+             withTitle: "Empty Password field",
+             withMessage: "Please enter an email",
+             actionName: L10n.ok,
+             self
+         ).present()
+    }
+    
+    func emailIsEmpty() {
+        SingleActionAlert(
+             withTitle: "Empty Email field",
+             withMessage: "Please enter an email",
+             actionName: L10n.ok,
+             self
+         ).present()
+    }
+    
+    func authError(_ e: Error) {
+        SingleActionAlert(
+             withTitle: "Authentication error",
+             withMessage: e.localizedDescription,
+             actionName: L10n.ok,
+             self
+         ).present()
+    }
+}
+
 
 
 //https://medium.com/@KaushElsewhere/how-to-dismiss-keyboard-in-a-view-controller-of-ios-3b1bfe973ad1
