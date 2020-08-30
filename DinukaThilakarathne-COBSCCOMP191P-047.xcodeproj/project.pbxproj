@@ -19,6 +19,8 @@
 		0003E60624FB72B700661089 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0003E60324FB72B700661089 /* Assets.swift */; };
 		006329D924FBB2E000B418F2 /* Abel-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0003E5FA24FB6A5100661089 /* Abel-Regular.ttf */; };
 		006329DA24FBB2E500B418F2 /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0003E5F924FB6A5100661089 /* BebasNeue-Regular.ttf */; };
+		0093230524FBBE17007427E6 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093230424FBBE17007427E6 /* RoundedTextField.swift */; };
+		0093230724FBBE22007427E6 /* RoundedTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0093230624FBBE22007427E6 /* RoundedTextField.xib */; };
 		00FE605E24FB754100D93505 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FE605D24FB754100D93505 /* Main.storyboard */; };
 		00FE606224FB75F000D93505 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FE606124FB75F000D93505 /* LaunchScreen.storyboard */; };
 		00FE606524FB769500D93505 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FE606424FB769500D93505 /* RoundedButton.swift */; };
@@ -61,6 +63,8 @@
 		0003E60124FB72B700661089 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		0003E60224FB72B700661089 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		0003E60324FB72B700661089 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		0093230424FBBE17007427E6 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		0093230624FBBE22007427E6 /* RoundedTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundedTextField.xib; sourceTree = "<group>"; };
 		00FE605D24FB754100D93505 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		00FE606124FB75F000D93505 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00FE606424FB769500D93505 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -218,6 +222,8 @@
 		0093230324FBBD75007427E6 /* TextField */ = {
 			isa = PBXGroup;
 			children = (
+				0093230424FBBE17007427E6 /* RoundedTextField.swift */,
+				0093230624FBBE22007427E6 /* RoundedTextField.xib */,
 			);
 			path = TextField;
 			sourceTree = "<group>";
@@ -359,6 +365,7 @@
 				006329D924FBB2E000B418F2 /* Abel-Regular.ttf in Resources */,
 				00FE606724FB76A300D93505 /* RoundedButton.xib in Resources */,
 				00FE605E24FB754100D93505 /* Main.storyboard in Resources */,
+				0093230724FBBE22007427E6 /* RoundedTextField.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +393,7 @@
 				0003E60424FB72B700661089 /* Fonts.swift in Sources */,
 				0003E5AE24FB686400661089 /* LandingViewController.swift in Sources */,
 				0003E60624FB72B700661089 /* Assets.swift in Sources */,
+				0093230524FBBE17007427E6 /* RoundedTextField.swift in Sources */,
 				0003E60524FB72B700661089 /* Strings.swift in Sources */,
 				00FE606524FB769500D93505 /* RoundedButton.swift in Sources */,
 				0003E5AA24FB686400661089 /* AppDelegate.swift in Sources */,

@@ -22,26 +22,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="FXz-vb-RuL">
-                                <rect key="frame" x="20" y="75" width="374" height="41"/>
+                                <rect key="frame" x="20" y="75" width="374" height="37"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4r1-l0-UcN">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="25.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Abel-Regular" family="Abel" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yh9-eW-YTN">
-                                        <rect key="frame" x="0.0" y="15.5" width="374" height="25.5"/>
+                                        <rect key="frame" x="0.0" y="13.5" width="374" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Abel-Regular" family="Abel" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="upB-yb-ePZ" customClass="RoundedTextField" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="20" y="428" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="KAy-Bh-dOu"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hrf-P4-la8" customClass="RoundedTextField" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="20" y="498" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="cqk-iX-AaX"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="PrimaryColor"/>
                         <constraints>
+                            <constraint firstItem="zoC-3q-J8U" firstAttribute="trailing" secondItem="Hrf-P4-la8" secondAttribute="trailing" constant="20" id="0sx-Vj-6tp"/>
+                            <constraint firstItem="upB-yb-ePZ" firstAttribute="leading" secondItem="zoC-3q-J8U" secondAttribute="leading" constant="20" id="JPo-Dk-W5s"/>
+                            <constraint firstItem="upB-yb-ePZ" firstAttribute="centerY" secondItem="hgP-8L-GQo" secondAttribute="centerY" id="LI1-o7-2PE"/>
                             <constraint firstItem="FXz-vb-RuL" firstAttribute="leading" secondItem="zoC-3q-J8U" secondAttribute="leading" constant="20" id="PSS-HN-bLK"/>
+                            <constraint firstItem="zoC-3q-J8U" firstAttribute="trailing" secondItem="upB-yb-ePZ" secondAttribute="trailing" constant="20" id="Zly-D2-Itj"/>
+                            <constraint firstItem="Hrf-P4-la8" firstAttribute="leading" secondItem="zoC-3q-J8U" secondAttribute="leading" constant="20" id="eyB-px-5eG"/>
+                            <constraint firstItem="Hrf-P4-la8" firstAttribute="top" secondItem="upB-yb-ePZ" secondAttribute="bottom" constant="30" id="l63-a4-Wio"/>
                             <constraint firstItem="FXz-vb-RuL" firstAttribute="top" secondItem="zoC-3q-J8U" secondAttribute="top" constant="31" id="pGd-yb-gxH"/>
                             <constraint firstItem="zoC-3q-J8U" firstAttribute="trailing" secondItem="FXz-vb-RuL" secondAttribute="trailing" constant="20" id="xx7-wL-zth"/>
                         </constraints>
