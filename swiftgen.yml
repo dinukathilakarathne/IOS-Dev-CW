@@ -1,0 +1,18 @@
+#for code type safety
+#https://github.com/SwiftGen/SwiftGen
+strings:
+  inputs: DinukaThilakarathne-COBSCCOMP191P-047/Resources/Strings
+  outputs:
+    - templateName: structured-swift5
+      output: DinukaThilakarathne-COBSCCOMP191P-047/Resources/Generated/Strings.swift
+xcassets:
+  inputs:
+    - DinukaThilakarathne-COBSCCOMP191P-047/Resources/Assets.xcassets
+  outputs:
+    - templateName: swift5
+      output: DinukaThilakarathne-COBSCCOMP191P-047/Resources/Generated/Assets.swift
+fonts:
+    inputs: DinukaThilakarathne-COBSCCOMP191P-047/Resources/Fonts
+    outputs:
+      templateName: swift5
+      output: DinukaThilakarathne-COBSCCOMP191P-047/Resources/Generated/Fonts.swift
