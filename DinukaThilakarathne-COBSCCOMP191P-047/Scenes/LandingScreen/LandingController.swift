@@ -16,6 +16,7 @@ protocol LandingControllerDelegate {
     func authError(_ e : Error)
     func isAuthenticating(_ value : Bool)
     func showHomeScreen()
+    func showSignUpScreen()
 }
 
 final class LandingController {
@@ -55,6 +56,7 @@ final class LandingController {
         isAuthenticating = true
         delegate?.isAuthenticating(true)
         let email = self.email ?? ""
+        //logging in user with email and password
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
             self?.isAuthenticating = false
             self?.delegate?.isAuthenticating(false)
@@ -67,5 +69,9 @@ final class LandingController {
             }
             self?.delegate?.showHomeScreen()
         }
+    }
+    
+    func signUp(){
+        delegate?.showSignUpScreen()
     }
 }

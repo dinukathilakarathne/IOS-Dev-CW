@@ -1,14 +1,14 @@
 //
-//  HomeViewController.swift
+//  SettingsViewController.swift
 //  DinukaThilakarathne-COBSCCOMP191P-047
 //
-//  Created by Dinuka Thilakarathne on 8/30/20.
+//  Created by Dinuka Thilakarathne on 8/31/20.
 //  Copyright © 2020 Dinuka Thilakarathne. All rights reserved.
 //
 
 import UIKit
 
-class HomeTabController: UITabBarController {
+class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

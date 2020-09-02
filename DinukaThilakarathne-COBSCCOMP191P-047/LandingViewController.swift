@@ -66,6 +66,14 @@ class LandingViewController: UIViewController {
             loginButton.roundButton.setTitle(L10n.login, for: .normal)
         }
     }
+    @IBOutlet weak var makeAccountButton: UIButton!{
+        didSet{
+            makeAccountButton.setTitle("Don't have an account? Sign up", for: .normal)
+            makeAccountButton.tintColor = Asset.white.color.withAlphaComponent(0.5)
+            makeAccountButton.titleLabel?.font = FontFamily.Abel.regular.font(size: 16)
+            makeAccountButton.addTarget(self, action: #selector(signUpPressed), for: .touchUpInside)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,6 +90,10 @@ class LandingViewController: UIViewController {
         controller.setPassword(password)
         controller.loginButtonPressed()
     }
+    
+    @objc func signUpPressed(){
+        showSignUpScreen()
+    }
 }
 
 
@@ -95,45 +107,52 @@ extension LandingViewController : UITextFieldDelegate {
 
 extension LandingViewController : LandingControllerDelegate {
     
+    func showSignUpScreen() {
+        let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SignUpViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+    }
+    
+    
     //controller delegate methods
     func showHomeScreen() {
-        let storyboard = UIStoryboard(name: "Home", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
+        let storyboard = UIStoryboard(name: "Dashboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DashboardTabController")
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }
     
     
     func isAuthenticating(_ value: Bool) {
-        print(value)
         //unused
     }
     
     func passwordIsEmpty() {
         SingleActionAlert(
-             withTitle: "Empty Password field",
-             withMessage: "Please enter an email",
-             actionName: L10n.ok,
-             self
-         ).present()
+            withTitle: "Empty Password field",
+            withMessage: "Please enter an email",
+            actionName: L10n.ok,
+            self
+        ).present()
     }
     
     func emailIsEmpty() {
         SingleActionAlert(
-             withTitle: "Empty Email field",
-             withMessage: "Please enter an email",
-             actionName: L10n.ok,
-             self
-         ).present()
+            withTitle: "Empty Email field",
+            withMessage: "Please enter an email",
+            actionName: L10n.ok,
+            self
+        ).present()
     }
     
     func authError(_ e: Error) {
         SingleActionAlert(
-             withTitle: "Authentication error",
-             withMessage: e.localizedDescription,
-             actionName: L10n.ok,
-             self
-         ).present()
+            withTitle: "Authentication error",
+            withMessage: e.localizedDescription,
+            actionName: L10n.ok,
+            self
+        ).present()
     }
 }
 
