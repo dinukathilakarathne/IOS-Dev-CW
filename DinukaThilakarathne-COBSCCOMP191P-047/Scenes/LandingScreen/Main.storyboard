@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="FXz-vb-RuL">
-                                <rect key="frame" x="20" y="75" width="374" height="37"/>
+                                <rect key="frame" x="20" y="74" width="374" height="37"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4r1-l0-UcN">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="23.5"/>
@@ -74,7 +74,7 @@
                             <constraint firstItem="d4X-J7-Ayn" firstAttribute="leading" secondItem="zoC-3q-J8U" secondAttribute="leading" constant="30" id="hY7-mr-3iZ"/>
                             <constraint firstItem="Hrf-P4-la8" firstAttribute="top" secondItem="upB-yb-ePZ" secondAttribute="bottom" constant="30" id="l63-a4-Wio"/>
                             <constraint firstItem="zoC-3q-J8U" firstAttribute="trailing" secondItem="d4X-J7-Ayn" secondAttribute="trailing" constant="30" id="pE6-40-2JG"/>
-                            <constraint firstItem="FXz-vb-RuL" firstAttribute="top" secondItem="zoC-3q-J8U" secondAttribute="top" constant="31" id="pGd-yb-gxH"/>
+                            <constraint firstItem="FXz-vb-RuL" firstAttribute="top" secondItem="zoC-3q-J8U" secondAttribute="top" constant="30" id="pGd-yb-gxH"/>
                             <constraint firstItem="d4X-J7-Ayn" firstAttribute="top" secondItem="Hrf-P4-la8" secondAttribute="bottom" constant="50" id="tz8-Tv-1NN"/>
                             <constraint firstItem="zoC-3q-J8U" firstAttribute="trailing" secondItem="FXz-vb-RuL" secondAttribute="trailing" constant="20" id="xx7-wL-zth"/>
                         </constraints>

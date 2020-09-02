@@ -22,8 +22,12 @@ internal enum L10n {
   internal static let login = L10n.tr("Localizable", "login")
   /// OK
   internal static let ok = L10n.tr("Localizable", "ok")
+  /// Re-enter password
+  internal static let reenterPasswordPlaceholder = L10n.tr("Localizable", "reenter_password_placeholder")
   /// S I G N  U P
   internal static let signUp = L10n.tr("Localizable", "sign_up")
+  /// Sign Up
+  internal static let signUpPageTitle = L10n.tr("Localizable", "sign_up_page_title")
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name

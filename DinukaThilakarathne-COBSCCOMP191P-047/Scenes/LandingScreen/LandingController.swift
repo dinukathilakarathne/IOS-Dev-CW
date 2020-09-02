@@ -71,7 +71,7 @@ final class LandingController {
         }
     }
     
-    func signUp(){
+    func signUpPressed(){
         delegate?.showSignUpScreen()
     }
 }

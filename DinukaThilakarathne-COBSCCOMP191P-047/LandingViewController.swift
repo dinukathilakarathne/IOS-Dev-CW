@@ -92,7 +92,7 @@ class LandingViewController: UIViewController {
     }
     
     @objc func signUpPressed(){
-        showSignUpScreen()
+        controller.signUpPressed()
     }
 }
 
@@ -131,7 +131,7 @@ extension LandingViewController : LandingControllerDelegate {
     func passwordIsEmpty() {
         SingleActionAlert(
             withTitle: "Empty Password field",
-            withMessage: "Please enter an email",
+            withMessage: "Please enter a password",
             actionName: L10n.ok,
             self
         ).present()

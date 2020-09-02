@@ -37,6 +37,7 @@
 		00B7EAF324FBF958009E9DF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00B7EAF224FBF958009E9DF1 /* GoogleService-Info.plist */; };
 		00B7EAF624FC0D88009E9DF1 /* DashboardTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B7EAF524FC0D88009E9DF1 /* DashboardTabController.swift */; };
 		00B7EAF824FC0D96009E9DF1 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B7EAF724FC0D96009E9DF1 /* Dashboard.storyboard */; };
+		00F945AD24FFD8C000E372EA /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F945AC24FFD8C000E372EA /* SignUpController.swift */; };
 		00FE605E24FB754100D93505 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FE605D24FB754100D93505 /* Main.storyboard */; };
 		00FE606224FB75F000D93505 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FE606124FB75F000D93505 /* LaunchScreen.storyboard */; };
 		00FE606524FB769500D93505 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FE606424FB769500D93505 /* RoundedButton.swift */; };
@@ -98,6 +99,7 @@
 		00B7EAF224FBF958009E9DF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		00B7EAF524FC0D88009E9DF1 /* DashboardTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabController.swift; sourceTree = "<group>"; };
 		00B7EAF724FC0D96009E9DF1 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		00F945AC24FFD8C000E372EA /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		00FE605D24FB754100D93505 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		00FE606124FB75F000D93505 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00FE606424FB769500D93505 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 			children = (
 				007FA92D24FFABE40081DF69 /* SignUp.storyboard */,
 				007FA92F24FFABED0081DF69 /* SignUpViewController.swift */,
+				00F945AC24FFD8C000E372EA /* SignUpController.swift */,
 			);
 			path = SignUpScreen;
 			sourceTree = "<group>";
@@ -570,6 +573,7 @@
 				007FA92724FCDD170081DF69 /* PresentStatsViewController.swift in Sources */,
 				007FA92B24FCDD500081DF69 /* SettingsViewController.swift in Sources */,
 				0003E60524FB72B700661089 /* Strings.swift in Sources */,
+				00F945AD24FFD8C000E372EA /* SignUpController.swift in Sources */,
 				007FA93024FFABED0081DF69 /* SignUpViewController.swift in Sources */,
 				00B7EAEE24FBD44A009E9DF1 /* LandingController.swift in Sources */,
 				00FE606524FB769500D93505 /* RoundedButton.swift in Sources */,
