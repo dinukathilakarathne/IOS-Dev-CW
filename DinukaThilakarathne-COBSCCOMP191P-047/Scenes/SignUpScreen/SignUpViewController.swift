@@ -1,41 +1,31 @@
 //
-//  ViewController.swift
+//  SignUpViewController.swift
 //  DinukaThilakarathne-COBSCCOMP191P-047
 //
-//  Created by Dinuka Thilakarathne on 8/30/20.
+//  Created by Dinuka Thilakarathne on 9/2/20.
 //  Copyright © 2020 Dinuka Thilakarathne. All rights reserved.
 //
 
 import UIKit
-import Firebase
 
-class LandingViewController: UIViewController {
+class SignUpViewController: UIViewController {
     
-    //instantiating controller
-    let controller = LandingController()
+    let controller = SignUpController()
     
-    //linking and setting UI components
-    @IBOutlet weak var contentView: UIView!{
+    @IBOutlet var contentView: UIView!{
         didSet{
             let gradientLayer = CAGradientLayer()
             gradientLayer.frame = self.contentView.bounds
-            gradientLayer.colors = [UIColor.clear, Asset.accentGreen.color.cgColor]
+            gradientLayer.colors = [UIColor.clear, Asset.primaryColor.color.cgColor]
             contentView.layer.insertSublayer(gradientLayer, at: 0)
         }
     }
     
-    @IBOutlet weak var landingPageHeadingOutline: UILabel!{
+    @IBOutlet weak var titleLabel: UILabel!{
         didSet{
-            landingPageHeadingOutline.text = L10n.headingOutline
-            landingPageHeadingOutline.font = FontFamily.Abel.regular.font(size: 20)
-            landingPageHeadingOutline.textColor = Asset.white.color
-        }
-    }
-    @IBOutlet weak var landingPageTitle: UILabel!{
-        didSet{
-            landingPageTitle.text = L10n.appName
-            landingPageTitle.font = FontFamily.BebasNeue.regular.font(size: 60)
-            landingPageTitle.textColor = Asset.white.color
+            titleLabel.text = L10n.signUpPageTitle
+            titleLabel.font = FontFamily.BebasNeue.regular.font(size: 60)
+            titleLabel.textColor = Asset.white.color
         }
     }
     
@@ -47,7 +37,6 @@ class LandingViewController: UIViewController {
             emailTextField.roundedTextField.attributedPlaceholder = NSAttributedString(string: L10n.enterEmailPlaceholder, attributes: [NSAttributedString.Key.foregroundColor : Asset.lightPlaceholderColor.color])
         }
     }
-    
     @IBOutlet weak var passwordTextField: RoundedTextField!{
         didSet{
             passwordTextField.roundedTextField.delegate = self
@@ -56,76 +45,74 @@ class LandingViewController: UIViewController {
             passwordTextField.roundedTextField.attributedPlaceholder = NSAttributedString(string: L10n.enterPasswordPlaceholder, attributes: [NSAttributedString.Key.foregroundColor : Asset.lightPlaceholderColor.color])
         }
     }
-    
-    @IBOutlet weak var loginButton: RoundedButton!{
+    @IBOutlet weak var reenterPasswordField: RoundedTextField!{
         didSet{
-            //adding Objective-C selectors
-            loginButton.roundButton.addTarget(self, action: #selector(loginPressed), for: .touchUpInside)
+            reenterPasswordField.roundedTextField.delegate = self
+            reenterPasswordField.roundedTextField.returnKeyType = .done
+            reenterPasswordField.roundedTextField.isSecureTextEntry = true
+            reenterPasswordField.roundedTextField.attributedPlaceholder = NSAttributedString(string: L10n.reenterPasswordPlaceholder, attributes: [NSAttributedString.Key.foregroundColor : Asset.lightPlaceholderColor.color])
             
-            loginButton.roundButton.titleLabel?.addCharacterSpacing(value: 5)
-            loginButton.roundButton.setTitle(L10n.login, for: .normal)
         }
     }
-    @IBOutlet weak var makeAccountButton: UIButton!{
+    @IBOutlet weak var signUpButton: RoundedButton!{
         didSet{
-            makeAccountButton.setTitle("Don't have an account? Sign up", for: .normal)
-            makeAccountButton.tintColor = Asset.white.color.withAlphaComponent(0.5)
-            makeAccountButton.titleLabel?.font = FontFamily.Abel.regular.font(size: 16)
-            makeAccountButton.addTarget(self, action: #selector(signUpPressed), for: .touchUpInside)
+            signUpButton.roundButton.addTarget(self, action: #selector(signUpPressed), for: .touchUpInside)
+            signUpButton.roundButton.titleLabel?.addCharacterSpacing(value: 5)
+            signUpButton.roundButton.setTitle(L10n.signUp, for: .normal)
+        }
+    }
+    @IBOutlet weak var loginButton: UIButton!{
+        didSet{
+            loginButton.setTitle("If you have an account. Login", for: .normal)
+            loginButton.tintColor = Asset.white.color.withAlphaComponent(0.5)
+            loginButton.titleLabel?.font = FontFamily.Abel.regular.font(size: 16)
+            loginButton.addTarget(self, action: #selector(loginPressed), for: .touchUpInside)
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //setting controller delegate for passing data
         controller.delegate = self
     }
     
-    @objc func loginPressed(){
+    @objc func signUpPressed(){
         let email = emailTextField.roundedTextField.text ?? ""
         let password = passwordTextField.roundedTextField.text ?? ""
+        let reenteredPassword = reenterPasswordField.roundedTextField.text ?? ""
         
-        //passing data
         controller.setEmail(email)
         controller.setPassword(password)
-        controller.loginButtonPressed()
+        controller.setReenteredPassword(reenteredPassword)
+        controller.signUpButtonPressed()
     }
     
-    @objc func signUpPressed(){
-        controller.signUpPressed()
+    @objc func loginPressed(){
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
-
-extension LandingViewController : UITextFieldDelegate {
+extension SignUpViewController : UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        return true
     }
 }
 
-extension LandingViewController : LandingControllerDelegate {
-    
-    func showSignUpScreen() {
-        let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "SignUpViewController")
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
+extension SignUpViewController : SignUpControllerDelegate {
+    func unidenticalPassword() {
+        SingleActionAlert(
+            withTitle: "The passwords do not match",
+            withMessage: "Please re-enter the passwords",
+            actionName: L10n.ok,
+            self
+        ).present()
     }
     
-    
-    //controller delegate methods
     func showHomeScreen() {
         let storyboard = UIStoryboard(name: "Dashboard", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "DashboardTabController")
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
-    }
-    
-    
-    func isAuthenticating(_ value: Bool) {
-        //unused
     }
     
     func passwordIsEmpty() {
@@ -137,9 +124,18 @@ extension LandingViewController : LandingControllerDelegate {
         ).present()
     }
     
+    func reenterPasswordIsEmpty() {
+        SingleActionAlert(
+            withTitle: "Empty Re-entered Password field",
+            withMessage: "Please re-enter the password",
+            actionName: L10n.ok,
+            self
+        ).present()
+    }
+    
     func emailIsEmpty() {
         SingleActionAlert(
-            withTitle: "Empty Email field",
+            withTitle: "Empty email field",
             withMessage: "Please enter an email",
             actionName: L10n.ok,
             self
@@ -154,9 +150,10 @@ extension LandingViewController : LandingControllerDelegate {
             self
         ).present()
     }
+    
+    func isAuthenticating(_ value: Bool) {
+        //unused
+    }
+    
+    
 }
-
-
-
-//https://medium.com/@KaushElsewhere/how-to-dismiss-keyboard-in-a-view-controller-of-ios-3b1bfe973ad1
-

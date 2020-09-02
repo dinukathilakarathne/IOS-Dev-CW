@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="FXz-vb-RuL">
-                                <rect key="frame" x="20" y="75" width="374" height="37"/>
+                                <rect key="frame" x="20" y="74" width="374" height="37"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4r1-l0-UcN">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="23.5"/>
@@ -50,25 +50,44 @@
                                     <constraint firstAttribute="height" constant="40" id="cqk-iX-AaX"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4X-J7-Ayn" customClass="RoundedButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="30" y="588" width="354" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ovp-c6-KtE"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEU-s3-9DR">
+                                <rect key="frame" x="184" y="646" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="PrimaryColor"/>
                         <constraints>
                             <constraint firstItem="zoC-3q-J8U" firstAttribute="trailing" secondItem="Hrf-P4-la8" secondAttribute="trailing" constant="20" id="0sx-Vj-6tp"/>
+                            <constraint firstItem="oEU-s3-9DR" firstAttribute="centerX" secondItem="hgP-8L-GQo" secondAttribute="centerX" id="Ap3-89-jhf"/>
                             <constraint firstItem="upB-yb-ePZ" firstAttribute="leading" secondItem="zoC-3q-J8U" secondAttribute="leading" constant="20" id="JPo-Dk-W5s"/>
                             <constraint firstItem="upB-yb-ePZ" firstAttribute="centerY" secondItem="hgP-8L-GQo" secondAttribute="centerY" id="LI1-o7-2PE"/>
                             <constraint firstItem="FXz-vb-RuL" firstAttribute="leading" secondItem="zoC-3q-J8U" secondAttribute="leading" constant="20" id="PSS-HN-bLK"/>
+                            <constraint firstItem="oEU-s3-9DR" firstAttribute="top" secondItem="d4X-J7-Ayn" secondAttribute="bottom" constant="8" id="WEP-Kk-6oM"/>
                             <constraint firstItem="zoC-3q-J8U" firstAttribute="trailing" secondItem="upB-yb-ePZ" secondAttribute="trailing" constant="20" id="Zly-D2-Itj"/>
                             <constraint firstItem="Hrf-P4-la8" firstAttribute="leading" secondItem="zoC-3q-J8U" secondAttribute="leading" constant="20" id="eyB-px-5eG"/>
+                            <constraint firstItem="d4X-J7-Ayn" firstAttribute="leading" secondItem="zoC-3q-J8U" secondAttribute="leading" constant="30" id="hY7-mr-3iZ"/>
                             <constraint firstItem="Hrf-P4-la8" firstAttribute="top" secondItem="upB-yb-ePZ" secondAttribute="bottom" constant="30" id="l63-a4-Wio"/>
-                            <constraint firstItem="FXz-vb-RuL" firstAttribute="top" secondItem="zoC-3q-J8U" secondAttribute="top" constant="31" id="pGd-yb-gxH"/>
+                            <constraint firstItem="zoC-3q-J8U" firstAttribute="trailing" secondItem="d4X-J7-Ayn" secondAttribute="trailing" constant="30" id="pE6-40-2JG"/>
+                            <constraint firstItem="FXz-vb-RuL" firstAttribute="top" secondItem="zoC-3q-J8U" secondAttribute="top" constant="30" id="pGd-yb-gxH"/>
+                            <constraint firstItem="d4X-J7-Ayn" firstAttribute="top" secondItem="Hrf-P4-la8" secondAttribute="bottom" constant="50" id="tz8-Tv-1NN"/>
                             <constraint firstItem="zoC-3q-J8U" firstAttribute="trailing" secondItem="FXz-vb-RuL" secondAttribute="trailing" constant="20" id="xx7-wL-zth"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zoC-3q-J8U"/>
                     </view>
                     <connections>
                         <outlet property="contentView" destination="hgP-8L-GQo" id="UeZ-lm-S12"/>
+                        <outlet property="emailTextField" destination="upB-yb-ePZ" id="Mlr-FM-zaj"/>
                         <outlet property="landingPageHeadingOutline" destination="4r1-l0-UcN" id="x7B-Be-1wb"/>
                         <outlet property="landingPageTitle" destination="Yh9-eW-YTN" id="Wk8-mL-rvk"/>
+                        <outlet property="loginButton" destination="d4X-J7-Ayn" id="Ies-A5-wI8"/>
+                        <outlet property="makeAccountButton" destination="oEU-s3-9DR" id="GQp-8h-6tY"/>
+                        <outlet property="passwordTextField" destination="Hrf-P4-la8" id="HT3-V6-Xm0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hhw-C7-Xn6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

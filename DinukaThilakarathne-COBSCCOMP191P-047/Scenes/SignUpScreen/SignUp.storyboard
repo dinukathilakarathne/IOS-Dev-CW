@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign Up View Controller-->
+        <scene sceneID="k37-Ch-g6W">
+            <objects>
+                <viewController storyboardIdentifier="SignUpViewController" id="Vop-U9-qXV" customClass="SignUpViewController" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W2K-80-wtW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3M-X1-V0h" customClass="RoundedTextField" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="20" y="428" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="O1n-bb-jk4"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="Weu-Mf-5Co"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sn8-IT-94t" customClass="RoundedTextField" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="20" y="498" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Mse-Cs-aoC"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="bUV-dS-mnJ"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KSm-Y6-SQ3" customClass="RoundedTextField" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="20" y="358" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="dIP-Zp-1nP"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="xWj-Gt-Vt2"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jfs-ur-Ue5">
+                                <rect key="frame" x="184" y="646" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ss-oy-rcc">
+                                <rect key="frame" x="20" y="74" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BL9-XS-ib5" customClass="RoundedButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="30" y="588" width="354" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="atm-VP-eXo"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="RRH-Gh-4WV"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstItem="r3M-X1-V0h" firstAttribute="top" secondItem="KSm-Y6-SQ3" secondAttribute="bottom" constant="30" id="1PQ-tX-xA5"/>
+                            <constraint firstItem="zXa-9u-AfS" firstAttribute="trailing" secondItem="KSm-Y6-SQ3" secondAttribute="trailing" constant="20" id="1uB-SG-fNF"/>
+                            <constraint firstItem="zXa-9u-AfS" firstAttribute="trailing" secondItem="Sn8-IT-94t" secondAttribute="trailing" constant="20" id="6I3-OY-phL"/>
+                            <constraint firstItem="KSm-Y6-SQ3" firstAttribute="leading" secondItem="zXa-9u-AfS" secondAttribute="leading" constant="20" id="7ky-XX-rsm"/>
+                            <constraint firstItem="7ss-oy-rcc" firstAttribute="leading" secondItem="zXa-9u-AfS" secondAttribute="leading" constant="20" id="8pq-GS-7em"/>
+                            <constraint firstItem="Sn8-IT-94t" firstAttribute="leading" secondItem="zXa-9u-AfS" secondAttribute="leading" constant="20" id="98n-ah-2HY"/>
+                            <constraint firstItem="7ss-oy-rcc" firstAttribute="top" secondItem="zXa-9u-AfS" secondAttribute="top" constant="30" id="CsT-z0-bLW"/>
+                            <constraint firstItem="Jfs-ur-Ue5" firstAttribute="top" secondItem="BL9-XS-ib5" secondAttribute="bottom" constant="8" id="F4Z-04-UDS"/>
+                            <constraint firstItem="BL9-XS-ib5" firstAttribute="top" secondItem="Sn8-IT-94t" secondAttribute="bottom" constant="50" id="LL7-au-KYN"/>
+                            <constraint firstItem="zXa-9u-AfS" firstAttribute="trailing" secondItem="BL9-XS-ib5" secondAttribute="trailing" constant="30" id="MNG-ZP-bge"/>
+                            <constraint firstItem="Jfs-ur-Ue5" firstAttribute="centerX" secondItem="W2K-80-wtW" secondAttribute="centerX" id="MqS-hM-7G7"/>
+                            <constraint firstItem="Sn8-IT-94t" firstAttribute="top" secondItem="r3M-X1-V0h" secondAttribute="bottom" constant="30" id="OGA-vL-VBy"/>
+                            <constraint firstItem="r3M-X1-V0h" firstAttribute="centerY" secondItem="W2K-80-wtW" secondAttribute="centerY" id="SA0-9h-NM6"/>
+                            <constraint firstItem="r3M-X1-V0h" firstAttribute="leading" secondItem="zXa-9u-AfS" secondAttribute="leading" constant="20" id="gea-6n-e8a"/>
+                            <constraint firstItem="r3M-X1-V0h" firstAttribute="centerX" secondItem="W2K-80-wtW" secondAttribute="centerX" id="hgX-uO-LEC"/>
+                            <constraint firstItem="BL9-XS-ib5" firstAttribute="leading" secondItem="zXa-9u-AfS" secondAttribute="leading" constant="30" id="k3q-u1-GFK"/>
+                            <constraint firstItem="zXa-9u-AfS" firstAttribute="trailing" secondItem="r3M-X1-V0h" secondAttribute="trailing" constant="20" id="wrq-zT-hOB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zXa-9u-AfS"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="W2K-80-wtW" id="HyE-7u-3ZK"/>
+                        <outlet property="emailTextField" destination="KSm-Y6-SQ3" id="zUw-WR-rJE"/>
+                        <outlet property="loginButton" destination="Jfs-ur-Ue5" id="yDN-JR-u12"/>
+                        <outlet property="passwordTextField" destination="r3M-X1-V0h" id="NPI-fH-fVh"/>
+                        <outlet property="reenterPasswordField" destination="Sn8-IT-94t" id="VIE-qG-wRz"/>
+                        <outlet property="signUpButton" destination="BL9-XS-ib5" id="o4F-o0-CLZ"/>
+                        <outlet property="titleLabel" destination="7ss-oy-rcc" id="ita-0X-GCS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kK4-pf-sy0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="89.732142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.36899998784065247" green="0.76499998569488525" blue="0.78799998760223389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
