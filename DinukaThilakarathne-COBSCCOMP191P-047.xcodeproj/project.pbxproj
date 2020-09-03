@@ -38,6 +38,8 @@
 		00B7EAF624FC0D88009E9DF1 /* DashboardTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B7EAF524FC0D88009E9DF1 /* DashboardTabController.swift */; };
 		00B7EAF824FC0D96009E9DF1 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B7EAF724FC0D96009E9DF1 /* Dashboard.storyboard */; };
 		00F945AD24FFD8C000E372EA /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F945AC24FFD8C000E372EA /* SignUpController.swift */; };
+		00F945AF250151AD00E372EA /* UserHealthStatus.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00F945AE250151AD00E372EA /* UserHealthStatus.xib */; };
+		00F945B1250151BF00E372EA /* UserHealthStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F945B0250151BF00E372EA /* UserHealthStatus.swift */; };
 		00FE605E24FB754100D93505 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FE605D24FB754100D93505 /* Main.storyboard */; };
 		00FE606224FB75F000D93505 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FE606124FB75F000D93505 /* LaunchScreen.storyboard */; };
 		00FE606524FB769500D93505 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FE606424FB769500D93505 /* RoundedButton.swift */; };
@@ -100,6 +102,8 @@
 		00B7EAF524FC0D88009E9DF1 /* DashboardTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabController.swift; sourceTree = "<group>"; };
 		00B7EAF724FC0D96009E9DF1 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		00F945AC24FFD8C000E372EA /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		00F945AE250151AD00E372EA /* UserHealthStatus.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserHealthStatus.xib; sourceTree = "<group>"; };
+		00F945B0250151BF00E372EA /* UserHealthStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHealthStatus.swift; sourceTree = "<group>"; };
 		00FE605D24FB754100D93505 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		00FE606124FB75F000D93505 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00FE606424FB769500D93505 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -348,6 +352,23 @@
 			path = Dashboard;
 			sourceTree = "<group>";
 		};
+		00F945B2250151C400E372EA /* UserHealthStatus */ = {
+			isa = PBXGroup;
+			children = (
+				00F945AE250151AD00E372EA /* UserHealthStatus.xib */,
+				00F945B0250151BF00E372EA /* UserHealthStatus.swift */,
+			);
+			path = UserHealthStatus;
+			sourceTree = "<group>";
+		};
+		00F945B3250151D700E372EA /* HomeWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				00F945B2250151C400E372EA /* UserHealthStatus */,
+			);
+			path = HomeWidgets;
+			sourceTree = "<group>";
+		};
 		00FE606324FB767E00D93505 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,6 +376,7 @@
 				0093230324FBBD75007427E6 /* TextField */,
 				00FE606824FB76AF00D93505 /* Buttons */,
 				007FA93524FFB0080081DF69 /* NavigationBar */,
+				00F945B3250151D700E372EA /* HomeWidgets */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -512,6 +534,7 @@
 				007FA92E24FFABE40081DF69 /* SignUp.storyboard in Resources */,
 				00FE606724FB76A300D93505 /* RoundedButton.xib in Resources */,
 				00FE605E24FB754100D93505 /* Main.storyboard in Resources */,
+				00F945AF250151AD00E372EA /* UserHealthStatus.xib in Resources */,
 				0093230724FBBE22007427E6 /* RoundedTextField.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -578,6 +601,7 @@
 				00B7EAEE24FBD44A009E9DF1 /* LandingController.swift in Sources */,
 				00FE606524FB769500D93505 /* RoundedButton.swift in Sources */,
 				0003E5AA24FB686400661089 /* AppDelegate.swift in Sources */,
+				00F945B1250151BF00E372EA /* UserHealthStatus.swift in Sources */,
 				0003E5AC24FB686400661089 /* SceneDelegate.swift in Sources */,
 				00B7EAF624FC0D88009E9DF1 /* DashboardTabController.swift in Sources */,
 			);

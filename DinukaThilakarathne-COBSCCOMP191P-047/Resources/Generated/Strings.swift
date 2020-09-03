@@ -12,6 +12,8 @@ import Foundation
 internal enum L10n {
   /// NIBM COVID19
   internal static let appName = L10n.tr("Localizable", "app_name")
+  /// Can attend college
+  internal static let canAttendCollege = L10n.tr("Localizable", "can_attend_college")
   /// Email
   internal static let enterEmailPlaceholder = L10n.tr("Localizable", "enter_email_placeholder")
   /// Password
@@ -28,6 +30,8 @@ internal enum L10n {
   internal static let signUp = L10n.tr("Localizable", "sign_up")
   /// Sign Up
   internal static let signUpPageTitle = L10n.tr("Localizable", "sign_up_page_title")
+  /// Stay at home
+  internal static let stayAtHome = L10n.tr("Localizable", "stay_at_home")
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name
