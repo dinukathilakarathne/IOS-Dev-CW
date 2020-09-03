@@ -10,8 +10,6 @@ import UIKit
 
 class DashboardTabController: UITabBarController {
     
-    var selectedTab: Int = 0
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
@@ -19,21 +17,29 @@ class DashboardTabController: UITabBarController {
 }
 
 extension DashboardTabController : UITabBarControllerDelegate {
-    
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        print(tabBarController.selectedIndex)
-        if tabBarController.selectedIndex == 1 {
-            let storyboard = UIStoryboard(name: "Dashboard", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "DashboardTabController")
-            vc.modalPresentationStyle = .formSheet
-            self.present(vc, animated: true, completion: nil)
-        }
-    }
+//
+//    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+//        print(tabBarController.selectedIndex)
+//        if tabBarController.selectedIndex == 1 {
+//            let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "SignUpViewController")
+//            vc.modalPresentationStyle = .formSheet
+//            self.present(vc, animated: true)
+//        }
+//    }
 
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        if tabBarController.selectedIndex == 1{
+        print(viewController.self)
+        if viewController is SignUpViewController{
+            let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "SignUpViewController")
+            vc.modalPresentationStyle = .formSheet
+            self.present(vc, animated: true)
+            print(false)
             return false
+            
         }
+        print(true)
         return true
     }
 }

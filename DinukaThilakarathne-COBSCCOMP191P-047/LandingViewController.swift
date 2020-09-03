@@ -110,7 +110,7 @@ extension LandingViewController : LandingControllerDelegate {
     func showSignUpScreen() {
         let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "SignUpViewController")
-        vc.modalPresentationStyle = .fullScreen
+        vc.modalPresentationStyle = .formSheet
         self.present(vc, animated: true)
     }
     
