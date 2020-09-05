@@ -11,15 +11,20 @@ sign_up_page_title = "Sign Up";
 login = "L O G I N";
 sign_up = "S I G N  U P";
 ok = "OK";
+news = "News";
 
 //Placeholders
 enter_email_placeholder = "Email";
 enter_password_placeholder = "Password";
 reenter_password_placeholder = "Re-enter password";
 
-//User Status
+//Home page
 stay_at_home = "Stay at home";
 can_attend_college = "Can attend college";
+current_stats = "Current stats";
+infected = "INFECTED";
+suspects = "SUSPECTS";
+deaths = "DEATHS";
 
 
 

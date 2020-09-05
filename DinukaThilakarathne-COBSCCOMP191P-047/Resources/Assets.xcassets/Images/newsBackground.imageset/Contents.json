@@ -3,16 +3,6 @@
     {
       "filename" : "news-1.png",
       "idiom" : "universal"
-    },
-    {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "dark"
-        }
-      ],
-      "filename" : "news.png",
-      "idiom" : "universal"
     }
   ],
   "info" : {

@@ -1,5 +1,5 @@
 //
-//  NewsButton.swift
+//  AppConstants.swift
 //  DinukaThilakarathne-COBSCCOMP191P-047
 //
 //  Created by Dinuka Thilakarathne on 9/5/20.
@@ -8,7 +8,6 @@
 
 import UIKit
 
-class NewsButton: UIView {
-
-    @IBOutlet var contentView: UIView!
+class AppConstants {
+    static let viewCornerRadius : CGFloat  = 5
 }

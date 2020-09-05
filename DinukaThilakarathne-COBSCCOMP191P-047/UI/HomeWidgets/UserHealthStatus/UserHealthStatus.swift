@@ -52,7 +52,7 @@ class UserHealthStatus: UIView {
     }
     
     func setUI(){
-        contentHolder.layer.cornerRadius = 5
+        contentHolder.layer.cornerRadius = AppConstants.viewCornerRadius
         setStatus()
     }
     

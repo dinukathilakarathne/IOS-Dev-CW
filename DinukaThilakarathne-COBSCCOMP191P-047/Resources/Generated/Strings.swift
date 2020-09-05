@@ -14,14 +14,22 @@ internal enum L10n {
   internal static let appName = L10n.tr("Localizable", "app_name")
   /// Can attend college
   internal static let canAttendCollege = L10n.tr("Localizable", "can_attend_college")
+  /// Current stats
+  internal static let currentStats = L10n.tr("Localizable", "current_stats")
+  /// DEATHS
+  internal static let deaths = L10n.tr("Localizable", "deaths")
   /// Email
   internal static let enterEmailPlaceholder = L10n.tr("Localizable", "enter_email_placeholder")
   /// Password
   internal static let enterPasswordPlaceholder = L10n.tr("Localizable", "enter_password_placeholder")
   /// Welcome to
   internal static let headingOutline = L10n.tr("Localizable", "heading_outline")
+  /// INFECTED
+  internal static let infected = L10n.tr("Localizable", "infected")
   /// L O G I N
   internal static let login = L10n.tr("Localizable", "login")
+  /// News
+  internal static let news = L10n.tr("Localizable", "news")
   /// OK
   internal static let ok = L10n.tr("Localizable", "ok")
   /// Re-enter password
@@ -32,6 +40,8 @@ internal enum L10n {
   internal static let signUpPageTitle = L10n.tr("Localizable", "sign_up_page_title")
   /// Stay at home
   internal static let stayAtHome = L10n.tr("Localizable", "stay_at_home")
+  /// SUSPECTS
+  internal static let suspects = L10n.tr("Localizable", "suspects")
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name

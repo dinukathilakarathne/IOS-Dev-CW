@@ -30,20 +30,80 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMo-mD-gNl" customClass="UserHealthStatus" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="10" width="414" height="100"/>
+                                                <rect key="frame" x="20" y="10" width="374" height="100"/>
+                                                <color key="backgroundColor" name="BackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="BMv-K7-RyC"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yny-pS-0DH" customClass="NewsButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="175" width="374" height="100"/>
+                                                <color key="backgroundColor" name="BackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="FwN-Ne-anD"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sh1-vy-Aut">
+                                                <rect key="frame" x="117" y="142" width="180" height="1"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="180" id="Ik7-Se-Jtx"/>
+                                                    <constraint firstAttribute="height" constant="1" id="jlU-8s-xd0"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3FN-hd-1wg">
+                                                <rect key="frame" x="117" y="307" width="180" height="1"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="180" id="3cb-pd-u2P"/>
+                                                    <constraint firstAttribute="height" constant="1" id="93Y-uI-zrr"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjQ-yl-YRq">
+                                                <rect key="frame" x="20" y="340" width="374" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="g4I-52-Nsh">
+                                                <rect key="frame" x="20" y="368.5" width="374" height="110"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4F-O4-On0" customClass="LocalStat" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="110"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdA-Br-ThO" customClass="LocalStat" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                                        <rect key="frame" x="127.5" y="0.0" width="119" height="110"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fOG-6Y-7MP" customClass="LocalStat" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                                        <rect key="frame" x="254.5" y="0.0" width="119.5" height="110"/>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="110" id="Tnu-Cm-czV"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="yny-pS-0DH" firstAttribute="top" secondItem="Sh1-vy-Aut" secondAttribute="bottom" constant="32" id="498-HR-neJ"/>
                                             <constraint firstItem="o8q-Hv-6RZ" firstAttribute="leading" secondItem="gmj-LQ-XZl" secondAttribute="leading" constant="87" id="5lH-qu-88T"/>
                                             <constraint firstAttribute="trailing" secondItem="o8q-Hv-6RZ" secondAttribute="trailing" constant="87" id="7FT-F9-UQo"/>
+                                            <constraint firstItem="fjQ-yl-YRq" firstAttribute="leading" secondItem="gmj-LQ-XZl" secondAttribute="leading" constant="20" id="CQR-uO-E7Z"/>
+                                            <constraint firstAttribute="trailing" secondItem="yny-pS-0DH" secondAttribute="trailing" constant="20" id="Kx7-wg-DnA"/>
                                             <constraint firstItem="oMo-mD-gNl" firstAttribute="top" secondItem="gmj-LQ-XZl" secondAttribute="top" constant="10" id="MwC-oE-dDe"/>
-                                            <constraint firstAttribute="trailing" secondItem="oMo-mD-gNl" secondAttribute="trailing" id="TsW-NR-mCT"/>
+                                            <constraint firstItem="g4I-52-Nsh" firstAttribute="leading" secondItem="gmj-LQ-XZl" secondAttribute="leading" constant="20" id="O4b-d8-g91"/>
+                                            <constraint firstItem="Sh1-vy-Aut" firstAttribute="top" secondItem="oMo-mD-gNl" secondAttribute="bottom" constant="32" id="RjQ-AK-qYl"/>
+                                            <constraint firstAttribute="trailing" secondItem="g4I-52-Nsh" secondAttribute="trailing" constant="20" id="SQU-WK-3J6"/>
+                                            <constraint firstItem="3FN-hd-1wg" firstAttribute="top" secondItem="yny-pS-0DH" secondAttribute="bottom" constant="32" id="Ssu-1u-Jhm"/>
+                                            <constraint firstAttribute="trailing" secondItem="oMo-mD-gNl" secondAttribute="trailing" constant="20" id="TsW-NR-mCT"/>
                                             <constraint firstAttribute="height" constant="1200" id="UG5-KI-OeC"/>
-                                            <constraint firstItem="oMo-mD-gNl" firstAttribute="leading" secondItem="gmj-LQ-XZl" secondAttribute="leading" id="ZYZ-nL-0GJ"/>
+                                            <constraint firstItem="3FN-hd-1wg" firstAttribute="centerX" secondItem="gmj-LQ-XZl" secondAttribute="centerX" id="Ubi-2M-5Fn"/>
+                                            <constraint firstItem="oMo-mD-gNl" firstAttribute="leading" secondItem="gmj-LQ-XZl" secondAttribute="leading" constant="20" id="ZYZ-nL-0GJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="fjQ-yl-YRq" secondAttribute="trailing" constant="20" id="Zpj-u0-u6I"/>
                                             <constraint firstAttribute="bottom" secondItem="o8q-Hv-6RZ" secondAttribute="bottom" constant="20" id="gNa-GH-mdG"/>
+                                            <constraint firstItem="yny-pS-0DH" firstAttribute="leading" secondItem="gmj-LQ-XZl" secondAttribute="leading" constant="20" id="nao-jf-nF6"/>
+                                            <constraint firstItem="Sh1-vy-Aut" firstAttribute="centerX" secondItem="gmj-LQ-XZl" secondAttribute="centerX" id="oVw-yw-juH"/>
+                                            <constraint firstItem="fjQ-yl-YRq" firstAttribute="top" secondItem="3FN-hd-1wg" secondAttribute="bottom" constant="32" id="yNH-cF-2HH"/>
+                                            <constraint firstItem="g4I-52-Nsh" firstAttribute="top" secondItem="fjQ-yl-YRq" secondAttribute="bottom" constant="8" id="ybx-Y8-D4U"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -80,6 +140,12 @@
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="1200"/>
+                    <connections>
+                        <outlet property="currentStatsTitle" destination="fjQ-yl-YRq" id="ZLJ-Hl-QnZ"/>
+                        <outletCollection property="currentStatView" destination="fOG-6Y-7MP" collectionClass="NSMutableArray" id="y2X-1w-TDB"/>
+                        <outletCollection property="currentStatView" destination="gdA-Br-ThO" collectionClass="NSMutableArray" id="nub-Rx-78o"/>
+                        <outletCollection property="currentStatView" destination="U4F-O4-On0" collectionClass="NSMutableArray" id="5dD-ff-JHI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="409-hT-zqe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -88,7 +154,6 @@
         <!--Home-->
         <scene sceneID="AHM-QT-1at">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="U6T-I8-443" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9cb-qs-aMS" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="Os1-UQ-wEL"/>
                     <toolbarItems/>
@@ -101,12 +166,16 @@
                         <segue destination="1ko-eH-4Qe" kind="relationship" relationship="rootViewController" id="wqy-2Q-CSW"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U6T-I8-443" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2026" y="200"/>
         </scene>
     </scenes>
     <resources>
         <image name="house" catalog="system" width="128" height="110"/>
+        <namedColor name="AccentColor">
+            <color red="0.36899998784065247" green="0.76499998569488525" blue="0.78799998760223389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="BackgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
