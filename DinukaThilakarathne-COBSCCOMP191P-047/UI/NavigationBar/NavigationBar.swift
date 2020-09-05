@@ -10,7 +10,11 @@ import UIKit
 
 class NavigationBar: UIView {
 
-    @IBOutlet var contentView: UIView!
+    @IBOutlet var contentView: UIView!{
+        didSet{
+            contentView.backgroundColor = Asset.backgroundColor.color
+        }
+    }
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var notifications: UIImageView!
