@@ -21,10 +21,12 @@ reenter_password_placeholder = "Re-enter password";
 //Home page
 stay_at_home = "Stay at home";
 can_attend_college = "Can attend college";
-current_stats = "Current stats";
+current_stats_heading = "Current stats";
+more_features_heading = "More";
 infected = "INFECTED";
 suspects = "SUSPECTS";
 deaths = "DEATHS";
+
 
 
 

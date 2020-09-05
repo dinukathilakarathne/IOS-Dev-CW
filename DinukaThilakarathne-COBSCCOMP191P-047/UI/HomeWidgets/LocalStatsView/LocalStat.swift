@@ -19,7 +19,7 @@ class LocalStat: UIView {
     
     @IBOutlet weak var statValue: UILabel!{
         didSet{
-            statName.font = FontFamily.BebasNeue.regular.font(size: 24)
+            statValue.font = FontFamily.BebasNeue.regular.font(size: 30)
         }
     }
     

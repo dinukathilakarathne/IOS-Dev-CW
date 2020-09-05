@@ -15,7 +15,7 @@ internal enum L10n {
   /// Can attend college
   internal static let canAttendCollege = L10n.tr("Localizable", "can_attend_college")
   /// Current stats
-  internal static let currentStats = L10n.tr("Localizable", "current_stats")
+  internal static let currentStatsHeading = L10n.tr("Localizable", "current_stats_heading")
   /// DEATHS
   internal static let deaths = L10n.tr("Localizable", "deaths")
   /// Email
@@ -28,6 +28,8 @@ internal enum L10n {
   internal static let infected = L10n.tr("Localizable", "infected")
   /// L O G I N
   internal static let login = L10n.tr("Localizable", "login")
+  /// More
+  internal static let moreFeaturesHeading = L10n.tr("Localizable", "more_features_heading")
   /// News
   internal static let news = L10n.tr("Localizable", "news")
   /// OK

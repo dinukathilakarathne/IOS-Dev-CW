@@ -17,6 +17,8 @@
 		0003E60424FB72B700661089 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0003E60124FB72B700661089 /* Fonts.swift */; };
 		0003E60524FB72B700661089 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0003E60224FB72B700661089 /* Strings.swift */; };
 		0003E60624FB72B700661089 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0003E60324FB72B700661089 /* Assets.swift */; };
+		000A14472503FF6E003C50D4 /* MoreFeatureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 000A14462503FF6E003C50D4 /* MoreFeatureCell.xib */; };
+		000A14492503FF8A003C50D4 /* MoreFeatureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000A14482503FF8A003C50D4 /* MoreFeatureCollectionViewCell.swift */; };
 		004BB1412503E77800603EE2 /* NewsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004BB1402503E77800603EE2 /* NewsButton.swift */; };
 		006329D924FBB2E000B418F2 /* Abel-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0003E5FA24FB6A5100661089 /* Abel-Regular.ttf */; };
 		006329DA24FBB2E500B418F2 /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0003E5F924FB6A5100661089 /* BebasNeue-Regular.ttf */; };
@@ -88,6 +90,8 @@
 		0003E60124FB72B700661089 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		0003E60224FB72B700661089 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		0003E60324FB72B700661089 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		000A14462503FF6E003C50D4 /* MoreFeatureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreFeatureCell.xib; sourceTree = "<group>"; };
+		000A14482503FF8A003C50D4 /* MoreFeatureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreFeatureCollectionViewCell.swift; sourceTree = "<group>"; };
 		004BB1402503E77800603EE2 /* NewsButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsButton.swift; sourceTree = "<group>"; };
 		007FA91D24FCD2A40081DF69 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		007FA92124FCD4100081DF69 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -283,6 +287,31 @@
 			path = Generated;
 			sourceTree = "<group>";
 		};
+		000A14432503FE0C003C50D4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				000A14452503FF54003C50D4 /* CollectionViewCells */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		000A14442503FE85003C50D4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				000A14462503FF6E003C50D4 /* MoreFeatureCell.xib */,
+				000A14482503FF8A003C50D4 /* MoreFeatureCollectionViewCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		000A14452503FF54003C50D4 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				000A14442503FE85003C50D4 /* Home */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
 		007FA91F24FCD3B30081DF69 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -403,6 +432,7 @@
 		00FE606324FB767E00D93505 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				000A14432503FE0C003C50D4 /* Cells */,
 				00B7EAEF24FBE497009E9DF1 /* Alerts */,
 				0093230324FBBD75007427E6 /* TextField */,
 				00FE606824FB76AF00D93505 /* Buttons */,
@@ -562,6 +592,7 @@
 				00FE606224FB75F000D93505 /* LaunchScreen.storyboard in Resources */,
 				007FA93224FFAFF50081DF69 /* NavigationBar.xib in Resources */,
 				006329D924FBB2E000B418F2 /* Abel-Regular.ttf in Resources */,
+				000A14472503FF6E003C50D4 /* MoreFeatureCell.xib in Resources */,
 				007FA92E24FFABE40081DF69 /* SignUp.storyboard in Resources */,
 				00FE606724FB76A300D93505 /* RoundedButton.xib in Resources */,
 				00F945BF2503E48500E372EA /* LocalStat.xib in Resources */,
@@ -632,6 +663,7 @@
 				0003E60524FB72B700661089 /* Strings.swift in Sources */,
 				00F945AD24FFD8C000E372EA /* SignUpController.swift in Sources */,
 				007FA93024FFABED0081DF69 /* SignUpViewController.swift in Sources */,
+				000A14492503FF8A003C50D4 /* MoreFeatureCollectionViewCell.swift in Sources */,
 				00F945BD2503E47900E372EA /* LocalStat.swift in Sources */,
 				00B7EAEE24FBD44A009E9DF1 /* LandingController.swift in Sources */,
 				00FE606524FB769500D93505 /* RoundedButton.swift in Sources */,
