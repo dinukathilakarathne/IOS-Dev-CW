@@ -31,6 +31,7 @@ internal enum Asset {
   internal static let lightPlaceholderColor = ColorAsset(name: "LightPlaceholderColor")
   internal static let primaryColor = ColorAsset(name: "PrimaryColor")
   internal static let secondaryColor = ColorAsset(name: "SecondaryColor")
+  internal static let tabBarColor = ColorAsset(name: "TabBarColor")
   internal static let white = ColorAsset(name: "White")
   internal static let cross = ImageAsset(name: "cross")
   internal static let newsBackground = ImageAsset(name: "newsBackground")

@@ -9,7 +9,14 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
+    let moreFeatures : [[String]] = [
+        ["MapScreen", "Map View"],
+        ["AdviceScreen", "Health Advice"],
+        ["ContactScreen", "Contact us"],
+        ["HelpScreen", "Help"],
+    ]
+    
     @IBOutlet weak var currentStatsTitle: UILabel!{
         didSet{
             currentStatsTitle.font = FontFamily.Abel.regular.font(size: 20)
@@ -49,9 +56,9 @@ class HomeViewController: UIViewController {
         ]
         
         let statValues = [
-         "110",
-         "12",
-         "17"
+            "110",
+            "12",
+            "17"
         ]
         for i in 0..<currentStatView.count{
             currentStatView[i].statName.text = statNames[i]
@@ -63,23 +70,30 @@ class HomeViewController: UIViewController {
 extension HomeViewController : UICollectionViewDelegateFlowLayout,UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return moreFeatures.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MoreFeaturesCell", for: indexPath) as! MoreFeatureCollectionViewCell
         cell.contentHolder.backgroundColor = Asset.accentColor.color
-
+        let title = moreFeatures[indexPath.row][1]
+        cell.cellTitle.text = title
         return cell
     }
     
+    func centerItemsInCollectionView(cellWidth: Double, numberOfItems: Double, spaceBetweenCell: Double, collectionView: UICollectionView) -> UIEdgeInsets {
+        let totalWidth = cellWidth * numberOfItems
+        let totalSpacingWidth = spaceBetweenCell * (numberOfItems - 1)
+        let leftInset = (collectionView.frame.width - CGFloat(totalWidth + totalSpacingWidth)) / 2
+        let rightInset = leftInset
+        return UIEdgeInsets(top: 0, left: leftInset, bottom: 0, right: rightInset)
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        // Compute the dimension of a cell for an NxN layout with space S between
-        // cells.  Take the collection view's width, subtract (N-1)*S points for
-        // the spaces between the cells, and then divide by N to find the final
-        // dimension for the cell's width and height
-
         return CGSize(width: 100, height: 50)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.row)
     }
 }

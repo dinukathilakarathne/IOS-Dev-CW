@@ -26,12 +26,9 @@ class MoreFeatureCollectionViewCell: UICollectionViewCell {
             if newValue {
                 super.isSelected = true
                 contentHolder.backgroundColor = Asset.primaryColor.color
-                print("selected")
             } else if newValue == false {
                 super.isSelected = false
                 contentHolder.backgroundColor = Asset.accentColor.color
-
-                print("deselected")
             }
         }
     }
