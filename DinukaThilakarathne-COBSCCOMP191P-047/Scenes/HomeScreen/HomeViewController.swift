@@ -11,7 +11,7 @@ import UIKit
 class HomeViewController: UIViewController {
     
     let moreFeatures : [[String]] = [
-        ["MapScreen", "Map View"],
+        ["Map", "Map View"],
         ["AdviceScreen", "Health Advice"],
         ["ContactScreen", "Contact us"],
         ["HelpScreen", "Help"],
@@ -94,6 +94,10 @@ extension HomeViewController : UICollectionViewDelegateFlowLayout,UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.row)
+        let screen = moreFeatures[indexPath.row][0]
+        let storyboard = UIStoryboard(name: "\(screen)", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "\(screen)ViewController")
+        vc.modalPresentationStyle = .formSheet
+        self.present(vc, animated: true)
     }
 }

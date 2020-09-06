@@ -19,6 +19,8 @@
 		0003E60624FB72B700661089 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0003E60324FB72B700661089 /* Assets.swift */; };
 		000A14472503FF6E003C50D4 /* MoreFeatureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 000A14462503FF6E003C50D4 /* MoreFeatureCell.xib */; };
 		000A14492503FF8A003C50D4 /* MoreFeatureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000A14482503FF8A003C50D4 /* MoreFeatureCollectionViewCell.swift */; };
+		000A144C2504D5D9003C50D4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000A144B2504D5D9003C50D4 /* MapViewController.swift */; };
+		000A144E2504D5E1003C50D4 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 000A144D2504D5E1003C50D4 /* Map.storyboard */; };
 		004BB1412503E77800603EE2 /* NewsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004BB1402503E77800603EE2 /* NewsButton.swift */; };
 		006329D924FBB2E000B418F2 /* Abel-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0003E5FA24FB6A5100661089 /* Abel-Regular.ttf */; };
 		006329DA24FBB2E500B418F2 /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0003E5F924FB6A5100661089 /* BebasNeue-Regular.ttf */; };
@@ -92,6 +94,8 @@
 		0003E60324FB72B700661089 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		000A14462503FF6E003C50D4 /* MoreFeatureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreFeatureCell.xib; sourceTree = "<group>"; };
 		000A14482503FF8A003C50D4 /* MoreFeatureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreFeatureCollectionViewCell.swift; sourceTree = "<group>"; };
+		000A144B2504D5D9003C50D4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		000A144D2504D5E1003C50D4 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		004BB1402503E77800603EE2 /* NewsButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsButton.swift; sourceTree = "<group>"; };
 		007FA91D24FCD2A40081DF69 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		007FA92124FCD4100081DF69 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -220,6 +224,7 @@
 		0003E5DA24FB696700661089 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				000A144A2504D5AA003C50D4 /* MapScreen */,
 				007FA92C24FFABD20081DF69 /* SignUpScreen */,
 				007FA92324FCDC7C0081DF69 /* PresentStatsScreen */,
 				007FA91F24FCD3B30081DF69 /* HomeScreen */,
@@ -310,6 +315,15 @@
 				000A14442503FE85003C50D4 /* Home */,
 			);
 			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		000A144A2504D5AA003C50D4 /* MapScreen */ = {
+			isa = PBXGroup;
+			children = (
+				000A144B2504D5D9003C50D4 /* MapViewController.swift */,
+				000A144D2504D5E1003C50D4 /* Map.storyboard */,
+			);
+			path = MapScreen;
 			sourceTree = "<group>";
 		};
 		007FA91F24FCD3B30081DF69 /* HomeScreen */ = {
@@ -588,6 +602,7 @@
 				00B7EAF324FBF958009E9DF1 /* GoogleService-Info.plist in Resources */,
 				006329DA24FBB2E500B418F2 /* BebasNeue-Regular.ttf in Resources */,
 				007FA92524FCDCAD0081DF69 /* PresentStats.storyboard in Resources */,
+				000A144E2504D5E1003C50D4 /* Map.storyboard in Resources */,
 				007FA91E24FCD2A40081DF69 /* Home.storyboard in Resources */,
 				00FE606224FB75F000D93505 /* LaunchScreen.storyboard in Resources */,
 				007FA93224FFAFF50081DF69 /* NavigationBar.xib in Resources */,
@@ -656,6 +671,7 @@
 				00F945B92503DD6300E372EA /* AppConstants.swift in Sources */,
 				00B7EAF124FBE4BC009E9DF1 /* AlertDialog.swift in Sources */,
 				0003E60624FB72B700661089 /* Assets.swift in Sources */,
+				000A144C2504D5D9003C50D4 /* MapViewController.swift in Sources */,
 				007FA92924FCDD290081DF69 /* HomeViewController.swift in Sources */,
 				0093230524FBBE17007427E6 /* RoundedTextField.swift in Sources */,
 				007FA92724FCDD170081DF69 /* PresentStatsViewController.swift in Sources */,
