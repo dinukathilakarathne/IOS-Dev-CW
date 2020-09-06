@@ -39,6 +39,7 @@
                         <viewLayoutGuide key="safeArea" id="Ahz-rP-DEH"/>
                     </view>
                     <connections>
+                        <outlet property="mapView" destination="7Mq-fL-B9T" id="DZN-OT-VLc"/>
                         <outlet property="navigationBar" destination="jn5-54-xeq" id="cPE-23-nUr"/>
                     </connections>
                 </viewController>
