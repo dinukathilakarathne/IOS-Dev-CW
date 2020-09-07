@@ -7,7 +7,17 @@
 //
 
 import UIKit
+import SwiftDefaults
 
 class AppConstants {
     static let viewCornerRadius : CGFloat  = 5
 }
+
+class UserDefaults : SwiftDefaults{
+    dynamic var isLoggedIn : Bool = false
+    dynamic var nameOfUser : String = ""
+    dynamic var userAddress : String = ""
+    dynamic var userIndex : String = ""
+    dynamic var userImage : String = ""
+}
+

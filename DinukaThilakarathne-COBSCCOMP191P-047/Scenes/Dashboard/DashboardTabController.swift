@@ -29,17 +29,14 @@ extension DashboardTabController : UITabBarControllerDelegate {
 //    }
 
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        print(viewController.self)
         if viewController is SignUpViewController{
             let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "SignUpViewController")
             vc.modalPresentationStyle = .formSheet
             self.present(vc, animated: true)
-            print(false)
             return false
             
         }
-        print(true)
         return true
     }
 }
