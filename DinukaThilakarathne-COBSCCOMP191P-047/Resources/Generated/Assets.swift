@@ -34,6 +34,7 @@ internal enum Asset {
   internal static let tabBarColor = ColorAsset(name: "TabBarColor")
   internal static let white = ColorAsset(name: "White")
   internal static let cross = ImageAsset(name: "cross")
+  internal static let emptyImage = ImageAsset(name: "emptyImage")
   internal static let newsBackground = ImageAsset(name: "newsBackground")
   internal static let tick = ImageAsset(name: "tick")
   internal static let virus = ImageAsset(name: "virus")

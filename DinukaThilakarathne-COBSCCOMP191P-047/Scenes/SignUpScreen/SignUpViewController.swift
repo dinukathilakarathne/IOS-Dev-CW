@@ -8,11 +8,26 @@
 
 import UIKit
 
-//MARK:- End of this article.
 
 class SignUpViewController: UIViewController {
     
     let controller = SignUpController()
+    var imagePicker: ImagePicker!
+
+    
+    @IBOutlet weak var profileImage: UIImageView!{
+        didSet{
+            profileImage.image = Asset.emptyImage.image
+        }
+    }
+    @IBOutlet weak var selectImageButton: UIButton!{
+        didSet{
+            selectImageButton.setTitle("Choose image", for: .normal)
+            selectImageButton.tintColor = Asset.white.color.withAlphaComponent(0.5)
+            selectImageButton.titleLabel?.font = FontFamily.Abel.regular.font(size: 16)
+        }
+    }
+    
     
     @IBOutlet var contentView: UIView!{
         didSet{
@@ -97,6 +112,12 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         controller.delegate = self
+        self.imagePicker = ImagePicker(presentationController: self, delegate: self)
+        setUI()
+    }
+    
+    func setUI(){
+        profileImage.layer.cornerRadius = profileImage.frame.width / 2
     }
     
     @objc func signUpPressed(){
@@ -113,6 +134,11 @@ class SignUpViewController: UIViewController {
     @objc func loginPressed(){
         self.dismiss(animated: true, completion: nil)
     }
+
+    @IBAction func selectImageButtonPressed(_ sender: UIButton) {
+        self.imagePicker.present(from: sender)
+    }
+    
 }
 
 extension SignUpViewController : UITextFieldDelegate {
@@ -180,4 +206,11 @@ extension SignUpViewController : SignUpControllerDelegate {
     }
     
     
+}
+
+extension SignUpViewController : ImagePickerDelegate {
+
+    func didSelect(image: UIImage?) {
+        self.profileImage.image = image
+    }
 }

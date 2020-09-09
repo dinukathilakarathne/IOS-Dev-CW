@@ -24,6 +24,7 @@
 		004BB1412503E77800603EE2 /* NewsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004BB1402503E77800603EE2 /* NewsButton.swift */; };
 		006329D924FBB2E000B418F2 /* Abel-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0003E5FA24FB6A5100661089 /* Abel-Regular.ttf */; };
 		006329DA24FBB2E500B418F2 /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0003E5F924FB6A5100661089 /* BebasNeue-Regular.ttf */; };
+		0064D9BD2509740E00485F2F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064D9BC2509740E00485F2F /* ImagePicker.swift */; };
 		007FA91E24FCD2A40081DF69 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007FA91D24FCD2A40081DF69 /* Home.storyboard */; };
 		007FA92224FCD4100081DF69 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007FA92124FCD4100081DF69 /* Settings.storyboard */; };
 		007FA92524FCDCAD0081DF69 /* PresentStats.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007FA92424FCDCAD0081DF69 /* PresentStats.storyboard */; };
@@ -97,6 +98,7 @@
 		000A144B2504D5D9003C50D4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		000A144D2504D5E1003C50D4 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		004BB1402503E77800603EE2 /* NewsButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsButton.swift; sourceTree = "<group>"; };
+		0064D9BC2509740E00485F2F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		007FA91D24FCD2A40081DF69 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		007FA92124FCD4100081DF69 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		007FA92424FCDCAD0081DF69 /* PresentStats.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PresentStats.storyboard; sourceTree = "<group>"; };
@@ -326,6 +328,14 @@
 			path = MapScreen;
 			sourceTree = "<group>";
 		};
+		0064D9BE250975F300485F2F /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				0064D9BC2509740E00485F2F /* ImagePicker.swift */,
+			);
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
 		007FA91F24FCD3B30081DF69 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -452,6 +462,7 @@
 				00FE606824FB76AF00D93505 /* Buttons */,
 				007FA93524FFB0080081DF69 /* NavigationBar */,
 				00F945B3250151D700E372EA /* HomeWidgets */,
+				0064D9BE250975F300485F2F /* ImagePicker */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -666,6 +677,7 @@
 			files = (
 				007FA93424FFB0050081DF69 /* NavigationBar.swift in Sources */,
 				0003E60424FB72B700661089 /* Fonts.swift in Sources */,
+				0064D9BD2509740E00485F2F /* ImagePicker.swift in Sources */,
 				0093230A24FBCC93007427E6 /* UILabel+Extension.swift in Sources */,
 				0003E5AE24FB686400661089 /* LandingViewController.swift in Sources */,
 				00F945B92503DD6300E372EA /* AppConstants.swift in Sources */,
