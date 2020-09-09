@@ -17,6 +17,9 @@ news = "News";
 enter_email_placeholder = "Email";
 enter_password_placeholder = "Password";
 reenter_password_placeholder = "Re-enter password";
+enter_name_placeholder = "Name";
+enter_address_placeholder = "Address";
+
 
 //Home page
 stay_at_home = "Stay at home";

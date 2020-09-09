@@ -13,7 +13,7 @@ class SignUpViewController: UIViewController {
     
     let controller = SignUpController()
     var imagePicker: ImagePicker!
-
+    
     
     @IBOutlet weak var profileImage: UIImageView!{
         didSet{
@@ -77,7 +77,7 @@ class SignUpViewController: UIViewController {
             nameField.roundedTextField.delegate = self
             nameField.roundedTextField.returnKeyType = .done
             nameField.roundedTextField.isSecureTextEntry = true
-            nameField.roundedTextField.attributedPlaceholder = NSAttributedString(string: L10n.reenterPasswordPlaceholder, attributes: [NSAttributedString.Key.foregroundColor : Asset.lightPlaceholderColor.color])
+            nameField.roundedTextField.attributedPlaceholder = NSAttributedString(string: L10n.enterNamePlaceholder, attributes: [NSAttributedString.Key.foregroundColor : Asset.lightPlaceholderColor.color])
         }
     }
     
@@ -86,7 +86,7 @@ class SignUpViewController: UIViewController {
             addressField.roundedTextField.delegate = self
             addressField.roundedTextField.returnKeyType = .done
             addressField.roundedTextField.isSecureTextEntry = true
-            addressField.roundedTextField.attributedPlaceholder = NSAttributedString(string: L10n.reenterPasswordPlaceholder, attributes: [NSAttributedString.Key.foregroundColor : Asset.lightPlaceholderColor.color])
+            addressField.roundedTextField.attributedPlaceholder = NSAttributedString(string: L10n.enterAddressPlaceholder, attributes: [NSAttributedString.Key.foregroundColor : Asset.lightPlaceholderColor.color])
         }
     }
     
@@ -124,17 +124,23 @@ class SignUpViewController: UIViewController {
         let email = emailTextField.roundedTextField.text ?? ""
         let password = passwordTextField.roundedTextField.text ?? ""
         let reenteredPassword = reenterPasswordField.roundedTextField.text ?? ""
+        let name = nameField.roundedTextField.text ?? ""
+        
+        let address = addressField.roundedTextField.text ?? ""
         
         controller.setEmail(email)
         controller.setPassword(password)
         controller.setReenteredPassword(reenteredPassword)
+        controller.setAddress(address)
+        controller.setName(name)
+        controller.setProfileImage(profileImage.image)
         controller.signUpButtonPressed()
     }
     
     @objc func loginPressed(){
         self.dismiss(animated: true, completion: nil)
     }
-
+    
     @IBAction func selectImageButtonPressed(_ sender: UIButton) {
         self.imagePicker.present(from: sender)
     }
@@ -149,6 +155,33 @@ extension SignUpViewController : UITextFieldDelegate {
 }
 
 extension SignUpViewController : SignUpControllerDelegate {
+    func addressIsEmpty() {
+        SingleActionAlert(
+            withTitle: "The Address field is empty",
+            withMessage: "Please enter an address.",
+            actionName: L10n.ok,
+            self
+        ).present()
+    }
+    
+    func nameIsEmpty() {
+        SingleActionAlert(
+            withTitle: "The Name field is empty",
+            withMessage: "Please enter an name.",
+            actionName: L10n.ok,
+            self
+        ).present()
+    }
+    
+    func idIsEmpty() {
+        SingleActionAlert(
+            withTitle: "The ID field is empty",
+            withMessage: "Please enter an ID.",
+            actionName: L10n.ok,
+            self
+        ).present()
+    }
+    
     func unidenticalPassword() {
         SingleActionAlert(
             withTitle: "The passwords do not match",
@@ -209,8 +242,11 @@ extension SignUpViewController : SignUpControllerDelegate {
 }
 
 extension SignUpViewController : ImagePickerDelegate {
-
+    
     func didSelect(image: UIImage?) {
-        self.profileImage.image = image
+        guard let profileImage = image else {
+            return
+        }
+        self.profileImage.image = profileImage
     }
 }

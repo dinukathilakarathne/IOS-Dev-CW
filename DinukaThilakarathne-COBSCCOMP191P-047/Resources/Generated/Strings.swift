@@ -18,8 +18,12 @@ internal enum L10n {
   internal static let currentStatsHeading = L10n.tr("Localizable", "current_stats_heading")
   /// DEATHS
   internal static let deaths = L10n.tr("Localizable", "deaths")
+  /// Address
+  internal static let enterAddressPlaceholder = L10n.tr("Localizable", "enter_address_placeholder")
   /// Email
   internal static let enterEmailPlaceholder = L10n.tr("Localizable", "enter_email_placeholder")
+  /// Name
+  internal static let enterNamePlaceholder = L10n.tr("Localizable", "enter_name_placeholder")
   /// Password
   internal static let enterPasswordPlaceholder = L10n.tr("Localizable", "enter_password_placeholder")
   /// Welcome to

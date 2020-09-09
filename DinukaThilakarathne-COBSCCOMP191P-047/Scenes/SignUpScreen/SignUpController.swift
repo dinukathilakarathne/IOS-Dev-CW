@@ -6,12 +6,15 @@
 //  Copyright © 2020 Dinuka Thilakarathne. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Firebase
 
 protocol SignUpControllerDelegate {
     func showHomeScreen()
     func passwordIsEmpty()
+    func addressIsEmpty()
+    func nameIsEmpty()
+    func idIsEmpty()
     func reenterPasswordIsEmpty()
     func emailIsEmpty()
     func authError(_ e : Error)
@@ -24,7 +27,11 @@ final class SignUpController {
     private var email : String? = nil
     private var password : String? = nil
     private var reenteredPassword : String? = nil
+    private var name : String? = nil
+    private var address : String? = nil
+    private var id : String? = nil
     private var isAuthenticating : Bool = false
+    private var profileImage : UIImage?
     
     var delegate : SignUpControllerDelegate?
     
@@ -32,7 +39,11 @@ final class SignUpController {
         let email = self.email ?? ""
         let password = self.password ?? ""
         let reenteredPassword = self.reenteredPassword ?? ""
-        
+        let name = self.name ?? ""
+        let address = self.address ?? ""
+        let id = self.id ?? ""
+
+
         if email.isEmpty {
             delegate?.emailIsEmpty()
         }else if password.isEmpty{
@@ -41,6 +52,12 @@ final class SignUpController {
             delegate?.reenterPasswordIsEmpty()
         }else if password != reenteredPassword{
             delegate?.unidenticalPassword()
+        }else if name.isEmpty {
+            delegate?.nameIsEmpty()
+        }else if address.isEmpty {
+            delegate?.addressIsEmpty()
+        }else if id.isEmpty{
+            delegate?.idIsEmpty()
         }else{
             createUser(email, password)
         }
@@ -56,6 +73,18 @@ final class SignUpController {
     
     func setReenteredPassword(_ reenteredPassword : String){
         self.reenteredPassword = reenteredPassword
+    }
+    
+    func setName(_ name : String){
+        self.name = name
+    }
+    
+    func setAddress(_ address : String){
+        self.address = address
+    }
+    
+    func setProfileImage(_ image : UIImage?){
+        self.profileImage = image
     }
     
     private func createUser(_ email : String, _ password : String){

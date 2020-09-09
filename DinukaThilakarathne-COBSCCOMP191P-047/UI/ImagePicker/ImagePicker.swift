@@ -8,27 +8,27 @@
 
 import UIKit
 
-//adding protocol to pass data
 public protocol ImagePickerDelegate: class {
     func didSelect(image: UIImage?)
 }
 
-class ImagePicker: NSObject {
+open class ImagePicker: NSObject {
 
-    private let imagePickerController: UIImagePickerController
-    private weak var presentationViewController: UIViewController?
+    private let pickerController: UIImagePickerController
+    private weak var presentationController: UIViewController?
     private weak var delegate: ImagePickerDelegate?
 
-    //constructor to initialize
     public init(presentationController: UIViewController, delegate: ImagePickerDelegate) {
-        imagePickerController = UIImagePickerController()
+        self.pickerController = UIImagePickerController()
 
         super.init()
 
-        presentationViewController = presentationController
-        delegate = delegate
-        imagePickerController.delegate = self
-        imagePickerController.mediaTypes = ["public.image"]
+        self.presentationController = presentationController
+        self.delegate = delegate
+
+        self.pickerController.delegate = self
+        self.pickerController.allowsEditing = true
+        self.pickerController.mediaTypes = ["public.image"]
     }
 
     private func action(for type: UIImagePickerController.SourceType, title: String) -> UIAlertAction? {
@@ -37,8 +37,8 @@ class ImagePicker: NSObject {
         }
 
         return UIAlertAction(title: title, style: .default) { [unowned self] _ in
-            self.imagePickerController.sourceType = type
-            self.presentationViewController?.present(self.imagePickerController, animated: true)
+            self.pickerController.sourceType = type
+            self.presentationController?.present(self.pickerController, animated: true)
         }
     }
 
@@ -64,7 +64,7 @@ class ImagePicker: NSObject {
             alertController.popoverPresentationController?.permittedArrowDirections = [.down, .up]
         }
 
-        self.presentationViewController?.present(alertController, animated: true)
+        self.presentationController?.present(alertController, animated: true)
     }
 
     private func pickerController(_ controller: UIImagePickerController, didSelect image: UIImage?) {
@@ -90,7 +90,6 @@ extension ImagePicker: UIImagePickerControllerDelegate {
 }
 
 extension ImagePicker: UINavigationControllerDelegate {
+
 }
-
-
 //https://theswiftdev.com/picking-images-with-uiimagepickercontroller-in-swift-5/
