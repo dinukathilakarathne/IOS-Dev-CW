@@ -8,6 +8,8 @@
 
 import UIKit
 
+//MARK:- End of this article.
+
 class SignUpViewController: UIViewController {
     
     let controller = SignUpController()
@@ -45,15 +47,37 @@ class SignUpViewController: UIViewController {
             passwordTextField.roundedTextField.attributedPlaceholder = NSAttributedString(string: L10n.enterPasswordPlaceholder, attributes: [NSAttributedString.Key.foregroundColor : Asset.lightPlaceholderColor.color])
         }
     }
+    
     @IBOutlet weak var reenterPasswordField: RoundedTextField!{
         didSet{
             reenterPasswordField.roundedTextField.delegate = self
             reenterPasswordField.roundedTextField.returnKeyType = .done
             reenterPasswordField.roundedTextField.isSecureTextEntry = true
             reenterPasswordField.roundedTextField.attributedPlaceholder = NSAttributedString(string: L10n.reenterPasswordPlaceholder, attributes: [NSAttributedString.Key.foregroundColor : Asset.lightPlaceholderColor.color])
-            
         }
     }
+    
+    @IBOutlet weak var nameField: RoundedTextField!{
+        didSet{
+            nameField.roundedTextField.delegate = self
+            nameField.roundedTextField.returnKeyType = .done
+            nameField.roundedTextField.isSecureTextEntry = true
+            nameField.roundedTextField.attributedPlaceholder = NSAttributedString(string: L10n.reenterPasswordPlaceholder, attributes: [NSAttributedString.Key.foregroundColor : Asset.lightPlaceholderColor.color])
+        }
+    }
+    
+    @IBOutlet weak var addressField: RoundedTextField!{
+        didSet{
+            addressField.roundedTextField.delegate = self
+            addressField.roundedTextField.returnKeyType = .done
+            addressField.roundedTextField.isSecureTextEntry = true
+            addressField.roundedTextField.attributedPlaceholder = NSAttributedString(string: L10n.reenterPasswordPlaceholder, attributes: [NSAttributedString.Key.foregroundColor : Asset.lightPlaceholderColor.color])
+        }
+    }
+    
+    
+    
+    
     @IBOutlet weak var signUpButton: RoundedButton!{
         didSet{
             signUpButton.roundButton.addTarget(self, action: #selector(signUpPressed), for: .touchUpInside)
