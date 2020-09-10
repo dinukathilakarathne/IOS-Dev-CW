@@ -8,16 +8,29 @@
 
 import UIKit
 import SwiftDefaults
+import Firebase
 
 class AppConstants {
     static let viewCornerRadius : CGFloat  = 5
 }
 
 class UserDefaults : SwiftDefaults{
-    dynamic var isLoggedIn : Bool = false
-    dynamic var nameOfUser : String = ""
-    dynamic var userAddress : String = ""
-    dynamic var userIndex : String = ""
-    dynamic var userImage : String = ""
+    @objc dynamic var isLoggedIn : Bool = false
+    @objc dynamic var nameOfUser : String = ""
+    @objc dynamic var userAddress : String = ""
+    @objc dynamic var userIndex : String = ""
+    @objc dynamic var userImage : String = ""
+    @objc dynamic var userID : String = ""
+    @objc dynamic var isAdmin : Bool = false
+    
+    func setDefaults(){
+        let db = DatabaseController()
+        let user = Auth.auth().currentUser
+        UserDefaults().isLoggedIn = true
+        UserDefaults().nameOfUser = user?.displayName ?? ""
+        UserDefaults().userImage = user?.photoURL?.absoluteString ?? ""
+        
+        db.getCurrentProfileDetails()
+    }
 }
 

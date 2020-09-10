@@ -11,7 +11,7 @@ import Firebase
 
 class LandingViewController: UIViewController {
     
-    //instantiating controller
+    //instantiating controllers
     let controller = LandingController()
     
     //linking and setting UI components

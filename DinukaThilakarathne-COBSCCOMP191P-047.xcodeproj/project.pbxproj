@@ -36,6 +36,9 @@
 		007FA93224FFAFF50081DF69 /* NavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 007FA93124FFAFF50081DF69 /* NavigationBar.xib */; };
 		007FA93424FFB0050081DF69 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007FA93324FFB0050081DF69 /* NavigationBar.swift */; };
 		008241E02509F8D2005062C0 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008241DF2509F8D2005062C0 /* DatabaseController.swift */; };
+		008241E3250A3FD5005062C0 /* ProfileDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008241E2250A3FD5005062C0 /* ProfileDetails.swift */; };
+		008241E5250A3FE1005062C0 /* ProfileDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 008241E4250A3FE1005062C0 /* ProfileDetails.xib */; };
+		008241E8250A442C005062C0 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008241E7250A442C005062C0 /* UIImageView+Extension.swift */; };
 		0093230524FBBE17007427E6 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093230424FBBE17007427E6 /* RoundedTextField.swift */; };
 		0093230724FBBE22007427E6 /* RoundedTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0093230624FBBE22007427E6 /* RoundedTextField.xib */; };
 		0093230A24FBCC93007427E6 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093230924FBCC93007427E6 /* UILabel+Extension.swift */; };
@@ -111,6 +114,9 @@
 		007FA93124FFAFF50081DF69 /* NavigationBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationBar.xib; sourceTree = "<group>"; };
 		007FA93324FFB0050081DF69 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		008241DF2509F8D2005062C0 /* DatabaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
+		008241E2250A3FD5005062C0 /* ProfileDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetails.swift; sourceTree = "<group>"; };
+		008241E4250A3FE1005062C0 /* ProfileDetails.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileDetails.xib; sourceTree = "<group>"; };
+		008241E7250A442C005062C0 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		0093230424FBBE17007427E6 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		0093230624FBBE22007427E6 /* RoundedTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundedTextField.xib; sourceTree = "<group>"; };
 		0093230924FBCC93007427E6 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
@@ -393,6 +399,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		008241E6250A3FF4005062C0 /* ProfileDetails */ = {
+			isa = PBXGroup;
+			children = (
+				008241E2250A3FD5005062C0 /* ProfileDetails.swift */,
+				008241E4250A3FE1005062C0 /* ProfileDetails.xib */,
+			);
+			path = ProfileDetails;
+			sourceTree = "<group>";
+		};
 		0093230324FBBD75007427E6 /* TextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -406,6 +421,7 @@
 			isa = PBXGroup;
 			children = (
 				0093230924FBCC93007427E6 /* UILabel+Extension.swift */,
+				008241E7250A442C005062C0 /* UIImageView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -474,6 +490,7 @@
 				007FA93524FFB0080081DF69 /* NavigationBar */,
 				00F945B3250151D700E372EA /* HomeWidgets */,
 				0064D9BE250975F300485F2F /* ImagePicker */,
+				008241E6250A3FF4005062C0 /* ProfileDetails */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -619,6 +636,7 @@
 			files = (
 				0003E60024FB6AC600661089 /* Localizable.strings in Resources */,
 				007FA92224FCD4100081DF69 /* Settings.storyboard in Resources */,
+				008241E5250A3FE1005062C0 /* ProfileDetails.xib in Resources */,
 				00B7EAF824FC0D96009E9DF1 /* Dashboard.storyboard in Resources */,
 				0003E5FE24FB6AB200661089 /* Assets.xcassets in Resources */,
 				00B7EAF324FBF958009E9DF1 /* GoogleService-Info.plist in Resources */,
@@ -688,8 +706,10 @@
 			files = (
 				007FA93424FFB0050081DF69 /* NavigationBar.swift in Sources */,
 				0003E60424FB72B700661089 /* Fonts.swift in Sources */,
+				008241E8250A442C005062C0 /* UIImageView+Extension.swift in Sources */,
 				0064D9BD2509740E00485F2F /* ImagePicker.swift in Sources */,
 				0093230A24FBCC93007427E6 /* UILabel+Extension.swift in Sources */,
+				008241E3250A3FD5005062C0 /* ProfileDetails.swift in Sources */,
 				0003E5AE24FB686400661089 /* LandingViewController.swift in Sources */,
 				00F945B92503DD6300E372EA /* AppConstants.swift in Sources */,
 				00B7EAF124FBE4BC009E9DF1 /* AlertDialog.swift in Sources */,
