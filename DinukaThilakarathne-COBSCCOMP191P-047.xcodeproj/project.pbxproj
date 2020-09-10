@@ -39,6 +39,8 @@
 		008241E3250A3FD5005062C0 /* ProfileDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008241E2250A3FD5005062C0 /* ProfileDetails.swift */; };
 		008241E5250A3FE1005062C0 /* ProfileDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 008241E4250A3FE1005062C0 /* ProfileDetails.xib */; };
 		008241E8250A442C005062C0 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008241E7250A442C005062C0 /* UIImageView+Extension.swift */; };
+		008241EA250A62F2005062C0 /* RightIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008241E9250A62F2005062C0 /* RightIconButton.swift */; };
+		008241EC250A6301005062C0 /* RightIconButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 008241EB250A6301005062C0 /* RightIconButton.xib */; };
 		0093230524FBBE17007427E6 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093230424FBBE17007427E6 /* RoundedTextField.swift */; };
 		0093230724FBBE22007427E6 /* RoundedTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0093230624FBBE22007427E6 /* RoundedTextField.xib */; };
 		0093230A24FBCC93007427E6 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093230924FBCC93007427E6 /* UILabel+Extension.swift */; };
@@ -117,6 +119,8 @@
 		008241E2250A3FD5005062C0 /* ProfileDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetails.swift; sourceTree = "<group>"; };
 		008241E4250A3FE1005062C0 /* ProfileDetails.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileDetails.xib; sourceTree = "<group>"; };
 		008241E7250A442C005062C0 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		008241E9250A62F2005062C0 /* RightIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightIconButton.swift; sourceTree = "<group>"; };
+		008241EB250A6301005062C0 /* RightIconButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RightIconButton.xib; sourceTree = "<group>"; };
 		0093230424FBBE17007427E6 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		0093230624FBBE22007427E6 /* RoundedTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundedTextField.xib; sourceTree = "<group>"; };
 		0093230924FBCC93007427E6 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
@@ -408,6 +412,15 @@
 			path = ProfileDetails;
 			sourceTree = "<group>";
 		};
+		008241ED250A6307005062C0 /* RightIconButton */ = {
+			isa = PBXGroup;
+			children = (
+				008241E9250A62F2005062C0 /* RightIconButton.swift */,
+				008241EB250A6301005062C0 /* RightIconButton.xib */,
+			);
+			path = RightIconButton;
+			sourceTree = "<group>";
+		};
 		0093230324FBBD75007427E6 /* TextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -498,6 +511,7 @@
 		00FE606824FB76AF00D93505 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				008241ED250A6307005062C0 /* RightIconButton */,
 				00FE606924FB76B700D93505 /* RoundedButton */,
 			);
 			path = Buttons;
@@ -643,6 +657,7 @@
 				006329DA24FBB2E500B418F2 /* BebasNeue-Regular.ttf in Resources */,
 				007FA92524FCDCAD0081DF69 /* PresentStats.storyboard in Resources */,
 				000A144E2504D5E1003C50D4 /* Map.storyboard in Resources */,
+				008241EC250A6301005062C0 /* RightIconButton.xib in Resources */,
 				007FA91E24FCD2A40081DF69 /* Home.storyboard in Resources */,
 				00FE606224FB75F000D93505 /* LaunchScreen.storyboard in Resources */,
 				007FA93224FFAFF50081DF69 /* NavigationBar.xib in Resources */,
@@ -732,6 +747,7 @@
 				0003E5AC24FB686400661089 /* SceneDelegate.swift in Sources */,
 				004BB1412503E77800603EE2 /* NewsButton.swift in Sources */,
 				00B7EAF624FC0D88009E9DF1 /* DashboardTabController.swift in Sources */,
+				008241EA250A62F2005062C0 /* RightIconButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

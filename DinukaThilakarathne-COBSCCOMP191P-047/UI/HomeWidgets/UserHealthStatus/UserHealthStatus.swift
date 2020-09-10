@@ -43,7 +43,6 @@ class UserHealthStatus: UIView {
     }
     
     func configure() {
-        print("health status init")
         Bundle.main.loadNibNamed("UserHealthStatus", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds

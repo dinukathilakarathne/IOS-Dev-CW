@@ -32,5 +32,15 @@ class UserDefaults : SwiftDefaults{
         
         db.getCurrentProfileDetails()
     }
+    
+    func clearDefaults(){
+        UserDefaults().isLoggedIn = false
+        UserDefaults().nameOfUser = ""
+        UserDefaults().userAddress = ""
+        UserDefaults().userIndex = ""
+        UserDefaults().userImage = ""
+        UserDefaults().userID = ""
+        UserDefaults().isAdmin = false
+    }
 }
 

@@ -102,8 +102,30 @@ final class SignUpController {
                 self.delegate?.isAuthenticating(false)
                 return
             }
-            self.saveProfileData()
-//            self.delegate?.showHomeScreen()
+            self.logUser(email, password)
+        }
+    }
+    
+    //method used for user authentication
+    func logUser(_ email : String, _ password : String){
+        
+        isAuthenticating = true
+        delegate?.isAuthenticating(true)
+        let email = self.email ?? ""
+        //logging in user with email and password
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+            self?.isAuthenticating = false
+            self?.delegate?.isAuthenticating(false)
+          guard let _ = self else {
+            return
+            }
+            if let e = error {
+                self?.delegate?.authError(e)
+                return
+            }
+            self?.saveProfileData()
+            UserDefaults().setDefaults()
+            self?.delegate?.showHomeScreen()
         }
     }
     
@@ -115,9 +137,13 @@ final class SignUpController {
         let changeProfileRequest = user?.createProfileChangeRequest()
         changeProfileRequest?.displayName = self.name ?? ""
         changeProfileRequest?.photoURL = URL(string: "https://vignette.wikia.nocookie.net/meme/images/d/d5/Wikia-Visualization-Main%2Cmeme.png/revision/latest/window-crop/width/500/x-offset/81/y-offset/0/window-width/321/window-height/320?cb=20161102143849")
+        changeProfileRequest?.commitChanges(completion: { (error) in
+            print("error\(String(describing: error?.localizedDescription))")
+        })
         dbController.setProfileDetails(address, index)
     }
     
+    //saving profile image to firebase storage
     func saveProfileImage(){
         guard let imageData = profileImage?.jpegData(compressionQuality: 0.5) else {
             print("image null")

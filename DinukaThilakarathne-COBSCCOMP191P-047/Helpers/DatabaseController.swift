@@ -41,11 +41,11 @@ class DatabaseController {
                 UserDefaults().userID = snapshot.value as! String
         })
         
-        self.ref.child("users").child(uuid).child("address").observeSingleEvent(of: .value , with: { (snapshot) in
-            if snapshot.value as! String == "1" {
-                UserDefaults().isAdmin = true
-            }
-        })
+//        self.ref.child("users").child(uuid).child("address").observeSingleEvent(of: .value , with: { (snapshot) in
+//            if snapshot.value as! String == "1" {
+//                UserDefaults().isAdmin = true
+//            }
+//        })
     }
 }
 

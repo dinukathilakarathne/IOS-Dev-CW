@@ -14,6 +14,10 @@ internal enum L10n {
   internal static let appName = L10n.tr("Localizable", "app_name")
   /// Can attend college
   internal static let canAttendCollege = L10n.tr("Localizable", "can_attend_college")
+  /// CONTACT US
+  internal static let contactUs = L10n.tr("Localizable", "contact_us")
+  /// C R E A T E  A C C O U N T
+  internal static let createAccount = L10n.tr("Localizable", "create_account")
   /// Current stats
   internal static let currentStatsHeading = L10n.tr("Localizable", "current_stats_heading")
   /// DEATHS
@@ -34,6 +38,8 @@ internal enum L10n {
   internal static let infected = L10n.tr("Localizable", "infected")
   /// L O G I N
   internal static let login = L10n.tr("Localizable", "login")
+  /// L O G  O U T
+  internal static let logout = L10n.tr("Localizable", "logout")
   /// More
   internal static let moreFeaturesHeading = L10n.tr("Localizable", "more_features_heading")
   /// News
@@ -42,6 +48,10 @@ internal enum L10n {
   internal static let ok = L10n.tr("Localizable", "ok")
   /// Re-enter password
   internal static let reenterPasswordPlaceholder = L10n.tr("Localizable", "reenter_password_placeholder")
+  /// SHARE
+  internal static let share = L10n.tr("Localizable", "share")
+  /// S H O W  R E S U L T S
+  internal static let showResults = L10n.tr("Localizable", "show_results")
   /// S I G N  U P
   internal static let signUp = L10n.tr("Localizable", "sign_up")
   /// Sign Up

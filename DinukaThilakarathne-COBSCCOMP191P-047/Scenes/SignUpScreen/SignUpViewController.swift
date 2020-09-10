@@ -77,7 +77,6 @@ class SignUpViewController: UIViewController {
         didSet{
             nameField.roundedTextField.delegate = self
             nameField.roundedTextField.returnKeyType = .done
-            nameField.roundedTextField.isSecureTextEntry = true
             nameField.roundedTextField.attributedPlaceholder = NSAttributedString(string: L10n.enterNamePlaceholder, attributes: [NSAttributedString.Key.foregroundColor : Asset.lightPlaceholderColor.color])
         }
     }
@@ -86,7 +85,6 @@ class SignUpViewController: UIViewController {
         didSet{
             addressField.roundedTextField.delegate = self
             addressField.roundedTextField.returnKeyType = .done
-            addressField.roundedTextField.isSecureTextEntry = true
             addressField.roundedTextField.attributedPlaceholder = NSAttributedString(string: L10n.enterAddressPlaceholder, attributes: [NSAttributedString.Key.foregroundColor : Asset.lightPlaceholderColor.color])
         }
     }
@@ -95,7 +93,6 @@ class SignUpViewController: UIViewController {
         didSet{
             idField.roundedTextField.delegate = self
             idField.roundedTextField.returnKeyType = .done
-            idField.roundedTextField.isSecureTextEntry = true
             idField.roundedTextField.attributedPlaceholder = NSAttributedString(string: L10n.enterIdPlaceholder, attributes: [NSAttributedString.Key.foregroundColor : Asset.lightPlaceholderColor.color])
         }
     }

@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //setting tabbar appearance
         UITabBar.appearance().barTintColor = Asset.tabBarColor.color
         UITabBar.appearance().tintColor = Asset.accentColor.color
-        
         return true
     }
 

@@ -12,6 +12,11 @@ login = "L O G I N";
 sign_up = "S I G N  U P";
 ok = "OK";
 news = "News";
+share = "SHARE";
+contact_us = "CONTACT US";
+logout = "L O G  O U T";
+create_account = "C R E A T E  A C C O U N T";
+show_results = "S H O W  R E S U L T S";
 
 //Placeholders
 enter_email_placeholder = "Email";
@@ -19,7 +24,7 @@ enter_password_placeholder = "Password";
 reenter_password_placeholder = "Re-enter password";
 enter_name_placeholder = "Name";
 enter_address_placeholder = "Address";
-enter_id_placeholder = "ID"; 
+enter_id_placeholder = "ID";
 
 
 //Home page
