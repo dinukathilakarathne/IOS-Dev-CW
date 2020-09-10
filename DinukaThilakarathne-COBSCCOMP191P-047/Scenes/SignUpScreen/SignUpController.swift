@@ -22,7 +22,7 @@ protocol SignUpControllerDelegate {
     func unidenticalPassword()
 }
 
-final class SignUpController {
+class SignUpController {
     
     private var email : String? = nil
     private var password : String? = nil

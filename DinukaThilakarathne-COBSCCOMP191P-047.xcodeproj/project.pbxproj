@@ -41,6 +41,7 @@
 		008241E8250A442C005062C0 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008241E7250A442C005062C0 /* UIImageView+Extension.swift */; };
 		008241EA250A62F2005062C0 /* RightIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008241E9250A62F2005062C0 /* RightIconButton.swift */; };
 		008241EC250A6301005062C0 /* RightIconButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 008241EB250A6301005062C0 /* RightIconButton.xib */; };
+		008241EF250A71E2005062C0 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008241EE250A71E2005062C0 /* SettingsController.swift */; };
 		0093230524FBBE17007427E6 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093230424FBBE17007427E6 /* RoundedTextField.swift */; };
 		0093230724FBBE22007427E6 /* RoundedTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0093230624FBBE22007427E6 /* RoundedTextField.xib */; };
 		0093230A24FBCC93007427E6 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093230924FBCC93007427E6 /* UILabel+Extension.swift */; };
@@ -121,6 +122,7 @@
 		008241E7250A442C005062C0 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		008241E9250A62F2005062C0 /* RightIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightIconButton.swift; sourceTree = "<group>"; };
 		008241EB250A6301005062C0 /* RightIconButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RightIconButton.xib; sourceTree = "<group>"; };
+		008241EE250A71E2005062C0 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		0093230424FBBE17007427E6 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		0093230624FBBE22007427E6 /* RoundedTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundedTextField.xib; sourceTree = "<group>"; };
 		0093230924FBCC93007427E6 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 			children = (
 				007FA92124FCD4100081DF69 /* Settings.storyboard */,
 				007FA92A24FCDD500081DF69 /* SettingsViewController.swift */,
+				008241EE250A71E2005062C0 /* SettingsController.swift */,
 			);
 			path = SettingsScreen;
 			sourceTree = "<group>";
@@ -725,6 +728,7 @@
 				0064D9BD2509740E00485F2F /* ImagePicker.swift in Sources */,
 				0093230A24FBCC93007427E6 /* UILabel+Extension.swift in Sources */,
 				008241E3250A3FD5005062C0 /* ProfileDetails.swift in Sources */,
+				008241EF250A71E2005062C0 /* SettingsController.swift in Sources */,
 				0003E5AE24FB686400661089 /* LandingViewController.swift in Sources */,
 				00F945B92503DD6300E372EA /* AppConstants.swift in Sources */,
 				00B7EAF124FBE4BC009E9DF1 /* AlertDialog.swift in Sources */,
