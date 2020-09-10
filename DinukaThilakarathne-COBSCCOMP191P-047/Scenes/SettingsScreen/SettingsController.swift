@@ -9,12 +9,11 @@
 import Foundation
 
 protocol SettingsDelegate {
-    func primaryButtonPressed()
     func contactUsPressed()
     func sharePressed()
     func showResultsPage()
     func showSignUpPage()
-    func showLandingPage()
+    func loggedOut()
 }
 
 class SettingsController{
@@ -33,14 +32,14 @@ class SettingsController{
         delegate?.showResultsPage()
     }
     
-    //method for login/create account
-    func primaryButtonPressed(){
-        if UserDefaults().isLoggedIn{
-            UserDefaults().clearDefaults()
-            delegate?.showLandingPage()
-            return
-        }
+    //methods for login/create account
+    func createAccountButtonPressed(){
         delegate?.showSignUpPage()
+    }
+    
+    func logoutButtonPressed(){
+        UserDefaults().clearDefaults()
+        delegate?.loggedOut()
     }
     
     

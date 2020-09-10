@@ -9,6 +9,8 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    
+    let controller = SettingsController()
 
     @IBOutlet weak var profileDetailsView: profileDetails!
     
@@ -58,24 +60,68 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Settings"
+        controller.delegate = self
+        setUI()
 
-//        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     @objc func createAccountPressed(){
-        
+        controller.createAccountButtonPressed()
     }
     
     @objc func logoutPressed(){
-        
+        controller.logoutButtonPressed()
     }
     
     @objc func shareAppPressed(){
-        
+        controller.shareButtonPressed()
     }
     
     @objc func ContactUsPressed(){
-        
+        controller.contactUsButtonPressed()
     }
+    
+    func setUI(){
+        if !UserDefaults().isLoggedIn{
+            self.profileDetailsView.isHidden = true
+            self.profileDetailsView.heightAnchor.constraint(equalToConstant: 0).isActive = true
+            self.settingsPrimaryButton.roundButton.setTitle(L10n.createAccount, for: .normal)
+        }else{
+            self.profileDetailsView.isHidden = false
+            self.profileDetailsView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+            self.settingsPrimaryButton.roundButton.setTitle(L10n.logout, for: .normal)
+        }
+    }
+    
+}
+
+extension SettingsViewController : SettingsDelegate{
+    
+    func contactUsPressed() {
+        //unused
+    }
+    
+    func sharePressed() {
+        //unused
+    }
+    
+    func showResultsPage() {
+        //unused
+    }
+    
+    func showSignUpPage() {
+        let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SignUpViewController")
+        vc.modalPresentationStyle = .formSheet
+        self.present(vc, animated: true)
+    }
+    
+    func loggedOut() {
+        DispatchQueue.main.async {
+            self.setUI()
+            self.settingsPrimaryButton.roundButton.addTarget(self, action: #selector(self.createAccountPressed), for: .touchUpInside)
+        }
+    }
+    
     
 }
