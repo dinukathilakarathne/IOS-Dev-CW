@@ -19,6 +19,7 @@ enter_password_placeholder = "Password";
 reenter_password_placeholder = "Re-enter password";
 enter_name_placeholder = "Name";
 enter_address_placeholder = "Address";
+enter_id_placeholder = "ID"; 
 
 
 //Home page

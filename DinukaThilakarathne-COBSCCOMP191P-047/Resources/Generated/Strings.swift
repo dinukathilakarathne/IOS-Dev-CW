@@ -22,6 +22,8 @@ internal enum L10n {
   internal static let enterAddressPlaceholder = L10n.tr("Localizable", "enter_address_placeholder")
   /// Email
   internal static let enterEmailPlaceholder = L10n.tr("Localizable", "enter_email_placeholder")
+  /// ID
+  internal static let enterIdPlaceholder = L10n.tr("Localizable", "enter_id_placeholder")
   /// Name
   internal static let enterNamePlaceholder = L10n.tr("Localizable", "enter_name_placeholder")
   /// Password

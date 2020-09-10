@@ -6,6 +6,7 @@ pod 'Firebase/Auth'
 pod 'Firebase/Analytics'
 pod 'Firebase/Database'
 pod "SwiftDefaults"
+pod 'Firebase/Storage'
 
 
 end

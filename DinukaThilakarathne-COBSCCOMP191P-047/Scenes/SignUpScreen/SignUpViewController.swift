@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 
 class SignUpViewController: UIViewController {
@@ -90,9 +91,16 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var idField: RoundedTextField!{
+        didSet{
+            idField.roundedTextField.delegate = self
+            idField.roundedTextField.returnKeyType = .done
+            idField.roundedTextField.isSecureTextEntry = true
+            idField.roundedTextField.attributedPlaceholder = NSAttributedString(string: L10n.enterIdPlaceholder, attributes: [NSAttributedString.Key.foregroundColor : Asset.lightPlaceholderColor.color])
+        }
+    }
     
-    
-    
+
     @IBOutlet weak var signUpButton: RoundedButton!{
         didSet{
             signUpButton.roundButton.addTarget(self, action: #selector(signUpPressed), for: .touchUpInside)
@@ -100,6 +108,9 @@ class SignUpViewController: UIViewController {
             signUpButton.roundButton.setTitle(L10n.signUp, for: .normal)
         }
     }
+    
+    
+    
     @IBOutlet weak var loginButton: UIButton!{
         didSet{
             loginButton.setTitle("If you have an account. Login", for: .normal)
@@ -125,14 +136,15 @@ class SignUpViewController: UIViewController {
         let password = passwordTextField.roundedTextField.text ?? ""
         let reenteredPassword = reenterPasswordField.roundedTextField.text ?? ""
         let name = nameField.roundedTextField.text ?? ""
-        
         let address = addressField.roundedTextField.text ?? ""
+        let id = idField.roundedTextField.text ?? ""
         
         controller.setEmail(email)
         controller.setPassword(password)
         controller.setReenteredPassword(reenteredPassword)
         controller.setAddress(address)
         controller.setName(name)
+        controller.setID(id)
         controller.setProfileImage(profileImage.image)
         controller.signUpButtonPressed()
     }
@@ -247,6 +259,8 @@ extension SignUpViewController : ImagePickerDelegate {
         guard let profileImage = image else {
             return
         }
+        
+        
         self.profileImage.image = profileImage
     }
 }

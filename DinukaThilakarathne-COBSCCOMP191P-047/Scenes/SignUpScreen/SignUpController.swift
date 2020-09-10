@@ -34,6 +34,7 @@ final class SignUpController {
     private var profileImage : UIImage?
     
     var delegate : SignUpControllerDelegate?
+    let dbController = DatabaseController()
     
     func signUpButtonPressed(){
         let email = self.email ?? ""
@@ -83,6 +84,10 @@ final class SignUpController {
         self.address = address
     }
     
+    func setID(_ id : String){
+        self.id = id
+    }
+    
     func setProfileImage(_ image : UIImage?){
         self.profileImage = image
     }
@@ -97,8 +102,42 @@ final class SignUpController {
                 self.delegate?.isAuthenticating(false)
                 return
             }
-            self.delegate?.showHomeScreen()
+            self.saveProfileData()
+//            self.delegate?.showHomeScreen()
         }
     }
     
+    func saveProfileData(){
+        let address = self.address ?? ""
+        let index = self.id ?? ""
+        
+        let user = Auth.auth().currentUser
+        let changeProfileRequest = user?.createProfileChangeRequest()
+        changeProfileRequest?.displayName = self.name ?? ""
+        changeProfileRequest?.photoURL = URL(string: "https://vignette.wikia.nocookie.net/meme/images/d/d5/Wikia-Visualization-Main%2Cmeme.png/revision/latest/window-crop/width/500/x-offset/81/y-offset/0/window-width/321/window-height/320?cb=20161102143849")
+        dbController.setProfileDetails(address, index)
+    }
+    
+    func saveProfileImage(){
+        guard let imageData = profileImage?.jpegData(compressionQuality: 0.5) else {
+            print("image null")
+            return
+        }
+        
+        let metadata = StorageMetadata()
+        metadata.contentType = "image/png"
+        let storageLoc = "NIBMCovid19User" + "/" + UUID().uuidString + ".jpg"
+        
+        print("storage loc - \(storageLoc)")
+        let ref =  Storage.storage().reference().child(storageLoc)
+        ref.putData(imageData, metadata: metadata) { (metadata, error) in
+            if error == nil {
+                ref.downloadURL(completion: { (url, error) in
+                    print("Done, url is \(String(describing: url))")
+                })
+            }else{
+                print("error \(String(describing: error))")
+            }
+        }
+    }
 }

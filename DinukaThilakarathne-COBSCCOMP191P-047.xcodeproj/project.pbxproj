@@ -35,6 +35,7 @@
 		007FA93024FFABED0081DF69 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007FA92F24FFABED0081DF69 /* SignUpViewController.swift */; };
 		007FA93224FFAFF50081DF69 /* NavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 007FA93124FFAFF50081DF69 /* NavigationBar.xib */; };
 		007FA93424FFB0050081DF69 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007FA93324FFB0050081DF69 /* NavigationBar.swift */; };
+		008241E02509F8D2005062C0 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008241DF2509F8D2005062C0 /* DatabaseController.swift */; };
 		0093230524FBBE17007427E6 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093230424FBBE17007427E6 /* RoundedTextField.swift */; };
 		0093230724FBBE22007427E6 /* RoundedTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0093230624FBBE22007427E6 /* RoundedTextField.xib */; };
 		0093230A24FBCC93007427E6 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093230924FBCC93007427E6 /* UILabel+Extension.swift */; };
@@ -109,6 +110,7 @@
 		007FA92F24FFABED0081DF69 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		007FA93124FFAFF50081DF69 /* NavigationBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationBar.xib; sourceTree = "<group>"; };
 		007FA93324FFB0050081DF69 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		008241DF2509F8D2005062C0 /* DatabaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
 		0093230424FBBE17007427E6 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		0093230624FBBE22007427E6 /* RoundedTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundedTextField.xib; sourceTree = "<group>"; };
 		0093230924FBCC93007427E6 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 		0003E5A824FB686400661089 /* DinukaThilakarathne-COBSCCOMP191P-047 */ = {
 			isa = PBXGroup;
 			children = (
+				008241DE2509F8B6005062C0 /* Helpers */,
 				0093230824FBCC4C007427E6 /* Extensions */,
 				0003E5D924FB695F00661089 /* App */,
 				0003E5DA24FB696700661089 /* Scenes */,
@@ -380,6 +383,14 @@
 				007FA93324FFB0050081DF69 /* NavigationBar.swift */,
 			);
 			path = NavigationBar;
+			sourceTree = "<group>";
+		};
+		008241DE2509F8B6005062C0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				008241DF2509F8D2005062C0 /* DatabaseController.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		0093230324FBBD75007427E6 /* TextField */ = {
@@ -687,6 +698,7 @@
 				007FA92924FCDD290081DF69 /* HomeViewController.swift in Sources */,
 				0093230524FBBE17007427E6 /* RoundedTextField.swift in Sources */,
 				007FA92724FCDD170081DF69 /* PresentStatsViewController.swift in Sources */,
+				008241E02509F8D2005062C0 /* DatabaseController.swift in Sources */,
 				007FA92B24FCDD500081DF69 /* SettingsViewController.swift in Sources */,
 				0003E60524FB72B700661089 /* Strings.swift in Sources */,
 				00F945AD24FFD8C000E372EA /* SignUpController.swift in Sources */,
