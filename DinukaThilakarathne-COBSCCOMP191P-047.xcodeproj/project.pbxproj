@@ -42,6 +42,8 @@
 		008241EA250A62F2005062C0 /* RightIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008241E9250A62F2005062C0 /* RightIconButton.swift */; };
 		008241EC250A6301005062C0 /* RightIconButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 008241EB250A6301005062C0 /* RightIconButton.xib */; };
 		008241EF250A71E2005062C0 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008241EE250A71E2005062C0 /* SettingsController.swift */; };
+		008241F1250B26A0005062C0 /* PresentStatsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008241F0250B26A0005062C0 /* PresentStatsController.swift */; };
+		008241F3250B55F6005062C0 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008241F2250B55F5005062C0 /* Survey.swift */; };
 		0093230524FBBE17007427E6 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093230424FBBE17007427E6 /* RoundedTextField.swift */; };
 		0093230724FBBE22007427E6 /* RoundedTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0093230624FBBE22007427E6 /* RoundedTextField.xib */; };
 		0093230A24FBCC93007427E6 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093230924FBCC93007427E6 /* UILabel+Extension.swift */; };
@@ -123,6 +125,8 @@
 		008241E9250A62F2005062C0 /* RightIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightIconButton.swift; sourceTree = "<group>"; };
 		008241EB250A6301005062C0 /* RightIconButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RightIconButton.xib; sourceTree = "<group>"; };
 		008241EE250A71E2005062C0 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		008241F0250B26A0005062C0 /* PresentStatsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentStatsController.swift; sourceTree = "<group>"; };
+		008241F2250B55F5005062C0 /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		0093230424FBBE17007427E6 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		0093230624FBBE22007427E6 /* RoundedTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundedTextField.xib; sourceTree = "<group>"; };
 		0093230924FBCC93007427E6 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
@@ -198,6 +202,7 @@
 		0003E5A824FB686400661089 /* DinukaThilakarathne-COBSCCOMP191P-047 */ = {
 			isa = PBXGroup;
 			children = (
+				008241F4250B5815005062C0 /* Model */,
 				008241DE2509F8B6005062C0 /* Helpers */,
 				0093230824FBCC4C007427E6 /* Extensions */,
 				0003E5D924FB695F00661089 /* App */,
@@ -375,6 +380,7 @@
 			children = (
 				007FA92424FCDCAD0081DF69 /* PresentStats.storyboard */,
 				007FA92624FCDD170081DF69 /* PresentStatsViewController.swift */,
+				008241F0250B26A0005062C0 /* PresentStatsController.swift */,
 			);
 			path = PresentStatsScreen;
 			sourceTree = "<group>";
@@ -422,6 +428,14 @@
 				008241EB250A6301005062C0 /* RightIconButton.xib */,
 			);
 			path = RightIconButton;
+			sourceTree = "<group>";
+		};
+		008241F4250B5815005062C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				008241F2250B55F5005062C0 /* Survey.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		0093230324FBBD75007427E6 /* TextField */ = {
@@ -743,7 +757,9 @@
 				00F945AD24FFD8C000E372EA /* SignUpController.swift in Sources */,
 				007FA93024FFABED0081DF69 /* SignUpViewController.swift in Sources */,
 				000A14492503FF8A003C50D4 /* MoreFeatureCollectionViewCell.swift in Sources */,
+				008241F3250B55F6005062C0 /* Survey.swift in Sources */,
 				00F945BD2503E47900E372EA /* LocalStat.swift in Sources */,
+				008241F1250B26A0005062C0 /* PresentStatsController.swift in Sources */,
 				00B7EAEE24FBD44A009E9DF1 /* LandingController.swift in Sources */,
 				00FE606524FB769500D93505 /* RoundedButton.swift in Sources */,
 				0003E5AA24FB686400661089 /* AppDelegate.swift in Sources */,

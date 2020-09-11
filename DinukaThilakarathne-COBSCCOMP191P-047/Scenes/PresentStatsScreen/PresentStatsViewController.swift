@@ -9,22 +9,59 @@
 import UIKit
 
 class PresentStatsViewController: UIViewController {
+    
+    let db = DatabaseController()
+    var temperature : Float = 0
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var temperatureLabel: UILabel!{
+        didSet{
+            temperatureLabel.font = FontFamily.BebasNeue.regular.font(size: 60)
+            temperatureLabel.textColor = Asset.defautTextColor.color
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBOutlet weak var temperatureView: UIView!
+    @IBOutlet weak var updateTempButton: RoundedButton!{
+        didSet{
+            updateTempButton.contentView.backgroundColor = Asset.primaryColor.color
+            updateTempButton.roundButton.tintColor = Asset.white.color
+            updateTempButton.roundButton.setTitle(L10n.submit, for: .normal)
+            updateTempButton.roundButton.addTarget(self, action: #selector(updateTemperaturePressed), for: .touchUpInside)
+        }
     }
-    */
+    @IBOutlet weak var temperatureSlider: UISlider!
+    @IBOutlet weak var surveyButton: UIButton!{
+        didSet{
+            surveyButton.setTitle(L10n.openSurvey, for: .normal)
+            surveyButton.titleLabel?.font = FontFamily.BebasNeue.regular.font(size: 20)
+            surveyButton.tintColor = Asset.accentColor.color
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateSlider()
+        setUI()
+    }
+    
+    func setUI(){
+        temperatureView.layer.cornerRadius = AppConstants.viewCornerRadius
+    }
+    
+    @objc func updateTemperaturePressed(){
+        db.updateTemperature(self.temperature)
+    }
 
+    func updateSlider(){
+        let step : Float = 0.5
+        let roundedValue = round(temperatureSlider.value / step) * step
+        self.temperature = roundedValue
+        temperatureLabel.text = "\(roundedValue) °C"
+    }
+    
+    @IBAction func valueChanged(_ sender: UISlider) {
+        updateSlider()
+    }
+    
+    
 }

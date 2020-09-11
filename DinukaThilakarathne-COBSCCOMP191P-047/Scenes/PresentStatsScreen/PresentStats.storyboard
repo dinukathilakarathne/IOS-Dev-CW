@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,10 +15,69 @@
                     <view key="view" contentMode="scaleToFill" id="7uO-sY-WWA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qpl-Nl-DdC" customClass="RoundedButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="20" y="796" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hDk-5D-zBb"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="35" minValue="35" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="tgh-uL-qkB">
+                                <rect key="frame" x="38" y="670" width="338" height="31"/>
+                                <color key="minimumTrackTintColor" name="AccentColor"/>
+                                <color key="thumbTintColor" name="AccentColor"/>
+                                <connections>
+                                    <action selector="valueChanged:" destination="vUV-2O-irX" eventType="valueChanged" id="pKC-Jf-67f"/>
+                                </connections>
+                            </slider>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gf4-xp-25a">
+                                <rect key="frame" x="40" y="148" width="334" height="510"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lwx-Ab-yzi">
+                                        <rect key="frame" x="146" y="244.5" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="ForegroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Lwx-Ab-yzi" firstAttribute="centerY" secondItem="gf4-xp-25a" secondAttribute="centerY" id="F3M-de-bbG"/>
+                                    <constraint firstItem="Lwx-Ab-yzi" firstAttribute="centerX" secondItem="gf4-xp-25a" secondAttribute="centerX" id="Gcx-qa-XhA"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePh-Kc-J0N">
+                                <rect key="frame" x="184" y="750" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GHL-en-7Wg" firstAttribute="trailing" secondItem="gf4-xp-25a" secondAttribute="trailing" constant="40" id="2Sg-tv-1LZ"/>
+                            <constraint firstItem="GHL-en-7Wg" firstAttribute="trailing" secondItem="tgh-uL-qkB" secondAttribute="trailing" constant="40" id="8TO-EX-cOa"/>
+                            <constraint firstItem="tgh-uL-qkB" firstAttribute="top" secondItem="gf4-xp-25a" secondAttribute="bottom" constant="12" id="FZR-Gv-Mmk"/>
+                            <constraint firstItem="GHL-en-7Wg" firstAttribute="bottom" secondItem="qpl-Nl-DdC" secondAttribute="bottom" constant="16" id="NYc-8C-FIf"/>
+                            <constraint firstItem="GHL-en-7Wg" firstAttribute="trailing" secondItem="qpl-Nl-DdC" secondAttribute="trailing" constant="20" id="TMT-nA-gDT"/>
+                            <constraint firstItem="ePh-Kc-J0N" firstAttribute="top" secondItem="tgh-uL-qkB" secondAttribute="bottom" constant="50" id="XxB-QB-VyF"/>
+                            <constraint firstItem="gf4-xp-25a" firstAttribute="top" secondItem="GHL-en-7Wg" secondAttribute="top" constant="8" id="bjo-0l-cZf"/>
+                            <constraint firstItem="qpl-Nl-DdC" firstAttribute="top" secondItem="ePh-Kc-J0N" secondAttribute="bottom" constant="16" id="kjc-g7-DCo"/>
+                            <constraint firstItem="gf4-xp-25a" firstAttribute="top" secondItem="GHL-en-7Wg" secondAttribute="top" constant="8" id="l7K-Vu-0vo"/>
+                            <constraint firstItem="gf4-xp-25a" firstAttribute="leading" secondItem="GHL-en-7Wg" secondAttribute="leading" constant="40" id="mqA-8N-jrx"/>
+                            <constraint firstItem="gf4-xp-25a" firstAttribute="top" secondItem="GHL-en-7Wg" secondAttribute="top" constant="8" id="onG-wH-p2Z"/>
+                            <constraint firstItem="ePh-Kc-J0N" firstAttribute="centerX" secondItem="7uO-sY-WWA" secondAttribute="centerX" id="sk8-8X-KvG"/>
+                            <constraint firstItem="qpl-Nl-DdC" firstAttribute="leading" secondItem="GHL-en-7Wg" secondAttribute="leading" constant="20" id="t5W-XR-PZC"/>
+                            <constraint firstItem="tgh-uL-qkB" firstAttribute="leading" secondItem="GHL-en-7Wg" secondAttribute="leading" constant="40" id="yV7-YD-eIu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="GHL-en-7Wg"/>
                     </view>
                     <navigationItem key="navigationItem" id="vFg-Z4-dJ7"/>
+                    <connections>
+                        <outlet property="surveyButton" destination="ePh-Kc-J0N" id="sK2-am-Ekr"/>
+                        <outlet property="temperatureLabel" destination="Lwx-Ab-yzi" id="Xs4-yg-MUF"/>
+                        <outlet property="temperatureSlider" destination="tgh-uL-qkB" id="HDg-xV-aN2"/>
+                        <outlet property="temperatureView" destination="gf4-xp-25a" id="zMm-5W-weT"/>
+                        <outlet property="updateTempButton" destination="qpl-Nl-DdC" id="FVK-gP-vaG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Kt-8o-p5i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -32,6 +92,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="K4U-cf-vLm">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" name="NavbarTitleColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -45,5 +108,17 @@
     </scenes>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="AccentColor">
+            <color red="0.36899998784065247" green="0.76499998569488525" blue="0.78799998760223389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ForegroundColor">
+            <color red="0.95300000905990601" green="0.95300000905990601" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NavbarTitleColor">
+            <color red="0.023529411764705882" green="0.066666666666666666" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

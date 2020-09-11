@@ -32,7 +32,7 @@ final class LandingController {
     func loginButtonPressed(){
 //        var email = self.email ?? ""
 //        var password = self.password ?? ""
-        email = "visal@gmail.com"
+        email = "visalr@gmail.com"
         password = "123456"
 //        if email.isEmpty{
 //            delegate?.emailIsEmpty()

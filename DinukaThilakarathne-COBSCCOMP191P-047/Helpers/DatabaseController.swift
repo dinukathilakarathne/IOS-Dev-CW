@@ -22,7 +22,11 @@ class DatabaseController {
         if let user = Auth.auth().currentUser{
             self.ref.child("users").child(user.uid).setValue([
                 "address" : address,
-                "index" : index
+                "index" : index,
+                "temperature" : Float(0),
+                "survey": [
+                    
+                ]
             ])
         }
     }
@@ -40,13 +44,23 @@ class DatabaseController {
         self.ref.child("users").child(uuid).child("index").observeSingleEvent(of: .value , with: { (snapshot) in
                 UserDefaults().userID = snapshot.value as! String
         })
-        
-//        self.ref.child("users").child(uuid).child("address").observeSingleEvent(of: .value , with: { (snapshot) in
-//            if snapshot.value as! String == "1" {
-//                UserDefaults().isAdmin = true
-//            }
-//        })
     }
+    
+    //method to update users temperature
+    func updateTemperature(_ temperature : Float){
+        guard let user = Auth.auth().currentUser else {
+            return
+        }
+        self.ref.child("users/\(user.uid)/temperature").setValue(temperature)
+    }
+    
+    //method to update users temperature
+//    func updateSurveyResults(){
+//        guard let user = Auth.auth().currentUser else {
+//            return
+//        }
+//        self.ref.child("users/\(user.uid)/survey").setValue(temperature)
+//    }
 }
 
 //https://firebase.google.com/docs/database/ios/read-and-write
