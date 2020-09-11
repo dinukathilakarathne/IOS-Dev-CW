@@ -34,10 +34,12 @@ internal enum Asset {
   internal static let secondaryColor = ColorAsset(name: "SecondaryColor")
   internal static let tabBarColor = ColorAsset(name: "TabBarColor")
   internal static let white = ColorAsset(name: "White")
+  internal static let checked = ImageAsset(name: "checked")
   internal static let cross = ImageAsset(name: "cross")
   internal static let emptyImage = ImageAsset(name: "emptyImage")
   internal static let newsBackground = ImageAsset(name: "newsBackground")
   internal static let tick = ImageAsset(name: "tick")
+  internal static let unchecked = ImageAsset(name: "unchecked")
   internal static let virus = ImageAsset(name: "virus")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

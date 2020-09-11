@@ -23,8 +23,8 @@
 		000A144E2504D5E1003C50D4 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 000A144D2504D5E1003C50D4 /* Map.storyboard */; };
 		004BB1412503E77800603EE2 /* NewsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004BB1402503E77800603EE2 /* NewsButton.swift */; };
 		004F3DCF250B654B0013CF68 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F3DCE250B654B0013CF68 /* RadioButton.swift */; };
-		004F3DD2250B661F0013CF68 /* Question.xib in Resources */ = {isa = PBXBuildFile; fileRef = 004F3DD1250B661F0013CF68 /* Question.xib */; };
-		004F3DD4250B662A0013CF68 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F3DD3250B662A0013CF68 /* Question.swift */; };
+		004F3DD2250B661F0013CF68 /* Answer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 004F3DD1250B661F0013CF68 /* Answer.xib */; };
+		004F3DD4250B662A0013CF68 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F3DD3250B662A0013CF68 /* Answer.swift */; };
 		0060B0FE250B6105003A2A82 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060B0FD250B6105003A2A82 /* SurveyViewController.swift */; };
 		0060B100250B610E003A2A82 /* Survey.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0060B0FF250B610E003A2A82 /* Survey.storyboard */; };
 		0060B105250B6205003A2A82 /* SurveyQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060B104250B6205003A2A82 /* SurveyQuestion.swift */; };
@@ -59,6 +59,7 @@
 		00B7EAF324FBF958009E9DF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00B7EAF224FBF958009E9DF1 /* GoogleService-Info.plist */; };
 		00B7EAF624FC0D88009E9DF1 /* DashboardTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B7EAF524FC0D88009E9DF1 /* DashboardTabController.swift */; };
 		00B7EAF824FC0D96009E9DF1 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B7EAF724FC0D96009E9DF1 /* Dashboard.storyboard */; };
+		00EDAEEA250B8F9B004B25E1 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EDAEE9250B8F9B004B25E1 /* String+Extension.swift */; };
 		00F945AD24FFD8C000E372EA /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F945AC24FFD8C000E372EA /* SignUpController.swift */; };
 		00F945AF250151AD00E372EA /* UserHealthStatus.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00F945AE250151AD00E372EA /* UserHealthStatus.xib */; };
 		00F945B1250151BF00E372EA /* UserHealthStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F945B0250151BF00E372EA /* UserHealthStatus.swift */; };
@@ -115,8 +116,8 @@
 		000A144D2504D5E1003C50D4 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		004BB1402503E77800603EE2 /* NewsButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsButton.swift; sourceTree = "<group>"; };
 		004F3DCE250B654B0013CF68 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
-		004F3DD1250B661F0013CF68 /* Question.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Question.xib; sourceTree = "<group>"; };
-		004F3DD3250B662A0013CF68 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		004F3DD1250B661F0013CF68 /* Answer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Answer.xib; sourceTree = "<group>"; };
+		004F3DD3250B662A0013CF68 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		0060B0FD250B6105003A2A82 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		0060B0FF250B610E003A2A82 /* Survey.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Survey.storyboard; sourceTree = "<group>"; };
 		0060B104250B6205003A2A82 /* SurveyQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyQuestion.swift; sourceTree = "<group>"; };
@@ -149,6 +150,7 @@
 		00B7EAF224FBF958009E9DF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		00B7EAF524FC0D88009E9DF1 /* DashboardTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabController.swift; sourceTree = "<group>"; };
 		00B7EAF724FC0D96009E9DF1 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		00EDAEE9250B8F9B004B25E1 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		00F945AC24FFD8C000E372EA /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		00F945AE250151AD00E372EA /* UserHealthStatus.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserHealthStatus.xib; sourceTree = "<group>"; };
 		00F945B0250151BF00E372EA /* UserHealthStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHealthStatus.swift; sourceTree = "<group>"; };
@@ -374,8 +376,8 @@
 		004F3DD5250B662E0013CF68 /* Question */ = {
 			isa = PBXGroup;
 			children = (
-				004F3DD1250B661F0013CF68 /* Question.xib */,
-				004F3DD3250B662A0013CF68 /* Question.swift */,
+				004F3DD1250B661F0013CF68 /* Answer.xib */,
+				004F3DD3250B662A0013CF68 /* Answer.swift */,
 			);
 			path = Question;
 			sourceTree = "<group>";
@@ -512,6 +514,7 @@
 			children = (
 				0093230924FBCC93007427E6 /* UILabel+Extension.swift */,
 				008241E7250A442C005062C0 /* UIImageView+Extension.swift */,
+				00EDAEE9250B8F9B004B25E1 /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -740,7 +743,7 @@
 				008241EC250A6301005062C0 /* RightIconButton.xib in Resources */,
 				007FA91E24FCD2A40081DF69 /* Home.storyboard in Resources */,
 				00FE606224FB75F000D93505 /* LaunchScreen.storyboard in Resources */,
-				004F3DD2250B661F0013CF68 /* Question.xib in Resources */,
+				004F3DD2250B661F0013CF68 /* Answer.xib in Resources */,
 				007FA93224FFAFF50081DF69 /* NavigationBar.xib in Resources */,
 				006329D924FBB2E000B418F2 /* Abel-Regular.ttf in Resources */,
 				000A14472503FF6E003C50D4 /* MoreFeatureCell.xib in Resources */,
@@ -821,7 +824,7 @@
 				007FA92B24FCDD500081DF69 /* SettingsViewController.swift in Sources */,
 				0003E60524FB72B700661089 /* Strings.swift in Sources */,
 				00F945AD24FFD8C000E372EA /* SignUpController.swift in Sources */,
-				004F3DD4250B662A0013CF68 /* Question.swift in Sources */,
+				004F3DD4250B662A0013CF68 /* Answer.swift in Sources */,
 				007FA93024FFABED0081DF69 /* SignUpViewController.swift in Sources */,
 				004F3DCF250B654B0013CF68 /* RadioButton.swift in Sources */,
 				000A14492503FF8A003C50D4 /* MoreFeatureCollectionViewCell.swift in Sources */,
@@ -834,6 +837,7 @@
 				00F945B1250151BF00E372EA /* UserHealthStatus.swift in Sources */,
 				0003E5AC24FB686400661089 /* SceneDelegate.swift in Sources */,
 				004BB1412503E77800603EE2 /* NewsButton.swift in Sources */,
+				00EDAEEA250B8F9B004B25E1 /* String+Extension.swift in Sources */,
 				00B7EAF624FC0D88009E9DF1 /* DashboardTabController.swift in Sources */,
 				008241EA250A62F2005062C0 /* RightIconButton.swift in Sources */,
 			);

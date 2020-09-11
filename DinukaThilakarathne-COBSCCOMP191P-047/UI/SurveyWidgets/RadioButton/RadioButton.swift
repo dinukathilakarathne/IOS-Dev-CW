@@ -8,51 +8,52 @@
 
 import UIKit
 
-//https://medium.com/@ashokraju/programmatic-easy-custom-radiobutton-for-ios-swift-5-9f22db12d4ab
-
 protocol RadioButtonDelegate {
-    func onClick(_ sender: UIView)
+    func radioPressed(_ tag : Int)
 }
 
 class RadioButton: UIButton {
-    var checkedView: UIView?
-    var uncheckedView: UIView?
-    var delegate: RadioButtonDelegate?
+    var alternateButton:Array<RadioButton>?
+    var delegate : RadioButtonDelegate?
     
-    var isChecked: Bool = false {
-        didSet {
-            setNeedsLayout()
-        }
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.addTarget(self, action: #selector(onClick), for: UIControl.Event.touchUpInside)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        checkedView?.removeFromSuperview()
-        uncheckedView?.removeFromSuperview()
-        removeConstraints(self.constraints)
-        
-        let view = isChecked == true ? checkedView : uncheckedView
-        if let view = view {
-            addSubview(view)
-            view.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                view.centerYAnchor.constraint(equalTo: centerYAnchor)
-            ])
-        }
-    }
+    override func awakeFromNib() {
+        self.layer.cornerRadius = self.frame.width / 2
+        self.layer.borderWidth = 2.0
+        self.layer.masksToBounds = true
+        self.layer.borderColor = Asset.primaryColor.color.cgColor
+        self.layer.backgroundColor = UIColor.clear.cgColor
 
-    @objc func onClick(sender: UIButton) {
-        if sender == self {
-            delegate?.onClick(self)
+    }
+    
+    func unselectAlternateButtons() {
+        if alternateButton != nil {
+            self.isSelected = true
+            
+            for aButton:RadioButton in alternateButton! {
+                aButton.isSelected = false
+            }
+        } else {
+            toggleButton()
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        unselectAlternateButtons()
+        super.touchesBegan(touches, with: event)
+    }
+    
+    func toggleButton() {
+        self.isSelected = !isSelected
+        delegate?.radioPressed(self.tag)
+    }
+    
+    override var isSelected: Bool {
+        didSet {
+            if isSelected {
+                self.layer.backgroundColor = Asset.primaryColor.color.cgColor
+            } else {
+                self.layer.backgroundColor = UIColor.clear.cgColor
+            }
         }
     }
 }

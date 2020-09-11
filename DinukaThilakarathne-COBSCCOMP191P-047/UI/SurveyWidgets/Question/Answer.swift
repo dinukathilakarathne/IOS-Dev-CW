@@ -8,13 +8,13 @@
 
 import UIKit
 
-class Question: UIView {
+class Answer: UIView {
 
     @IBOutlet var contentView: UIView!
-    
+
     @IBOutlet weak var radioButton: RadioButton!
     
-    @IBOutlet weak var question: UILabel!
+    @IBOutlet weak var answers: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,7 +27,7 @@ class Question: UIView {
     }
     
     func configure() {
-        Bundle.main.loadNibNamed("Question", owner: self, options: nil)
+        Bundle.main.loadNibNamed("Answer", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]

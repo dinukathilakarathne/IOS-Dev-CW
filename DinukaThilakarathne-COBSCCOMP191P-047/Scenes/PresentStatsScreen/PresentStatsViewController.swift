@@ -10,8 +10,7 @@ import UIKit
 
 class PresentStatsViewController: UIViewController {
     
-    let db = DatabaseController()
-    var temperature : Float = 0
+    let controller = PresentStatsController()
 
     @IBOutlet weak var temperatureLabel: UILabel!{
         didSet{
@@ -30,16 +29,19 @@ class PresentStatsViewController: UIViewController {
         }
     }
     @IBOutlet weak var temperatureSlider: UISlider!
+    
     @IBOutlet weak var surveyButton: UIButton!{
         didSet{
             surveyButton.setTitle(L10n.openSurvey, for: .normal)
             surveyButton.titleLabel?.font = FontFamily.BebasNeue.regular.font(size: 20)
             surveyButton.tintColor = Asset.accentColor.color
+            surveyButton.addTarget(self, action: #selector(openSurveyPressed), for: .touchUpInside)
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        controller.delegate = self
         updateSlider()
         setUI()
     }
@@ -49,18 +51,45 @@ class PresentStatsViewController: UIViewController {
     }
     
     @objc func updateTemperaturePressed(){
-        db.updateTemperature(self.temperature)
+        controller.submitButtonPressed()
+    }
+    
+    @objc func openSurveyPressed(){
+        controller.surveyButtonPressed()
     }
 
     func updateSlider(){
         let step : Float = 0.5
         let roundedValue = round(temperatureSlider.value / step) * step
-        self.temperature = roundedValue
+        controller.sliderDidChange(roundedValue)
         temperatureLabel.text = "\(roundedValue) °C"
     }
     
     @IBAction func valueChanged(_ sender: UISlider) {
         updateSlider()
+    }
+    
+    
+}
+
+extension PresentStatsViewController : PresentStatsDelegate{
+    func submitButtonPressed() {
+        SingleActionAlert(withTitle: "Success", withMessage: "Successfully submitted the temperature. Thank you for your cooperation for safety", actionName: L10n.ok, self).present()
+    }
+    
+    func showSurveyScreen() {
+        let storyboard = UIStoryboard(name: "Survey", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SurveyViewController")
+        vc.modalPresentationStyle = .formSheet
+        self.present(vc, animated: true)
+    }
+    
+    
+    func userNotLoggedIn() {
+//        let storyboard = UIStoryboard(name: "Dashboard", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "DashboardTabController")
+//        vc.modalPresentationStyle = .fullScreen
+//        self.present(vc, animated: true)
     }
     
     

@@ -48,6 +48,9 @@ class Survey {
         return answers
     }
     
+    func questionCount() -> Int {
+        return questions.count
+    }
     
     
 }

@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,13 +15,68 @@
                     <view key="view" contentMode="scaleToFill" id="6il-ID-x9i">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="auO-Rv-UBI" customClass="NavigationBar" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="6GD-np-86g"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGb-ps-Lri">
+                                <rect key="frame" x="0.0" y="114" width="414" height="782"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nOO-nH-VZT">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1350"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bM3-Ki-VaX">
+                                                <rect key="frame" x="20" y="0.0" width="374" height="1350"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="bM3-Ki-VaX" secondAttribute="trailing" constant="20" id="Oc2-Bi-dx0"/>
+                                            <constraint firstItem="bM3-Ki-VaX" firstAttribute="top" secondItem="nOO-nH-VZT" secondAttribute="top" id="V0b-VT-l4n"/>
+                                            <constraint firstItem="bM3-Ki-VaX" firstAttribute="leading" secondItem="nOO-nH-VZT" secondAttribute="leading" constant="20" id="am0-4x-1RH"/>
+                                            <constraint firstAttribute="bottom" secondItem="bM3-Ki-VaX" secondAttribute="bottom" id="or0-YY-2xH"/>
+                                            <constraint firstAttribute="height" constant="1350" id="uWP-Xu-wh1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="nOO-nH-VZT" firstAttribute="leading" secondItem="BGb-ps-Lri" secondAttribute="leading" id="A8Z-ta-3TS"/>
+                                    <constraint firstItem="nOO-nH-VZT" firstAttribute="top" secondItem="BGb-ps-Lri" secondAttribute="top" id="Frg-SJ-AHD"/>
+                                    <constraint firstAttribute="bottom" secondItem="nOO-nH-VZT" secondAttribute="bottom" constant="-23" id="iSs-YI-yOU"/>
+                                    <constraint firstAttribute="trailing" secondItem="nOO-nH-VZT" secondAttribute="trailing" id="zPv-ab-DXx"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nOO-nH-VZT" firstAttribute="width" secondItem="6il-ID-x9i" secondAttribute="width" id="9oE-kU-W2l"/>
+                            <constraint firstItem="BGb-ps-Lri" firstAttribute="trailing" secondItem="JSF-C2-tG9" secondAttribute="trailing" id="AFd-vY-Y2m"/>
+                            <constraint firstAttribute="bottom" secondItem="BGb-ps-Lri" secondAttribute="bottom" id="PUW-9m-Vha"/>
+                            <constraint firstItem="BGb-ps-Lri" firstAttribute="top" secondItem="auO-Rv-UBI" secondAttribute="bottom" id="iTg-mt-Adu"/>
+                            <constraint firstItem="auO-Rv-UBI" firstAttribute="top" secondItem="JSF-C2-tG9" secondAttribute="top" id="m2E-fM-HdX"/>
+                            <constraint firstItem="auO-Rv-UBI" firstAttribute="leading" secondItem="JSF-C2-tG9" secondAttribute="leading" id="nPH-Uc-YfQ"/>
+                            <constraint firstItem="JSF-C2-tG9" firstAttribute="trailing" secondItem="auO-Rv-UBI" secondAttribute="trailing" id="nvJ-Ur-sbZ"/>
+                            <constraint firstItem="BGb-ps-Lri" firstAttribute="leading" secondItem="JSF-C2-tG9" secondAttribute="leading" id="oUh-9V-jOl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JSF-C2-tG9"/>
                     </view>
+                    <connections>
+                        <outlet property="navigationBar" destination="auO-Rv-UBI" id="3TU-fw-ttV"/>
+                        <outlet property="surveyQuestionStack" destination="bM3-Ki-VaX" id="bue-EB-oHh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a9u-Z3-BJh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-72" y="177"/>
+            <point key="canvasLocation" x="-72.463768115942031" y="176.78571428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="BackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

@@ -10,12 +10,31 @@ import Foundation
 
 protocol PresentStatsDelegate {
     func userNotLoggedIn()
+    func showSurveyScreen()
+    func submitButtonPressed()
 }
 
 class PresentStatsController {
     
+    let db = DatabaseController()
     var delegate : PresentStatsDelegate?
+    var temperature : Float = 0
     
+    func surveyButtonPressed(){
+        delegate?.showSurveyScreen()
+    }
     
+    func userNotAvailable(){
+        delegate?.userNotLoggedIn()
+    }
+    
+    func submitButtonPressed(){
+        db.updateTemperature(self.temperature)
+        delegate?.submitButtonPressed()
+    }
+    
+    func sliderDidChange(_ value : Float){
+        self.temperature = value
+    }
     
 }
