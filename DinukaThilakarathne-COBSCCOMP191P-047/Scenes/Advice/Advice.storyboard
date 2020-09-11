@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fdn-pW-n0y">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="advice-1" translatesAutoresizingMaskIntoConstraints="NO" id="fdn-pW-n0y">
                                 <rect key="frame" x="0.0" y="298" width="414" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="C25-To-Y0P"/>
@@ -34,17 +34,15 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QKS-lJ-4cQ">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QKS-lJ-4cQ" customClass="ImageButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
                                         <rect key="frame" x="30" y="92" width="80" height="80"/>
-                                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="RGC-l7-dmw"/>
                                             <constraint firstAttribute="height" constant="80" id="n8a-Pm-kY9"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lbw-2u-4hQ">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lbw-2u-4hQ" customClass="ImageButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
                                         <rect key="frame" x="304" y="92" width="80" height="80"/>
-                                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="RJa-Cx-Abv"/>
                                             <constraint firstAttribute="width" constant="80" id="Vxb-Yx-G3X"/>
@@ -60,20 +58,37 @@
                                     <constraint firstItem="jpB-pA-6g4" firstAttribute="centerY" secondItem="r8n-wU-5SN" secondAttribute="centerY" id="dBr-cS-BZS"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="42V-SB-xOu" customClass="NavigationBar" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="yRj-cC-eSX"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="f1Y-xP-D94" firstAttribute="trailing" secondItem="42V-SB-xOu" secondAttribute="trailing" id="DGu-PI-SGx"/>
                             <constraint firstItem="fdn-pW-n0y" firstAttribute="centerY" secondItem="bFn-qT-GAB" secondAttribute="centerY" id="Lja-eC-CaO"/>
                             <constraint firstItem="fdn-pW-n0y" firstAttribute="centerX" secondItem="bFn-qT-GAB" secondAttribute="centerX" id="T2k-Gb-HBB"/>
                             <constraint firstItem="f1Y-xP-D94" firstAttribute="bottom" secondItem="r8n-wU-5SN" secondAttribute="bottom" id="U2R-51-xll"/>
                             <constraint firstItem="r8n-wU-5SN" firstAttribute="top" secondItem="fdn-pW-n0y" secondAttribute="bottom" id="XF6-pm-Szb"/>
                             <constraint firstItem="f1Y-xP-D94" firstAttribute="trailing" secondItem="r8n-wU-5SN" secondAttribute="trailing" id="aJ1-N0-BSA"/>
                             <constraint firstItem="fdn-pW-n0y" firstAttribute="leading" secondItem="f1Y-xP-D94" secondAttribute="leading" id="cVa-30-yV4"/>
+                            <constraint firstItem="42V-SB-xOu" firstAttribute="leading" secondItem="f1Y-xP-D94" secondAttribute="leading" id="jDU-Bv-Dsl"/>
+                            <constraint firstItem="42V-SB-xOu" firstAttribute="top" secondItem="f1Y-xP-D94" secondAttribute="top" id="u1E-6n-hgI"/>
                             <constraint firstItem="r8n-wU-5SN" firstAttribute="leading" secondItem="f1Y-xP-D94" secondAttribute="leading" id="yiK-ES-EPS"/>
                             <constraint firstItem="f1Y-xP-D94" firstAttribute="trailing" secondItem="fdn-pW-n0y" secondAttribute="trailing" id="zEZ-gO-yjl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="f1Y-xP-D94"/>
                     </view>
+                    <connections>
+                        <outlet property="imageNumberLabel" destination="jpB-pA-6g4" id="LpK-gn-Sby"/>
+                        <outlet property="imageView" destination="fdn-pW-n0y" id="wSQ-p4-eCD"/>
+                        <outlet property="navigationBar" destination="42V-SB-xOu" id="ymJ-8Q-EQd"/>
+                        <outlet property="nextButton" destination="Lbw-2u-4hQ" id="nmE-SK-h3U"/>
+                        <outlet property="previousButton" destination="QKS-lJ-4cQ" id="YNK-wy-g4z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Za-ft-8hf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,6 +96,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="advice-1" width="3840" height="2160"/>
         <namedColor name="BackgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

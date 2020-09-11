@@ -34,6 +34,8 @@ internal enum L10n {
   internal static let enterPasswordPlaceholder = L10n.tr("Localizable", "enter_password_placeholder")
   /// Welcome to
   internal static let headingOutline = L10n.tr("Localizable", "heading_outline")
+  /// Health Advice
+  internal static let healthAdvice = L10n.tr("Localizable", "health_advice")
   /// INFECTED
   internal static let infected = L10n.tr("Localizable", "infected")
   /// L O G I N
