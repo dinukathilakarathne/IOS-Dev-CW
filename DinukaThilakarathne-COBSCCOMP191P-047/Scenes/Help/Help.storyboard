@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Help View Controller-->
+        <scene sceneID="APC-2j-Etg">
+            <objects>
+                <viewController storyboardIdentifier="HelpViewController" id="eIs-oQ-poN" customClass="HelpViewController" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XzC-5S-pWc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzA-At-BuF" customClass="NavigationBar" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="JkK-Nx-byo"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L6k-be-DVY" customClass="ImageButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="50" y="291" width="314" height="314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="L6k-be-DVY" secondAttribute="height" multiplier="1:1" id="976-F6-LdO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="L6k-be-DVY" firstAttribute="centerX" secondItem="XzC-5S-pWc" secondAttribute="centerX" id="5GZ-8A-6Sm"/>
+                            <constraint firstItem="dzA-At-BuF" firstAttribute="leading" secondItem="g49-2u-0pK" secondAttribute="leading" id="A93-fc-dTN"/>
+                            <constraint firstItem="L6k-be-DVY" firstAttribute="centerY" secondItem="XzC-5S-pWc" secondAttribute="centerY" id="C5E-zg-PKm"/>
+                            <constraint firstItem="L6k-be-DVY" firstAttribute="leading" secondItem="g49-2u-0pK" secondAttribute="leading" constant="50" id="DTk-RE-A3X"/>
+                            <constraint firstItem="dzA-At-BuF" firstAttribute="top" secondItem="g49-2u-0pK" secondAttribute="top" id="MTG-tY-ClA"/>
+                            <constraint firstItem="g49-2u-0pK" firstAttribute="trailing" secondItem="L6k-be-DVY" secondAttribute="trailing" constant="50" id="nFF-mY-Tpl"/>
+                            <constraint firstItem="g49-2u-0pK" firstAttribute="trailing" secondItem="dzA-At-BuF" secondAttribute="trailing" id="sgJ-Yj-rvG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="g49-2u-0pK"/>
+                    </view>
+                    <connections>
+                        <outlet property="navigationBar" destination="dzA-At-BuF" id="XCu-7k-qH2"/>
+                        <outlet property="sosButton" destination="L6k-be-DVY" id="gV3-1e-bUa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N81-vf-TS7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-113" y="76"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

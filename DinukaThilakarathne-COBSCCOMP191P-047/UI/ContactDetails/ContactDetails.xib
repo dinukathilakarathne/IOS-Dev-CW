@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Abel-Regular.ttf">
+            <string>Abel-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactDetails" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+            <connections>
+                <outlet property="contactButton" destination="uO7-n6-Udt" id="iWt-13-A1Q"/>
+                <outlet property="contactLabel" destination="IJ5-a9-4iK" id="ZFb-2F-jmA"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="3W3-p4-EHF"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="118"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJ5-a9-4iK">
+                    <rect key="frame" x="20" y="48" width="316" height="22"/>
+                    <fontDescription key="fontDescription" name="Abel-Regular" family="Abel" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uO7-n6-Udt">
+                    <rect key="frame" x="344" y="34" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="APo-cm-Hj6"/>
+                        <constraint firstAttribute="width" constant="50" id="xvo-MN-6mp"/>
+                    </constraints>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="uO7-n6-Udt" firstAttribute="leading" secondItem="IJ5-a9-4iK" secondAttribute="trailing" constant="8" id="4O4-ac-ceN"/>
+                <constraint firstItem="IJ5-a9-4iK" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="UKG-yS-CgQ"/>
+                <constraint firstItem="IJ5-a9-4iK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="YPw-pf-NtO"/>
+                <constraint firstItem="uO7-n6-Udt" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="gS8-Fb-0QK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="uO7-n6-Udt" secondAttribute="trailing" constant="20" id="uOd-x1-gCL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="63.768115942028992" y="364.95535714285711"/>
+        </view>
+    </objects>
+</document>

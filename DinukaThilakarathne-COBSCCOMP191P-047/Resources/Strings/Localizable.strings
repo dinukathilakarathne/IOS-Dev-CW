@@ -41,4 +41,13 @@ deaths = "DEATHS";
 //Page Titles
 survey_title = "Survey";
 health_advice = "Health Advice";
+help = "Help";
+contact_us = "Contact us";
 
+//Contact Us Page
+emailAddress = "nibmcovid19@gmail.com";
+phone_number = "0779382489";
+land_number = "0112342342";
+email = "Email";
+phone = "Mobile phone";
+land_phone = "Land phone";

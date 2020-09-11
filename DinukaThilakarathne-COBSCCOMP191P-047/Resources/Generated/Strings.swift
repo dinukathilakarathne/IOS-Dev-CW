@@ -14,7 +14,7 @@ internal enum L10n {
   internal static let appName = L10n.tr("Localizable", "app_name")
   /// Can attend college
   internal static let canAttendCollege = L10n.tr("Localizable", "can_attend_college")
-  /// CONTACT US
+  /// Contact us
   internal static let contactUs = L10n.tr("Localizable", "contact_us")
   /// C R E A T E  A C C O U N T
   internal static let createAccount = L10n.tr("Localizable", "create_account")
@@ -22,6 +22,10 @@ internal enum L10n {
   internal static let currentStatsHeading = L10n.tr("Localizable", "current_stats_heading")
   /// DEATHS
   internal static let deaths = L10n.tr("Localizable", "deaths")
+  /// Email
+  internal static let email = L10n.tr("Localizable", "email")
+  /// nibmcovid19@gmail.com
+  internal static let emailAddress = L10n.tr("Localizable", "emailAddress")
   /// Address
   internal static let enterAddressPlaceholder = L10n.tr("Localizable", "enter_address_placeholder")
   /// Email
@@ -36,8 +40,14 @@ internal enum L10n {
   internal static let headingOutline = L10n.tr("Localizable", "heading_outline")
   /// Health Advice
   internal static let healthAdvice = L10n.tr("Localizable", "health_advice")
+  /// Help
+  internal static let help = L10n.tr("Localizable", "help")
   /// INFECTED
   internal static let infected = L10n.tr("Localizable", "infected")
+  /// 0112342342
+  internal static let landNumber = L10n.tr("Localizable", "land_number")
+  /// Land phone
+  internal static let landPhone = L10n.tr("Localizable", "land_phone")
   /// L O G I N
   internal static let login = L10n.tr("Localizable", "login")
   /// L O G  O U T
@@ -50,6 +60,10 @@ internal enum L10n {
   internal static let ok = L10n.tr("Localizable", "ok")
   /// OPEN SURVEY
   internal static let openSurvey = L10n.tr("Localizable", "open_survey")
+  /// Mobile phone
+  internal static let phone = L10n.tr("Localizable", "phone")
+  /// 0779382489
+  internal static let phoneNumber = L10n.tr("Localizable", "phone_number")
   /// Re-enter password
   internal static let reenterPasswordPlaceholder = L10n.tr("Localizable", "reenter_password_placeholder")
   /// SHARE

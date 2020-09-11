@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Contact Us View Controller-->
+        <scene sceneID="WLq-fq-EM1">
+            <objects>
+                <viewController storyboardIdentifier="ContactUsViewController" id="8yu-5F-sJd" customClass="ContactUsViewController" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UxK-JF-x8s">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GD1-mv-4V1" customClass="NavigationBar" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="8Ld-ig-4g5"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xof-9s-0F6" customClass="ContactDetails" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="20" y="164" width="374" height="80"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Rki-S2-DLs"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOm-1w-FNq" customClass="ContactDetails" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="20" y="274" width="374" height="80"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="fDz-Gs-3JK"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afp-yW-gpm" customClass="ContactDetails" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="20" y="384" width="374" height="80"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="RN6-6u-P8T"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zjJ-RN-dWc" firstAttribute="trailing" secondItem="Xof-9s-0F6" secondAttribute="trailing" constant="20" id="9i9-6W-ncb"/>
+                            <constraint firstItem="iOm-1w-FNq" firstAttribute="top" secondItem="Xof-9s-0F6" secondAttribute="bottom" constant="30" id="Anv-yZ-g03"/>
+                            <constraint firstItem="iOm-1w-FNq" firstAttribute="leading" secondItem="zjJ-RN-dWc" secondAttribute="leading" constant="20" id="HHj-0U-Z2Q"/>
+                            <constraint firstItem="zjJ-RN-dWc" firstAttribute="trailing" secondItem="afp-yW-gpm" secondAttribute="trailing" constant="20" id="Jph-Bb-vlb"/>
+                            <constraint firstItem="zjJ-RN-dWc" firstAttribute="trailing" secondItem="GD1-mv-4V1" secondAttribute="trailing" id="NMn-u5-RPm"/>
+                            <constraint firstItem="GD1-mv-4V1" firstAttribute="top" secondItem="zjJ-RN-dWc" secondAttribute="top" id="W95-br-VKC"/>
+                            <constraint firstItem="afp-yW-gpm" firstAttribute="top" secondItem="iOm-1w-FNq" secondAttribute="bottom" constant="30" id="Z4b-l1-JpA"/>
+                            <constraint firstItem="Xof-9s-0F6" firstAttribute="top" secondItem="GD1-mv-4V1" secondAttribute="bottom" constant="50" id="Zuv-nu-ABW"/>
+                            <constraint firstItem="Xof-9s-0F6" firstAttribute="leading" secondItem="zjJ-RN-dWc" secondAttribute="leading" constant="20" id="b3c-ym-1Fh"/>
+                            <constraint firstItem="zjJ-RN-dWc" firstAttribute="trailing" secondItem="iOm-1w-FNq" secondAttribute="trailing" constant="20" id="eoi-xY-FCP"/>
+                            <constraint firstItem="GD1-mv-4V1" firstAttribute="leading" secondItem="zjJ-RN-dWc" secondAttribute="leading" id="epH-I9-pYW"/>
+                            <constraint firstItem="afp-yW-gpm" firstAttribute="leading" secondItem="zjJ-RN-dWc" secondAttribute="leading" constant="20" id="juz-Vs-TH1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zjJ-RN-dWc"/>
+                    </view>
+                    <connections>
+                        <outlet property="email" destination="Xof-9s-0F6" id="0RD-AV-G2s"/>
+                        <outlet property="landLine" destination="afp-yW-gpm" id="Nxf-yn-qIY"/>
+                        <outlet property="navigationBar" destination="GD1-mv-4V1" id="6dm-n2-QFw"/>
+                        <outlet property="phone" destination="iOm-1w-FNq" id="W4K-Gz-luJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7MX-zH-h1K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-101" y="88"/>
+        </scene>
+    </scenes>
+</document>

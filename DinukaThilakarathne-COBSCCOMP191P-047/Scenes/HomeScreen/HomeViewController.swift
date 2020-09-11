@@ -13,8 +13,8 @@ class HomeViewController: UIViewController {
     let moreFeatures : [[String]] = [
         ["Map", "Map View"],
         ["Advice", "Health Advice"],
-        ["ContactScreen", "Contact us"],
-        ["HelpScreen", "Help"],
+        ["ContactUs", "Contact us"],
+        ["Help", "Help"],
     ]
     
     @IBOutlet weak var currentStatsTitle: UILabel!{

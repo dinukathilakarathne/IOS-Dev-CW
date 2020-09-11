@@ -60,6 +60,12 @@
 		00B5F315250BDDE100267EEF /* References in Resources */ = {isa = PBXBuildFile; fileRef = 00B5F314250BDDE100267EEF /* References */; };
 		00B5F317250BE06A00267EEF /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B5F316250BE06A00267EEF /* ImageButton.swift */; };
 		00B5F319250BE07200267EEF /* ImageButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00B5F318250BE07200267EEF /* ImageButton.xib */; };
+		00B5F31D250BEBB800267EEF /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B5F31C250BEBB800267EEF /* ContactUsViewController.swift */; };
+		00B5F31F250BEBCD00267EEF /* ContactUs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B5F31E250BEBCD00267EEF /* ContactUs.storyboard */; };
+		00B5F322250BEC0800267EEF /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B5F321250BEC0800267EEF /* HelpViewController.swift */; };
+		00B5F324250BEC1400267EEF /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B5F323250BEC1400267EEF /* Help.storyboard */; };
+		00B5F327250BF11700267EEF /* ContactDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B5F326250BF11700267EEF /* ContactDetails.swift */; };
+		00B5F329250BF12400267EEF /* ContactDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00B5F328250BF12400267EEF /* ContactDetails.xib */; };
 		00B7EAEE24FBD44A009E9DF1 /* LandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B7EAED24FBD44A009E9DF1 /* LandingController.swift */; };
 		00B7EAF124FBE4BC009E9DF1 /* AlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B7EAF024FBE4BC009E9DF1 /* AlertDialog.swift */; };
 		00B7EAF324FBF958009E9DF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00B7EAF224FBF958009E9DF1 /* GoogleService-Info.plist */; };
@@ -157,6 +163,12 @@
 		00B5F314250BDDE100267EEF /* References */ = {isa = PBXFileReference; lastKnownFileType = text; path = References; sourceTree = "<group>"; };
 		00B5F316250BE06A00267EEF /* ImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
 		00B5F318250BE07200267EEF /* ImageButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageButton.xib; sourceTree = "<group>"; };
+		00B5F31C250BEBB800267EEF /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		00B5F31E250BEBCD00267EEF /* ContactUs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactUs.storyboard; sourceTree = "<group>"; };
+		00B5F321250BEC0800267EEF /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		00B5F323250BEC1400267EEF /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
+		00B5F326250BF11700267EEF /* ContactDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetails.swift; sourceTree = "<group>"; };
+		00B5F328250BF12400267EEF /* ContactDetails.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactDetails.xib; sourceTree = "<group>"; };
 		00B7EAED24FBD44A009E9DF1 /* LandingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingController.swift; sourceTree = "<group>"; };
 		00B7EAF024FBE4BC009E9DF1 /* AlertDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDialog.swift; sourceTree = "<group>"; };
 		00B7EAF224FBF958009E9DF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -275,6 +287,8 @@
 		0003E5DA24FB696700661089 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				00B5F320250BEBFE00267EEF /* Help */,
+				00B5F31B250BEB6D00267EEF /* ContactUs */,
 				000A144A2504D5AA003C50D4 /* MapScreen */,
 				007FA92C24FFABD20081DF69 /* SignUpScreen */,
 				007FA92324FCDC7C0081DF69 /* PresentStatsScreen */,
@@ -552,6 +566,33 @@
 			path = ImageButton;
 			sourceTree = "<group>";
 		};
+		00B5F31B250BEB6D00267EEF /* ContactUs */ = {
+			isa = PBXGroup;
+			children = (
+				00B5F31C250BEBB800267EEF /* ContactUsViewController.swift */,
+				00B5F31E250BEBCD00267EEF /* ContactUs.storyboard */,
+			);
+			path = ContactUs;
+			sourceTree = "<group>";
+		};
+		00B5F320250BEBFE00267EEF /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				00B5F321250BEC0800267EEF /* HelpViewController.swift */,
+				00B5F323250BEC1400267EEF /* Help.storyboard */,
+			);
+			path = Help;
+			sourceTree = "<group>";
+		};
+		00B5F325250BF10100267EEF /* ContactDetails */ = {
+			isa = PBXGroup;
+			children = (
+				00B5F326250BF11700267EEF /* ContactDetails.swift */,
+				00B5F328250BF12400267EEF /* ContactDetails.xib */,
+			);
+			path = ContactDetails;
+			sourceTree = "<group>";
+		};
 		00B7EAEF24FBE497009E9DF1 /* Alerts */ = {
 			isa = PBXGroup;
 			children = (
@@ -609,6 +650,7 @@
 		00FE606324FB767E00D93505 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				00B5F325250BF10100267EEF /* ContactDetails */,
 				000A14432503FE0C003C50D4 /* Cells */,
 				00B7EAEF24FBE497009E9DF1 /* Alerts */,
 				0093230324FBBD75007427E6 /* TextField */,
@@ -770,10 +812,12 @@
 				00B7EAF824FC0D96009E9DF1 /* Dashboard.storyboard in Resources */,
 				00B5F315250BDDE100267EEF /* References in Resources */,
 				0060B100250B610E003A2A82 /* Survey.storyboard in Resources */,
+				00B5F324250BEC1400267EEF /* Help.storyboard in Resources */,
 				0003E5FE24FB6AB200661089 /* Assets.xcassets in Resources */,
 				00B7EAF324FBF958009E9DF1 /* GoogleService-Info.plist in Resources */,
 				006329DA24FBB2E500B418F2 /* BebasNeue-Regular.ttf in Resources */,
 				007FA92524FCDCAD0081DF69 /* PresentStats.storyboard in Resources */,
+				00B5F329250BF12400267EEF /* ContactDetails.xib in Resources */,
 				00B5F319250BE07200267EEF /* ImageButton.xib in Resources */,
 				0060B109250B64F1003A2A82 /* SurveyQuestion.xib in Resources */,
 				000A144E2504D5E1003C50D4 /* Map.storyboard in Resources */,
@@ -789,6 +833,7 @@
 				00F945BF2503E48500E372EA /* LocalStat.xib in Resources */,
 				00FE605E24FB754100D93505 /* Main.storyboard in Resources */,
 				00F945AF250151AD00E372EA /* UserHealthStatus.xib in Resources */,
+				00B5F31F250BEBCD00267EEF /* ContactUs.storyboard in Resources */,
 				0093230724FBBE22007427E6 /* RoundedTextField.xib in Resources */,
 				00F945B72503DA4800E372EA /* NewsButton.xib in Resources */,
 			);
@@ -847,6 +892,7 @@
 				008241E8250A442C005062C0 /* UIImageView+Extension.swift in Sources */,
 				0064D9BD2509740E00485F2F /* ImagePicker.swift in Sources */,
 				0093230A24FBCC93007427E6 /* UILabel+Extension.swift in Sources */,
+				00B5F322250BEC0800267EEF /* HelpViewController.swift in Sources */,
 				008241E3250A3FD5005062C0 /* ProfileDetails.swift in Sources */,
 				008241EF250A71E2005062C0 /* SettingsController.swift in Sources */,
 				0003E5AE24FB686400661089 /* LandingViewController.swift in Sources */,
@@ -861,6 +907,7 @@
 				008241E02509F8D2005062C0 /* DatabaseController.swift in Sources */,
 				007FA92B24FCDD500081DF69 /* SettingsViewController.swift in Sources */,
 				0003E60524FB72B700661089 /* Strings.swift in Sources */,
+				00B5F31D250BEBB800267EEF /* ContactUsViewController.swift in Sources */,
 				00F945AD24FFD8C000E372EA /* SignUpController.swift in Sources */,
 				004F3DD4250B662A0013CF68 /* Answer.swift in Sources */,
 				007FA93024FFABED0081DF69 /* SignUpViewController.swift in Sources */,
@@ -878,6 +925,7 @@
 				0003E5AC24FB686400661089 /* SceneDelegate.swift in Sources */,
 				004BB1412503E77800603EE2 /* NewsButton.swift in Sources */,
 				00EDAEEA250B8F9B004B25E1 /* String+Extension.swift in Sources */,
+				00B5F327250BF11700267EEF /* ContactDetails.swift in Sources */,
 				00B7EAF624FC0D88009E9DF1 /* DashboardTabController.swift in Sources */,
 				008241EA250A62F2005062C0 /* RightIconButton.swift in Sources */,
 			);

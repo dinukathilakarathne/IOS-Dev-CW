@@ -11,6 +11,7 @@ import UIKit
 class PresentStatsViewController: UIViewController {
     
     let controller = PresentStatsController()
+    var timer : Timer?
 
     @IBOutlet weak var temperatureLabel: UILabel!{
         didSet{
@@ -44,6 +45,17 @@ class PresentStatsViewController: UIViewController {
         controller.delegate = self
         updateSlider()
         setUI()
+        startTimer()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        timer?.invalidate()
+    }
+    
+    func startTimer(){
+        timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true, block: { (timer) in
+            self.controller.userNotAvailable()
+        })
     }
     
     func setUI(){
@@ -86,10 +98,10 @@ extension PresentStatsViewController : PresentStatsDelegate{
     
     
     func userNotLoggedIn() {
-//        let storyboard = UIStoryboard(name: "Dashboard", bundle: nil)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "DashboardTabController")
-//        vc.modalPresentationStyle = .fullScreen
-//        self.present(vc, animated: true)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "LandingViewController")
+        vc.modalPresentationStyle = .formSheet
+        self.present(vc, animated: true)
     }
     
     

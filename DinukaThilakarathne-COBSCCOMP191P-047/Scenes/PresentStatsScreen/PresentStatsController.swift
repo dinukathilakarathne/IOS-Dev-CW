@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 protocol PresentStatsDelegate {
     func userNotLoggedIn()
@@ -25,7 +26,9 @@ class PresentStatsController {
     }
     
     func userNotAvailable(){
-        delegate?.userNotLoggedIn()
+        if !UserDefaults().isLoggedIn{
+            delegate?.userNotLoggedIn()
+        }
     }
     
     func submitButtonPressed(){
