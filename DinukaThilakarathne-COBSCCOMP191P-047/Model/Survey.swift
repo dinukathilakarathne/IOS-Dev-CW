@@ -16,7 +16,7 @@ class Survey {
         self.surveyAnswer = ["","","","",""]
     }
     
-    let questions : [String] = [
+    private let questions : [String] = [
         "What is your age?",
         "How do you feel?",
         "Do you have any side affects?",
@@ -24,7 +24,7 @@ class Survey {
         "Did you spend anytime as a volunteer any organization"
     ]
     
-    let answers : [[String]] = [
+    private let answers : [[String]] = [
         ["0-21", "21-30", "30+"],
         ["Very good", "Normal", "Poor"],
         ["Yes", "No"],
@@ -38,6 +38,14 @@ class Survey {
     
     func getAnswers() -> [String] {
         return self.surveyAnswer
+    }
+    
+    func getSurveyQuestions() -> [String] {
+        return questions
+    }
+    
+    func getSurveyAnswers() -> [[String]]{
+        return answers
     }
     
     
