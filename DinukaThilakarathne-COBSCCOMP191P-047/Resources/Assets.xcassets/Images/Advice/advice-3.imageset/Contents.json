@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "5-hand-sanitizer.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

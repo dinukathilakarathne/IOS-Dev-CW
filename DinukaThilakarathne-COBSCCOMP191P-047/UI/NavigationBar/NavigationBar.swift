@@ -22,8 +22,17 @@ class NavigationBar: UIView {
             contentView.backgroundColor = Asset.backgroundColor.color
         }
     }
-    @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var backButton: UIButton!{
+        didSet{
+            backButton.tintColor = Asset.defautTextColor.color
+        }
+    }
+    @IBOutlet weak var title: UILabel!{
+        didSet{
+            title.font = FontFamily.Abel.regular.font(size: 20)
+            title.textColor = Asset.defautTextColor.color
+        }
+    }
     @IBOutlet weak var notifications: UIImageView!
     
     override init(frame: CGRect) {

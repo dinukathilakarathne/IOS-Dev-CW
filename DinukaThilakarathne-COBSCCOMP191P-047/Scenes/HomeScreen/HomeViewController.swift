@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
     
     let moreFeatures : [[String]] = [
         ["Map", "Map View"],
-        ["AdviceScreen", "Health Advice"],
+        ["Advice", "Health Advice"],
         ["ContactScreen", "Contact us"],
         ["HelpScreen", "Help"],
     ]

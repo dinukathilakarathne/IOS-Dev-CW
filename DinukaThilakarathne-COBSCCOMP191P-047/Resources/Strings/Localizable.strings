@@ -17,6 +17,8 @@ contact_us = "CONTACT US";
 logout = "L O G  O U T";
 create_account = "C R E A T E  A C C O U N T";
 show_results = "S H O W  R E S U L T S";
+submit = "S U B M I T";
+open_survey = "OPEN SURVEY";
 
 //Placeholders
 enter_email_placeholder = "Email";
@@ -36,6 +38,7 @@ infected = "INFECTED";
 suspects = "SUSPECTS";
 deaths = "DEATHS";
 
-
-
+//Page Titles
+survey_title = "Survey";
+health_advice = "Health Advice";
 

@@ -43,8 +43,8 @@ class SettingsViewController: UIViewController {
                 settingsPrimaryButton.roundButton.addTarget(self, action: #selector(logoutPressed), for: .touchUpInside)
                 return
             }
-            settingsPrimaryButton.roundButton.setTitle(L10n.createAccount, for: .normal)
-            settingsPrimaryButton.roundButton.addTarget(self, action: #selector(createAccountPressed), for: .touchUpInside)
+            settingsPrimaryButton.roundButton.setTitle(L10n.login, for: .normal)
+            settingsPrimaryButton.roundButton.addTarget(self, action: #selector(loginPressed), for: .touchUpInside)
         }
     }
     
@@ -56,6 +56,14 @@ class SettingsViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var createAccountButton: UIButton!{
+        didSet{
+            createAccountButton.addTarget(self, action: #selector(createAccountPressed), for: .touchUpInside)
+            createAccountButton.titleLabel?.font = FontFamily.Abel.regular.font(size: 16)
+            createAccountButton.tintColor = Asset.defaultRed.color
+            createAccountButton.setTitle(L10n.createAccount, for: .normal)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +73,10 @@ class SettingsViewController: UIViewController {
 
     }
     
+    @objc func loginPressed(){
+        controller.loginButtonPressed()
+    }
+
     @objc func createAccountPressed(){
         controller.createAccountButtonPressed()
     }
@@ -85,17 +97,28 @@ class SettingsViewController: UIViewController {
         if !UserDefaults().isLoggedIn{
             self.profileDetailsView.isHidden = true
             self.profileDetailsView.heightAnchor.constraint(equalToConstant: 0).isActive = true
-            self.settingsPrimaryButton.roundButton.setTitle(L10n.createAccount, for: .normal)
+            self.settingsPrimaryButton.roundButton.setTitle(L10n.login, for: .normal)
+            self.createAccountButton.isHidden = false
         }else{
             self.profileDetailsView.isHidden = false
             self.profileDetailsView.heightAnchor.constraint(equalToConstant: 200).isActive = true
             self.settingsPrimaryButton.roundButton.setTitle(L10n.logout, for: .normal)
+            self.createAccountButton.isHidden = true
+
         }
     }
     
 }
 
 extension SettingsViewController : SettingsDelegate{
+    
+    func logingIn() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "LandingViewController")
+        vc.modalPresentationStyle = .formSheet
+        self.present(vc, animated: true)
+    }
+    
     
     func contactUsPressed() {
         //unused
@@ -119,7 +142,8 @@ extension SettingsViewController : SettingsDelegate{
     func loggedOut() {
         DispatchQueue.main.async {
             self.setUI()
-            self.settingsPrimaryButton.roundButton.addTarget(self, action: #selector(self.createAccountPressed), for: .touchUpInside)
+            self.settingsPrimaryButton.roundButton.addTarget(self, action: #selector(self.loginPressed), for: .touchUpInside)
+            self.createAccountButton.addTarget(self, action: #selector(self.createAccountPressed), for: .touchUpInside)
         }
     }
     

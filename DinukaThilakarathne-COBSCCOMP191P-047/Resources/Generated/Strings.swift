@@ -34,6 +34,8 @@ internal enum L10n {
   internal static let enterPasswordPlaceholder = L10n.tr("Localizable", "enter_password_placeholder")
   /// Welcome to
   internal static let headingOutline = L10n.tr("Localizable", "heading_outline")
+  /// Health Advice
+  internal static let healthAdvice = L10n.tr("Localizable", "health_advice")
   /// INFECTED
   internal static let infected = L10n.tr("Localizable", "infected")
   /// L O G I N
@@ -46,6 +48,8 @@ internal enum L10n {
   internal static let news = L10n.tr("Localizable", "news")
   /// OK
   internal static let ok = L10n.tr("Localizable", "ok")
+  /// OPEN SURVEY
+  internal static let openSurvey = L10n.tr("Localizable", "open_survey")
   /// Re-enter password
   internal static let reenterPasswordPlaceholder = L10n.tr("Localizable", "reenter_password_placeholder")
   /// SHARE
@@ -58,6 +62,10 @@ internal enum L10n {
   internal static let signUpPageTitle = L10n.tr("Localizable", "sign_up_page_title")
   /// Stay at home
   internal static let stayAtHome = L10n.tr("Localizable", "stay_at_home")
+  /// S U B M I T
+  internal static let submit = L10n.tr("Localizable", "submit")
+  /// Survey
+  internal static let surveyTitle = L10n.tr("Localizable", "survey_title")
   /// SUSPECTS
   internal static let suspects = L10n.tr("Localizable", "suspects")
 }

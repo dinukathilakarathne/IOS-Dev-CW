@@ -22,6 +22,8 @@ class UserDefaults : SwiftDefaults{
     @objc dynamic var userImage : String = ""
     @objc dynamic var userID : String = ""
     @objc dynamic var isAdmin : Bool = false
+    @objc dynamic var recentTemperature : Float = 0
+    
     
     func setDefaults(){
         let db = DatabaseController()

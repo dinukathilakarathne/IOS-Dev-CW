@@ -16,7 +16,7 @@
         <!--Landing View Controller-->
         <scene sceneID="J8y-VU-bGr">
             <objects>
-                <viewController id="gfR-oS-ilf" customClass="LandingViewController" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LandingViewController" id="gfR-oS-ilf" customClass="LandingViewController" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hgP-8L-GQo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

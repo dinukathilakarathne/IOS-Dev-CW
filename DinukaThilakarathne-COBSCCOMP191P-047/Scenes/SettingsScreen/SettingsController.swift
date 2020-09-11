@@ -14,6 +14,7 @@ protocol SettingsDelegate {
     func showResultsPage()
     func showSignUpPage()
     func loggedOut()
+    func logingIn()
 }
 
 class SettingsController{
@@ -35,6 +36,10 @@ class SettingsController{
     //methods for login/create account
     func createAccountButtonPressed(){
         delegate?.showSignUpPage()
+    }
+    
+    func loginButtonPressed(){
+        delegate?.logingIn()
     }
     
     func logoutButtonPressed(){
