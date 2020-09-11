@@ -23,6 +23,8 @@
 		000A144E2504D5E1003C50D4 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 000A144D2504D5E1003C50D4 /* Map.storyboard */; };
 		004BB1412503E77800603EE2 /* NewsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004BB1402503E77800603EE2 /* NewsButton.swift */; };
 		004F3DCF250B654B0013CF68 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F3DCE250B654B0013CF68 /* RadioButton.swift */; };
+		004F3DD2250B661F0013CF68 /* Question.xib in Resources */ = {isa = PBXBuildFile; fileRef = 004F3DD1250B661F0013CF68 /* Question.xib */; };
+		004F3DD4250B662A0013CF68 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F3DD3250B662A0013CF68 /* Question.swift */; };
 		0060B0FE250B6105003A2A82 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060B0FD250B6105003A2A82 /* SurveyViewController.swift */; };
 		0060B100250B610E003A2A82 /* Survey.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0060B0FF250B610E003A2A82 /* Survey.storyboard */; };
 		0060B105250B6205003A2A82 /* SurveyQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060B104250B6205003A2A82 /* SurveyQuestion.swift */; };
@@ -113,6 +115,8 @@
 		000A144D2504D5E1003C50D4 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		004BB1402503E77800603EE2 /* NewsButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsButton.swift; sourceTree = "<group>"; };
 		004F3DCE250B654B0013CF68 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
+		004F3DD1250B661F0013CF68 /* Question.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Question.xib; sourceTree = "<group>"; };
+		004F3DD3250B662A0013CF68 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		0060B0FD250B6105003A2A82 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		0060B0FF250B610E003A2A82 /* Survey.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Survey.storyboard; sourceTree = "<group>"; };
 		0060B104250B6205003A2A82 /* SurveyQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyQuestion.swift; sourceTree = "<group>"; };
@@ -359,6 +363,23 @@
 			path = MapScreen;
 			sourceTree = "<group>";
 		};
+		004F3DD0250B66070013CF68 /* RadioButton */ = {
+			isa = PBXGroup;
+			children = (
+				004F3DCE250B654B0013CF68 /* RadioButton.swift */,
+			);
+			path = RadioButton;
+			sourceTree = "<group>";
+		};
+		004F3DD5250B662E0013CF68 /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				004F3DD1250B661F0013CF68 /* Question.xib */,
+				004F3DD3250B662A0013CF68 /* Question.swift */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
 		0060B101250B6124003A2A82 /* SurveyScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,7 +402,8 @@
 			isa = PBXGroup;
 			children = (
 				0060B106250B6208003A2A82 /* SurveyQuestion */,
-				004F3DCE250B654B0013CF68 /* RadioButton.swift */,
+				004F3DD0250B66070013CF68 /* RadioButton */,
+				004F3DD5250B662E0013CF68 /* Question */,
 			);
 			path = SurveyWidgets;
 			sourceTree = "<group>";
@@ -718,6 +740,7 @@
 				008241EC250A6301005062C0 /* RightIconButton.xib in Resources */,
 				007FA91E24FCD2A40081DF69 /* Home.storyboard in Resources */,
 				00FE606224FB75F000D93505 /* LaunchScreen.storyboard in Resources */,
+				004F3DD2250B661F0013CF68 /* Question.xib in Resources */,
 				007FA93224FFAFF50081DF69 /* NavigationBar.xib in Resources */,
 				006329D924FBB2E000B418F2 /* Abel-Regular.ttf in Resources */,
 				000A14472503FF6E003C50D4 /* MoreFeatureCell.xib in Resources */,
@@ -798,6 +821,7 @@
 				007FA92B24FCDD500081DF69 /* SettingsViewController.swift in Sources */,
 				0003E60524FB72B700661089 /* Strings.swift in Sources */,
 				00F945AD24FFD8C000E372EA /* SignUpController.swift in Sources */,
+				004F3DD4250B662A0013CF68 /* Question.swift in Sources */,
 				007FA93024FFABED0081DF69 /* SignUpViewController.swift in Sources */,
 				004F3DCF250B654B0013CF68 /* RadioButton.swift in Sources */,
 				000A14492503FF8A003C50D4 /* MoreFeatureCollectionViewCell.swift in Sources */,
