@@ -21,6 +21,8 @@ protocol LandingControllerDelegate {
 
 final class LandingController {
     
+    let dbController = DatabaseController()
+    
     private var email : String? = nil
     private var password : String? = nil
     private var isAuthenticating : Bool = false
@@ -30,7 +32,7 @@ final class LandingController {
     func loginButtonPressed(){
 //        var email = self.email ?? ""
 //        var password = self.password ?? ""
-        email = "ashandc4@gmail.com"
+        email = "visal@gmail.com"
         password = "123456"
 //        if email.isEmpty{
 //            delegate?.emailIsEmpty()
@@ -67,6 +69,7 @@ final class LandingController {
                 self?.delegate?.authError(e)
                 return
             }
+            UserDefaults().setDefaults()
             self?.delegate?.showHomeScreen()
         }
     }

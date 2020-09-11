@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,15 +15,71 @@
                     <view key="view" contentMode="scaleToFill" id="0zJ-5v-Xls">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EMl-5A-ihN" customClass="profileDetails" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="20" y="160" width="374" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="PVv-3o-akM"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iR7-v5-afu">
+                                <rect key="frame" x="20" y="410" width="374" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gjq-ti-DCw" customClass="RoundedButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="177" height="50"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BzP-ia-MuO" customClass="RoundedButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                        <rect key="frame" x="197" y="0.0" width="177" height="50"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LT3-nd-mAW"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEI-Qi-vKM" customClass="RoundedButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="20" y="782" width="374" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="lpW-2q-89I"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jcr-Kv-G6A" customClass="RightIconButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="20" y="480" width="374" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="T4Y-Vl-2sb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WDQ-6n-LZy" firstAttribute="trailing" secondItem="EEI-Qi-vKM" secondAttribute="trailing" constant="20" id="4Qo-rq-dK5"/>
+                            <constraint firstItem="WDQ-6n-LZy" firstAttribute="trailing" secondItem="Jcr-Kv-G6A" secondAttribute="trailing" constant="20" id="N9H-7U-scK"/>
+                            <constraint firstItem="WDQ-6n-LZy" firstAttribute="trailing" secondItem="EMl-5A-ihN" secondAttribute="trailing" constant="20" id="Z5a-eu-LGn"/>
+                            <constraint firstItem="Jcr-Kv-G6A" firstAttribute="leading" secondItem="WDQ-6n-LZy" secondAttribute="leading" constant="20" id="boi-OE-Tdh"/>
+                            <constraint firstItem="EMl-5A-ihN" firstAttribute="leading" secondItem="WDQ-6n-LZy" secondAttribute="leading" constant="20" id="dtL-D9-PQh"/>
+                            <constraint firstAttribute="trailing" secondItem="iR7-v5-afu" secondAttribute="trailing" constant="20" id="e9V-Qh-h7s"/>
+                            <constraint firstItem="WDQ-6n-LZy" firstAttribute="bottom" secondItem="EEI-Qi-vKM" secondAttribute="bottom" constant="20" id="hrN-FT-OYq"/>
+                            <constraint firstItem="iR7-v5-afu" firstAttribute="top" secondItem="EMl-5A-ihN" secondAttribute="bottom" constant="20" id="iHA-Sx-UGb"/>
+                            <constraint firstItem="iR7-v5-afu" firstAttribute="leading" secondItem="WDQ-6n-LZy" secondAttribute="leading" constant="20" id="iOQ-7L-bSz"/>
+                            <constraint firstItem="Jcr-Kv-G6A" firstAttribute="top" secondItem="iR7-v5-afu" secondAttribute="bottom" constant="20" id="qli-1H-mmQ"/>
+                            <constraint firstItem="EMl-5A-ihN" firstAttribute="top" secondItem="WDQ-6n-LZy" secondAttribute="top" constant="20" id="rbW-KZ-qdk"/>
+                            <constraint firstItem="EEI-Qi-vKM" firstAttribute="leading" secondItem="WDQ-6n-LZy" secondAttribute="leading" constant="20" id="sqM-Or-aDC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WDQ-6n-LZy"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="plus" catalog="system" id="Vp9-g4-Zfu"/>
                     <navigationItem key="navigationItem" id="l9U-1z-CBs"/>
+                    <connections>
+                        <outlet property="contactButton" destination="Gjq-ti-DCw" id="Mfx-Pw-kJV"/>
+                        <outlet property="profileDetailsView" destination="EMl-5A-ihN" id="DhB-L1-O4s"/>
+                        <outlet property="seeResultsButton" destination="Jcr-Kv-G6A" id="eMm-EA-9Lc"/>
+                        <outlet property="settingsPrimaryButton" destination="EEI-Qi-vKM" id="SLV-kC-XnW"/>
+                        <outlet property="shareButton" destination="BzP-ia-MuO" id="hAu-Cu-C8a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hP9-MW-EEW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="542" y="1649"/>
+            <point key="canvasLocation" x="540.57971014492762" y="1648.6607142857142"/>
         </scene>
         <!--Settings-->
         <scene sceneID="10q-2w-Qad">
@@ -33,6 +90,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="eSg-CT-LhD">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="PrimaryColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -47,5 +110,11 @@
     <resources>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="BackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryColor">
+            <color red="0.28600001335144043" green="0.55699998140335083" blue="0.86699998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

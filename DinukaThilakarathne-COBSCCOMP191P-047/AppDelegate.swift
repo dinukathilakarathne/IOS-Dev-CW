@@ -12,14 +12,14 @@ import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        //configuring firebase
         FirebaseApp.configure()
-        UITabBar.appearance().barTintColor = .black
-        UITabBar.appearance().tintColor = Asset.accentColor.color
         
+        //setting tabbar appearance
+        UITabBar.appearance().barTintColor = Asset.tabBarColor.color
+        UITabBar.appearance().tintColor = Asset.accentColor.color
         return true
     }
 
@@ -40,3 +40,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+//https://firebase.google.com/docs/database/ios/start

@@ -7,10 +7,28 @@
 //
 
 import UIKit
+import Firebase
+
 
 class SignUpViewController: UIViewController {
     
     let controller = SignUpController()
+    var imagePicker: ImagePicker!
+    
+    
+    @IBOutlet weak var profileImage: UIImageView!{
+        didSet{
+            profileImage.image = Asset.emptyImage.image
+        }
+    }
+    @IBOutlet weak var selectImageButton: UIButton!{
+        didSet{
+            selectImageButton.setTitle("Choose image", for: .normal)
+            selectImageButton.tintColor = Asset.white.color.withAlphaComponent(0.5)
+            selectImageButton.titleLabel?.font = FontFamily.Abel.regular.font(size: 16)
+        }
+    }
+    
     
     @IBOutlet var contentView: UIView!{
         didSet{
@@ -45,15 +63,41 @@ class SignUpViewController: UIViewController {
             passwordTextField.roundedTextField.attributedPlaceholder = NSAttributedString(string: L10n.enterPasswordPlaceholder, attributes: [NSAttributedString.Key.foregroundColor : Asset.lightPlaceholderColor.color])
         }
     }
+    
     @IBOutlet weak var reenterPasswordField: RoundedTextField!{
         didSet{
             reenterPasswordField.roundedTextField.delegate = self
             reenterPasswordField.roundedTextField.returnKeyType = .done
             reenterPasswordField.roundedTextField.isSecureTextEntry = true
             reenterPasswordField.roundedTextField.attributedPlaceholder = NSAttributedString(string: L10n.reenterPasswordPlaceholder, attributes: [NSAttributedString.Key.foregroundColor : Asset.lightPlaceholderColor.color])
-            
         }
     }
+    
+    @IBOutlet weak var nameField: RoundedTextField!{
+        didSet{
+            nameField.roundedTextField.delegate = self
+            nameField.roundedTextField.returnKeyType = .done
+            nameField.roundedTextField.attributedPlaceholder = NSAttributedString(string: L10n.enterNamePlaceholder, attributes: [NSAttributedString.Key.foregroundColor : Asset.lightPlaceholderColor.color])
+        }
+    }
+    
+    @IBOutlet weak var addressField: RoundedTextField!{
+        didSet{
+            addressField.roundedTextField.delegate = self
+            addressField.roundedTextField.returnKeyType = .done
+            addressField.roundedTextField.attributedPlaceholder = NSAttributedString(string: L10n.enterAddressPlaceholder, attributes: [NSAttributedString.Key.foregroundColor : Asset.lightPlaceholderColor.color])
+        }
+    }
+    
+    @IBOutlet weak var idField: RoundedTextField!{
+        didSet{
+            idField.roundedTextField.delegate = self
+            idField.roundedTextField.returnKeyType = .done
+            idField.roundedTextField.attributedPlaceholder = NSAttributedString(string: L10n.enterIdPlaceholder, attributes: [NSAttributedString.Key.foregroundColor : Asset.lightPlaceholderColor.color])
+        }
+    }
+    
+
     @IBOutlet weak var signUpButton: RoundedButton!{
         didSet{
             signUpButton.roundButton.addTarget(self, action: #selector(signUpPressed), for: .touchUpInside)
@@ -61,6 +105,9 @@ class SignUpViewController: UIViewController {
             signUpButton.roundButton.setTitle(L10n.signUp, for: .normal)
         }
     }
+    
+    
+    
     @IBOutlet weak var loginButton: UIButton!{
         didSet{
             loginButton.setTitle("If you have an account. Login", for: .normal)
@@ -73,22 +120,40 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         controller.delegate = self
+        self.imagePicker = ImagePicker(presentationController: self, delegate: self)
+        setUI()
+    }
+    
+    func setUI(){
+        profileImage.layer.cornerRadius = profileImage.frame.width / 2
     }
     
     @objc func signUpPressed(){
         let email = emailTextField.roundedTextField.text ?? ""
         let password = passwordTextField.roundedTextField.text ?? ""
         let reenteredPassword = reenterPasswordField.roundedTextField.text ?? ""
+        let name = nameField.roundedTextField.text ?? ""
+        let address = addressField.roundedTextField.text ?? ""
+        let id = idField.roundedTextField.text ?? ""
         
         controller.setEmail(email)
         controller.setPassword(password)
         controller.setReenteredPassword(reenteredPassword)
+        controller.setAddress(address)
+        controller.setName(name)
+        controller.setID(id)
+        controller.setProfileImage(profileImage.image)
         controller.signUpButtonPressed()
     }
     
     @objc func loginPressed(){
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func selectImageButtonPressed(_ sender: UIButton) {
+        self.imagePicker.present(from: sender)
+    }
+    
 }
 
 extension SignUpViewController : UITextFieldDelegate {
@@ -99,6 +164,33 @@ extension SignUpViewController : UITextFieldDelegate {
 }
 
 extension SignUpViewController : SignUpControllerDelegate {
+    func addressIsEmpty() {
+        SingleActionAlert(
+            withTitle: "The Address field is empty",
+            withMessage: "Please enter an address.",
+            actionName: L10n.ok,
+            self
+        ).present()
+    }
+    
+    func nameIsEmpty() {
+        SingleActionAlert(
+            withTitle: "The Name field is empty",
+            withMessage: "Please enter an name.",
+            actionName: L10n.ok,
+            self
+        ).present()
+    }
+    
+    func idIsEmpty() {
+        SingleActionAlert(
+            withTitle: "The ID field is empty",
+            withMessage: "Please enter an ID.",
+            actionName: L10n.ok,
+            self
+        ).present()
+    }
+    
     func unidenticalPassword() {
         SingleActionAlert(
             withTitle: "The passwords do not match",
@@ -156,4 +248,16 @@ extension SignUpViewController : SignUpControllerDelegate {
     }
     
     
+}
+
+extension SignUpViewController : ImagePickerDelegate {
+    
+    func didSelect(image: UIImage?) {
+        guard let profileImage = image else {
+            return
+        }
+        
+        
+        self.profileImage.image = profileImage
+    }
 }

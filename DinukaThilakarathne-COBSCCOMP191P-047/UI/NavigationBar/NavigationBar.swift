@@ -8,7 +8,14 @@
 
 import UIKit
 
+protocol NavigationBarDelegate {
+    func goBack()
+    func showNotifications()
+}
+
 class NavigationBar: UIView {
+    
+    var delegate : NavigationBarDelegate?
 
     @IBOutlet var contentView: UIView!{
         didSet{
@@ -41,4 +48,7 @@ class NavigationBar: UIView {
         //unused
     }
 
+    @IBAction func goBackPressed(_ sender: UIButton) {
+        delegate?.goBack()
+    }
 }

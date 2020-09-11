@@ -16,29 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3M-X1-V0h" customClass="RoundedTextField" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
-                                <rect key="frame" x="20" y="428" width="374" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="O1n-bb-jk4"/>
-                                </constraints>
-                                <viewLayoutGuide key="safeArea" id="Weu-Mf-5Co"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sn8-IT-94t" customClass="RoundedTextField" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
-                                <rect key="frame" x="20" y="498" width="374" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Mse-Cs-aoC"/>
-                                </constraints>
-                                <viewLayoutGuide key="safeArea" id="bUV-dS-mnJ"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KSm-Y6-SQ3" customClass="RoundedTextField" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
-                                <rect key="frame" x="20" y="358" width="374" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="dIP-Zp-1nP"/>
-                                </constraints>
-                                <viewLayoutGuide key="safeArea" id="xWj-Gt-Vt2"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jfs-ur-Ue5">
-                                <rect key="frame" x="184" y="646" width="46" height="30"/>
+                                <rect key="frame" x="184" y="772" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ss-oy-rcc">
@@ -48,45 +27,143 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BL9-XS-ib5" customClass="RoundedButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
-                                <rect key="frame" x="30" y="588" width="354" height="50"/>
+                                <rect key="frame" x="30" y="714" width="354" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="atm-VP-eXo"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="RRH-Gh-4WV"/>
                             </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vj8-Kg-MuM">
+                                <rect key="frame" x="0.0" y="125" width="414" height="559"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6D-hX-pXg">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="580"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I15-A4-lKu" customClass="RoundedTextField" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="166" width="374" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="NET-tw-InS"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iO2-jX-DGP" customClass="RoundedTextField" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="236" width="374" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="W5V-yr-zpS"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DJM-as-Yvy" customClass="RoundedTextField" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="306" width="374" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="5yI-6H-reZ"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1aJ-rg-dm3" customClass="RoundedTextField" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="376" width="374" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="6t2-YH-GWF"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HoE-NV-qfe" customClass="RoundedTextField" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="446" width="374" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="e6V-af-vw4"/>
+                                                </constraints>
+                                            </view>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uq9-wC-mp8">
+                                                <rect key="frame" x="157" y="8" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="SXy-Qg-AXI"/>
+                                                    <constraint firstAttribute="height" constant="100" id="UBs-FL-Dra"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nk-gm-DZ3">
+                                                <rect key="frame" x="184" y="116" width="46" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="selectImageButtonPressed:" destination="Vop-U9-qXV" eventType="touchUpInside" id="IA2-ey-tJX"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w0z-RC-gSc" customClass="RoundedTextField" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="516" width="374" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="eNU-aj-0v2"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="iO2-jX-DGP" firstAttribute="top" secondItem="I15-A4-lKu" secondAttribute="bottom" constant="30" id="79o-ub-gKe"/>
+                                            <constraint firstItem="iO2-jX-DGP" firstAttribute="leading" secondItem="d6D-hX-pXg" secondAttribute="leading" constant="20" id="7IH-gH-XzF"/>
+                                            <constraint firstItem="0nk-gm-DZ3" firstAttribute="centerX" secondItem="d6D-hX-pXg" secondAttribute="centerX" id="8tM-Co-mab"/>
+                                            <constraint firstItem="HoE-NV-qfe" firstAttribute="top" secondItem="1aJ-rg-dm3" secondAttribute="bottom" constant="30" id="E7A-bP-FnK"/>
+                                            <constraint firstItem="w0z-RC-gSc" firstAttribute="leading" secondItem="d6D-hX-pXg" secondAttribute="leading" constant="20" id="Ray-Ho-qLV"/>
+                                            <constraint firstItem="1aJ-rg-dm3" firstAttribute="leading" secondItem="d6D-hX-pXg" secondAttribute="leading" constant="20" id="SnX-pE-FTX"/>
+                                            <constraint firstItem="uq9-wC-mp8" firstAttribute="top" secondItem="d6D-hX-pXg" secondAttribute="top" constant="8" id="Sru-qK-1Mi"/>
+                                            <constraint firstItem="HoE-NV-qfe" firstAttribute="leading" secondItem="d6D-hX-pXg" secondAttribute="leading" constant="20" id="Vh5-wV-chR"/>
+                                            <constraint firstAttribute="trailing" secondItem="w0z-RC-gSc" secondAttribute="trailing" constant="20" id="XnV-om-czo"/>
+                                            <constraint firstAttribute="trailing" secondItem="HoE-NV-qfe" secondAttribute="trailing" constant="20" id="Ycy-BL-hye"/>
+                                            <constraint firstItem="DJM-as-Yvy" firstAttribute="leading" secondItem="d6D-hX-pXg" secondAttribute="leading" constant="20" id="ZJe-M6-M7j"/>
+                                            <constraint firstItem="w0z-RC-gSc" firstAttribute="top" secondItem="HoE-NV-qfe" secondAttribute="bottom" constant="30" id="a55-of-hDP"/>
+                                            <constraint firstAttribute="trailing" secondItem="DJM-as-Yvy" secondAttribute="trailing" constant="20" id="aP1-hV-N4k"/>
+                                            <constraint firstAttribute="trailing" secondItem="iO2-jX-DGP" secondAttribute="trailing" constant="20" id="d3s-Hl-geS"/>
+                                            <constraint firstItem="1aJ-rg-dm3" firstAttribute="top" secondItem="DJM-as-Yvy" secondAttribute="bottom" constant="30" id="gWH-B6-ekn"/>
+                                            <constraint firstItem="I15-A4-lKu" firstAttribute="leading" secondItem="d6D-hX-pXg" secondAttribute="leading" constant="20" id="hWd-OQ-HMF"/>
+                                            <constraint firstItem="I15-A4-lKu" firstAttribute="top" secondItem="0nk-gm-DZ3" secondAttribute="bottom" constant="20" id="jWc-Nv-WcD"/>
+                                            <constraint firstAttribute="trailing" secondItem="I15-A4-lKu" secondAttribute="trailing" constant="20" id="jju-y4-hds"/>
+                                            <constraint firstItem="uq9-wC-mp8" firstAttribute="centerX" secondItem="d6D-hX-pXg" secondAttribute="centerX" id="lwn-h0-9Nl"/>
+                                            <constraint firstAttribute="height" constant="580" id="mi0-Po-fLq"/>
+                                            <constraint firstAttribute="trailing" secondItem="1aJ-rg-dm3" secondAttribute="trailing" constant="20" id="o71-kS-A14"/>
+                                            <constraint firstItem="0nk-gm-DZ3" firstAttribute="top" secondItem="uq9-wC-mp8" secondAttribute="bottom" constant="8" id="sNK-to-9sV"/>
+                                            <constraint firstItem="DJM-as-Yvy" firstAttribute="top" secondItem="iO2-jX-DGP" secondAttribute="bottom" constant="30" id="yPH-Y4-emm"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="d6D-hX-pXg" firstAttribute="top" secondItem="vj8-Kg-MuM" secondAttribute="top" id="X52-Bx-Box"/>
+                                    <constraint firstAttribute="bottom" secondItem="d6D-hX-pXg" secondAttribute="bottom" id="YuQ-jr-kOr"/>
+                                    <constraint firstItem="d6D-hX-pXg" firstAttribute="leading" secondItem="vj8-Kg-MuM" secondAttribute="leading" id="cLP-h8-WfP"/>
+                                    <constraint firstAttribute="trailing" secondItem="d6D-hX-pXg" secondAttribute="trailing" id="eOL-eG-v3M"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" name="AccentColor"/>
                         <constraints>
-                            <constraint firstItem="r3M-X1-V0h" firstAttribute="top" secondItem="KSm-Y6-SQ3" secondAttribute="bottom" constant="30" id="1PQ-tX-xA5"/>
-                            <constraint firstItem="zXa-9u-AfS" firstAttribute="trailing" secondItem="KSm-Y6-SQ3" secondAttribute="trailing" constant="20" id="1uB-SG-fNF"/>
-                            <constraint firstItem="zXa-9u-AfS" firstAttribute="trailing" secondItem="Sn8-IT-94t" secondAttribute="trailing" constant="20" id="6I3-OY-phL"/>
-                            <constraint firstItem="KSm-Y6-SQ3" firstAttribute="leading" secondItem="zXa-9u-AfS" secondAttribute="leading" constant="20" id="7ky-XX-rsm"/>
+                            <constraint firstItem="vj8-Kg-MuM" firstAttribute="top" secondItem="7ss-oy-rcc" secondAttribute="bottom" constant="30" id="4NQ-Ac-4Kr"/>
+                            <constraint firstItem="zXa-9u-AfS" firstAttribute="bottom" secondItem="Jfs-ur-Ue5" secondAttribute="bottom" constant="60" id="585-Eq-07V"/>
                             <constraint firstItem="7ss-oy-rcc" firstAttribute="leading" secondItem="zXa-9u-AfS" secondAttribute="leading" constant="20" id="8pq-GS-7em"/>
-                            <constraint firstItem="Sn8-IT-94t" firstAttribute="leading" secondItem="zXa-9u-AfS" secondAttribute="leading" constant="20" id="98n-ah-2HY"/>
                             <constraint firstItem="7ss-oy-rcc" firstAttribute="top" secondItem="zXa-9u-AfS" secondAttribute="top" constant="30" id="CsT-z0-bLW"/>
-                            <constraint firstItem="Jfs-ur-Ue5" firstAttribute="top" secondItem="BL9-XS-ib5" secondAttribute="bottom" constant="8" id="F4Z-04-UDS"/>
-                            <constraint firstItem="BL9-XS-ib5" firstAttribute="top" secondItem="Sn8-IT-94t" secondAttribute="bottom" constant="50" id="LL7-au-KYN"/>
+                            <constraint firstItem="zXa-9u-AfS" firstAttribute="trailing" secondItem="vj8-Kg-MuM" secondAttribute="trailing" id="KCN-Hd-JYM"/>
                             <constraint firstItem="zXa-9u-AfS" firstAttribute="trailing" secondItem="BL9-XS-ib5" secondAttribute="trailing" constant="30" id="MNG-ZP-bge"/>
                             <constraint firstItem="Jfs-ur-Ue5" firstAttribute="centerX" secondItem="W2K-80-wtW" secondAttribute="centerX" id="MqS-hM-7G7"/>
-                            <constraint firstItem="Sn8-IT-94t" firstAttribute="top" secondItem="r3M-X1-V0h" secondAttribute="bottom" constant="30" id="OGA-vL-VBy"/>
-                            <constraint firstItem="r3M-X1-V0h" firstAttribute="centerY" secondItem="W2K-80-wtW" secondAttribute="centerY" id="SA0-9h-NM6"/>
-                            <constraint firstItem="r3M-X1-V0h" firstAttribute="leading" secondItem="zXa-9u-AfS" secondAttribute="leading" constant="20" id="gea-6n-e8a"/>
-                            <constraint firstItem="r3M-X1-V0h" firstAttribute="centerX" secondItem="W2K-80-wtW" secondAttribute="centerX" id="hgX-uO-LEC"/>
+                            <constraint firstItem="BL9-XS-ib5" firstAttribute="top" secondItem="vj8-Kg-MuM" secondAttribute="bottom" constant="30" id="NO9-DG-bOH"/>
+                            <constraint firstItem="Jfs-ur-Ue5" firstAttribute="top" secondItem="BL9-XS-ib5" secondAttribute="bottom" constant="8" id="QQw-V7-xLf"/>
+                            <constraint firstItem="d6D-hX-pXg" firstAttribute="width" secondItem="W2K-80-wtW" secondAttribute="width" id="eAw-em-fvL"/>
                             <constraint firstItem="BL9-XS-ib5" firstAttribute="leading" secondItem="zXa-9u-AfS" secondAttribute="leading" constant="30" id="k3q-u1-GFK"/>
-                            <constraint firstItem="zXa-9u-AfS" firstAttribute="trailing" secondItem="r3M-X1-V0h" secondAttribute="trailing" constant="20" id="wrq-zT-hOB"/>
+                            <constraint firstItem="vj8-Kg-MuM" firstAttribute="leading" secondItem="zXa-9u-AfS" secondAttribute="leading" id="zyR-Go-bgx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zXa-9u-AfS"/>
                     </view>
                     <connections>
+                        <outlet property="addressField" destination="HoE-NV-qfe" id="wna-MA-6pz"/>
                         <outlet property="contentView" destination="W2K-80-wtW" id="HyE-7u-3ZK"/>
-                        <outlet property="emailTextField" destination="KSm-Y6-SQ3" id="zUw-WR-rJE"/>
+                        <outlet property="emailTextField" destination="I15-A4-lKu" id="Jht-j3-Rha"/>
+                        <outlet property="idField" destination="w0z-RC-gSc" id="u1H-tp-TKE"/>
                         <outlet property="loginButton" destination="Jfs-ur-Ue5" id="yDN-JR-u12"/>
-                        <outlet property="passwordTextField" destination="r3M-X1-V0h" id="NPI-fH-fVh"/>
-                        <outlet property="reenterPasswordField" destination="Sn8-IT-94t" id="VIE-qG-wRz"/>
+                        <outlet property="nameField" destination="1aJ-rg-dm3" id="2De-5h-Jxu"/>
+                        <outlet property="passwordTextField" destination="iO2-jX-DGP" id="6Yl-te-x52"/>
+                        <outlet property="profileImage" destination="uq9-wC-mp8" id="sMW-nh-Kdk"/>
+                        <outlet property="reenterPasswordField" destination="DJM-as-Yvy" id="w1Q-mr-eEY"/>
+                        <outlet property="selectImageButton" destination="0nk-gm-DZ3" id="jag-iU-HWJ"/>
                         <outlet property="signUpButton" destination="BL9-XS-ib5" id="o4F-o0-CLZ"/>
                         <outlet property="titleLabel" destination="7ss-oy-rcc" id="ita-0X-GCS"/>
                     </connections>
                 </viewController>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9W6-B3-83D" customClass="RoundedTextField" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="kHX-tN-4ZX"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="3da-ON-GIg"/>
+                </view>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kK4-pf-sy0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="89.732142857142847"/>
