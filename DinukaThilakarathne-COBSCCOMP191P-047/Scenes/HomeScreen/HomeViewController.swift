@@ -10,6 +10,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    let controller = HomeController()
+    
     let moreFeatures : [[String]] = [
         ["Map", "Map View"],
         ["Advice", "Health Advice"],
@@ -17,6 +19,8 @@ class HomeViewController: UIViewController {
         ["Help", "Help"],
     ]
     
+    @IBOutlet weak var healthStatus: UserHealthStatus!
+    @IBOutlet weak var newsButton: NewsButton!
     @IBOutlet weak var currentStatsTitle: UILabel!{
         didSet{
             currentStatsTitle.font = FontFamily.Abel.regular.font(size: 20)
@@ -45,6 +49,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.controller.delegate = self
         setCurrentStats()
     }
     
@@ -99,5 +104,15 @@ extension HomeViewController : UICollectionViewDelegateFlowLayout,UICollectionVi
         let vc = storyboard.instantiateViewController(withIdentifier: "\(screen)ViewController")
         vc.modalPresentationStyle = .formSheet
         self.present(vc, animated: true)
+    }
+}
+
+extension HomeViewController : HomeDelegate{
+    func showNews() {
+        //
+    }
+    
+    func showNotifications() {
+        //
     }
 }

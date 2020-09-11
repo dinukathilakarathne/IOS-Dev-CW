@@ -66,6 +66,7 @@
 		00B5F324250BEC1400267EEF /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B5F323250BEC1400267EEF /* Help.storyboard */; };
 		00B5F327250BF11700267EEF /* ContactDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B5F326250BF11700267EEF /* ContactDetails.swift */; };
 		00B5F329250BF12400267EEF /* ContactDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00B5F328250BF12400267EEF /* ContactDetails.xib */; };
+		00B5F32B250BFB2D00267EEF /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B5F32A250BFB2D00267EEF /* HomeController.swift */; };
 		00B7EAEE24FBD44A009E9DF1 /* LandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B7EAED24FBD44A009E9DF1 /* LandingController.swift */; };
 		00B7EAF124FBE4BC009E9DF1 /* AlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B7EAF024FBE4BC009E9DF1 /* AlertDialog.swift */; };
 		00B7EAF324FBF958009E9DF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00B7EAF224FBF958009E9DF1 /* GoogleService-Info.plist */; };
@@ -169,6 +170,7 @@
 		00B5F323250BEC1400267EEF /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
 		00B5F326250BF11700267EEF /* ContactDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetails.swift; sourceTree = "<group>"; };
 		00B5F328250BF12400267EEF /* ContactDetails.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactDetails.xib; sourceTree = "<group>"; };
+		00B5F32A250BFB2D00267EEF /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		00B7EAED24FBD44A009E9DF1 /* LandingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingController.swift; sourceTree = "<group>"; };
 		00B7EAF024FBE4BC009E9DF1 /* AlertDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDialog.swift; sourceTree = "<group>"; };
 		00B7EAF224FBF958009E9DF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -452,6 +454,7 @@
 			children = (
 				007FA91D24FCD2A40081DF69 /* Home.storyboard */,
 				007FA92824FCDD290081DF69 /* HomeViewController.swift */,
+				00B5F32A250BFB2D00267EEF /* HomeController.swift */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -909,6 +912,7 @@
 				0003E60524FB72B700661089 /* Strings.swift in Sources */,
 				00B5F31D250BEBB800267EEF /* ContactUsViewController.swift in Sources */,
 				00F945AD24FFD8C000E372EA /* SignUpController.swift in Sources */,
+				00B5F32B250BFB2D00267EEF /* HomeController.swift in Sources */,
 				004F3DD4250B662A0013CF68 /* Answer.swift in Sources */,
 				007FA93024FFABED0081DF69 /* SignUpViewController.swift in Sources */,
 				004F3DCF250B654B0013CF68 /* RadioButton.swift in Sources */,

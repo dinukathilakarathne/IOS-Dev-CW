@@ -33,7 +33,11 @@ class NavigationBar: UIView {
             title.textColor = Asset.defautTextColor.color
         }
     }
-    @IBOutlet weak var notifications: UIImageView!
+    @IBOutlet weak var notifications: UIButton!{
+        didSet{
+            
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -59,5 +63,8 @@ class NavigationBar: UIView {
 
     @IBAction func goBackPressed(_ sender: UIButton) {
         delegate?.goBack()
+    }
+    @IBAction func notificationPressed(_ sender: UIButton) {
+        delegate?.showNotifications()
     }
 }

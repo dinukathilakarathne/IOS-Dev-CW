@@ -170,8 +170,10 @@
                     <size key="freeformSize" width="414" height="800"/>
                     <connections>
                         <outlet property="currentStatsTitle" destination="fjQ-yl-YRq" id="ZLJ-Hl-QnZ"/>
+                        <outlet property="healthStatus" destination="oMo-mD-gNl" id="9Kp-o0-IKU"/>
                         <outlet property="moreFeaturesCollectionView" destination="Qas-Sq-u2y" id="vYO-6D-jLf"/>
                         <outlet property="moreFeaturesTitle" destination="tmS-P8-uhe" id="VoA-9v-pH8"/>
+                        <outlet property="newsButton" destination="yny-pS-0DH" id="Hb3-Sq-11B"/>
                         <outletCollection property="currentStatView" destination="U4F-O4-On0" collectionClass="NSMutableArray" id="f6C-DX-xqx"/>
                         <outletCollection property="currentStatView" destination="gdA-Br-ThO" collectionClass="NSMutableArray" id="WKe-KK-Ocw"/>
                         <outletCollection property="currentStatView" destination="fOG-6Y-7MP" collectionClass="NSMutableArray" id="Hya-8d-qgi"/>
