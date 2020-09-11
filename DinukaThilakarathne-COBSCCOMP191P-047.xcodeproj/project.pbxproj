@@ -54,6 +54,12 @@
 		0093230524FBBE17007427E6 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093230424FBBE17007427E6 /* RoundedTextField.swift */; };
 		0093230724FBBE22007427E6 /* RoundedTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0093230624FBBE22007427E6 /* RoundedTextField.xib */; };
 		0093230A24FBCC93007427E6 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093230924FBCC93007427E6 /* UILabel+Extension.swift */; };
+		00B5F30E250BCE9E00267EEF /* SurveyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B5F30D250BCE9E00267EEF /* SurveyController.swift */; };
+		00B5F310250BDBF700267EEF /* AdviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B5F30F250BDBF700267EEF /* AdviceViewController.swift */; };
+		00B5F312250BDC0800267EEF /* Advice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B5F311250BDC0800267EEF /* Advice.storyboard */; };
+		00B5F315250BDDE100267EEF /* References in Resources */ = {isa = PBXBuildFile; fileRef = 00B5F314250BDDE100267EEF /* References */; };
+		00B5F317250BE06A00267EEF /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B5F316250BE06A00267EEF /* ImageButton.swift */; };
+		00B5F319250BE07200267EEF /* ImageButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00B5F318250BE07200267EEF /* ImageButton.xib */; };
 		00B7EAEE24FBD44A009E9DF1 /* LandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B7EAED24FBD44A009E9DF1 /* LandingController.swift */; };
 		00B7EAF124FBE4BC009E9DF1 /* AlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B7EAF024FBE4BC009E9DF1 /* AlertDialog.swift */; };
 		00B7EAF324FBF958009E9DF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00B7EAF224FBF958009E9DF1 /* GoogleService-Info.plist */; };
@@ -145,6 +151,12 @@
 		0093230424FBBE17007427E6 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		0093230624FBBE22007427E6 /* RoundedTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundedTextField.xib; sourceTree = "<group>"; };
 		0093230924FBCC93007427E6 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		00B5F30D250BCE9E00267EEF /* SurveyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyController.swift; sourceTree = "<group>"; };
+		00B5F30F250BDBF700267EEF /* AdviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceViewController.swift; sourceTree = "<group>"; };
+		00B5F311250BDC0800267EEF /* Advice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Advice.storyboard; sourceTree = "<group>"; };
+		00B5F314250BDDE100267EEF /* References */ = {isa = PBXFileReference; lastKnownFileType = text; path = References; sourceTree = "<group>"; };
+		00B5F316250BE06A00267EEF /* ImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
+		00B5F318250BE07200267EEF /* ImageButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageButton.xib; sourceTree = "<group>"; };
 		00B7EAED24FBD44A009E9DF1 /* LandingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingController.swift; sourceTree = "<group>"; };
 		00B7EAF024FBE4BC009E9DF1 /* AlertDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDialog.swift; sourceTree = "<group>"; };
 		00B7EAF224FBF958009E9DF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -227,6 +239,7 @@
 				0003E5DD24FB698F00661089 /* Resources */,
 				0003E5B724FB686700661089 /* Info.plist */,
 				00B7EAF224FBF958009E9DF1 /* GoogleService-Info.plist */,
+				00B5F314250BDDE100267EEF /* References */,
 			);
 			path = "DinukaThilakarathne-COBSCCOMP191P-047";
 			sourceTree = "<group>";
@@ -271,6 +284,7 @@
 				0003E5DB24FB697000661089 /* LandingScreen */,
 				0003E5DC24FB698100661089 /* LaunchScreen */,
 				0060B101250B6124003A2A82 /* SurveyScreen */,
+				00B5F313250BDC0C00267EEF /* Advice */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -386,6 +400,7 @@
 			isa = PBXGroup;
 			children = (
 				0060B0FD250B6105003A2A82 /* SurveyViewController.swift */,
+				00B5F30D250BCE9E00267EEF /* SurveyController.swift */,
 				0060B0FF250B610E003A2A82 /* Survey.storyboard */,
 			);
 			path = SurveyScreen;
@@ -519,6 +534,24 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		00B5F313250BDC0C00267EEF /* Advice */ = {
+			isa = PBXGroup;
+			children = (
+				00B5F30F250BDBF700267EEF /* AdviceViewController.swift */,
+				00B5F311250BDC0800267EEF /* Advice.storyboard */,
+			);
+			path = Advice;
+			sourceTree = "<group>";
+		};
+		00B5F31A250BE07600267EEF /* ImageButton */ = {
+			isa = PBXGroup;
+			children = (
+				00B5F316250BE06A00267EEF /* ImageButton.swift */,
+				00B5F318250BE07200267EEF /* ImageButton.xib */,
+			);
+			path = ImageButton;
+			sourceTree = "<group>";
+		};
 		00B7EAEF24FBE497009E9DF1 /* Alerts */ = {
 			isa = PBXGroup;
 			children = (
@@ -594,6 +627,7 @@
 			children = (
 				008241ED250A6307005062C0 /* RightIconButton */,
 				00FE606924FB76B700D93505 /* RoundedButton */,
+				00B5F31A250BE07600267EEF /* ImageButton */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -729,15 +763,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00B5F312250BDC0800267EEF /* Advice.storyboard in Resources */,
 				0003E60024FB6AC600661089 /* Localizable.strings in Resources */,
 				007FA92224FCD4100081DF69 /* Settings.storyboard in Resources */,
 				008241E5250A3FE1005062C0 /* ProfileDetails.xib in Resources */,
 				00B7EAF824FC0D96009E9DF1 /* Dashboard.storyboard in Resources */,
+				00B5F315250BDDE100267EEF /* References in Resources */,
 				0060B100250B610E003A2A82 /* Survey.storyboard in Resources */,
 				0003E5FE24FB6AB200661089 /* Assets.xcassets in Resources */,
 				00B7EAF324FBF958009E9DF1 /* GoogleService-Info.plist in Resources */,
 				006329DA24FBB2E500B418F2 /* BebasNeue-Regular.ttf in Resources */,
 				007FA92524FCDCAD0081DF69 /* PresentStats.storyboard in Resources */,
+				00B5F319250BE07200267EEF /* ImageButton.xib in Resources */,
 				0060B109250B64F1003A2A82 /* SurveyQuestion.xib in Resources */,
 				000A144E2504D5E1003C50D4 /* Map.storyboard in Resources */,
 				008241EC250A6301005062C0 /* RightIconButton.xib in Resources */,
@@ -804,6 +841,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				007FA93424FFB0050081DF69 /* NavigationBar.swift in Sources */,
+				00B5F310250BDBF700267EEF /* AdviceViewController.swift in Sources */,
 				0060B0FE250B6105003A2A82 /* SurveyViewController.swift in Sources */,
 				0003E60424FB72B700661089 /* Fonts.swift in Sources */,
 				008241E8250A442C005062C0 /* UIImageView+Extension.swift in Sources */,
@@ -829,11 +867,13 @@
 				004F3DCF250B654B0013CF68 /* RadioButton.swift in Sources */,
 				000A14492503FF8A003C50D4 /* MoreFeatureCollectionViewCell.swift in Sources */,
 				008241F3250B55F6005062C0 /* Survey.swift in Sources */,
+				00B5F317250BE06A00267EEF /* ImageButton.swift in Sources */,
 				00F945BD2503E47900E372EA /* LocalStat.swift in Sources */,
 				008241F1250B26A0005062C0 /* PresentStatsController.swift in Sources */,
 				00B7EAEE24FBD44A009E9DF1 /* LandingController.swift in Sources */,
 				00FE606524FB769500D93505 /* RoundedButton.swift in Sources */,
 				0003E5AA24FB686400661089 /* AppDelegate.swift in Sources */,
+				00B5F30E250BCE9E00267EEF /* SurveyController.swift in Sources */,
 				00F945B1250151BF00E372EA /* UserHealthStatus.swift in Sources */,
 				0003E5AC24FB686400661089 /* SceneDelegate.swift in Sources */,
 				004BB1412503E77800603EE2 /* NewsButton.swift in Sources */,

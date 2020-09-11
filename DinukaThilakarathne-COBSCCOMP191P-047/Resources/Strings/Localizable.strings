@@ -38,6 +38,6 @@ infected = "INFECTED";
 suspects = "SUSPECTS";
 deaths = "DEATHS";
 
-
-
+//Page Titles
+survey_title = "Survey";
 

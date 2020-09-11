@@ -13,7 +13,7 @@ class SurveyQuestion: UIView {
     @IBOutlet weak var contentHolder: UIView!
     @IBOutlet weak var questionLabel: UILabel!{
         didSet{
-            questionLabel.font = FontFamily.Abel.regular.font(size: 16)
+            questionLabel.font = FontFamily.Abel.regular.font(size: 20)
         }
     }
     

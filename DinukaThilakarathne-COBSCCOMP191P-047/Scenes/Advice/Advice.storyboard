@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Advice View Controller-->
+        <scene sceneID="IAk-bc-22s">
+            <objects>
+                <viewController storyboardIdentifier="AdviceViewController" id="mrW-45-CQD" customClass="AdviceViewController" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bFn-qT-GAB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fdn-pW-n0y">
+                                <rect key="frame" x="0.0" y="298" width="414" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="C25-To-Y0P"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r8n-wU-5SN">
+                                <rect key="frame" x="0.0" y="598" width="414" height="264"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpB-pA-6g4">
+                                        <rect key="frame" x="172" y="121.5" width="70" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="YNt-Rp-Jzk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QKS-lJ-4cQ">
+                                        <rect key="frame" x="30" y="92" width="80" height="80"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="RGC-l7-dmw"/>
+                                            <constraint firstAttribute="height" constant="80" id="n8a-Pm-kY9"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lbw-2u-4hQ">
+                                        <rect key="frame" x="304" y="92" width="80" height="80"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="RJa-Cx-Abv"/>
+                                            <constraint firstAttribute="width" constant="80" id="Vxb-Yx-G3X"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="jpB-pA-6g4" firstAttribute="centerX" secondItem="r8n-wU-5SN" secondAttribute="centerX" id="3BR-w0-yMx"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lbw-2u-4hQ" secondAttribute="trailing" constant="30" id="8MR-Jd-8FM"/>
+                                    <constraint firstItem="Lbw-2u-4hQ" firstAttribute="centerY" secondItem="r8n-wU-5SN" secondAttribute="centerY" id="DRP-ZW-kbg"/>
+                                    <constraint firstItem="QKS-lJ-4cQ" firstAttribute="leading" secondItem="r8n-wU-5SN" secondAttribute="leading" constant="30" id="T3m-yf-ZPx"/>
+                                    <constraint firstItem="QKS-lJ-4cQ" firstAttribute="centerY" secondItem="r8n-wU-5SN" secondAttribute="centerY" id="Yq4-Sk-bkt"/>
+                                    <constraint firstItem="jpB-pA-6g4" firstAttribute="centerY" secondItem="r8n-wU-5SN" secondAttribute="centerY" id="dBr-cS-BZS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fdn-pW-n0y" firstAttribute="centerY" secondItem="bFn-qT-GAB" secondAttribute="centerY" id="Lja-eC-CaO"/>
+                            <constraint firstItem="fdn-pW-n0y" firstAttribute="centerX" secondItem="bFn-qT-GAB" secondAttribute="centerX" id="T2k-Gb-HBB"/>
+                            <constraint firstItem="f1Y-xP-D94" firstAttribute="bottom" secondItem="r8n-wU-5SN" secondAttribute="bottom" id="U2R-51-xll"/>
+                            <constraint firstItem="r8n-wU-5SN" firstAttribute="top" secondItem="fdn-pW-n0y" secondAttribute="bottom" id="XF6-pm-Szb"/>
+                            <constraint firstItem="f1Y-xP-D94" firstAttribute="trailing" secondItem="r8n-wU-5SN" secondAttribute="trailing" id="aJ1-N0-BSA"/>
+                            <constraint firstItem="fdn-pW-n0y" firstAttribute="leading" secondItem="f1Y-xP-D94" secondAttribute="leading" id="cVa-30-yV4"/>
+                            <constraint firstItem="r8n-wU-5SN" firstAttribute="leading" secondItem="f1Y-xP-D94" secondAttribute="leading" id="yiK-ES-EPS"/>
+                            <constraint firstItem="f1Y-xP-D94" firstAttribute="trailing" secondItem="fdn-pW-n0y" secondAttribute="trailing" id="zEZ-gO-yjl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="f1Y-xP-D94"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Za-ft-8hf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="66.964285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

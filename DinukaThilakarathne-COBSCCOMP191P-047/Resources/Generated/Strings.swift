@@ -62,6 +62,8 @@ internal enum L10n {
   internal static let stayAtHome = L10n.tr("Localizable", "stay_at_home")
   /// S U B M I T
   internal static let submit = L10n.tr("Localizable", "submit")
+  /// Survey
+  internal static let surveyTitle = L10n.tr("Localizable", "survey_title")
   /// SUSPECTS
   internal static let suspects = L10n.tr("Localizable", "suspects")
 }

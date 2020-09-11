@@ -9,11 +9,11 @@
 import Foundation
 
 class Survey {
-    private var surveyAnswer : [String] = []
+    private var surveyAnswer : [Int] = []
     private var FillDate = Date()
     
     init() {
-        self.surveyAnswer = ["","","","",""]
+        self.surveyAnswer = [-1,-1,-1,-1,-1]
     }
     
     private let questions : [String] = [
@@ -32,11 +32,11 @@ class Survey {
         ["Yes", "No"]
     ]
     
-    func setAnswer(atIndex index : Int, answer a : String){
+    func setAnswer(atIndex index : Int, answer a : Int){
         surveyAnswer[index] = a
     }
     
-    func getAnswers() -> [String] {
+    func getAnswers() -> [Int] {
         return self.surveyAnswer
     }
     

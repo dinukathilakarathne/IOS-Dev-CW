@@ -14,7 +14,11 @@ class Answer: UIView {
 
     @IBOutlet weak var radioButton: RadioButton!
     
-    @IBOutlet weak var answers: UILabel!
+    @IBOutlet weak var answers: UILabel!{
+        didSet{
+            answers.font = FontFamily.Abel.regular.font(size: 16)
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
