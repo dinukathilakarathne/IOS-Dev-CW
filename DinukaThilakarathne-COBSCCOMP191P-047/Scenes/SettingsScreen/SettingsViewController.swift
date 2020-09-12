@@ -121,7 +121,10 @@ extension SettingsViewController : SettingsDelegate{
     
     
     func contactUsPressed() {
-        //unused
+        let storyboard = UIStoryboard(name: "ContactUs", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ContactUsViewController")
+        vc.modalPresentationStyle = .formSheet
+        self.present(vc, animated: true)
     }
     
     func sharePressed() {

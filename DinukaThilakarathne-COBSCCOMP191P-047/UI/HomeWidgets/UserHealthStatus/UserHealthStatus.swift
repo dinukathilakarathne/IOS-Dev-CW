@@ -22,7 +22,7 @@ class UserHealthStatus: UIView {
     @IBOutlet weak var statusLabel: UILabel!{
         didSet{
             statusLabel.text = L10n.signUpPageTitle
-            statusLabel.font = FontFamily.BebasNeue.regular.font(size: 24)
+            statusLabel.font = FontFamily.Abel.regular.font(size: 24)
             statusLabel.textColor = Asset.defautTextColor.color
         }
     }
@@ -30,7 +30,7 @@ class UserHealthStatus: UIView {
     @IBOutlet weak var contentView: UIView!
     
     @IBOutlet weak var contentHolder: UIView!
-    var isAllowed : Bool = false
+    var isAllowed : Bool = true
     
     override init(frame: CGRect) {
         super.init(frame: frame)

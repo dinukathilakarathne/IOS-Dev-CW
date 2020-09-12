@@ -27,6 +27,6 @@ class HomeController{
     
     func getNotifications(){
         db?.getNotifications()
-        
     }
+    
 }

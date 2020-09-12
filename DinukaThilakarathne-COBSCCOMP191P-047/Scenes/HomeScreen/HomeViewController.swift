@@ -11,6 +11,7 @@ import UIKit
 class HomeViewController: UIViewController {
     
     let controller = HomeController()
+    var timer : Timer?
     
     let moreFeatures : [[String]] = [
         ["Map", "Map View"],
@@ -24,6 +25,8 @@ class HomeViewController: UIViewController {
             navigationBar.delegate = self
             navigationBar.backButton.isHidden = true
             navigationBar.title.text = L10n.home
+            navigationBar.backButton.widthAnchor.constraint(equalToConstant: 0).isActive = true
+            
         }
     }
     @IBOutlet weak var healthStatus: UserHealthStatus!
@@ -57,7 +60,43 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         self.controller.delegate = self
+        setUI()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+    }
+    
+    func setUI(){
         setCurrentStats()
+        setStatus()
+        setHealthStatus()
+    
+    }
+    
+    func setStatus(){
+        if UserDefaults().recentTemperature >= AppConstants.maxTemperature{
+            self.healthStatus.isAllowed = false
+        }else{
+            self.healthStatus.isAllowed = true
+        }
+        self.healthStatus.setStatus()
+        self.healthStatus.temperaturLabel.text = "\(UserDefaults().recentTemperature) °C"
+    }
+    
+    func setHealthStatus(){
+        if !UserDefaults().isLoggedIn{
+            return
+        }
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (timer) in
+            self.setStatus()
+            if !UserDefaults().isLoggedIn{
+                self.healthStatus.isHidden = true
+                self.healthStatus.heightAnchor.constraint(equalToConstant: 0).isActive = true
+            }else{
+                self.healthStatus.isHidden = false
+                self.healthStatus.heightAnchor.constraint(equalToConstant: 100).isActive = true
+            }
+        })
     }
 
     func setCurrentStats(){

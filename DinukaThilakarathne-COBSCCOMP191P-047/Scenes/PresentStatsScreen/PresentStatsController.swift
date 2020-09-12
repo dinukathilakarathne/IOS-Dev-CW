@@ -32,6 +32,7 @@ class PresentStatsController {
     }
     
     func submitButtonPressed(){
+        UserDefaults().recentTemperature = self.temperature
         db.updateTemperature(self.temperature)
         delegate?.submitButtonPressed()
     }

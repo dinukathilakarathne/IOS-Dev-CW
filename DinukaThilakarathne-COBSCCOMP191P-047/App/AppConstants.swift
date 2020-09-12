@@ -12,6 +12,7 @@ import Firebase
 
 class AppConstants {
     static let viewCornerRadius : CGFloat  = 5
+    static let maxTemperature : Float = 37.5
 }
 
 class UserDefaults : SwiftDefaults{

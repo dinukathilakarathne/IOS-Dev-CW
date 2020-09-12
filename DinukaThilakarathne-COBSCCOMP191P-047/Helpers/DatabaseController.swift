@@ -37,6 +37,12 @@ class DatabaseController {
         
         self.ref.child("users").child(uuid).observeSingleEvent(of: .value , with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
+            
+            let data = snapshot.children.allObjects as! [DataSnapshot]
+            
+            for x in data {
+                print(x)
+            }
 
             UserDefaults().userAddress = value?["address"] as? String ?? ""
             UserDefaults().userID = value?["index"] as? String ?? ""

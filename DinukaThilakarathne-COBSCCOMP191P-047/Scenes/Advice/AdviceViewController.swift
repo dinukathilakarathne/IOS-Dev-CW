@@ -85,7 +85,7 @@ class AdviceViewController: UIViewController {
     }
     
     func setImageNumber(){
-        imageNumberLabel.text = "\(slideNumber)/\(slides.count)"
+        imageNumberLabel.text = "\(slideNumber + 1)/\(slides.count)"
     }
     
     func setSlides(){
