@@ -1,5 +1,5 @@
 //
-//  HomeController.swift
+//  NotificationController.swift
 //  DinukaThilakarathne-COBSCCOMP191P-047
 //
 //  Created by Dinuka Thilakarathne on 9/12/20.
@@ -8,25 +8,25 @@
 
 import Foundation
 
-protocol HomeDelegate {
-    func showNews()
+protocol  NotificationDelegate {
+    func updateTableView()
 }
 
-class HomeController{
+class NotificationController{
     
-    var delegate : HomeDelegate?
-    let db : DatabaseController?
+    var db : DatabaseController?
+    var delegate : NotificationDelegate?
     
     init() {
         db = DatabaseController()
     }
     
-    func newsButtonPressed(){
-        delegate?.showNews()
-    }
-    
     func getNotifications(){
         db?.getNotifications()
-        
     }
+    
+    func notificationsLoaded(){
+        delegate?.updateTableView()
+    }
+    
 }

@@ -42,6 +42,8 @@ internal enum L10n {
   internal static let healthAdvice = L10n.tr("Localizable", "health_advice")
   /// Help
   internal static let help = L10n.tr("Localizable", "help")
+  /// Home
+  internal static let home = L10n.tr("Localizable", "home")
   /// INFECTED
   internal static let infected = L10n.tr("Localizable", "infected")
   /// 0112342342
@@ -52,6 +54,8 @@ internal enum L10n {
   internal static let login = L10n.tr("Localizable", "login")
   /// L O G  O U T
   internal static let logout = L10n.tr("Localizable", "logout")
+  /// Map View
+  internal static let map = L10n.tr("Localizable", "map")
   /// More
   internal static let moreFeaturesHeading = L10n.tr("Localizable", "more_features_heading")
   /// News

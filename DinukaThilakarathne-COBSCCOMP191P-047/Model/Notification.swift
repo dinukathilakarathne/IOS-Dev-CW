@@ -16,8 +16,8 @@ class Notification {
         return notifications.count
     }
     
-    static func setNotifications(nots : [[String]]){
-        notifications.append(contentsOf: nots)
+    static func setNotifications(not : [String]){
+        notifications.append(not)
     }
     
     static func getNotifications() -> [[String]]{

@@ -15,6 +15,7 @@ class MapViewController: UIViewController {
     @IBOutlet weak var navigationBar: NavigationBar!{
         didSet{
             navigationBar.delegate = self
+            navigationBar.notifications.isHidden = true
         }
     }
     

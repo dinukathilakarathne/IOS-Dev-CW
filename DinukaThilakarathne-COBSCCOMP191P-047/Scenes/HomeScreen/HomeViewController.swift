@@ -19,6 +19,13 @@ class HomeViewController: UIViewController {
         ["Help", "Help"],
     ]
     
+    @IBOutlet weak var navigationBar: NavigationBar!{
+        didSet{
+            navigationBar.delegate = self
+            navigationBar.backButton.isHidden = true
+            navigationBar.title.text = L10n.home
+        }
+    }
     @IBOutlet weak var healthStatus: UserHealthStatus!
     @IBOutlet weak var newsButton: NewsButton!
     @IBOutlet weak var currentStatsTitle: UILabel!{
@@ -52,7 +59,7 @@ class HomeViewController: UIViewController {
         self.controller.delegate = self
         setCurrentStats()
     }
-    
+
     func setCurrentStats(){
         let statNames = [
             L10n.infected,
@@ -108,11 +115,23 @@ extension HomeViewController : UICollectionViewDelegateFlowLayout,UICollectionVi
 }
 
 extension HomeViewController : HomeDelegate{
+    
     func showNews() {
         //
     }
-    
-    func showNotifications() {
-        //
+}
+
+extension HomeViewController : NavigationBarDelegate {
+    func goBack() {
+        //unused
     }
+
+    func showNotifications() {
+        let storyboard = UIStoryboard(name: "Notification", bundle: nil)
+               let vc = storyboard.instantiateViewController(withIdentifier: "NotificationViewController")
+               vc.modalPresentationStyle = .fullScreen
+               self.present(vc, animated: true)
+    }
+    
+    
 }

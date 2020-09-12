@@ -43,6 +43,8 @@ survey_title = "Survey";
 health_advice = "Health Advice";
 help = "Help";
 contact_us = "Contact us";
+home = "Home";
+map = "Map View";
 
 //Contact Us Page
 emailAddress = "nibmcovid19@gmail.com";

@@ -69,6 +69,9 @@
 		00B5F32B250BFB2D00267EEF /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B5F32A250BFB2D00267EEF /* HomeController.swift */; };
 		00B5F32D250C8A2E00267EEF /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B5F32C250C8A2E00267EEF /* Date+Extension.swift */; };
 		00B5F32F250C91B500267EEF /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B5F32E250C91B500267EEF /* Notification.swift */; };
+		00B5F331250C986D00267EEF /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B5F330250C986C00267EEF /* NotificationViewController.swift */; };
+		00B5F333250C987900267EEF /* Notification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B5F332250C987900267EEF /* Notification.storyboard */; };
+		00B5F336250C9B2D00267EEF /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B5F335250C9B2D00267EEF /* NotificationController.swift */; };
 		00B7EAEE24FBD44A009E9DF1 /* LandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B7EAED24FBD44A009E9DF1 /* LandingController.swift */; };
 		00B7EAF124FBE4BC009E9DF1 /* AlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B7EAF024FBE4BC009E9DF1 /* AlertDialog.swift */; };
 		00B7EAF324FBF958009E9DF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00B7EAF224FBF958009E9DF1 /* GoogleService-Info.plist */; };
@@ -175,6 +178,9 @@
 		00B5F32A250BFB2D00267EEF /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		00B5F32C250C8A2E00267EEF /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		00B5F32E250C91B500267EEF /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		00B5F330250C986C00267EEF /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		00B5F332250C987900267EEF /* Notification.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notification.storyboard; sourceTree = "<group>"; };
+		00B5F335250C9B2D00267EEF /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		00B7EAED24FBD44A009E9DF1 /* LandingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingController.swift; sourceTree = "<group>"; };
 		00B7EAF024FBE4BC009E9DF1 /* AlertDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDialog.swift; sourceTree = "<group>"; };
 		00B7EAF224FBF958009E9DF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -305,6 +311,7 @@
 				0003E5DC24FB698100661089 /* LaunchScreen */,
 				0060B101250B6124003A2A82 /* SurveyScreen */,
 				00B5F313250BDC0C00267EEF /* Advice */,
+				00B5F334250C988600267EEF /* Notificaion */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -602,6 +609,16 @@
 			path = ContactDetails;
 			sourceTree = "<group>";
 		};
+		00B5F334250C988600267EEF /* Notificaion */ = {
+			isa = PBXGroup;
+			children = (
+				00B5F330250C986C00267EEF /* NotificationViewController.swift */,
+				00B5F335250C9B2D00267EEF /* NotificationController.swift */,
+				00B5F332250C987900267EEF /* Notification.storyboard */,
+			);
+			path = Notificaion;
+			sourceTree = "<group>";
+		};
 		00B7EAEF24FBE497009E9DF1 /* Alerts */ = {
 			isa = PBXGroup;
 			children = (
@@ -835,6 +852,7 @@
 				00FE606224FB75F000D93505 /* LaunchScreen.storyboard in Resources */,
 				004F3DD2250B661F0013CF68 /* Answer.xib in Resources */,
 				007FA93224FFAFF50081DF69 /* NavigationBar.xib in Resources */,
+				00B5F333250C987900267EEF /* Notification.storyboard in Resources */,
 				006329D924FBB2E000B418F2 /* Abel-Regular.ttf in Resources */,
 				000A14472503FF6E003C50D4 /* MoreFeatureCell.xib in Resources */,
 				007FA92E24FFABE40081DF69 /* SignUp.storyboard in Resources */,
@@ -894,6 +912,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00B5F331250C986D00267EEF /* NotificationViewController.swift in Sources */,
 				007FA93424FFB0050081DF69 /* NavigationBar.swift in Sources */,
 				00B5F310250BDBF700267EEF /* AdviceViewController.swift in Sources */,
 				0060B0FE250B6105003A2A82 /* SurveyViewController.swift in Sources */,
@@ -911,6 +930,7 @@
 				0003E60624FB72B700661089 /* Assets.swift in Sources */,
 				000A144C2504D5D9003C50D4 /* MapViewController.swift in Sources */,
 				007FA92924FCDD290081DF69 /* HomeViewController.swift in Sources */,
+				00B5F336250C9B2D00267EEF /* NotificationController.swift in Sources */,
 				0093230524FBBE17007427E6 /* RoundedTextField.swift in Sources */,
 				007FA92724FCDD170081DF69 /* PresentStatsViewController.swift in Sources */,
 				008241E02509F8D2005062C0 /* DatabaseController.swift in Sources */,

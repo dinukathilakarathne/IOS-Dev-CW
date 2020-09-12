@@ -69,22 +69,25 @@ class DatabaseController {
         self.ref.child("users/\(user.uid)/admin").setValue(stat)
     }
     
-    func getNotifications() -> [[String]]{
-        var notifications : [[String]] = []
+    func getNotifications(){
         self.ref.child("notifications").observeSingleEvent(of: .value) { (snapshot) in
-            for child in snapshot.children.allObjects as! [DataSnapshot]{
-                let not = child.childSnapshot(forPath: "message").value as! String
-                let date = child.childSnapshot(forPath: "time").value as! String
-                notifications.append([not, date])
+            let currentNotCount = Notification.getNotificationCount()
+            let data = snapshot.children.allObjects as! [DataSnapshot]
+            if data.count != currentNotCount{
+                for child in data{
+                    let message = child.childSnapshot(forPath: "message").value as! String
+                    let date = child.childSnapshot(forPath: "time").value as! String
+                    Notification.setNotifications(not: [date, message])
+                }
             }
         }
-        return notifications
     }
     
-    func newNotification(_ message : String = "asdfasdfasdfadfsfasd"){
+    func newNotification(_ message : String){
         let now = Date().getStringDate()
-        self.ref.child("notifications/notification/message").setValue(message)
-        self.ref.child("notifications/notification/time").setValue(now)
+        let count = Notification.getNotificationCount() + 1
+        self.ref.child("notifications/notification\(count)/message").setValue(message)
+        self.ref.child("notifications/notification\(count)/time").setValue(now)
         
     }
 }
