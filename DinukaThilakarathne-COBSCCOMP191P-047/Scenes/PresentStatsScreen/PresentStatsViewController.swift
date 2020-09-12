@@ -53,8 +53,7 @@ class PresentStatsViewController: UIViewController {
     }
     
     func startTimer(){
-        timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true, block: { (timer) in
-            self.controller.userNotAvailable()
+        timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { (timer) in
         })
     }
     
@@ -63,11 +62,21 @@ class PresentStatsViewController: UIViewController {
     }
     
     @objc func updateTemperaturePressed(){
-        controller.submitButtonPressed()
+        if UserDefaults().isLoggedIn{
+            controller.submitButtonPressed()
+        }else{
+
+            controller.userNotAvailable()
+        }
+        
     }
     
     @objc func openSurveyPressed(){
-        controller.surveyButtonPressed()
+        if UserDefaults().isLoggedIn{
+            controller.surveyButtonPressed()
+        }else{
+            controller.userNotAvailable()
+        }
     }
 
     func updateSlider(){

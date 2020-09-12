@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,27 +25,24 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xof-9s-0F6" customClass="ContactDetails" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
                                 <rect key="frame" x="20" y="164" width="374" height="80"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Rki-S2-DLs"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOm-1w-FNq" customClass="ContactDetails" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
                                 <rect key="frame" x="20" y="274" width="374" height="80"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="fDz-Gs-3JK"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afp-yW-gpm" customClass="ContactDetails" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
                                 <rect key="frame" x="20" y="384" width="374" height="80"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="RN6-6u-P8T"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zjJ-RN-dWc" firstAttribute="trailing" secondItem="Xof-9s-0F6" secondAttribute="trailing" constant="20" id="9i9-6W-ncb"/>
                             <constraint firstItem="iOm-1w-FNq" firstAttribute="top" secondItem="Xof-9s-0F6" secondAttribute="bottom" constant="30" id="Anv-yZ-g03"/>
@@ -73,4 +71,9 @@
             <point key="canvasLocation" x="-101" y="88"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="BackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

@@ -17,6 +17,10 @@ class HomeController{
     
     var delegate : HomeDelegate?
     
+    init() {
+        DatabaseController().newNotification("sjkjkfaskkkfskdfjdjkjkfksjkfjskdjfksjkfskkfdkfjjfskfsjdkjfj")
+    }
+    
     func newsButtonPressed(){
         print("news")
         delegate?.showNews()
