@@ -46,6 +46,7 @@ class DatabaseController {
 
             UserDefaults().userAddress = value?["address"] as? String ?? ""
             UserDefaults().userID = value?["index"] as? String ?? ""
+            print("id:\(0) / \(UserDefaults().nameOfUser)")
             UserDefaults().recentTemperature = value?["temperature"] as? Float ?? 0
             UserDefaults().isAdmin = value?["isAdmin"] as? Bool ?? false
 

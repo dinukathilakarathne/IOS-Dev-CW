@@ -11,7 +11,9 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     let controller = SettingsController()
-
+    var timer : Timer?
+    
+    @IBOutlet weak var profileDetailHeight: NSLayoutConstraint!
     @IBOutlet weak var profileDetailsView: profileDetails!
     
     @IBOutlet weak var contactButton: RoundedButton!{
@@ -41,10 +43,11 @@ class SettingsViewController: UIViewController {
             if UserDefaults().isLoggedIn{
                 settingsPrimaryButton.roundButton.setTitle(L10n.logout, for: .normal)
                 settingsPrimaryButton.roundButton.addTarget(self, action: #selector(logoutPressed), for: .touchUpInside)
-                return
+            }else{
+                settingsPrimaryButton.roundButton.setTitle(L10n.login, for: .normal)
+                settingsPrimaryButton.roundButton.addTarget(self, action: #selector(loginPressed), for: .touchUpInside)
             }
-            settingsPrimaryButton.roundButton.setTitle(L10n.login, for: .normal)
-            settingsPrimaryButton.roundButton.addTarget(self, action: #selector(loginPressed), for: .touchUpInside)
+            
         }
     }
     
@@ -70,13 +73,25 @@ class SettingsViewController: UIViewController {
         title = "Settings"
         controller.delegate = self
         setUI()
-
+    }
+    
+    func setProfileDetails(){
+        let view = profileDetailsView
+        view?.addressLabel.text = UserDefaults().userAddress
+        view?.nameLabel.text = UserDefaults().nameOfUser
+        view?.indexLabel.text = UserDefaults().userID
+        view?.profileImage.downloaded(from: UserDefaults().userImage)
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setUI()
     }
     
     @objc func loginPressed(){
         controller.loginButtonPressed()
     }
-
+    
     @objc func createAccountPressed(){
         controller.createAccountButtonPressed()
     }
@@ -94,27 +109,38 @@ class SettingsViewController: UIViewController {
     }
     
     func setUI(){
+        setProfileDetails()
         if !UserDefaults().isLoggedIn{
             self.profileDetailsView.isHidden = true
-            self.profileDetailsView.heightAnchor.constraint(equalToConstant: 0).isActive = true
+            self.profileDetailHeight.constant = 0
             self.settingsPrimaryButton.roundButton.setTitle(L10n.login, for: .normal)
             self.createAccountButton.isHidden = false
         }else{
             self.profileDetailsView.isHidden = false
-            self.profileDetailsView.heightAnchor.constraint(equalToConstant: 200).isActive = true
             self.settingsPrimaryButton.roundButton.setTitle(L10n.logout, for: .normal)
+            self.profileDetailHeight.constant = 230
             self.createAccountButton.isHidden = true
-
+            
         }
     }
     
 }
 
-extension SettingsViewController : SettingsDelegate{
+extension SettingsViewController : SettingsDelegate, LoginCoordinator{
+    func loggedIn() {
+        setUI()
+        if UserDefaults().isLoggedIn{
+            self.settingsPrimaryButton.roundButton.removeTarget(self, action: nil, for: .allEvents)
+            self.settingsPrimaryButton.roundButton.addTarget(self, action: #selector(self.logoutPressed), for: .touchUpInside)
+        }
+    }
+    
     
     func logingIn() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "LandingViewController")
+        let vc = storyboard.instantiateViewController(withIdentifier: "LandingViewController") as! LandingViewController
+        vc.controller = LandingController()
+        vc.controller?.coordinator = self
         vc.modalPresentationStyle = .formSheet
         self.present(vc, animated: true)
     }
@@ -143,11 +169,10 @@ extension SettingsViewController : SettingsDelegate{
     }
     
     func loggedOut() {
-        DispatchQueue.main.async {
-            self.setUI()
-            self.settingsPrimaryButton.roundButton.addTarget(self, action: #selector(self.loginPressed), for: .touchUpInside)
-            self.createAccountButton.addTarget(self, action: #selector(self.createAccountPressed), for: .touchUpInside)
-        }
+        self.setUI()
+        self.settingsPrimaryButton.roundButton.addTarget(self, action: #selector(self.loginPressed), for: .touchUpInside)
+        self.createAccountButton.addTarget(self, action: #selector(self.createAccountPressed), for: .touchUpInside)
+        
     }
     
     

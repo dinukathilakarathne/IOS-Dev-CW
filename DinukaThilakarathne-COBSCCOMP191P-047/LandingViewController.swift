@@ -12,7 +12,7 @@ import Firebase
 class LandingViewController: UIViewController {
     
     //instantiating controllers
-    let controller = LandingController()
+    var controller : LandingController?
     
     //linking and setting UI components
     @IBOutlet weak var contentView: UIView!{
@@ -78,7 +78,7 @@ class LandingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //setting controller delegate for passing data
-        controller.delegate = self
+        controller?.delegate = self
     }
     
     @objc func loginPressed(){
@@ -86,13 +86,13 @@ class LandingViewController: UIViewController {
         let password = passwordTextField.roundedTextField.text ?? ""
         
         //passing data
-        controller.setEmail(email)
-        controller.setPassword(password)
-        controller.loginButtonPressed()
+        controller?.setEmail(email)
+        controller?.setPassword(password)
+        controller?.loginButtonPressed()
     }
     
     @objc func signUpPressed(){
-        controller.signUpPressed()
+        controller?.signUpPressed()
     }
 }
 
@@ -116,11 +116,8 @@ extension LandingViewController : LandingControllerDelegate {
     
     
     //controller delegate methods
-    func showHomeScreen() {
-        let storyboard = UIStoryboard(name: "Dashboard", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "DashboardTabController")
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
+    func showParentScreen() {
+        self.dismiss(animated: true, completion: nil)
     }
     
     

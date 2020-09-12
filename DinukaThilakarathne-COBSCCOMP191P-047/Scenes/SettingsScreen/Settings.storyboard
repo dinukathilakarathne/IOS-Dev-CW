@@ -81,6 +81,7 @@
                     <connections>
                         <outlet property="contactButton" destination="Gjq-ti-DCw" id="Mfx-Pw-kJV"/>
                         <outlet property="createAccountButton" destination="bJA-ya-p1N" id="hjv-4A-TSq"/>
+                        <outlet property="profileDetailHeight" destination="PVv-3o-akM" id="onQ-rr-I1M"/>
                         <outlet property="profileDetailsView" destination="EMl-5A-ihN" id="DhB-L1-O4s"/>
                         <outlet property="seeResultsButton" destination="Jcr-Kv-G6A" id="eMm-EA-9Lc"/>
                         <outlet property="settingsPrimaryButton" destination="EEI-Qi-vKM" id="SLV-kC-XnW"/>

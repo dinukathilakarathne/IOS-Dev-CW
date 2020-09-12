@@ -45,7 +45,10 @@ class PresentStatsViewController: UIViewController {
         controller.delegate = self
         updateSlider()
         setUI()
-        startTimer()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+       startTimer()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -93,7 +96,11 @@ class PresentStatsViewController: UIViewController {
     
 }
 
-extension PresentStatsViewController : PresentStatsDelegate{
+extension PresentStatsViewController : PresentStatsDelegate, LoginCoordinator{
+    func loggedIn() {
+        //unused
+    }
+    
     func submitButtonPressed() {
         SingleActionAlert(withTitle: "Success", withMessage: "Successfully submitted the temperature. Thank you for your cooperation for safety", actionName: L10n.ok, self).present()
     }
@@ -108,7 +115,9 @@ extension PresentStatsViewController : PresentStatsDelegate{
     
     func userNotLoggedIn() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "LandingViewController")
+        let vc = storyboard.instantiateViewController(withIdentifier: "LandingViewController") as! LandingViewController
+        vc.controller = LandingController()
+        vc.controller?.coordinator = self
         vc.modalPresentationStyle = .formSheet
         self.present(vc, animated: true)
     }

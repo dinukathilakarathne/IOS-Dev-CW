@@ -60,17 +60,21 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         self.controller.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         setUI()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        timer?.invalidate()
     }
     
     func setUI(){
         setCurrentStats()
         setStatus()
         setHealthStatus()
-    
+        
     }
     
     func setStatus(){
@@ -84,21 +88,16 @@ class HomeViewController: UIViewController {
     }
     
     func setHealthStatus(){
+        self.setStatus()
         if !UserDefaults().isLoggedIn{
-            return
+            self.healthStatus.isHidden = true
+            self.healthStatus.heightAnchor.constraint(equalToConstant: 0).isActive = true
+        }else{
+            self.healthStatus.isHidden = false
+            self.healthStatus.heightAnchor.constraint(equalToConstant: 100).isActive = true
         }
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (timer) in
-            self.setStatus()
-            if !UserDefaults().isLoggedIn{
-                self.healthStatus.isHidden = true
-                self.healthStatus.heightAnchor.constraint(equalToConstant: 0).isActive = true
-            }else{
-                self.healthStatus.isHidden = false
-                self.healthStatus.heightAnchor.constraint(equalToConstant: 100).isActive = true
-            }
-        })
     }
-
+    
     func setCurrentStats(){
         let statNames = [
             L10n.infected,
@@ -164,12 +163,12 @@ extension HomeViewController : NavigationBarDelegate {
     func goBack() {
         //unused
     }
-
+    
     func showNotifications() {
         let storyboard = UIStoryboard(name: "Notification", bundle: nil)
-               let vc = storyboard.instantiateViewController(withIdentifier: "NotificationViewController")
-               vc.modalPresentationStyle = .fullScreen
-               self.present(vc, animated: true)
+        let vc = storyboard.instantiateViewController(withIdentifier: "NotificationViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
     }
     
     

@@ -60,7 +60,7 @@ extension NotificationViewController : UITableViewDelegate, UITableViewDataSourc
         let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationCell", for: indexPath)
         let notifications = Notification.getNotifications()
         cell.detailTextLabel?.text = notifications[indexPath.row][0]
-        cell.detailTextLabel?.textColor = Asset.accentColor.color
+        cell.detailTextLabel?.textColor = Asset.secondaryColor.color
         cell.detailTextLabel?.font = FontFamily.Abel.regular.font(size: 10)
     
         cell.textLabel?.text = notifications[indexPath.row][1]

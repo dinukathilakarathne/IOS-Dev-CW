@@ -15,8 +15,12 @@ protocol LandingControllerDelegate {
     func emailIsEmpty()
     func authError(_ e : Error)
     func isAuthenticating(_ value : Bool)
-    func showHomeScreen()
+    func showParentScreen()
     func showSignUpScreen()
+}
+
+protocol LoginCoordinator {
+    func loggedIn()
 }
 
 final class LandingController {
@@ -28,6 +32,7 @@ final class LandingController {
     private var isAuthenticating : Bool = false
     
     var delegate : LandingControllerDelegate?
+    var coordinator : LoginCoordinator?
     
     func loginButtonPressed(){
 //        var email = self.email ?? ""
@@ -69,8 +74,10 @@ final class LandingController {
                 self?.delegate?.authError(e)
                 return
             }
-            UserDefaults().setDefaults()
-            self?.delegate?.showHomeScreen()
+            self?.dbController.getCurrentProfileDetails()
+            UserDefaults().isLoggedIn = true
+            self?.delegate?.showParentScreen()
+            self?.coordinator?.loggedIn()
         }
     }
     
