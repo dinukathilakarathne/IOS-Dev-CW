@@ -19,13 +19,18 @@ class MapViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var mapView: MKMapView!{
+        didSet{
+            mapView.delegate = self
+            mapView.userTrackingMode = .follow
+        }
+    }
     
     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        addAnnotations()
         // Do any additional setup after loading the view.
     }
     
@@ -35,6 +40,12 @@ class MapViewController: UIViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+    }
+    
+    func addAnnotations(){
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = CLLocationCoordinate2D(latitude: 38.8934, longitude: -77.9398)
+        mapView.addAnnotation(annotation)
     }
 }
 
@@ -50,7 +61,8 @@ extension MapViewController : NavigationBarDelegate {
     
 }
 
-extension MapViewController : CLLocationManagerDelegate{
+extension MapViewController : CLLocationManagerDelegate, MKMapViewDelegate{
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first{
             locationManager.stopUpdatingLocation()
@@ -66,4 +78,9 @@ extension MapViewController : CLLocationManagerDelegate{
         let region = MKCoordinateRegion(center: coordinate, span: span)
         mapView.setRegion(region, animated: true)
     }
+    
+}
+
+class CustomPointAnnotation: MKPointAnnotation {
+    var imageName: String!
 }

@@ -28,7 +28,6 @@
 		0060B0FE250B6105003A2A82 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060B0FD250B6105003A2A82 /* SurveyViewController.swift */; };
 		0060B100250B610E003A2A82 /* Survey.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0060B0FF250B610E003A2A82 /* Survey.storyboard */; };
 		0060B105250B6205003A2A82 /* SurveyQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060B104250B6205003A2A82 /* SurveyQuestion.swift */; };
-		0060B109250B64F1003A2A82 /* SurveyQuestion.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0060B108250B64F1003A2A82 /* SurveyQuestion.xib */; };
 		006329D924FBB2E000B418F2 /* Abel-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0003E5FA24FB6A5100661089 /* Abel-Regular.ttf */; };
 		006329DA24FBB2E500B418F2 /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0003E5F924FB6A5100661089 /* BebasNeue-Regular.ttf */; };
 		0064D9BD2509740E00485F2F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064D9BC2509740E00485F2F /* ImagePicker.swift */; };
@@ -87,6 +86,7 @@
 		00F945B92503DD6300E372EA /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F945B82503DD6300E372EA /* AppConstants.swift */; };
 		00F945BD2503E47900E372EA /* LocalStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F945BC2503E47900E372EA /* LocalStat.swift */; };
 		00F945BF2503E48500E372EA /* LocalStat.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00F945BE2503E48500E372EA /* LocalStat.xib */; };
+		00FA4AB1250E1FCB00E7F5AE /* SurveyQuestion.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00FA4AB0250E1FCB00E7F5AE /* SurveyQuestion.xib */; };
 		00FE605E24FB754100D93505 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FE605D24FB754100D93505 /* Main.storyboard */; };
 		00FE606224FB75F000D93505 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FE606124FB75F000D93505 /* LaunchScreen.storyboard */; };
 		00FE606524FB769500D93505 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FE606424FB769500D93505 /* RoundedButton.swift */; };
@@ -141,7 +141,6 @@
 		0060B0FD250B6105003A2A82 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		0060B0FF250B610E003A2A82 /* Survey.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Survey.storyboard; sourceTree = "<group>"; };
 		0060B104250B6205003A2A82 /* SurveyQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyQuestion.swift; sourceTree = "<group>"; };
-		0060B108250B64F1003A2A82 /* SurveyQuestion.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SurveyQuestion.xib; path = ../../../../../../Downloads/SurveyQuestion.xib; sourceTree = "<group>"; };
 		0064D9BC2509740E00485F2F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		007FA91D24FCD2A40081DF69 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		007FA92124FCD4100081DF69 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -198,6 +197,7 @@
 		00F945B82503DD6300E372EA /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		00F945BC2503E47900E372EA /* LocalStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStat.swift; sourceTree = "<group>"; };
 		00F945BE2503E48500E372EA /* LocalStat.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocalStat.xib; sourceTree = "<group>"; };
+		00FA4AB0250E1FCB00E7F5AE /* SurveyQuestion.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveyQuestion.xib; sourceTree = "<group>"; };
 		00FE605D24FB754100D93505 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		00FE606124FB75F000D93505 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00FE606424FB769500D93505 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -437,8 +437,8 @@
 		0060B106250B6208003A2A82 /* SurveyQuestion */ = {
 			isa = PBXGroup;
 			children = (
-				0060B108250B64F1003A2A82 /* SurveyQuestion.xib */,
 				0060B104250B6205003A2A82 /* SurveyQuestion.swift */,
+				00FA4AB0250E1FCB00E7F5AE /* SurveyQuestion.xib */,
 			);
 			path = SurveyQuestion;
 			sourceTree = "<group>";
@@ -869,8 +869,8 @@
 				007FA92524FCDCAD0081DF69 /* PresentStats.storyboard in Resources */,
 				00B5F329250BF12400267EEF /* ContactDetails.xib in Resources */,
 				00B5F319250BE07200267EEF /* ImageButton.xib in Resources */,
-				0060B109250B64F1003A2A82 /* SurveyQuestion.xib in Resources */,
 				000A144E2504D5E1003C50D4 /* Map.storyboard in Resources */,
+				00FA4AB1250E1FCB00E7F5AE /* SurveyQuestion.xib in Resources */,
 				008241EC250A6301005062C0 /* RightIconButton.xib in Resources */,
 				007FA91E24FCD2A40081DF69 /* Home.storyboard in Resources */,
 				00FE606224FB75F000D93505 /* LaunchScreen.storyboard in Resources */,

@@ -24,7 +24,8 @@ class DatabaseController {
                 "address" : address,
                 "index" : index,
                 "temperature" : Float(0),
-                "survey": []
+                "survey": [],
+                "location": []
             ])
         }
     }
@@ -74,6 +75,13 @@ class DatabaseController {
             return
         }
         self.ref.child("users/\(user.uid)/admin").setValue(stat)
+    }
+    
+    func updateLocation(location : [String]){
+        guard let user = Auth.auth().currentUser else {
+            return
+        }
+        self.ref.child("users/\(user.uid)/location").setValue(location)
     }
     
     func getNotifications(){
