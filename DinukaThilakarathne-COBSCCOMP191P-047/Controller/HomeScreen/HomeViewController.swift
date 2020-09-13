@@ -60,6 +60,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         self.controller.delegate = self
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -19,6 +19,7 @@ class HomeController{
     
     init() {
         db = DatabaseController()
+        db?.getAllLocations()
     }
     
     func newsButtonPressed(){

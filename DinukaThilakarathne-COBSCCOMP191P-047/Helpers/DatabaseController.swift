@@ -38,12 +38,6 @@ class DatabaseController {
         
         self.ref.child("users").child(uuid).observeSingleEvent(of: .value , with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
-            
-            let data = snapshot.children.allObjects as! [DataSnapshot]
-            
-            for x in data {
-                print(x)
-            }
 
             UserDefaults().userAddress = value?["address"] as? String ?? ""
             UserDefaults().userID = value?["index"] as? String ?? ""
@@ -77,11 +71,24 @@ class DatabaseController {
         self.ref.child("users/\(user.uid)/admin").setValue(stat)
     }
     
-    func updateLocation(location : [String]){
+    func updateLocation(location : [Double]){
         guard let user = Auth.auth().currentUser else {
             return
         }
         self.ref.child("users/\(user.uid)/location").setValue(location)
+    }
+    
+    func getAllLocations() -> [[Double]]{
+        var locations : [[Double]] = []
+        _ = self.ref.child("users").observeSingleEvent(of: .value) { (snapshot) in
+            for child in snapshot.children.allObjects as! [DataSnapshot]{
+                let userLoc = child.childSnapshot(forPath: "location").value as? [Double] ?? []
+                locations.append(userLoc)
+                print(locations)
+            }
+        }
+        print("current locs \(locations)")
+        return locations
     }
     
     func getNotifications(){

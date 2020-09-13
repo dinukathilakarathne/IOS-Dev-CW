@@ -41,4 +41,8 @@ class PresentStatsController {
         self.temperature = value
     }
     
+    func setLocation(_ loc : [Double]){
+        db.updateLocation(location: loc)
+    }
+    
 }

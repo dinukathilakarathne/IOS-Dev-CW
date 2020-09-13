@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import CoreLocation
 
 class PresentStatsViewController: UIViewController {
     
     let controller = PresentStatsController()
     var timer : Timer?
+    var locationManager : CLLocationManager!
 
     @IBOutlet weak var temperatureLabel: UILabel!{
         didSet{
@@ -21,6 +23,7 @@ class PresentStatsViewController: UIViewController {
     }
     
     @IBOutlet weak var temperatureView: UIView!
+    
     @IBOutlet weak var updateTempButton: RoundedButton!{
         didSet{
             updateTempButton.contentView.backgroundColor = Asset.primaryColor.color
@@ -45,6 +48,15 @@ class PresentStatsViewController: UIViewController {
         controller.delegate = self
         updateSlider()
         setUI()
+        setLocationManager()
+    }
+    
+    func setLocationManager(){
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,7 +80,6 @@ class PresentStatsViewController: UIViewController {
         if UserDefaults().isLoggedIn{
             controller.submitButtonPressed()
         }else{
-
             controller.userNotAvailable()
         }
         
@@ -103,6 +114,7 @@ extension PresentStatsViewController : PresentStatsDelegate, LoginCoordinator{
     
     func submitButtonPressed() {
         SingleActionAlert(withTitle: "Success", withMessage: "Successfully submitted the temperature. Thank you for your cooperation for safety", actionName: L10n.ok, self).present()
+        
     }
     
     func showSurveyScreen() {
@@ -123,4 +135,21 @@ extension PresentStatsViewController : PresentStatsDelegate, LoginCoordinator{
     }
     
     
+}
+
+extension PresentStatsViewController : CLLocationManagerDelegate{
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first{
+            locationManager.stopUpdatingLocation()
+            setLocation(location)
+        }
+    }
+    
+    func setLocation(_ location: CLLocation){
+        let lat = location.coordinate.latitude
+        let lon = location.coordinate.longitude
+        controller.setLocation([lat,lon])
+        
+    }
 }
