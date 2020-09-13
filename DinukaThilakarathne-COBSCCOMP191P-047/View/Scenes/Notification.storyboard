@@ -24,7 +24,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d50-ta-C5a">
-                                <rect key="frame" x="0.0" y="114" width="414" height="748"/>
+                                <rect key="frame" x="0.0" y="114" width="414" height="698"/>
                                 <color key="backgroundColor" name="BackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NotificationCell" textLabel="eLK-18-arg" detailTextLabel="aUD-1N-cYn" style="IBUITableViewCellStyleSubtitle" id="7gc-E5-3Tv">
@@ -54,27 +54,39 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAn-4r-AhZ" customClass="RoundedButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="20" y="812" width="374" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="j7z-B3-Tka"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="S3R-lj-jd9" firstAttribute="top" secondItem="Xnc-Sb-KT8" secondAttribute="top" id="40m-ol-49Z"/>
                             <constraint firstItem="S3R-lj-jd9" firstAttribute="leading" secondItem="Xnc-Sb-KT8" secondAttribute="leading" id="BsG-S1-Ywp"/>
+                            <constraint firstItem="WAn-4r-AhZ" firstAttribute="leading" secondItem="Xnc-Sb-KT8" secondAttribute="leading" constant="20" id="Cyn-4V-WoQ"/>
+                            <constraint firstItem="WAn-4r-AhZ" firstAttribute="top" secondItem="d50-ta-C5a" secondAttribute="bottom" id="F5s-I1-Hhy"/>
+                            <constraint firstItem="Xnc-Sb-KT8" firstAttribute="trailing" secondItem="WAn-4r-AhZ" secondAttribute="trailing" constant="20" id="F6u-cw-OkV"/>
                             <constraint firstItem="d50-ta-C5a" firstAttribute="leading" secondItem="Xnc-Sb-KT8" secondAttribute="leading" id="Lfv-sY-67I"/>
-                            <constraint firstItem="Xnc-Sb-KT8" firstAttribute="bottom" secondItem="d50-ta-C5a" secondAttribute="bottom" id="VuF-aI-UpS"/>
                             <constraint firstItem="Xnc-Sb-KT8" firstAttribute="trailing" secondItem="S3R-lj-jd9" secondAttribute="trailing" id="YEx-UU-zYi"/>
+                            <constraint firstItem="WAn-4r-AhZ" firstAttribute="bottom" secondItem="Xnc-Sb-KT8" secondAttribute="bottom" id="efi-KN-SYY"/>
                             <constraint firstItem="Xnc-Sb-KT8" firstAttribute="trailing" secondItem="d50-ta-C5a" secondAttribute="trailing" id="foF-ZY-emE"/>
                             <constraint firstItem="d50-ta-C5a" firstAttribute="top" secondItem="S3R-lj-jd9" secondAttribute="bottom" id="suk-6z-Uwy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xnc-Sb-KT8"/>
                     </view>
                     <connections>
+                        <outlet property="buttonHeight" destination="j7z-B3-Tka" id="atg-3l-fJZ"/>
                         <outlet property="navigationBar" destination="S3R-lj-jd9" id="D8x-Xb-Oe6"/>
+                        <outlet property="newNotificationButton" destination="WAn-4r-AhZ" id="fpT-DI-E11"/>
                         <outlet property="notificationTable" destination="d50-ta-C5a" id="ybu-Q2-xKf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Njy-PF-owS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="67" y="90"/>
+            <point key="canvasLocation" x="66.666666666666671" y="89.732142857142847"/>
         </scene>
     </scenes>
     <resources>

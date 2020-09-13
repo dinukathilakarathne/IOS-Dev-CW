@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Notification View Controller-->
+        <scene sceneID="GhH-u1-KfH">
+            <objects>
+                <viewController storyboardIdentifier="NewNotificationViewController" id="auy-mi-iXk" customClass="NewNotificationViewController" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YMS-vi-Qg5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jcM-J4-xRa" customClass="NavigationBar" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="fM5-7P-Ipa"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C2y-R6-K7Z" customClass="RoundedTextField" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="20" y="164" width="374" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="bvM-rU-WWa"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u3G-yw-9md" customClass="RoundedButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="20" y="792" width="374" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jqh-7m-3fh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="C2y-R6-K7Z" firstAttribute="centerX" secondItem="YMS-vi-Qg5" secondAttribute="centerX" id="0NW-tn-Hgh"/>
+                            <constraint firstItem="etZ-n6-vK2" firstAttribute="trailing" secondItem="jcM-J4-xRa" secondAttribute="trailing" id="4sG-df-YKR"/>
+                            <constraint firstItem="jcM-J4-xRa" firstAttribute="top" secondItem="etZ-n6-vK2" secondAttribute="top" id="4vU-pa-oNt"/>
+                            <constraint firstItem="C2y-R6-K7Z" firstAttribute="top" secondItem="jcM-J4-xRa" secondAttribute="bottom" constant="50" id="CuH-iu-Yku"/>
+                            <constraint firstItem="etZ-n6-vK2" firstAttribute="bottom" secondItem="u3G-yw-9md" secondAttribute="bottom" constant="20" id="DcK-b5-F7r"/>
+                            <constraint firstItem="etZ-n6-vK2" firstAttribute="trailing" secondItem="C2y-R6-K7Z" secondAttribute="trailing" constant="20" id="GGS-86-IvH"/>
+                            <constraint firstItem="u3G-yw-9md" firstAttribute="leading" secondItem="etZ-n6-vK2" secondAttribute="leading" constant="20" id="Hbv-By-QYy"/>
+                            <constraint firstItem="jcM-J4-xRa" firstAttribute="leading" secondItem="etZ-n6-vK2" secondAttribute="leading" id="UxC-do-ICa"/>
+                            <constraint firstItem="C2y-R6-K7Z" firstAttribute="leading" secondItem="etZ-n6-vK2" secondAttribute="leading" constant="20" id="YAt-0K-bx7"/>
+                            <constraint firstItem="etZ-n6-vK2" firstAttribute="trailing" secondItem="u3G-yw-9md" secondAttribute="trailing" constant="20" id="jh2-bO-BGB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="etZ-n6-vK2"/>
+                    </view>
+                    <connections>
+                        <outlet property="navigationBar" destination="jcM-J4-xRa" id="a1c-oq-vXW"/>
+                        <outlet property="newNotificationField" destination="C2y-R6-K7Z" id="ltA-wj-pqi"/>
+                        <outlet property="passNotificationButtton" destination="u3G-yw-9md" id="8r9-Il-lLQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IWH-uW-hHo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64" y="54"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

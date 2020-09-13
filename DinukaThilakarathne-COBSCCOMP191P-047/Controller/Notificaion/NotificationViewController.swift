@@ -23,6 +23,14 @@ class NotificationViewController: UIViewController {
             notificationTable.dataSource = self
         }
     }
+    @IBOutlet weak var newNotificationButton: RoundedButton!{
+        didSet{
+            newNotificationButton.contentView.backgroundColor = Asset.primaryColor.color
+            newNotificationButton.roundButton.setTitle(L10n.newNotification, for: .normal)
+        }
+    }
+    
+    @IBOutlet weak var buttonHeight: NSLayoutConstraint!
     
     var timer : Timer?
     var controller = NotificationController()
