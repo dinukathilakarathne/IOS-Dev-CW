@@ -18,7 +18,7 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var showSurveyResults: RightIconButton!{
         didSet{
-            showSurveyResults.rightIconButton.addTarget(self, action: #selector(ContactUsPressed), for: .touchUpInside)
+            showSurveyResults.rightIconButton.addTarget(self, action: #selector(showResultPressed), for: .touchUpInside)
         }
     }
 
@@ -119,18 +119,25 @@ class SettingsViewController: UIViewController {
     }
     
     func setUI(){
-        setProfileDetails()
-        if !UserDefaults().isLoggedIn{
-            self.profileDetailsView.isHidden = true
-            self.profileDetailHeight.constant = 0
-            self.settingsPrimaryButton.roundButton.setTitle(L10n.login, for: .normal)
-            self.createAccountButton.isHidden = false
-        }else{
-            self.profileDetailsView.isHidden = false
-            self.settingsPrimaryButton.roundButton.setTitle(L10n.logout, for: .normal)
-            self.profileDetailHeight.constant = 230
-            self.createAccountButton.isHidden = true
+        DispatchQueue.main.async {        self.setProfileDetails()
+            if !UserDefaults().isLoggedIn{
+                self.profileDetailsView.isHidden = true
+                self.profileDetailHeight.constant = 0
+                self.settingsPrimaryButton.roundButton.setTitle(L10n.login, for: .normal)
+                self.createAccountButton.isHidden = false
+            }else{
+                self.profileDetailsView.isHidden = false
+                self.settingsPrimaryButton.roundButton.setTitle(L10n.logout, for: .normal)
+                self.profileDetailHeight.constant = 230
+                self.createAccountButton.isHidden = true
+
+            }
             
+            if !UserDefaults().isAdmin{
+                self.showSurveyResults.isHidden = true
+            }else{
+                self.showSurveyResults.isHidden = false
+            }
         }
     }
     
@@ -138,13 +145,12 @@ class SettingsViewController: UIViewController {
 
 extension SettingsViewController : SettingsDelegate, LoginCoordinator{
     
-    func showProfileDetails() {
+    func showProfileDetails(){
         setUI()
     }
     
-    
     func loggedIn() {
-        setUI()
+        controller.getCurrentProfileDetails()
         if UserDefaults().isLoggedIn{
             self.settingsPrimaryButton.roundButton.removeTarget(self, action: nil, for: .allEvents)
             self.settingsPrimaryButton.roundButton.addTarget(self, action: #selector(self.logoutPressed), for: .touchUpInside)
@@ -177,7 +183,10 @@ extension SettingsViewController : SettingsDelegate, LoginCoordinator{
     }
     
     func showResultsPage() {
-        //unused
+        let storyboard = UIStoryboard(name: "Results", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ResultsViewController")
+        vc.modalPresentationStyle = .formSheet
+        self.present(vc, animated: true)
     }
     
     func showSignUpPage() {

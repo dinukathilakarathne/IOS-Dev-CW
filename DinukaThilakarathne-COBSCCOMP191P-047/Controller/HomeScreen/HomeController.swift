@@ -20,7 +20,6 @@ class HomeController{
     init() {
         db = DatabaseController()
         db?.getCurrentProfileDetails()
-        db?.getAllResults()
     }
     
     func newsButtonPressed(){

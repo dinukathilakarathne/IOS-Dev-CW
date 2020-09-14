@@ -15,9 +15,45 @@
                     <view key="view" contentMode="scaleToFill" id="Pfc-dD-edo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Sz-GZ-5Rp" customClass="NavigationBar" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="mov-Xl-ogG"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X4G-GH-2AD">
+                                <rect key="frame" x="0.0" y="114" width="414" height="748"/>
+                                <color key="backgroundColor" name="BackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResultCell" id="g81-5M-XWI">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g81-5M-XWI" id="e7D-hC-oSe">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hxm-1W-nwv" firstAttribute="trailing" secondItem="9Sz-GZ-5Rp" secondAttribute="trailing" id="2fC-9u-VCW"/>
+                            <constraint firstItem="Hxm-1W-nwv" firstAttribute="trailing" secondItem="X4G-GH-2AD" secondAttribute="trailing" id="7qG-cF-0ba"/>
+                            <constraint firstItem="Hxm-1W-nwv" firstAttribute="bottom" secondItem="X4G-GH-2AD" secondAttribute="bottom" id="9Kc-MR-2Mn"/>
+                            <constraint firstItem="X4G-GH-2AD" firstAttribute="top" secondItem="9Sz-GZ-5Rp" secondAttribute="bottom" id="CXX-Hn-vfJ"/>
+                            <constraint firstItem="9Sz-GZ-5Rp" firstAttribute="top" secondItem="Hxm-1W-nwv" secondAttribute="top" id="Up8-1Y-bgK"/>
+                            <constraint firstItem="9Sz-GZ-5Rp" firstAttribute="leading" secondItem="Hxm-1W-nwv" secondAttribute="leading" id="kAH-XI-XOn"/>
+                            <constraint firstItem="X4G-GH-2AD" firstAttribute="leading" secondItem="Hxm-1W-nwv" secondAttribute="leading" id="u1g-xR-29e"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Hxm-1W-nwv"/>
                     </view>
+                    <connections>
+                        <outlet property="navigationBar" destination="9Sz-GZ-5Rp" id="kZM-Ca-SdG"/>
+                        <outlet property="resultsTableView" destination="X4G-GH-2AD" id="a7q-Ud-Qq3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n3f-0h-69K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

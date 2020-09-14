@@ -16,16 +16,15 @@ protocol LandingControllerDelegate {
     func authError(_ e : Error)
     func isAuthenticating(_ value : Bool)
     func showParentScreen()
-    func showSignUpScreen()
 }
 
 protocol LoginCoordinator {
     func loggedIn()
 }
 
-final class LandingController {
+final class LandingController{
     
-    let dbController = DatabaseController()
+    let db = DatabaseController()
     
     private var email : String? = nil
     private var password : String? = nil
@@ -34,18 +33,23 @@ final class LandingController {
     var delegate : LandingControllerDelegate?
     var coordinator : LoginCoordinator?
     
+    init() {
+        db.delegate = self
+    }
+    
     func loginButtonPressed(){
-//        var email = self.email ?? ""
-//        var password = self.password ?? ""
-        email = "visal@gmail.com"
-        password = "123456"
-//        if email.isEmpty{
-//            delegate?.emailIsEmpty()
-//        }else if password.isEmpty {
-//            delegate?.passwordIsEmpty()
-//        }else {
-        logUser(email!, password!)
-//        }
+        let email = self.email ?? ""
+        let password = self.password ?? ""
+        
+//        email = "visal@gmail.com"
+//        password = "123456"
+        if email.isEmpty{
+            delegate?.emailIsEmpty()
+        }else if password.isEmpty {
+            delegate?.passwordIsEmpty()
+        }else {
+            logUser(email, password)
+        }
     }
     
     //setters
@@ -74,15 +78,15 @@ final class LandingController {
                 self?.delegate?.authError(e)
                 return
             }
-            self?.dbController.getCurrentProfileDetails()
+            self?.db.getCurrentProfileDetails()
             UserDefaults().isLoggedIn = true
             self?.delegate?.showParentScreen()
             self?.coordinator?.loggedIn()
         }
     }
     
-    func signUpPressed(){
-        delegate?.showSignUpScreen()
-    }
     
 }
+
+
+extension LandingController: DatabaseDelegate {}

@@ -42,7 +42,7 @@ class MapViewController: UIViewController {
         didSet{
             alertViewLabel.text = L10n.infectedProximityMessage
             alertViewLabel.textColor = Asset.white.color
-            alertViewLabel.font = FontFamily.Abel.regular.font(size: 14)
+            alertViewLabel.font = FontFamily.Abel.regular.font(size: 18)
         }
     }
     

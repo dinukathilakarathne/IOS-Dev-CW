@@ -13,6 +13,7 @@ import Firebase
 class AppConstants {
     static let viewCornerRadius : CGFloat  = 5
     static let maxTemperature : Float = 37.5
+    static let storageRefURL : String = "gs://nibm-covid19-680ec.appspot.com"
 }
 
 class UserDefaults : SwiftDefaults{

@@ -31,6 +31,7 @@ class NewNotificationViewController: UIViewController {
     
     @IBOutlet weak var passNotificationButtton: RoundedButton!{
         didSet{
+            passNotificationButtton.roundButton.setTitle(L10n.newNotification, for: .normal)
             passNotificationButtton.contentView.backgroundColor = Asset.accentColor.color
             passNotificationButtton.roundButton.tintColor = Asset.backgroundColor.color
             passNotificationButtton.roundButton.addTarget(self, action: #selector(passNotificationPressed), for: .touchUpInside)
@@ -40,7 +41,6 @@ class NewNotificationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         controller.delegate = self
-
     }
     
     @objc func passNotificationPressed(){
@@ -73,8 +73,10 @@ extension NewNotificationViewController : UITextViewDelegate{
 }
 
 extension NewNotificationViewController : NewNotificationDelegate{
+    
     func showSuccessMessage() {
         SingleActionAlert(withTitle: "Success", withMessage: "Successfully created the new notification", actionName: L10n.ok, self, true).present()
     }
+    
 }
 

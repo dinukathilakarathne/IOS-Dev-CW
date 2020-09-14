@@ -32,4 +32,33 @@ struct Result {
     static func getResultCount() -> Int {
         return self.allResults.count
     }
+    
+    func getScoreMessage() -> String{
+        if score < 6{
+            return "Moderate threat"
+        }else if score < 4{
+            return "Normal"
+        }else if score < 2{
+            return "Safe"
+        }else{
+            return "Threat"
+        }
+    }
+    
+    func getName() -> String {
+        return self.name
+    }
+    
+    func getDate() -> String {
+        return self.date.getStringDate()
+    }
+    
+    func getScore() -> Int {
+        return self.score
+    }
+    
+    static func clearResults(){
+        allResults.removeAll()
+    }
+    
 }

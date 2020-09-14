@@ -16,6 +16,7 @@ protocol SettingsDelegate {
     func loggedOut()
     func logingIn()
     func showProfileDetails()
+    
 }
 
 class SettingsController{
@@ -26,6 +27,11 @@ class SettingsController{
     init() {
         db = DatabaseController()
         db.delegate = self
+        getCurrentProfileDetails()
+    }
+    
+    func getCurrentProfileDetails(){
+        db.getCurrentProfileDetails()
     }
     
     func contactUsButtonPressed(){
@@ -59,7 +65,6 @@ class SettingsController{
 
 extension SettingsController : DatabaseDelegate{
     func profileDetailsDidLoad() {
-        print("loaded details")
         delegate?.showProfileDetails()
     }
 }

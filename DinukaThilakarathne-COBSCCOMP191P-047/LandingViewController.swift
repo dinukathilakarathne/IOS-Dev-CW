@@ -66,14 +66,6 @@ class LandingViewController: UIViewController {
             loginButton.roundButton.setTitle(L10n.login, for: .normal)
         }
     }
-    @IBOutlet weak var makeAccountButton: UIButton!{
-        didSet{
-            makeAccountButton.setTitle("Don't have an account? Sign up", for: .normal)
-            makeAccountButton.tintColor = Asset.white.color.withAlphaComponent(0.5)
-            makeAccountButton.titleLabel?.font = FontFamily.Abel.regular.font(size: 16)
-            makeAccountButton.addTarget(self, action: #selector(signUpPressed), for: .touchUpInside)
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,10 +82,7 @@ class LandingViewController: UIViewController {
         controller?.setPassword(password)
         controller?.loginButtonPressed()
     }
-    
-    @objc func signUpPressed(){
-        controller?.signUpPressed()
-    }
+
 }
 
 
@@ -106,13 +95,6 @@ extension LandingViewController : UITextFieldDelegate {
 }
 
 extension LandingViewController : LandingControllerDelegate {
-    
-    func showSignUpScreen() {
-        let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "SignUpViewController")
-        vc.modalPresentationStyle = .formSheet
-        self.present(vc, animated: true)
-    }
     
     
     //controller delegate methods

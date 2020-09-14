@@ -13,7 +13,6 @@ import Firebase
 class SignUpViewController: UIViewController {
     
     let controller = SignUpController()
-    var imagePicker: ImagePicker!
     
     
     @IBOutlet weak var profileImage: UIImageView!{
@@ -120,7 +119,6 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         controller.delegate = self
-        self.imagePicker = ImagePicker(presentationController: self, delegate: self)
         setUI()
     }
     
@@ -151,7 +149,11 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func selectImageButtonPressed(_ sender: UIButton) {
-        self.imagePicker.present(from: sender)
+        let picker = UIImagePickerController()
+        picker.sourceType = .photoLibrary
+        picker.allowsEditing = true
+        picker.delegate = self
+        self.present(picker, animated: true)
     }
     
 }
@@ -259,5 +261,22 @@ extension SignUpViewController : ImagePickerDelegate {
         
         
         self.profileImage.image = profileImage
+    }
+}
+
+extension SignUpViewController :  UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let imageSelected = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
+            profileImage.image = imageSelected
+            controller.setProfileImage(imageSelected)
+        }
+        
+        if let imageOriginal = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            profileImage.image = imageOriginal
+            controller.setProfileImage(imageOriginal)
+
+        }
+        
+        picker.dismiss(animated: true, completion: nil)
     }
 }

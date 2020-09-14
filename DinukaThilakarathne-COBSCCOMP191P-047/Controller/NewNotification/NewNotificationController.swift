@@ -27,8 +27,14 @@ class NewNotificationController{
     }
     
     func createNotificationPressed(){
+        addNewNotification()
         db.newNotification(notificationBody)
         delegate?.showSuccessMessage()
+    }
+    
+    func addNewNotification(){
+        let date = Date().getStringDate()
+        Notification.setNotifications(not: [date, notificationBody])
     }
     
     

@@ -13,6 +13,7 @@ import Firebase
 @objc protocol DatabaseDelegate {
     @objc optional func notificationsDidLoad()
     @objc optional func profileDetailsDidLoad()
+    @objc optional func resultsDidLoad()
 
 }
 
@@ -27,13 +28,14 @@ class DatabaseController {
     }
     
     //setting auth details
-    func setProfileDetails(_ name : String, _ address : String, _ index : String, _ image : String){
+    func setProfileDetails(_ name : String, _ address : String, _ index : String, _ image : String, _ isAdmin : Bool){
         if let user = Auth.auth().currentUser{
             self.ref.child("users").child(user.uid).setValue([
                 "name" : name,
                 "image": image,
                 "address" : address,
                 "index" : index,
+                "admin" : isAdmin,
                 "temperature" : Float(0),
                 "survey": [
                     "answers" : [],
@@ -110,6 +112,7 @@ class DatabaseController {
                 let result = Result(name, date, score)
                 Result.addResult(result)
             }
+            self.delegate?.resultsDidLoad?()
         }
     }
     

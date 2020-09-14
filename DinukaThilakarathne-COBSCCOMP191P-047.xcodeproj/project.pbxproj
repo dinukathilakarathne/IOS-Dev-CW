@@ -50,6 +50,8 @@
 		008241EF250A71E2005062C0 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008241EE250A71E2005062C0 /* SettingsController.swift */; };
 		008241F1250B26A0005062C0 /* PresentStatsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008241F0250B26A0005062C0 /* PresentStatsController.swift */; };
 		008241F3250B55F6005062C0 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008241F2250B55F5005062C0 /* Survey.swift */; };
+		0092D12F250F7F4500D79787 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092D12E250F7F4500D79787 /* ResultViewController.swift */; };
+		0092D133250FD70800D79787 /* StorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092D132250FD70800D79787 /* StorageController.swift */; };
 		0093230524FBBE17007427E6 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093230424FBBE17007427E6 /* RoundedTextField.swift */; };
 		0093230724FBBE22007427E6 /* RoundedTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0093230624FBBE22007427E6 /* RoundedTextField.xib */; };
 		0093230A24FBCC93007427E6 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093230924FBCC93007427E6 /* UILabel+Extension.swift */; };
@@ -170,6 +172,8 @@
 		008241EE250A71E2005062C0 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		008241F0250B26A0005062C0 /* PresentStatsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentStatsController.swift; sourceTree = "<group>"; };
 		008241F2250B55F5005062C0 /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
+		0092D12E250F7F4500D79787 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		0092D132250FD70800D79787 /* StorageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageController.swift; sourceTree = "<group>"; };
 		0093230424FBBE17007427E6 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		0093230624FBBE22007427E6 /* RoundedTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundedTextField.xib; sourceTree = "<group>"; };
 		0093230924FBCC93007427E6 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
@@ -398,6 +402,7 @@
 		000A14432503FE0C003C50D4 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				0096C925250F60C200840866 /* UserResults */,
 				000A14452503FF54003C50D4 /* CollectionViewCells */,
 			);
 			path = Cells;
@@ -530,6 +535,7 @@
 			isa = PBXGroup;
 			children = (
 				008241DF2509F8D2005062C0 /* DatabaseController.swift */,
+				0092D132250FD70800D79787 /* StorageController.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -587,6 +593,7 @@
 			isa = PBXGroup;
 			children = (
 				0096C922250F607800840866 /* ResultsViewController.swift */,
+				0092D12E250F7F4500D79787 /* ResultViewController.swift */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -756,7 +763,6 @@
 		00FE606324FB767E00D93505 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				0096C925250F60C200840866 /* UserResults */,
 				00B5F325250BF10100267EEF /* ContactDetails */,
 				000A14432503FE0C003C50D4 /* Cells */,
 				00B7EAEF24FBE497009E9DF1 /* Alerts */,
@@ -1023,6 +1029,7 @@
 				0003E60424FB72B700661089 /* Fonts.swift in Sources */,
 				008241E8250A442C005062C0 /* UIImageView+Extension.swift in Sources */,
 				0064D9BD2509740E00485F2F /* ImagePicker.swift in Sources */,
+				0092D133250FD70800D79787 /* StorageController.swift in Sources */,
 				0093230A24FBCC93007427E6 /* UILabel+Extension.swift in Sources */,
 				00B5F322250BEC0800267EEF /* HelpViewController.swift in Sources */,
 				008241E3250A3FD5005062C0 /* ProfileDetails.swift in Sources */,
@@ -1066,6 +1073,7 @@
 				0003E5AC24FB686400661089 /* SceneDelegate.swift in Sources */,
 				004BB1412503E77800603EE2 /* NewsButton.swift in Sources */,
 				00EDAEEA250B8F9B004B25E1 /* String+Extension.swift in Sources */,
+				0092D12F250F7F4500D79787 /* ResultViewController.swift in Sources */,
 				00FA4AB7250F318800E7F5AE /* NewNotificationController.swift in Sources */,
 				00B5F327250BF11700267EEF /* ContactDetails.swift in Sources */,
 				00B7EAF624FC0D88009E9DF1 /* DashboardTabController.swift in Sources */,

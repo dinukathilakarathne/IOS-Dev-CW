@@ -56,19 +56,13 @@
                                     <constraint firstAttribute="height" constant="50" id="Ovp-c6-KtE"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEU-s3-9DR">
-                                <rect key="frame" x="184" y="646" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" name="PrimaryColor"/>
                         <constraints>
                             <constraint firstItem="zoC-3q-J8U" firstAttribute="trailing" secondItem="Hrf-P4-la8" secondAttribute="trailing" constant="20" id="0sx-Vj-6tp"/>
-                            <constraint firstItem="oEU-s3-9DR" firstAttribute="centerX" secondItem="hgP-8L-GQo" secondAttribute="centerX" id="Ap3-89-jhf"/>
                             <constraint firstItem="upB-yb-ePZ" firstAttribute="leading" secondItem="zoC-3q-J8U" secondAttribute="leading" constant="20" id="JPo-Dk-W5s"/>
                             <constraint firstItem="upB-yb-ePZ" firstAttribute="centerY" secondItem="hgP-8L-GQo" secondAttribute="centerY" id="LI1-o7-2PE"/>
                             <constraint firstItem="FXz-vb-RuL" firstAttribute="leading" secondItem="zoC-3q-J8U" secondAttribute="leading" constant="20" id="PSS-HN-bLK"/>
-                            <constraint firstItem="oEU-s3-9DR" firstAttribute="top" secondItem="d4X-J7-Ayn" secondAttribute="bottom" constant="8" id="WEP-Kk-6oM"/>
                             <constraint firstItem="zoC-3q-J8U" firstAttribute="trailing" secondItem="upB-yb-ePZ" secondAttribute="trailing" constant="20" id="Zly-D2-Itj"/>
                             <constraint firstItem="Hrf-P4-la8" firstAttribute="leading" secondItem="zoC-3q-J8U" secondAttribute="leading" constant="20" id="eyB-px-5eG"/>
                             <constraint firstItem="d4X-J7-Ayn" firstAttribute="leading" secondItem="zoC-3q-J8U" secondAttribute="leading" constant="30" id="hY7-mr-3iZ"/>
@@ -86,7 +80,6 @@
                         <outlet property="landingPageHeadingOutline" destination="4r1-l0-UcN" id="x7B-Be-1wb"/>
                         <outlet property="landingPageTitle" destination="Yh9-eW-YTN" id="Wk8-mL-rvk"/>
                         <outlet property="loginButton" destination="d4X-J7-Ayn" id="Ies-A5-wI8"/>
-                        <outlet property="makeAccountButton" destination="oEU-s3-9DR" id="GQp-8h-6tY"/>
                         <outlet property="passwordTextField" destination="Hrf-P4-la8" id="HT3-V6-Xm0"/>
                     </connections>
                 </viewController>

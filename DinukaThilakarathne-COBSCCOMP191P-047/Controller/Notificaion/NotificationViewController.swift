@@ -27,6 +27,7 @@ class NotificationViewController: UIViewController {
         didSet{
             newNotificationButton.contentView.backgroundColor = Asset.primaryColor.color
             newNotificationButton.roundButton.setTitle("Create notification", for: .normal)
+            newNotificationButton.roundButton.tintColor = Asset.backgroundColor.color
             newNotificationButton.roundButton.addTarget(self, action: #selector(createNotification), for: .touchUpInside)
         }
     }
@@ -67,8 +68,9 @@ class NotificationViewController: UIViewController {
     }
     
     func startTimer(){
-        timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true, block: { (timer) in
+        timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true, block: { (timer) in
             self.getNotifications()
+            self.notificationTable.reloadData()
         })
     }
     
@@ -93,6 +95,7 @@ extension NotificationViewController : UITableViewDelegate, UITableViewDataSourc
         cell.textLabel?.text = notifications[indexPath.row][1]
         cell.textLabel?.font = FontFamily.Abel.regular.font(size: 18)
         cell.textLabel?.textColor = Asset.defautTextColor.color
+        cell.selectionStyle = .none
         return cell
     }
     
