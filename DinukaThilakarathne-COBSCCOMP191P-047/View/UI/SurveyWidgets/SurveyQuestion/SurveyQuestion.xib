@@ -11,6 +11,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SurveyQuestion" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
             <connections>
                 <outlet property="answerStack" destination="302-2S-X4R" id="0Vx-9h-0OB"/>
+                <outlet property="contentHolder" destination="wfM-kk-vXY" id="QlN-Y3-ePr"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="QHN-Ng-9g2"/>
                 <outlet property="questionLabel" destination="Hyz-3i-fMj" id="AjZ-uK-KxO"/>
             </connections>
         </placeholder>

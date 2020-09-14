@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Share View Controller-->
+        <scene sceneID="XUN-hv-tZo">
+            <objects>
+                <viewController storyboardIdentifier="ShareViewController" id="96V-rO-T8I" customClass="ShareViewController" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wgt-Ad-cM6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8O5-FY-GnU" customClass="NavigationBar" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="aw5-D0-gdm"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PLl-KQ-HFq">
+                                <rect key="frame" x="186" y="214" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3XU-nP-992" customClass="RoundedButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="20" y="796" width="374" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5ZI-Dh-cLc"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhi-yy-pee">
+                                <rect key="frame" x="186" y="186" width="42" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Uhi-yy-pee" firstAttribute="centerX" secondItem="Wgt-Ad-cM6" secondAttribute="centerX" id="4pf-jg-inX"/>
+                            <constraint firstItem="Sgv-qo-dhP" firstAttribute="bottom" secondItem="3XU-nP-992" secondAttribute="bottom" constant="16" id="6vr-uq-my7"/>
+                            <constraint firstItem="3XU-nP-992" firstAttribute="leading" secondItem="Sgv-qo-dhP" secondAttribute="leading" constant="20" id="AEL-k5-SQh"/>
+                            <constraint firstItem="Sgv-qo-dhP" firstAttribute="trailing" secondItem="8O5-FY-GnU" secondAttribute="trailing" id="Gbs-br-asX"/>
+                            <constraint firstItem="8O5-FY-GnU" firstAttribute="top" secondItem="Sgv-qo-dhP" secondAttribute="top" id="UfI-5e-QcY"/>
+                            <constraint firstItem="PLl-KQ-HFq" firstAttribute="top" secondItem="Uhi-yy-pee" secondAttribute="bottom" constant="8" id="XqM-zF-qLd"/>
+                            <constraint firstItem="Sgv-qo-dhP" firstAttribute="trailing" secondItem="3XU-nP-992" secondAttribute="trailing" constant="20" id="hb9-FW-NF8"/>
+                            <constraint firstItem="PLl-KQ-HFq" firstAttribute="centerX" secondItem="Wgt-Ad-cM6" secondAttribute="centerX" id="iC3-UT-Ook"/>
+                            <constraint firstItem="8O5-FY-GnU" firstAttribute="leading" secondItem="Sgv-qo-dhP" secondAttribute="leading" id="sdZ-Sv-D6y"/>
+                            <constraint firstItem="PLl-KQ-HFq" firstAttribute="top" secondItem="8O5-FY-GnU" secondAttribute="bottom" constant="100" id="tgb-Yd-bIP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sgv-qo-dhP"/>
+                    </view>
+                    <connections>
+                        <outlet property="desc" destination="Uhi-yy-pee" id="e2b-5N-ZRf"/>
+                        <outlet property="navigationBar" destination="8O5-FY-GnU" id="A3O-C0-rvT"/>
+                        <outlet property="shareButton" destination="3XU-nP-992" id="1Tn-Gz-9fI"/>
+                        <outlet property="tempLabel" destination="PLl-KQ-HFq" id="Yce-c8-sM7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gth-am-Z1x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="104"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

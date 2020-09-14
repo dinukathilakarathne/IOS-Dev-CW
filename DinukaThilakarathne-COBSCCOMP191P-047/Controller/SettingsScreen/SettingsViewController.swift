@@ -16,6 +16,12 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var profileDetailHeight: NSLayoutConstraint!
     @IBOutlet weak var profileDetailsView: profileDetails!
     
+    @IBOutlet weak var showSurveyResults: RightIconButton!{
+        didSet{
+            showSurveyResults.rightIconButton.addTarget(self, action: #selector(ContactUsPressed), for: .touchUpInside)
+        }
+    }
+
     @IBOutlet weak var contactButton: RoundedButton!{
         didSet{
             contactButton.contentView.backgroundColor = Asset.accentColor.color
@@ -108,6 +114,10 @@ class SettingsViewController: UIViewController {
         controller.contactUsButtonPressed()
     }
     
+    @objc func showResultPressed(){
+        controller.showResultsButtonPressed()
+    }
+    
     func setUI(){
         setProfileDetails()
         if !UserDefaults().isLoggedIn{
@@ -127,6 +137,12 @@ class SettingsViewController: UIViewController {
 }
 
 extension SettingsViewController : SettingsDelegate, LoginCoordinator{
+    
+    func showProfileDetails() {
+        setUI()
+    }
+    
+    
     func loggedIn() {
         setUI()
         if UserDefaults().isLoggedIn{
@@ -154,7 +170,10 @@ extension SettingsViewController : SettingsDelegate, LoginCoordinator{
     }
     
     func sharePressed() {
-        //unused
+        let storyboard = UIStoryboard(name: "Share", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ShareViewController")
+        vc.modalPresentationStyle = .formSheet
+        self.present(vc, animated: true)
     }
     
     func showResultsPage() {

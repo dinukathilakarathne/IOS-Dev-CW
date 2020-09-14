@@ -21,12 +21,14 @@ class SurveyController {
     var delegate : SurveyDelegate?
     var isComplete = true
     var answered : [Int] = []
+    var score : Int!
 
     func setAnswers(_ answers : [Int]){
         self.answered = answers
     }
     
     func submitButtonPressed(){
+        self.score = survey.calculateDangerScore(answered)
         checkSurveyCompletion()
     }
     
@@ -39,7 +41,7 @@ class SurveyController {
             }
         }
         if isComplete{
-            db.updateSurveyResults(answers: answered)
+            db.updateSurveyResults(answers: answered, score)
             delegate?.submitPressed()
         }else{
             delegate?.incompleteSurvey()

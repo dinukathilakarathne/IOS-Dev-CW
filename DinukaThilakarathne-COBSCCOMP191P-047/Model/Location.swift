@@ -11,8 +11,8 @@ import Foundation
 class Location{
     static var coordinates : [[Double]] = []
     
-    static func setCoordinates(coordinates : [[Double]]){
-        self.coordinates.append(contentsOf: coordinates)
+    static func setCoordinates(coordinates : [Double]){
+        self.coordinates.append(coordinates)
     }
     
     static func getCoordinates() -> [[Double]]{

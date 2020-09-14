@@ -20,6 +20,7 @@ class PresentStatsController {
     let db = DatabaseController()
     var delegate : PresentStatsDelegate?
     var temperature : Float = 0
+    var location : [Double] = []
     
     func surveyButtonPressed(){
         delegate?.showSurveyScreen()
@@ -34,6 +35,7 @@ class PresentStatsController {
     func submitButtonPressed(){
         UserDefaults().recentTemperature = self.temperature
         db.updateTemperature(self.temperature)
+        db.updateLocation( self.location)
         delegate?.submitButtonPressed()
     }
     
@@ -42,7 +44,7 @@ class PresentStatsController {
     }
     
     func setLocation(_ loc : [Double]){
-        db.updateLocation(location: loc)
+        self.location = loc
     }
     
 }

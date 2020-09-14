@@ -23,4 +23,8 @@ class Notification {
     static func getNotifications() -> [[String]]{
         return notifications
     }
+    
+    static func clearNotifications(){
+        notifications.removeAll()
+    }
 }

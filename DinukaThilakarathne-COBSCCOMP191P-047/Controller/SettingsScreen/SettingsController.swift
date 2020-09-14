@@ -15,11 +15,18 @@ protocol SettingsDelegate {
     func showSignUpPage()
     func loggedOut()
     func logingIn()
+    func showProfileDetails()
 }
 
 class SettingsController{
     
     var delegate : SettingsDelegate?
+    var db : DatabaseController!
+    
+    init() {
+        db = DatabaseController()
+        db.delegate = self
+    }
     
     func contactUsButtonPressed(){
         delegate?.contactUsPressed()
@@ -48,4 +55,11 @@ class SettingsController{
     }
     
     
+}
+
+extension SettingsController : DatabaseDelegate{
+    func profileDetailsDidLoad() {
+        print("loaded details")
+        delegate?.showProfileDetails()
+    }
 }

@@ -141,7 +141,6 @@ extension PresentStatsViewController : CLLocationManagerDelegate{
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first{
-            locationManager.stopUpdatingLocation()
             setLocation(location)
         }
     }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N0z-bf-pUo">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -13,66 +13,91 @@
             <objects>
                 <viewController storyboardIdentifier="SettingsViewController" id="3f0-XO-gav" customClass="SettingsViewController" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0zJ-5v-Xls">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EMl-5A-ihN" customClass="profileDetails" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
-                                <rect key="frame" x="20" y="160" width="374" height="230"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="230" id="PVv-3o-akM"/>
-                                </constraints>
-                            </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iR7-v5-afu">
-                                <rect key="frame" x="20" y="410" width="374" height="50"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQ1-qX-BwD">
+                                <rect key="frame" x="0.0" y="96" width="375" height="571"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gjq-ti-DCw" customClass="RoundedButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="177" height="50"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BzP-ia-MuO" customClass="RoundedButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
-                                        <rect key="frame" x="197" y="0.0" width="177" height="50"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1jt-8b-Bwl">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="756"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EMl-5A-ihN" customClass="profileDetails" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="20" width="335" height="230"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="230" id="PVv-3o-akM"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iR7-v5-afu">
+                                                <rect key="frame" x="20" y="270" width="335" height="50"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gjq-ti-DCw" customClass="RoundedButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="157.5" height="50"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BzP-ia-MuO" customClass="RoundedButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                                        <rect key="frame" x="177.5" y="0.0" width="157.5" height="50"/>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="LT3-nd-mAW"/>
+                                                </constraints>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jcr-Kv-G6A" customClass="RightIconButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="340" width="335" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="T4Y-Vl-2sb"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJA-ya-p1N">
+                                                <rect key="frame" x="164.5" y="710" width="46" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="3QO-yw-eLk"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEI-Qi-vKM" customClass="RoundedButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="634" width="335" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="lpW-2q-89I"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="756" id="4Ko-1C-SB3"/>
+                                            <constraint firstItem="Jcr-Kv-G6A" firstAttribute="leading" secondItem="1jt-8b-Bwl" secondAttribute="leading" constant="20" id="5wB-hu-oLc"/>
+                                            <constraint firstItem="bJA-ya-p1N" firstAttribute="centerX" secondItem="1jt-8b-Bwl" secondAttribute="centerX" id="9uH-5q-QB8"/>
+                                            <constraint firstAttribute="trailing" secondItem="iR7-v5-afu" secondAttribute="trailing" constant="20" id="DLD-lh-d8N"/>
+                                            <constraint firstItem="bJA-ya-p1N" firstAttribute="top" secondItem="EEI-Qi-vKM" secondAttribute="bottom" constant="16" id="LkG-ra-DgW"/>
+                                            <constraint firstAttribute="trailing" secondItem="EEI-Qi-vKM" secondAttribute="trailing" constant="20" id="SHe-k5-0YX"/>
+                                            <constraint firstItem="iR7-v5-afu" firstAttribute="top" secondItem="EMl-5A-ihN" secondAttribute="bottom" constant="20" id="Y0M-rI-Tcc"/>
+                                            <constraint firstItem="EEI-Qi-vKM" firstAttribute="leading" secondItem="1jt-8b-Bwl" secondAttribute="leading" constant="20" id="YlP-zM-cF3"/>
+                                            <constraint firstItem="EMl-5A-ihN" firstAttribute="top" secondItem="1jt-8b-Bwl" secondAttribute="top" constant="20" id="adT-Nc-4Vr"/>
+                                            <constraint firstItem="iR7-v5-afu" firstAttribute="leading" secondItem="1jt-8b-Bwl" secondAttribute="leading" constant="20" id="bOI-yc-zl0"/>
+                                            <constraint firstAttribute="trailing" secondItem="EMl-5A-ihN" secondAttribute="trailing" constant="20" id="bZh-9h-ZBg"/>
+                                            <constraint firstAttribute="trailing" secondItem="Jcr-Kv-G6A" secondAttribute="trailing" constant="20" id="dSi-G3-XRr"/>
+                                            <constraint firstItem="Jcr-Kv-G6A" firstAttribute="top" secondItem="iR7-v5-afu" secondAttribute="bottom" constant="20" id="hQs-vs-RvL"/>
+                                            <constraint firstAttribute="trailing" secondItem="iR7-v5-afu" secondAttribute="trailing" constant="20" id="oGQ-1b-gIX"/>
+                                            <constraint firstItem="EMl-5A-ihN" firstAttribute="leading" secondItem="1jt-8b-Bwl" secondAttribute="leading" constant="20" id="omZ-f0-3vk"/>
+                                            <constraint firstAttribute="bottom" secondItem="bJA-ya-p1N" secondAttribute="bottom" constant="16" id="xvq-fT-ttR"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="LT3-nd-mAW"/>
+                                    <constraint firstItem="1jt-8b-Bwl" firstAttribute="top" secondItem="mQ1-qX-BwD" secondAttribute="top" id="HgQ-9F-Gyv"/>
+                                    <constraint firstAttribute="trailing" secondItem="1jt-8b-Bwl" secondAttribute="trailing" id="fPX-EK-VuA"/>
+                                    <constraint firstAttribute="bottom" secondItem="1jt-8b-Bwl" secondAttribute="bottom" id="hsu-lE-0Qu"/>
+                                    <constraint firstItem="1jt-8b-Bwl" firstAttribute="leading" secondItem="mQ1-qX-BwD" secondAttribute="leading" id="oHz-IK-IXf"/>
                                 </constraints>
-                            </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jcr-Kv-G6A" customClass="RightIconButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
-                                <rect key="frame" x="20" y="480" width="374" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="T4Y-Vl-2sb"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJA-ya-p1N">
-                                <rect key="frame" x="184" y="816" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="3QO-yw-eLk"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEI-Qi-vKM" customClass="RoundedButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
-                                <rect key="frame" x="20" y="740" width="374" height="60"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="lpW-2q-89I"/>
-                                </constraints>
-                            </view>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="WDQ-6n-LZy" firstAttribute="trailing" secondItem="EEI-Qi-vKM" secondAttribute="trailing" constant="20" id="4Qo-rq-dK5"/>
-                            <constraint firstItem="WDQ-6n-LZy" firstAttribute="trailing" secondItem="Jcr-Kv-G6A" secondAttribute="trailing" constant="20" id="N9H-7U-scK"/>
-                            <constraint firstItem="bJA-ya-p1N" firstAttribute="centerX" secondItem="0zJ-5v-Xls" secondAttribute="centerX" id="Pwq-Dx-8fY"/>
-                            <constraint firstItem="WDQ-6n-LZy" firstAttribute="bottom" secondItem="bJA-ya-p1N" secondAttribute="bottom" constant="16" id="UZu-It-lU7"/>
-                            <constraint firstItem="WDQ-6n-LZy" firstAttribute="trailing" secondItem="EMl-5A-ihN" secondAttribute="trailing" constant="20" id="Z5a-eu-LGn"/>
-                            <constraint firstItem="Jcr-Kv-G6A" firstAttribute="leading" secondItem="WDQ-6n-LZy" secondAttribute="leading" constant="20" id="boi-OE-Tdh"/>
-                            <constraint firstItem="bJA-ya-p1N" firstAttribute="top" secondItem="EEI-Qi-vKM" secondAttribute="bottom" constant="16" id="d50-qp-WIt"/>
-                            <constraint firstItem="EMl-5A-ihN" firstAttribute="leading" secondItem="WDQ-6n-LZy" secondAttribute="leading" constant="20" id="dtL-D9-PQh"/>
-                            <constraint firstAttribute="trailing" secondItem="iR7-v5-afu" secondAttribute="trailing" constant="20" id="e9V-Qh-h7s"/>
-                            <constraint firstItem="iR7-v5-afu" firstAttribute="top" secondItem="EMl-5A-ihN" secondAttribute="bottom" constant="20" id="iHA-Sx-UGb"/>
-                            <constraint firstItem="iR7-v5-afu" firstAttribute="leading" secondItem="WDQ-6n-LZy" secondAttribute="leading" constant="20" id="iOQ-7L-bSz"/>
-                            <constraint firstItem="Jcr-Kv-G6A" firstAttribute="top" secondItem="iR7-v5-afu" secondAttribute="bottom" constant="20" id="qli-1H-mmQ"/>
-                            <constraint firstItem="EMl-5A-ihN" firstAttribute="top" secondItem="WDQ-6n-LZy" secondAttribute="top" constant="20" id="rbW-KZ-qdk"/>
-                            <constraint firstItem="EEI-Qi-vKM" firstAttribute="leading" secondItem="WDQ-6n-LZy" secondAttribute="leading" constant="20" id="sqM-Or-aDC"/>
+                            <constraint firstItem="mQ1-qX-BwD" firstAttribute="top" secondItem="WDQ-6n-LZy" secondAttribute="top" id="Pil-d0-f86"/>
+                            <constraint firstItem="mQ1-qX-BwD" firstAttribute="trailing" secondItem="WDQ-6n-LZy" secondAttribute="trailing" id="XlA-lG-tvT"/>
+                            <constraint firstItem="mQ1-qX-BwD" firstAttribute="leading" secondItem="WDQ-6n-LZy" secondAttribute="leading" id="aBQ-ii-wBh"/>
+                            <constraint firstItem="1jt-8b-Bwl" firstAttribute="width" secondItem="0zJ-5v-Xls" secondAttribute="width" id="ndB-QE-hbP"/>
+                            <constraint firstAttribute="bottom" secondItem="mQ1-qX-BwD" secondAttribute="bottom" id="zcS-ml-db0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WDQ-6n-LZy"/>
                     </view>
@@ -86,6 +111,7 @@
                         <outlet property="seeResultsButton" destination="Jcr-Kv-G6A" id="eMm-EA-9Lc"/>
                         <outlet property="settingsPrimaryButton" destination="EEI-Qi-vKM" id="SLV-kC-XnW"/>
                         <outlet property="shareButton" destination="BzP-ia-MuO" id="hAu-Cu-C8a"/>
+                        <outlet property="showSurveyResults" destination="Jcr-Kv-G6A" id="RRV-mM-M6U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hP9-MW-EEW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -99,7 +125,7 @@
                     <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="PoT-n3-kcU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="eSg-CT-LhD">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" name="PrimaryColor"/>

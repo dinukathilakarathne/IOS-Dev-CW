@@ -11,11 +11,16 @@ import CoreLocation
 import MapKit
 
 class MapViewController: UIViewController {
-
+    
+    var locations : [MKPointAnnotation] = []
+    var currentLocation : CLLocation!
+    var isAlertShown : Bool! = false
+    
     @IBOutlet weak var navigationBar: NavigationBar!{
         didSet{
             navigationBar.delegate = self
             navigationBar.notifications.isHidden = true
+            navigationBar.title.text = L10n.map
         }
     }
     
@@ -26,12 +31,28 @@ class MapViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var alertView: UIView!{
+        didSet{
+            alertView.layer.cornerRadius = AppConstants.viewCornerRadius
+            
+        }
+    }
+    @IBOutlet weak var alertVIewHeight: NSLayoutConstraint!
+    @IBOutlet weak var alertViewLabel: UILabel!{
+        didSet{
+            alertViewLabel.text = L10n.infectedProximityMessage
+            alertViewLabel.textColor = Asset.white.color
+            alertViewLabel.font = FontFamily.Abel.regular.font(size: 14)
+        }
+    }
+    
     let locationManager = CLLocationManager()
+    var timer : Timer?
+    let db = DatabaseController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         addAnnotations()
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,12 +61,62 @@ class MapViewController: UIViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        startTimer()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        timer?.invalidate()
+    }
+    
+    func startTimer(){
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (timer) in
+            self.db.getAllLocations()
+            self.mapView.removeAnnotations(self.locations)
+            self.addAnnotations()
+        })
     }
     
     func addAnnotations(){
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = CLLocationCoordinate2D(latitude: 38.8934, longitude: -77.9398)
-        mapView.addAnnotation(annotation)
+        if let location = currentLocation{
+            self.calculateDistanceBetweenAnnotations(location)
+        }
+        self.showAlert()
+        
+        let count = Location.getNumberOfCoordinates()
+        for x in 0..<count{
+            let location = Location.getCoordinates()[x]
+            if location.count > 0 {
+                let lat = location[0]
+                let lon = location[1]
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+                locations.append(annotation)
+            }
+        }
+        self.mapView.addAnnotations(locations)
+    }
+    
+    func calculateDistanceBetweenAnnotations(_ location :
+        CLLocation){
+        
+        for location in locations{
+            isAlertShown = false
+            let loc = CLLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            let distance = currentLocation.distance(from: loc)
+            if distance < 200{
+                isAlertShown = true
+            }
+        }
+    }
+    
+    func showAlert(){
+        if isAlertShown{
+            alertVIewHeight.constant = 70
+            alertView.isHidden = false
+        }else{
+            alertVIewHeight.constant = 0
+            alertView.isHidden = true
+        }
     }
 }
 
@@ -65,14 +136,13 @@ extension MapViewController : CLLocationManagerDelegate, MKMapViewDelegate{
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first{
-            locationManager.stopUpdatingLocation()
+            currentLocation = location
             render(location)
         }
     }
     
     func render(_ location: CLLocation){
         let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude )
-        
         let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
         
         let region = MKCoordinateRegion(center: coordinate, span: span)

@@ -9,12 +9,12 @@
 import UIKit
 
 class NotificationViewController: UIViewController {
-
+    
     @IBOutlet weak var navigationBar: NavigationBar!{
         didSet{
             navigationBar.delegate = self
             navigationBar.notifications.isHidden = true
-            navigationBar.title.text = L10n.contactUs
+            navigationBar.title.text = L10n.newNotificationsTitle
         }
     }
     @IBOutlet weak var notificationTable: UITableView!{
@@ -26,7 +26,8 @@ class NotificationViewController: UIViewController {
     @IBOutlet weak var newNotificationButton: RoundedButton!{
         didSet{
             newNotificationButton.contentView.backgroundColor = Asset.primaryColor.color
-            newNotificationButton.roundButton.setTitle(L10n.newNotification, for: .normal)
+            newNotificationButton.roundButton.setTitle("Create notification", for: .normal)
+            newNotificationButton.roundButton.addTarget(self, action: #selector(createNotification), for: .touchUpInside)
         }
     }
     
@@ -38,23 +39,41 @@ class NotificationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         controller.delegate = self
-        getNotifications()
         startTimer()
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getNotifications()
+        setUI()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         timer?.invalidate()
     }
     
+    @objc func createNotification(){
+        controller.createNotificationPressed()
+    }
+    
+    func setUI(){
+        if UserDefaults().isAdmin{
+            newNotificationButton.isHidden = false
+            buttonHeight.constant = 50
+        }else{
+            newNotificationButton.isHidden = true
+            buttonHeight.constant = 0
+        }
+    }
+    
     func startTimer(){
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (timer) in
+        timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true, block: { (timer) in
             self.getNotifications()
         })
     }
     
     func getNotifications(){
         controller.getNotifications()
-        controller.notificationsLoaded()
     }
 
 }
@@ -81,9 +100,20 @@ extension NotificationViewController : UITableViewDelegate, UITableViewDataSourc
 }
 
 extension NotificationViewController : NotificationDelegate{
+    
+    func createNotificationPressed() {
+        let storyboard = UIStoryboard(name: "NewNotification", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "NewNotificationViewController")
+        vc.modalPresentationStyle = .formSheet
+        self.present(vc, animated: true)
+    }
+    
     func updateTableView() {
         notificationTable.reloadData()
     }
+    
+    
+    
     
     
 }

@@ -56,3 +56,7 @@ land_number = "0112342342";
 email = "Email";
 phone = "Mobile phone";
 land_phone = "Land phone";
+
+//Alert Messages
+infected_proximity_title = "Warning";
+infected_proximity_message = "You are too close to a person infected by COVID-19. Divert immediately";

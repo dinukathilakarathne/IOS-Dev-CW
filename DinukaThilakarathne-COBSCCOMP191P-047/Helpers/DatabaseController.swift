@@ -10,21 +10,36 @@ import Foundation
 import Firebase
 
 
+@objc protocol DatabaseDelegate {
+    @objc optional func notificationsDidLoad()
+    @objc optional func profileDetailsDidLoad()
+
+}
+
 class DatabaseController {
     var ref: DatabaseReference!
+    var delegate : DatabaseDelegate?
+    
+    let format = "yyyy-MM-dd HH:mm:ss"
 
     init() {
         self.ref = Database.database().reference()
     }
     
     //setting auth details
-    func setProfileDetails(_ address : String, _ index : String){
+    func setProfileDetails(_ name : String, _ address : String, _ index : String, _ image : String){
         if let user = Auth.auth().currentUser{
             self.ref.child("users").child(user.uid).setValue([
+                "name" : name,
+                "image": image,
                 "address" : address,
                 "index" : index,
                 "temperature" : Float(0),
-                "survey": [],
+                "survey": [
+                    "answers" : [],
+                    "score": 0,
+                    "date": ""
+                ],
                 "location": []
             ])
         }
@@ -35,7 +50,7 @@ class DatabaseController {
         guard let uuid = Auth.auth().currentUser?.uid else{
             return
         }
-        
+                
         self.ref.child("users").child(uuid).observeSingleEvent(of: .value , with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
 
@@ -44,7 +59,10 @@ class DatabaseController {
             print("id:\(0) / \(UserDefaults().nameOfUser)")
             UserDefaults().recentTemperature = value?["temperature"] as? Float ?? 0
             UserDefaults().isAdmin = value?["isAdmin"] as? Bool ?? false
-
+            UserDefaults().nameOfUser = value?["name"] as? String ?? ""
+            UserDefaults().userImage = value?["image"] as? String ?? ""
+            
+            self.delegate?.profileDetailsDidLoad?()
         })
     }
     
@@ -57,11 +75,13 @@ class DatabaseController {
     }
     
     //method to update users temperature
-    func updateSurveyResults(answers a : [Int]){
+    func updateSurveyResults(answers a : [Int], _ score : Int){
         guard let user = Auth.auth().currentUser else {
             return
         }
-        self.ref.child("users/\(user.uid)/survey").setValue(a)
+        self.ref.child("users/\(user.uid)/survey/answers").setValue(a)
+        self.ref.child("users/\(user.uid)/survey/score").setValue(score)
+        self.ref.child("users/\(user.uid)/survey/date").setValue("\(Date().getStringDate(by: format))")
     }
     
     func updateAdminStatus(status stat : Bool){
@@ -71,27 +91,43 @@ class DatabaseController {
         self.ref.child("users/\(user.uid)/admin").setValue(stat)
     }
     
-    func updateLocation(location : [Double]){
+    func updateLocation(_ location : [Double]){
         guard let user = Auth.auth().currentUser else {
             return
         }
         self.ref.child("users/\(user.uid)/location").setValue(location)
     }
     
-    func getAllLocations() -> [[Double]]{
-        var locations : [[Double]] = []
-        _ = self.ref.child("users").observeSingleEvent(of: .value) { (snapshot) in
-            for child in snapshot.children.allObjects as! [DataSnapshot]{
-                let userLoc = child.childSnapshot(forPath: "location").value as? [Double] ?? []
-                locations.append(userLoc)
-                print(locations)
+    func getAllResults(){
+        self.ref.child("users").observeSingleEvent(of: .value) { (snapshot) in
+            let data = snapshot.children.allObjects as! [DataSnapshot]
+            for child in data{
+                let name = child.childSnapshot(forPath: "name").value as? String ?? ""
+                let score = child.childSnapshot(forPath: "survey/score").value as? Int ?? 0
+                let dateStr = child.childSnapshot(forPath: "survey/date").value as? String ?? ""
+                print(dateStr)
+                let date = dateStr.toDate(withFormat: self.format) ?? Date()
+                let result = Result(name, date, score)
+                Result.addResult(result)
             }
         }
-        print("current locs \(locations)")
-        return locations
+    }
+    
+    func getAllLocations(){
+        _ = self.ref.child("users").observeSingleEvent(of: .value) { (snapshot) in
+            let data = snapshot.children.allObjects as! [DataSnapshot]
+            for child in data{
+                let userTemp = child.childSnapshot(forPath: "temperature").value as? Float ?? 35.0
+                if userTemp > 37 {
+                    let userLoc = child.childSnapshot(forPath: "location").value as? [Double] ?? []
+                    Location.setCoordinates(coordinates: userLoc)
+                }
+            }
+        }
     }
     
     func getNotifications(){
+        Notification.clearNotifications()
         self.ref.child("notifications").observeSingleEvent(of: .value) { (snapshot) in
             let currentNotCount = Notification.getNotificationCount()
             let data = snapshot.children.allObjects as! [DataSnapshot]
@@ -102,6 +138,7 @@ class DatabaseController {
                     Notification.setNotifications(not: [date, message])
                 }
             }
+            self.delegate?.notificationsDidLoad?()
         }
     }
     

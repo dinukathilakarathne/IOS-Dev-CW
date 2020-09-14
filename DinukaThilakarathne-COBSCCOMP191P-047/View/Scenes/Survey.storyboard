@@ -30,23 +30,23 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1400"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bM3-Ki-VaX">
-                                                <rect key="frame" x="20" y="0.0" width="374" height="1318"/>
+                                                <rect key="frame" x="20" y="0.0" width="374" height="1274"/>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMG-Dj-8hA" customClass="RoundedButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="1334" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="1290" width="374" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="lGU-gH-nsQ"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="oMG-Dj-8hA" secondAttribute="bottom" constant="16" id="E5C-wa-uge"/>
+                                            <constraint firstAttribute="bottom" secondItem="oMG-Dj-8hA" secondAttribute="bottom" constant="60" id="3Ju-s2-a9K"/>
+                                            <constraint firstItem="oMG-Dj-8hA" firstAttribute="top" secondItem="bM3-Ki-VaX" secondAttribute="bottom" constant="16" id="G6W-ds-8hM"/>
                                             <constraint firstAttribute="trailing" secondItem="bM3-Ki-VaX" secondAttribute="trailing" constant="20" id="Oc2-Bi-dx0"/>
                                             <constraint firstItem="oMG-Dj-8hA" firstAttribute="leading" secondItem="nOO-nH-VZT" secondAttribute="leading" constant="20" id="Uzb-dE-lCe"/>
                                             <constraint firstItem="bM3-Ki-VaX" firstAttribute="top" secondItem="nOO-nH-VZT" secondAttribute="top" id="V0b-VT-l4n"/>
                                             <constraint firstItem="bM3-Ki-VaX" firstAttribute="leading" secondItem="nOO-nH-VZT" secondAttribute="leading" constant="20" id="am0-4x-1RH"/>
                                             <constraint firstAttribute="trailing" secondItem="oMG-Dj-8hA" secondAttribute="trailing" constant="20" id="jZc-3u-i3z"/>
-                                            <constraint firstItem="oMG-Dj-8hA" firstAttribute="top" secondItem="bM3-Ki-VaX" secondAttribute="bottom" constant="16" id="qKa-mN-eor"/>
                                             <constraint firstAttribute="height" constant="1400" id="uWP-Xu-wh1"/>
                                         </constraints>
                                     </view>

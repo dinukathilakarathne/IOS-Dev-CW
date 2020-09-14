@@ -46,6 +46,10 @@ internal enum L10n {
   internal static let home = L10n.tr("Localizable", "home")
   /// INFECTED
   internal static let infected = L10n.tr("Localizable", "infected")
+  /// You are too close to a person infected by COVID-19. Divert immediately
+  internal static let infectedProximityMessage = L10n.tr("Localizable", "infected_proximity_message")
+  /// Warning
+  internal static let infectedProximityTitle = L10n.tr("Localizable", "infected_proximity_title")
   /// 0112342342
   internal static let landNumber = L10n.tr("Localizable", "land_number")
   /// Land phone

@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,20 +26,47 @@
                                     <constraint firstAttribute="height" constant="60" id="vap-yR-i52"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ccx-ID-ycp">
+                                <rect key="frame" x="30" y="776" width="354" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ts8-hA-MXo">
+                                        <rect key="frame" x="20" y="10" width="314" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="DefaultRed"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Ts8-hA-MXo" secondAttribute="trailing" constant="20" id="3U8-j0-vT0"/>
+                                    <constraint firstAttribute="height" constant="70" id="M8Y-gU-MW8"/>
+                                    <constraint firstItem="Ts8-hA-MXo" firstAttribute="leading" secondItem="Ccx-ID-ycp" secondAttribute="leading" constant="20" id="j9J-0X-Kgy"/>
+                                    <constraint firstItem="Ts8-hA-MXo" firstAttribute="centerX" secondItem="Ccx-ID-ycp" secondAttribute="centerX" id="kbR-EH-fiU"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ts8-hA-MXo" secondAttribute="bottom" constant="10" id="o6v-yu-ywb"/>
+                                    <constraint firstItem="Ts8-hA-MXo" firstAttribute="top" secondItem="Ccx-ID-ycp" secondAttribute="top" constant="10" id="xAy-1B-C5e"/>
+                                    <constraint firstItem="Ts8-hA-MXo" firstAttribute="centerY" secondItem="Ccx-ID-ycp" secondAttribute="centerY" id="ze0-X5-xj0"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Ahz-rP-DEH" firstAttribute="trailing" secondItem="jn5-54-xeq" secondAttribute="trailing" id="6UA-GJ-W8i"/>
                             <constraint firstAttribute="bottom" secondItem="7Mq-fL-B9T" secondAttribute="bottom" id="7MH-qR-4eZ"/>
+                            <constraint firstItem="Ccx-ID-ycp" firstAttribute="leading" secondItem="Ahz-rP-DEH" secondAttribute="leading" constant="30" id="8qr-0y-yn8"/>
                             <constraint firstItem="7Mq-fL-B9T" firstAttribute="leading" secondItem="Ahz-rP-DEH" secondAttribute="leading" id="9X6-ZT-n74"/>
+                            <constraint firstItem="Ahz-rP-DEH" firstAttribute="trailing" secondItem="Ccx-ID-ycp" secondAttribute="trailing" constant="30" id="DEm-Vv-fNC"/>
                             <constraint firstItem="jn5-54-xeq" firstAttribute="top" secondItem="Ahz-rP-DEH" secondAttribute="top" id="Fp2-lW-Dbu"/>
                             <constraint firstItem="jn5-54-xeq" firstAttribute="leading" secondItem="Ahz-rP-DEH" secondAttribute="leading" id="Myv-L9-p8b"/>
                             <constraint firstItem="7Mq-fL-B9T" firstAttribute="top" secondItem="jn5-54-xeq" secondAttribute="bottom" id="QBp-du-vNx"/>
+                            <constraint firstItem="Ahz-rP-DEH" firstAttribute="bottom" secondItem="Ccx-ID-ycp" secondAttribute="bottom" constant="16" id="UG6-b4-MuO"/>
                             <constraint firstItem="Ahz-rP-DEH" firstAttribute="trailing" secondItem="7Mq-fL-B9T" secondAttribute="trailing" id="Vgy-4R-dUr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ahz-rP-DEH"/>
                     </view>
                     <connections>
+                        <outlet property="alertVIewHeight" destination="M8Y-gU-MW8" id="Pm4-Ny-44Z"/>
+                        <outlet property="alertView" destination="Ccx-ID-ycp" id="cvA-xj-rQU"/>
+                        <outlet property="alertViewLabel" destination="Ts8-hA-MXo" id="pqD-9h-1PV"/>
                         <outlet property="mapView" destination="7Mq-fL-B9T" id="DZN-OT-VLc"/>
                         <outlet property="navigationBar" destination="jn5-54-xeq" id="cPE-23-nUr"/>
                     </connections>
@@ -48,4 +76,9 @@
             <point key="canvasLocation" x="63.768115942028992" y="89.732142857142847"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="DefaultRed">
+            <color red="0.9570000171661377" green="0.2630000114440918" blue="0.21199999749660492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

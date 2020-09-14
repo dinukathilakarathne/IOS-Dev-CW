@@ -28,6 +28,7 @@ class SurveyViewController: UIViewController {
         didSet{
             submitSurveyButton.contentView.backgroundColor = Asset.defaultGreen.color
             submitSurveyButton.roundButton.tintColor = Asset.defautTextColor.color
+            submitSurveyButton.roundButton.setTitle(L10n.submit, for: .normal)
             submitSurveyButton.roundButton.addTarget(self, action: #selector(submitSurveyPressed), for: .touchUpInside)
         }
     }

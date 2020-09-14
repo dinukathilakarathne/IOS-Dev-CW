@@ -21,16 +21,19 @@ class profileDetails: UIView {
     @IBOutlet weak var nameLabel: UILabel!{
         didSet{
             nameLabel.text = UserDefaults().nameOfUser
+            nameLabel.font = FontFamily.Abel.regular.font(size: 20)
         }
     }
     @IBOutlet weak var indexLabel: UILabel!{
         didSet{
             indexLabel.text = UserDefaults().userIndex
+            indexLabel.font = FontFamily.Abel.regular.font(size: 14)
         }
     }
     @IBOutlet weak var addressLabel: UILabel!{
         didSet{
             addressLabel.text = UserDefaults().userAddress
+            addressLabel.font = FontFamily.Abel.regular.font(size: 14)
         }
     }
     

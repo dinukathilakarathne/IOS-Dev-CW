@@ -35,6 +35,7 @@ class SignUpController {
     
     var delegate : SignUpControllerDelegate?
     let dbController = DatabaseController()
+    let image = "https://vignette.wikia.nocookie.net/meme/images/d/d5/Wikia-Visualization-Main%2Cmeme.png/revision/latest/window-crop/width/500/x-offset/81/y-offset/0/window-width/321/window-height/320?cb=20161102143849"
     
     func signUpButtonPressed(){
         let email = self.email ?? ""
@@ -132,15 +133,16 @@ class SignUpController {
     func saveProfileData(){
         let address = self.address ?? ""
         let index = self.id ?? ""
+        let name = self.name ?? ""
         
         let user = Auth.auth().currentUser
         let changeProfileRequest = user?.createProfileChangeRequest()
         changeProfileRequest?.displayName = self.name ?? ""
-        changeProfileRequest?.photoURL = URL(string: "https://vignette.wikia.nocookie.net/meme/images/d/d5/Wikia-Visualization-Main%2Cmeme.png/revision/latest/window-crop/width/500/x-offset/81/y-offset/0/window-width/321/window-height/320?cb=20161102143849")
+        changeProfileRequest?.photoURL = URL(string: image)
         changeProfileRequest?.commitChanges(completion: { (error) in
             print("error\(String(describing: error?.localizedDescription))")
         })
-        dbController.setProfileDetails(address, index)
+        dbController.setProfileDetails(name, address, index, image)
     }
     
     //saving profile image to firebase storage

@@ -10,8 +10,8 @@ import Foundation
 
 class Survey {
     private var surveyAnswer : [Int] = []
-    private var FillDate = Date()
-    
+    private var fillDate = Date()
+    private var score : Int!
     init() {
         self.surveyAnswer = [-1,-1,-1,-1,-1]
     }
@@ -27,9 +27,9 @@ class Survey {
     private let answers : [[String]] = [
         ["0-21", "21-30", "30+"],
         ["Very good", "Normal", "Poor"],
-        ["Yes", "No"],
+        ["No", "Yes"],
         ["Rarely", "Few times", "Daily"],
-        ["Yes", "No"]
+        ["No", "Yes"]
     ]
     
     func setAnswer(atIndex index : Int, answer a : Int){
@@ -52,5 +52,11 @@ class Survey {
         return questions.count
     }
     
-    
+    func calculateDangerScore(_ answers : [Int]) -> Int{
+        var score = 0
+        for x in 1..<answers.count{
+            score += answers[x]
+        }
+        return score
+    }
 }
