@@ -52,6 +52,7 @@
 		008241F3250B55F6005062C0 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008241F2250B55F5005062C0 /* Survey.swift */; };
 		0092D12F250F7F4500D79787 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092D12E250F7F4500D79787 /* ResultViewController.swift */; };
 		0092D133250FD70800D79787 /* StorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092D132250FD70800D79787 /* StorageController.swift */; };
+		0092D135250FFF8A00D79787 /* LoginUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092D134250FFF8A00D79787 /* LoginUnitTest.swift */; };
 		0093230524FBBE17007427E6 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093230424FBBE17007427E6 /* RoundedTextField.swift */; };
 		0093230724FBBE22007427E6 /* RoundedTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0093230624FBBE22007427E6 /* RoundedTextField.xib */; };
 		0093230A24FBCC93007427E6 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093230924FBCC93007427E6 /* UILabel+Extension.swift */; };
@@ -174,6 +175,7 @@
 		008241F2250B55F5005062C0 /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		0092D12E250F7F4500D79787 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		0092D132250FD70800D79787 /* StorageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageController.swift; sourceTree = "<group>"; };
+		0092D134250FFF8A00D79787 /* LoginUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUnitTest.swift; sourceTree = "<group>"; };
 		0093230424FBBE17007427E6 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		0093230624FBBE22007427E6 /* RoundedTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundedTextField.xib; sourceTree = "<group>"; };
 		0093230924FBCC93007427E6 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				0003E5C024FB686700661089 /* DinukaThilakarathne_COBSCCOMP191P_047Tests.swift */,
+				0092D134250FFF8A00D79787 /* LoginUnitTest.swift */,
 				0003E5C224FB686700661089 /* Info.plist */,
 			);
 			path = "DinukaThilakarathne-COBSCCOMP191P-047Tests";
@@ -1086,6 +1089,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0003E5C124FB686700661089 /* DinukaThilakarathne_COBSCCOMP191P_047Tests.swift in Sources */,
+				0092D135250FFF8A00D79787 /* LoginUnitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

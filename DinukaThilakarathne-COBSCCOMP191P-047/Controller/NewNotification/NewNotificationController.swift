@@ -12,11 +12,16 @@ protocol NewNotificationDelegate {
     func showSuccessMessage()
 }
 
+protocol NewNotificationCoordinator {
+    func didAddNotification()
+}
+
 class NewNotificationController{
         
     var db : DatabaseController!
     var notificationBody : String = ""
     var delegate : NewNotificationDelegate?
+    var coordinator : NewNotificationCoordinator?
     
     init() {
         db = DatabaseController()
@@ -34,7 +39,8 @@ class NewNotificationController{
     
     func addNewNotification(){
         let date = Date().getStringDate()
-        Notification.setNotifications(not: [date, notificationBody])
+        Notification().setNotifications(not: [date, notificationBody])
+        coordinator?.didAddNotification()
     }
     
     

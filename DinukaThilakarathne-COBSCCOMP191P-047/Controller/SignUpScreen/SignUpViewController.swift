@@ -151,6 +151,7 @@ class SignUpViewController: UIViewController {
     @IBAction func selectImageButtonPressed(_ sender: UIButton) {
         let picker = UIImagePickerController()
         picker.sourceType = .photoLibrary
+//        picker.sourceType = .camera
         picker.allowsEditing = true
         picker.delegate = self
         self.present(picker, animated: true)
@@ -258,12 +259,13 @@ extension SignUpViewController : ImagePickerDelegate {
         guard let profileImage = image else {
             return
         }
-        
-        
+    
         self.profileImage.image = profileImage
     }
 }
 
+//getting and setting the profile image using protocols
+//https://www.youtube.com/watch?v=0MrJFBGVuk4&list=PLaXWdRaxFtVfa3C1u56Cr6Bc4wcCVKpHp&index=18
 extension SignUpViewController :  UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let imageSelected = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{

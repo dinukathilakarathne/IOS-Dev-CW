@@ -60,7 +60,7 @@ class DatabaseController {
             UserDefaults().userID = value?["index"] as? String ?? ""
             print("id:\(0) / \(UserDefaults().nameOfUser)")
             UserDefaults().recentTemperature = value?["temperature"] as? Float ?? 0
-            UserDefaults().isAdmin = value?["isAdmin"] as? Bool ?? false
+            UserDefaults().isAdmin = value?["admin"] as? Bool ?? false
             UserDefaults().nameOfUser = value?["name"] as? String ?? ""
             UserDefaults().userImage = value?["image"] as? String ?? ""
             
@@ -138,7 +138,7 @@ class DatabaseController {
                 for child in data{
                     let message = child.childSnapshot(forPath: "message").value as! String
                     let date = child.childSnapshot(forPath: "time").value as! String
-                    Notification.setNotifications(not: [date, message])
+                    Notification().setNotifications(not: [date, message])
                 }
             }
             self.delegate?.notificationsDidLoad?()

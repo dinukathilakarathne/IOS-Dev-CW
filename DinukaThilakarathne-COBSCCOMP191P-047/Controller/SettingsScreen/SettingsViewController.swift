@@ -81,6 +81,7 @@ class SettingsViewController: UIViewController {
         setUI()
     }
     
+    
     func setProfileDetails(){
         let view = profileDetailsView
         view?.addressLabel.text = UserDefaults().userAddress
@@ -92,6 +93,8 @@ class SettingsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         setUI()
+        controller.getCurrentProfileDetails()
+        print("isAdmin \(UserDefaults().isAdmin)")
     }
     
     @objc func loginPressed(){

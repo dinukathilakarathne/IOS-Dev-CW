@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol  NotificationDelegate {
+protocol  NotificationViewDelegate {
     func updateTableView()
     func createNotificationPressed()
 }
@@ -16,7 +16,7 @@ protocol  NotificationDelegate {
 class NotificationController{
     
     var db : DatabaseController?
-    var delegate : NotificationDelegate?
+    var delegate : NotificationViewDelegate?
     
     init() {
         db = DatabaseController()
@@ -26,10 +26,6 @@ class NotificationController{
     func getNotifications(){
         db?.getNotifications()
     }
-    
-//    func notificationsLoaded(){
-//        delegate?.updateTableView()
-//    }
     
     func createNotificationPressed(){
         delegate?.createNotificationPressed()

@@ -117,7 +117,7 @@ class SignUpController {
                 return
             }
             self.saveProfileData()
-            //            self.logUser(email, password)
+            self.logUser(email, password)
         }
     }
     

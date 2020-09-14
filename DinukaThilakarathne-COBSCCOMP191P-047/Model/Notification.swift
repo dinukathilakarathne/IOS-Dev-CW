@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 class Notification {
     
     private static var notifications : [[String]] = []
@@ -16,8 +17,8 @@ class Notification {
         return notifications.count
     }
     
-    static func setNotifications(not : [String]){
-        notifications.append(not)
+    func setNotifications(not : [String]){
+        Notification.notifications.append(not)
     }
     
     static func getNotifications() -> [[String]]{

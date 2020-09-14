@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NotificationViewController: UIViewController {
+class NotificationViewController: UIViewController{
     
     @IBOutlet weak var navigationBar: NavigationBar!{
         didSet{
@@ -68,7 +68,7 @@ class NotificationViewController: UIViewController {
     }
     
     func startTimer(){
-        timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true, block: { (timer) in
+        timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true, block: { (timer) in
             self.getNotifications()
             self.notificationTable.reloadData()
         })
@@ -102,21 +102,28 @@ extension NotificationViewController : UITableViewDelegate, UITableViewDataSourc
     
 }
 
-extension NotificationViewController : NotificationDelegate{
+extension NotificationViewController : NotificationViewDelegate{
     
     func createNotificationPressed() {
         let storyboard = UIStoryboard(name: "NewNotification", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "NewNotificationViewController")
+        let vc = storyboard.instantiateViewController(withIdentifier: "NewNotificationViewController") as! NewNotificationViewController
         vc.modalPresentationStyle = .formSheet
+        vc.controller = NewNotificationController()
+        vc.controller.coordinator = self
         self.present(vc, animated: true)
     }
     
     func updateTableView() {
         notificationTable.reloadData()
     }
+}
+
+extension NotificationViewController:  NewNotificationCoordinator {
+    func didAddNotification() {
+        notificationTable.reloadData()
+    }
     
-    
-    
+
     
     
 }

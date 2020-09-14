@@ -41,8 +41,6 @@ final class LandingController{
         let email = self.email ?? ""
         let password = self.password ?? ""
         
-//        email = "visal@gmail.com"
-//        password = "123456"
         if email.isEmpty{
             delegate?.emailIsEmpty()
         }else if password.isEmpty {

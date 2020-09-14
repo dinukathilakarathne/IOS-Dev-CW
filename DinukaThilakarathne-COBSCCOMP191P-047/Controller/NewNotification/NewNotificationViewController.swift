@@ -10,7 +10,7 @@ import UIKit
 
 class NewNotificationViewController: UIViewController {
     
-    var controller = NewNotificationController()
+    var controller : NewNotificationController!
     
     @IBOutlet weak var navigationBar: NavigationBar!{
         didSet{
