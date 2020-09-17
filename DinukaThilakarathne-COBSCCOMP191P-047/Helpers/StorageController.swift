@@ -13,6 +13,7 @@ import Firebase
     func setImage(_ url : String)
 }
 
+
 class StorageController {
     
     var ref : StorageReference
@@ -22,6 +23,7 @@ class StorageController {
         ref = Storage.storage().reference(forURL: AppConstants.storageRefURL)
     }
     
+    //getting profile image from data
     func getProfileImageURL(_ imgData : Data){
         if let user = Auth.auth().currentUser?.uid {
             let storageRef = ref.child("profile").child(user)
