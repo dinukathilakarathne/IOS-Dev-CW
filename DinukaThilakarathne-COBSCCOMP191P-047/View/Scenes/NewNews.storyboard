@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Notification View Controller-->
+        <scene sceneID="3fx-yE-diE">
+            <objects>
+                <viewController storyboardIdentifier="NewNotificationViewController" id="HMV-qU-a60" customClass="NewNotificationViewController" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wvd-yZ-SMU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSH-AU-mtE" customClass="NavigationBar" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="1XA-vb-1J9"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2U4-Jg-1OX" customClass="RoundedButton" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target">
+                                <rect key="frame" x="20" y="792" width="374" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZOD-5X-afE"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter the new notification body" translatesAutoresizingMaskIntoConstraints="NO" id="Bkg-jZ-0KU">
+                                <rect key="frame" x="20" y="164" width="374" height="120"/>
+                                <color key="backgroundColor" name="ForegroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="iMq-nP-5aO"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Bkg-jZ-0KU" firstAttribute="top" secondItem="VSH-AU-mtE" secondAttribute="bottom" constant="50" id="0E8-WY-IQ0"/>
+                            <constraint firstItem="2U4-Jg-1OX" firstAttribute="leading" secondItem="bbT-fw-LYE" secondAttribute="leading" constant="20" id="Cvz-3w-uP0"/>
+                            <constraint firstItem="bbT-fw-LYE" firstAttribute="trailing" secondItem="2U4-Jg-1OX" secondAttribute="trailing" constant="20" id="Hcb-4J-xDK"/>
+                            <constraint firstItem="bbT-fw-LYE" firstAttribute="trailing" secondItem="Bkg-jZ-0KU" secondAttribute="trailing" constant="20" id="QiM-7g-VR4"/>
+                            <constraint firstItem="bbT-fw-LYE" firstAttribute="bottom" secondItem="2U4-Jg-1OX" secondAttribute="bottom" constant="20" id="Rub-Jg-q3h"/>
+                            <constraint firstItem="bbT-fw-LYE" firstAttribute="trailing" secondItem="VSH-AU-mtE" secondAttribute="trailing" id="bzD-Gk-1eu"/>
+                            <constraint firstItem="VSH-AU-mtE" firstAttribute="top" secondItem="bbT-fw-LYE" secondAttribute="top" id="cqk-5w-Dzk"/>
+                            <constraint firstItem="Bkg-jZ-0KU" firstAttribute="leading" secondItem="bbT-fw-LYE" secondAttribute="leading" constant="20" id="jB5-Nk-5FN"/>
+                            <constraint firstItem="VSH-AU-mtE" firstAttribute="leading" secondItem="bbT-fw-LYE" secondAttribute="leading" id="tsZ-YN-lvL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bbT-fw-LYE"/>
+                    </view>
+                    <connections>
+                        <outlet property="navigationBar" destination="VSH-AU-mtE" id="4uw-Z5-V7m"/>
+                        <outlet property="newNotificationField" destination="Bkg-jZ-0KU" id="mKM-pS-eHO"/>
+                        <outlet property="passNotificationButtton" destination="2U4-Jg-1OX" id="JVb-Bj-e6b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nVR-jf-GFj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64" y="54"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ForegroundColor">
+            <color red="0.95300000905990601" green="0.95300000905990601" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

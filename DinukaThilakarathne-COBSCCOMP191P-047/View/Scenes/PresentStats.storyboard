@@ -23,7 +23,7 @@
                                 </constraints>
                             </view>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="35" minValue="35" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="tgh-uL-qkB">
-                                <rect key="frame" x="38" y="670" width="338" height="31"/>
+                                <rect key="frame" x="38" y="632" width="338" height="31"/>
                                 <color key="minimumTrackTintColor" name="AccentColor"/>
                                 <color key="thumbTintColor" name="AccentColor"/>
                                 <connections>
@@ -31,10 +31,10 @@
                                 </connections>
                             </slider>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gf4-xp-25a">
-                                <rect key="frame" x="40" y="148" width="334" height="510"/>
+                                <rect key="frame" x="40" y="148" width="334" height="472"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lwx-Ab-yzi">
-                                        <rect key="frame" x="146" y="244.5" width="42" height="21"/>
+                                        <rect key="frame" x="146" y="225.5" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -50,15 +50,21 @@
                                 <rect key="frame" x="184" y="750" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgc-OR-36A">
+                                <rect key="frame" x="184" y="712" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="GHL-en-7Wg" firstAttribute="trailing" secondItem="gf4-xp-25a" secondAttribute="trailing" constant="40" id="2Sg-tv-1LZ"/>
+                            <constraint firstItem="ePh-Kc-J0N" firstAttribute="top" secondItem="cgc-OR-36A" secondAttribute="bottom" constant="8" id="7ap-F2-Tcd"/>
                             <constraint firstItem="GHL-en-7Wg" firstAttribute="trailing" secondItem="tgh-uL-qkB" secondAttribute="trailing" constant="40" id="8TO-EX-cOa"/>
                             <constraint firstItem="tgh-uL-qkB" firstAttribute="top" secondItem="gf4-xp-25a" secondAttribute="bottom" constant="12" id="FZR-Gv-Mmk"/>
+                            <constraint firstItem="cgc-OR-36A" firstAttribute="top" secondItem="tgh-uL-qkB" secondAttribute="bottom" constant="50" id="MyA-3l-MSt"/>
                             <constraint firstItem="GHL-en-7Wg" firstAttribute="bottom" secondItem="qpl-Nl-DdC" secondAttribute="bottom" constant="16" id="NYc-8C-FIf"/>
+                            <constraint firstItem="cgc-OR-36A" firstAttribute="centerX" secondItem="7uO-sY-WWA" secondAttribute="centerX" id="Niv-pz-7e3"/>
                             <constraint firstItem="GHL-en-7Wg" firstAttribute="trailing" secondItem="qpl-Nl-DdC" secondAttribute="trailing" constant="20" id="TMT-nA-gDT"/>
-                            <constraint firstItem="ePh-Kc-J0N" firstAttribute="top" secondItem="tgh-uL-qkB" secondAttribute="bottom" constant="50" id="XxB-QB-VyF"/>
                             <constraint firstItem="gf4-xp-25a" firstAttribute="top" secondItem="GHL-en-7Wg" secondAttribute="top" constant="8" id="bjo-0l-cZf"/>
                             <constraint firstItem="qpl-Nl-DdC" firstAttribute="top" secondItem="ePh-Kc-J0N" secondAttribute="bottom" constant="16" id="kjc-g7-DCo"/>
                             <constraint firstItem="gf4-xp-25a" firstAttribute="top" secondItem="GHL-en-7Wg" secondAttribute="top" constant="8" id="l7K-Vu-0vo"/>
@@ -72,6 +78,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="vFg-Z4-dJ7"/>
                     <connections>
+                        <outlet property="createNotificationButton" destination="cgc-OR-36A" id="8Hb-dE-sBD"/>
                         <outlet property="surveyButton" destination="ePh-Kc-J0N" id="sK2-am-Ekr"/>
                         <outlet property="temperatureLabel" destination="Lwx-Ab-yzi" id="Xs4-yg-MUF"/>
                         <outlet property="temperatureSlider" destination="tgh-uL-qkB" id="HDg-xV-aN2"/>

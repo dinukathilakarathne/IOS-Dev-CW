@@ -32,6 +32,10 @@
 		006EA2382513509F0056518F /* SignUpScreenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EA2372513509F0056518F /* SignUpScreenTest.swift */; };
 		006EA24E2513614A0056518F /* DinukaThilakarathne_COBSCCOMP191P_047UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EA24D2513614A0056518F /* DinukaThilakarathne_COBSCCOMP191P_047UITests.swift */; };
 		006EA256251361770056518F /* LoginPageUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EA255251361770056518F /* LoginPageUITest.swift */; };
+		006EA2582513867C0056518F /* NewNews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 006EA2572513867C0056518F /* NewNews.storyboard */; };
+		006EA25A251389000056518F /* NewNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EA259251388FF0056518F /* NewNewsViewController.swift */; };
+		006EA25C251389670056518F /* NewNewsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EA25B251389670056518F /* NewNewsHandler.swift */; };
+		006EA25E251389D10056518F /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EA25D251389D10056518F /* News.swift */; };
 		007FA91E24FCD2A40081DF69 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007FA91D24FCD2A40081DF69 /* Home.storyboard */; };
 		007FA92224FCD4100081DF69 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007FA92124FCD4100081DF69 /* Settings.storyboard */; };
 		007FA92524FCDCAD0081DF69 /* PresentStats.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007FA92424FCDCAD0081DF69 /* PresentStats.storyboard */; };
@@ -155,6 +159,10 @@
 		006EA24D2513614A0056518F /* DinukaThilakarathne_COBSCCOMP191P_047UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinukaThilakarathne_COBSCCOMP191P_047UITests.swift; sourceTree = "<group>"; };
 		006EA24F2513614A0056518F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		006EA255251361770056518F /* LoginPageUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageUITest.swift; sourceTree = "<group>"; };
+		006EA2572513867C0056518F /* NewNews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewNews.storyboard; sourceTree = "<group>"; };
+		006EA259251388FF0056518F /* NewNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNewsViewController.swift; sourceTree = "<group>"; };
+		006EA25B251389670056518F /* NewNewsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNewsHandler.swift; sourceTree = "<group>"; };
+		006EA25D251389D10056518F /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		007FA91D24FCD2A40081DF69 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		007FA92124FCD4100081DF69 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		007FA92424FCDCAD0081DF69 /* PresentStats.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PresentStats.storyboard; sourceTree = "<group>"; };
@@ -332,6 +340,8 @@
 				00B5F334250C988600267EEF /* Notificaion */,
 				00FA4AB8250F318F00E7F5AE /* NewNotification */,
 				0096C924250F607E00840866 /* Results */,
+				006EA259251388FF0056518F /* NewNewsViewController.swift */,
+				006EA25B251389670056518F /* NewNewsHandler.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -565,6 +575,7 @@
 				008241F2250B55F5005062C0 /* Survey.swift */,
 				0096C92A250F756F00840866 /* Result.swift */,
 				00B5F32E250C91B500267EEF /* Notification.swift */,
+				006EA25D251389D10056518F /* News.swift */,
 				00FA4AB4250E534500E7F5AE /* Location.swift */,
 			);
 			path = Model;
@@ -691,6 +702,7 @@
 				00B7EAF724FC0D96009E9DF1 /* Dashboard.storyboard */,
 				00FE605D24FB754100D93505 /* Main.storyboard */,
 				00B5F33D250D3F2100267EEF /* NewNotification.storyboard */,
+				006EA2572513867C0056518F /* NewNews.storyboard */,
 				00FE606124FB75F000D93505 /* LaunchScreen.storyboard */,
 				0060B0FF250B610E003A2A82 /* Survey.storyboard */,
 				00B5F311250BDC0800267EEF /* Advice.storyboard */,
@@ -952,6 +964,7 @@
 				00B5F319250BE07200267EEF /* ImageButton.xib in Resources */,
 				000A144E2504D5E1003C50D4 /* Map.storyboard in Resources */,
 				0096C921250F605E00840866 /* Results.storyboard in Resources */,
+				006EA2582513867C0056518F /* NewNews.storyboard in Resources */,
 				00FA4AB1250E1FCB00E7F5AE /* SurveyQuestion.xib in Resources */,
 				008241EC250A6301005062C0 /* RightIconButton.xib in Resources */,
 				007FA91E24FCD2A40081DF69 /* Home.storyboard in Resources */,
@@ -1094,6 +1107,7 @@
 				00B7EAF124FBE4BC009E9DF1 /* AlertDialog.swift in Sources */,
 				0060B105250B6205003A2A82 /* SurveyQuestion.swift in Sources */,
 				0003E60624FB72B700661089 /* Assets.swift in Sources */,
+				006EA25E251389D10056518F /* News.swift in Sources */,
 				000A144C2504D5D9003C50D4 /* MapViewController.swift in Sources */,
 				007FA92924FCDD290081DF69 /* HomeViewController.swift in Sources */,
 				00B5F336250C9B2D00267EEF /* NotificationController.swift in Sources */,
@@ -1120,10 +1134,12 @@
 				008241F1250B26A0005062C0 /* PresentStatsController.swift in Sources */,
 				00B7EAEE24FBD44A009E9DF1 /* LandingController.swift in Sources */,
 				00FE606524FB769500D93505 /* RoundedButton.swift in Sources */,
+				006EA25A251389000056518F /* NewNewsViewController.swift in Sources */,
 				00B5F32D250C8A2E00267EEF /* Date+Extension.swift in Sources */,
 				00B5F340250DDB5900267EEF /* NewNotificationViewController.swift in Sources */,
 				0003E5AA24FB686400661089 /* AppDelegate.swift in Sources */,
 				00B5F30E250BCE9E00267EEF /* SurveyController.swift in Sources */,
+				006EA25C251389670056518F /* NewNewsHandler.swift in Sources */,
 				00F945B1250151BF00E372EA /* UserHealthStatus.swift in Sources */,
 				0003E5AC24FB686400661089 /* SceneDelegate.swift in Sources */,
 				004BB1412503E77800603EE2 /* NewsButton.swift in Sources */,

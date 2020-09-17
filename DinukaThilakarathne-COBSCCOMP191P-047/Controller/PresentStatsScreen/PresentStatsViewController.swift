@@ -15,6 +15,11 @@ class PresentStatsViewController: UIViewController {
     var timer : Timer?
     var locationManager : CLLocationManager!
 
+    @IBOutlet weak var createNotificationButton: UIButton!{
+        didSet{
+            <#code#>
+        }
+    }
     @IBOutlet weak var temperatureLabel: UILabel!{
         didSet{
             temperatureLabel.font = FontFamily.BebasNeue.regular.font(size: 60)
