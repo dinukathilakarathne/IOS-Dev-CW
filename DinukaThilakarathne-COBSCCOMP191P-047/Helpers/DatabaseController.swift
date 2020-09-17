@@ -15,7 +15,6 @@ import Firebase
     @objc optional func newsDidLoad()
     @objc optional func profileDetailsDidLoad()
     @objc optional func resultsDidLoad()
-
 }
 
 class DatabaseController {
@@ -170,7 +169,7 @@ class DatabaseController {
     }
     
     func getNews(){
-        Notification.clearNotifications()
+        News.clearNews()
         self.ref.child("news").observeSingleEvent(of: .value) { (snapshot) in
             let currentNotCount = Notification.getNotificationCount()
             let data = snapshot.children.allObjects as! [DataSnapshot]
@@ -178,7 +177,7 @@ class DatabaseController {
                 for child in data{
                     let message = child.childSnapshot(forPath: "message").value as! String
                     let date = child.childSnapshot(forPath: "time").value as! String
-                    Notification().setNotifications(not: [date, message])
+                    News().setNews(news: [date, message])
                 }
             }
             self.delegate?.newsDidLoad?()

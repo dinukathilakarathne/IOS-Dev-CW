@@ -12,6 +12,7 @@ import Firebase
 protocol PresentStatsDelegate {
     func userNotLoggedIn()
     func showSurveyScreen()
+    func showCreateNewsScreen()
     func submitButtonPressed()
 }
 
@@ -45,6 +46,10 @@ class PresentStatsController {
     
     func setLocation(_ loc : [Double]){
         self.location = loc
+    }
+    
+    func newsButtonPressed(){
+        delegate?.showCreateNewsScreen()
     }
     
 }

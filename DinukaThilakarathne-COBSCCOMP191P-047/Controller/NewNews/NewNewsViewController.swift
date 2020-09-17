@@ -10,7 +10,7 @@ import UIKit
 
 class NewNewsViewController : UIViewController {
     
-    var controller : NewNotificationController!
+    var controller : NewNewsController!
     
     @IBOutlet weak var navigationBar: NavigationBar!{
         didSet{
@@ -20,21 +20,21 @@ class NewNewsViewController : UIViewController {
         }
     }
     
-    @IBOutlet weak var newNotificationField: UITextView!{
+    @IBOutlet weak var newNewsField: UITextView!{
         didSet{
-            newNotificationField.delegate = self
-            newNotificationField.layer.borderWidth = 3
-            newNotificationField.layer.borderColor = Asset.primaryColor.color.cgColor
-            newNotificationField.layer.cornerRadius = AppConstants.viewCornerRadius
+            newNewsField.delegate = self
+            newNewsField.layer.borderWidth = 3
+            newNewsField.layer.borderColor = Asset.primaryColor.color.cgColor
+            newNewsField.layer.cornerRadius = AppConstants.viewCornerRadius
         }
     }
     
-    @IBOutlet weak var passNotificationButtton: RoundedButton!{
+    @IBOutlet weak var passNewsButtton: RoundedButton!{
         didSet{
-            passNotificationButtton.roundButton.setTitle(L10n.newNotification, for: .normal)
-            passNotificationButtton.contentView.backgroundColor = Asset.accentColor.color
-            passNotificationButtton.roundButton.tintColor = Asset.backgroundColor.color
-            passNotificationButtton.roundButton.addTarget(self, action: #selector(passNotificationPressed), for: .touchUpInside)
+            passNewsButtton.roundButton.setTitle(L10n.newNotification, for: .normal)
+            passNewsButtton.contentView.backgroundColor = Asset.accentColor.color
+            passNewsButtton.roundButton.tintColor = Asset.backgroundColor.color
+            passNewsButtton.roundButton.addTarget(self, action: #selector(passNewsPressed), for: .touchUpInside)
         }
     }
     
@@ -43,13 +43,13 @@ class NewNewsViewController : UIViewController {
         controller.delegate = self
     }
     
-    @objc func passNotificationPressed(){
-        controller.setNotificationBody(newNotificationField.text)
-        controller.createNotificationPressed()
+    @objc func passNewsPressed(){
+        controller.setNewsBody(newNewsField.text)
+        controller.createNewsPressed()
     }
 }
 
-extension NewNotificationViewController : NavigationBarDelegate{
+extension NewNewsViewController : NavigationBarDelegate{
     func goBack() {
         self.dismiss(animated: true, completion: nil)
     }
@@ -61,7 +61,7 @@ extension NewNotificationViewController : NavigationBarDelegate{
     
 }
 
-extension NewNotificationViewController : UITextViewDelegate{
+extension NewNewsViewController : UITextViewDelegate{
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
          if(text == "\n") {
              textView.resignFirstResponder()
@@ -72,7 +72,7 @@ extension NewNotificationViewController : UITextViewDelegate{
     }
 }
 
-extension NewNotificationViewController : NewNotificationDelegate{
+extension NewNewsViewController : NewNewsDelegate{
     
     func showSuccessMessage() {
         SingleActionAlert(withTitle: "Success", withMessage: "Successfully created the new notification", actionName: L10n.ok, self, true).present()

@@ -15,9 +15,12 @@ class PresentStatsViewController: UIViewController {
     var timer : Timer?
     var locationManager : CLLocationManager!
 
-    @IBOutlet weak var createNotificationButton: UIButton!{
+    @IBOutlet weak var createNewsButton: UIButton!{
         didSet{
-            <#code#>
+            createNewsButton.setTitle(L10n.newNews, for: .normal)
+            createNewsButton.titleLabel?.font = FontFamily.BebasNeue.regular.font(size: 20)
+            createNewsButton.tintColor = Asset.accentColor.color
+            createNewsButton.addTarget(self, action: #selector(openNewsPressed), for: .touchUpInside)
         }
     }
     @IBOutlet weak var temperatureLabel: UILabel!{
@@ -79,6 +82,16 @@ class PresentStatsViewController: UIViewController {
     
     func setUI(){
         temperatureView.layer.cornerRadius = AppConstants.viewCornerRadius
+        
+        if UserDefaults().isAdmin{
+            createNewsButton.isHidden = false
+        }else{
+            createNewsButton.isHidden = true
+        }
+    }
+    
+    @objc func openNewsPressed(){
+        controller.newsButtonPressed()
     }
     
     @objc func updateTemperaturePressed(){
@@ -113,6 +126,14 @@ class PresentStatsViewController: UIViewController {
 }
 
 extension PresentStatsViewController : PresentStatsDelegate{
+    func showCreateNewsScreen() {
+        let storyboard = UIStoryboard(name: "NewNews", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "NewNewsViewController") as! NewNewsViewController
+        vc.modalPresentationStyle = .formSheet
+        vc.controller = NewNewsController()
+        self.present(vc, animated: true)
+    }
+    
     
     func submitButtonPressed() {
         SingleActionAlert(withTitle: "Success", withMessage: "Successfully submitted the temperature. Thank you for your cooperation for safety", actionName: L10n.ok, self).present()

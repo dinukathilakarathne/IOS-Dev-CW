@@ -21,6 +21,7 @@ show_results = "S H O W  R E S U L T S";
 submit = "S U B M I T";
 open_survey = "OPEN SURVEY";
 new_notification = "CREATE NOTIFICATION";
+new_news = "CREATE NEWS ITEM";
 
 //Placeholders
 enter_email_placeholder = "Email";

@@ -8,6 +8,7 @@
 
 import UIKit
 
+//delegate methods for navigation in custom navigation bar
 protocol NavigationBarDelegate {
     func goBack()
     func showNotifications()

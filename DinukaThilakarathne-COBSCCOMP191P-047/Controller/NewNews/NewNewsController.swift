@@ -16,11 +16,11 @@ protocol NewNewsCoordinator {
     func didAddNotification()
 }
 
-class NewNewsHandler{
+class NewNewsController{
         
     var db : DatabaseController!
-    var notificationBody : String = ""
-    var delegate : NewNewsHandler?
+    var newsBody : String = ""
+    var delegate : NewNewsDelegate?
     var coordinator : NewNewsCoordinator?
     
     init() {
@@ -28,18 +28,18 @@ class NewNewsHandler{
     }
     
     func setNewsBody(_ body : String){
-        notificationBody = body
+        newsBody = body
     }
     
     func createNewsPressed(){
         addNewNotification()
-        db.newNotification(notificationBody)
+        db.newNewsItem(newsBody)
         delegate?.showSuccessMessage()
     }
     
     func addNewNotification(){
         let date = Date().getStringDate()
-        Notification().setNotifications(not: [date, notificationBody])
+        Notification().setNotifications(not: [date, newsBody])
         coordinator?.didAddNotification()
     }
     

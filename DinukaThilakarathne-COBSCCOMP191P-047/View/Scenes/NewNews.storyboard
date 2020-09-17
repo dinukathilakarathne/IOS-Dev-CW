@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--New Notification View Controller-->
+        <!--New News View Controller-->
         <scene sceneID="3fx-yE-diE">
             <objects>
-                <viewController storyboardIdentifier="NewNotificationViewController" id="HMV-qU-a60" customClass="NewNotificationViewController" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewNewsViewController" id="HMV-qU-a60" customClass="NewNewsViewController" customModule="DinukaThilakarathne_COBSCCOMP191P_047" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wvd-yZ-SMU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,9 +56,9 @@
                         <viewLayoutGuide key="safeArea" id="bbT-fw-LYE"/>
                     </view>
                     <connections>
-                        <outlet property="navigationBar" destination="VSH-AU-mtE" id="4uw-Z5-V7m"/>
-                        <outlet property="newNotificationField" destination="Bkg-jZ-0KU" id="mKM-pS-eHO"/>
-                        <outlet property="passNotificationButtton" destination="2U4-Jg-1OX" id="JVb-Bj-e6b"/>
+                        <outlet property="navigationBar" destination="VSH-AU-mtE" id="ULO-BE-se3"/>
+                        <outlet property="newNewsField" destination="Bkg-jZ-0KU" id="iNh-1d-mZB"/>
+                        <outlet property="passNewsButtton" destination="2U4-Jg-1OX" id="XGu-w2-jE3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nVR-jf-GFj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

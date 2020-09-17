@@ -78,7 +78,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="vFg-Z4-dJ7"/>
                     <connections>
-                        <outlet property="createNotificationButton" destination="cgc-OR-36A" id="8Hb-dE-sBD"/>
+                        <outlet property="createNewsButton" destination="cgc-OR-36A" id="Ln3-16-vbd"/>
                         <outlet property="surveyButton" destination="ePh-Kc-J0N" id="sK2-am-Ekr"/>
                         <outlet property="temperatureLabel" destination="Lwx-Ab-yzi" id="Xs4-yg-MUF"/>
                         <outlet property="temperatureSlider" destination="tgh-uL-qkB" id="HDg-xV-aN2"/>

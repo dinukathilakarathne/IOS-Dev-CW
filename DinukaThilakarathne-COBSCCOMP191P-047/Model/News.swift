@@ -17,8 +17,8 @@ class News {
         return news.count
     }
     
-    func setNews(not : [String]){
-        News.news.append(not)
+    func setNews(news : [String]){
+        News.news.append(news)
     }
     
     static func getNews() -> [[String]]{

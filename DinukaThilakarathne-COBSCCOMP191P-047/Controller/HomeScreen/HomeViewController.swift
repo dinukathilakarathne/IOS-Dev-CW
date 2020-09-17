@@ -30,7 +30,12 @@ class HomeViewController: UIViewController {
         }
     }
     @IBOutlet weak var healthStatus: UserHealthStatus!
-    @IBOutlet weak var newsButton: NewsButton!
+    
+    @IBOutlet weak var newsButton: NewsButton!{
+        didSet{
+            newsButton.button.addTarget(self, action: #selector(newsButtonPressed), for: .touchUpInside)
+        }
+    }
     @IBOutlet weak var currentStatsTitle: UILabel!{
         didSet{
             currentStatsTitle.font = FontFamily.Abel.regular.font(size: 20)
@@ -115,6 +120,13 @@ class HomeViewController: UIViewController {
             currentStatView[i].statName.text = statNames[i]
             currentStatView[i].statValue.text = statValues[i]
         }
+    }
+    
+    @objc func newsButtonPressed(){
+        let storyboard = UIStoryboard(name: "News", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "NewsViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
     }
 }
 

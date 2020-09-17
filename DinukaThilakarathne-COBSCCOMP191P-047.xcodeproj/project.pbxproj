@@ -19,6 +19,9 @@
 		000A14492503FF8A003C50D4 /* MoreFeatureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000A14482503FF8A003C50D4 /* MoreFeatureCollectionViewCell.swift */; };
 		000A144C2504D5D9003C50D4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000A144B2504D5D9003C50D4 /* MapViewController.swift */; };
 		000A144E2504D5E1003C50D4 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 000A144D2504D5E1003C50D4 /* Map.storyboard */; };
+		0048BCE72513A0D5005774F4 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0048BCE62513A0D5005774F4 /* News.storyboard */; };
+		0048BCE92513A10E005774F4 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0048BCE82513A10E005774F4 /* NewsViewController.swift */; };
+		0048BCEB2513A13B005774F4 /* NewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0048BCEA2513A13B005774F4 /* NewsController.swift */; };
 		004BB1412503E77800603EE2 /* NewsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004BB1402503E77800603EE2 /* NewsButton.swift */; };
 		004F3DCF250B654B0013CF68 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F3DCE250B654B0013CF68 /* RadioButton.swift */; };
 		004F3DD2250B661F0013CF68 /* Answer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 004F3DD1250B661F0013CF68 /* Answer.xib */; };
@@ -34,7 +37,7 @@
 		006EA256251361770056518F /* LoginPageUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EA255251361770056518F /* LoginPageUITest.swift */; };
 		006EA2582513867C0056518F /* NewNews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 006EA2572513867C0056518F /* NewNews.storyboard */; };
 		006EA25A251389000056518F /* NewNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EA259251388FF0056518F /* NewNewsViewController.swift */; };
-		006EA25C251389670056518F /* NewNewsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EA25B251389670056518F /* NewNewsHandler.swift */; };
+		006EA25C251389670056518F /* NewNewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EA25B251389670056518F /* NewNewsController.swift */; };
 		006EA25E251389D10056518F /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EA25D251389D10056518F /* News.swift */; };
 		007FA91E24FCD2A40081DF69 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007FA91D24FCD2A40081DF69 /* Home.storyboard */; };
 		007FA92224FCD4100081DF69 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007FA92124FCD4100081DF69 /* Settings.storyboard */; };
@@ -146,6 +149,9 @@
 		000A14482503FF8A003C50D4 /* MoreFeatureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreFeatureCollectionViewCell.swift; sourceTree = "<group>"; };
 		000A144B2504D5D9003C50D4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		000A144D2504D5E1003C50D4 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		0048BCE62513A0D5005774F4 /* News.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
+		0048BCE82513A10E005774F4 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		0048BCEA2513A13B005774F4 /* NewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsController.swift; sourceTree = "<group>"; };
 		004BB1402503E77800603EE2 /* NewsButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsButton.swift; sourceTree = "<group>"; };
 		004F3DCE250B654B0013CF68 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		004F3DD1250B661F0013CF68 /* Answer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Answer.xib; sourceTree = "<group>"; };
@@ -161,7 +167,7 @@
 		006EA255251361770056518F /* LoginPageUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageUITest.swift; sourceTree = "<group>"; };
 		006EA2572513867C0056518F /* NewNews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewNews.storyboard; sourceTree = "<group>"; };
 		006EA259251388FF0056518F /* NewNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNewsViewController.swift; sourceTree = "<group>"; };
-		006EA25B251389670056518F /* NewNewsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNewsHandler.swift; sourceTree = "<group>"; };
+		006EA25B251389670056518F /* NewNewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNewsController.swift; sourceTree = "<group>"; };
 		006EA25D251389D10056518F /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		007FA91D24FCD2A40081DF69 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		007FA92124FCD4100081DF69 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -340,8 +346,8 @@
 				00B5F334250C988600267EEF /* Notificaion */,
 				00FA4AB8250F318F00E7F5AE /* NewNotification */,
 				0096C924250F607E00840866 /* Results */,
-				006EA259251388FF0056518F /* NewNewsViewController.swift */,
-				006EA25B251389670056518F /* NewNewsHandler.swift */,
+				006EA25F25138B8F0056518F /* NewNews */,
+				0048BCEC2513A140005774F4 /* News */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -434,6 +440,15 @@
 			path = MapScreen;
 			sourceTree = "<group>";
 		};
+		0048BCEC2513A140005774F4 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				0048BCE82513A10E005774F4 /* NewsViewController.swift */,
+				0048BCEA2513A13B005774F4 /* NewsController.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
 		004F3DD0250B66070013CF68 /* RadioButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -495,6 +510,15 @@
 				006EA255251361770056518F /* LoginPageUITest.swift */,
 			);
 			path = "DinukaThilakarathne-COBSCCOMP191P-047UITests";
+			sourceTree = "<group>";
+		};
+		006EA25F25138B8F0056518F /* NewNews */ = {
+			isa = PBXGroup;
+			children = (
+				006EA259251388FF0056518F /* NewNewsViewController.swift */,
+				006EA25B251389670056518F /* NewNewsController.swift */,
+			);
+			path = NewNews;
 			sourceTree = "<group>";
 		};
 		007FA91F24FCD3B30081DF69 /* HomeScreen */ = {
@@ -709,6 +733,7 @@
 				00B5F332250C987900267EEF /* Notification.storyboard */,
 				00C9D682250F50E9006627F9 /* Share.storyboard */,
 				0096C920250F605E00840866 /* Results.storyboard */,
+				0048BCE62513A0D5005774F4 /* News.storyboard */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -966,6 +991,7 @@
 				0096C921250F605E00840866 /* Results.storyboard in Resources */,
 				006EA2582513867C0056518F /* NewNews.storyboard in Resources */,
 				00FA4AB1250E1FCB00E7F5AE /* SurveyQuestion.xib in Resources */,
+				0048BCE72513A0D5005774F4 /* News.storyboard in Resources */,
 				008241EC250A6301005062C0 /* RightIconButton.xib in Resources */,
 				007FA91E24FCD2A40081DF69 /* Home.storyboard in Resources */,
 				00FE606224FB75F000D93505 /* LaunchScreen.storyboard in Resources */,
@@ -1110,6 +1136,7 @@
 				006EA25E251389D10056518F /* News.swift in Sources */,
 				000A144C2504D5D9003C50D4 /* MapViewController.swift in Sources */,
 				007FA92924FCDD290081DF69 /* HomeViewController.swift in Sources */,
+				0048BCE92513A10E005774F4 /* NewsViewController.swift in Sources */,
 				00B5F336250C9B2D00267EEF /* NotificationController.swift in Sources */,
 				0093230524FBBE17007427E6 /* RoundedTextField.swift in Sources */,
 				0096C92B250F756F00840866 /* Result.swift in Sources */,
@@ -1120,6 +1147,7 @@
 				00B5F31D250BEBB800267EEF /* ContactUsViewController.swift in Sources */,
 				00F945AD24FFD8C000E372EA /* SignUpController.swift in Sources */,
 				00B5F32B250BFB2D00267EEF /* HomeController.swift in Sources */,
+				0048BCEB2513A13B005774F4 /* NewsController.swift in Sources */,
 				004F3DD4250B662A0013CF68 /* Answer.swift in Sources */,
 				00B5F32F250C91B500267EEF /* Notification.swift in Sources */,
 				007FA93024FFABED0081DF69 /* SignUpViewController.swift in Sources */,
@@ -1139,7 +1167,7 @@
 				00B5F340250DDB5900267EEF /* NewNotificationViewController.swift in Sources */,
 				0003E5AA24FB686400661089 /* AppDelegate.swift in Sources */,
 				00B5F30E250BCE9E00267EEF /* SurveyController.swift in Sources */,
-				006EA25C251389670056518F /* NewNewsHandler.swift in Sources */,
+				006EA25C251389670056518F /* NewNewsController.swift in Sources */,
 				00F945B1250151BF00E372EA /* UserHealthStatus.swift in Sources */,
 				0003E5AC24FB686400661089 /* SceneDelegate.swift in Sources */,
 				004BB1412503E77800603EE2 /* NewsButton.swift in Sources */,

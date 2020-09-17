@@ -64,6 +64,8 @@ internal enum L10n {
   internal static let map = L10n.tr("Localizable", "map")
   /// More
   internal static let moreFeaturesHeading = L10n.tr("Localizable", "more_features_heading")
+  /// CREATE NEWS ITEM
+  internal static let newNews = L10n.tr("Localizable", "new_news")
   /// CREATE NOTIFICATION
   internal static let newNotification = L10n.tr("Localizable", "new_notification")
   /// New Notification
