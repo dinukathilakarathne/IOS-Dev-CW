@@ -44,6 +44,8 @@ internal enum L10n {
   internal static let help = L10n.tr("Localizable", "help")
   /// Home
   internal static let home = L10n.tr("Localizable", "home")
+  ///  - L O G I N - 
+  internal static let iHaveAnAccount = L10n.tr("Localizable", "i_have_an_account")
   /// INFECTED
   internal static let infected = L10n.tr("Localizable", "infected")
   /// You are too close to a person infected by COVID-19. Divert immediately

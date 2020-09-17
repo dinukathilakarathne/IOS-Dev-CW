@@ -43,30 +43,39 @@ class SignUpController {
         storage.delegate = self
     }
     
-    func signUpButtonPressed(){
+    func signUpButtonPressed() -> Bool{
         let email = self.email ?? ""
         let password = self.password ?? ""
         let reenteredPassword = self.reenteredPassword ?? ""
         let name = self.name ?? ""
         let address = self.address ?? ""
         let id = self.id ?? ""
+        
         if email.isEmpty {
             delegate?.emailIsEmpty()
+            return false
         }else if password.isEmpty{
             delegate?.passwordIsEmpty()
+            return false
         }else if reenteredPassword.isEmpty{
             delegate?.reenterPasswordIsEmpty()
+            return false
         }else if password != reenteredPassword{
             delegate?.unidenticalPassword()
+            return false
         }else if name.isEmpty {
             delegate?.nameIsEmpty()
+            return false
         }else if address.isEmpty {
             delegate?.addressIsEmpty()
+            return false
         }else if id.isEmpty{
             delegate?.idIsEmpty()
+            return false
         }else{
             checkAdminStatus()
             createUser(email, password)
+            return true
         }
     }
     
@@ -116,14 +125,15 @@ class SignUpController {
                 self.delegate?.isAuthenticating(false)
                 return
             }
+            print("made profile")
             self.saveProfileData()
             self.logUser(email, password)
         }
+        print("ela")
     }
     
     //method used for user authentication
     func logUser(_ email : String, _ password : String){
-        
         isAuthenticating = true
         delegate?.isAuthenticating(true)
         let email = self.email ?? ""
@@ -144,7 +154,6 @@ class SignUpController {
     }
     
     func saveProfileData(){
-        print("savingProfile data")
         guard let imageSelected = self.profileImage else{
             print("image is null")
             return

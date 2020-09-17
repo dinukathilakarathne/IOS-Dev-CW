@@ -9,6 +9,7 @@ sign_up_page_title = "Sign Up";
 
 //Button Titles
 login = "L O G I N";
+i_have_an_account = " - L O G I N - ";
 sign_up = "S I G N  U P";
 ok = "OK";
 news = "News";

@@ -107,10 +107,7 @@ class PresentStatsViewController: UIViewController {
     
 }
 
-extension PresentStatsViewController : PresentStatsDelegate, LoginCoordinator{
-    func loggedIn() {
-        //unused
-    }
+extension PresentStatsViewController : PresentStatsDelegate{
     
     func submitButtonPressed() {
         SingleActionAlert(withTitle: "Success", withMessage: "Successfully submitted the temperature. Thank you for your cooperation for safety", actionName: L10n.ok, self).present()
@@ -129,7 +126,6 @@ extension PresentStatsViewController : PresentStatsDelegate, LoginCoordinator{
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "LandingViewController") as! LandingViewController
         vc.controller = LandingController()
-        vc.controller?.coordinator = self
         vc.modalPresentationStyle = .formSheet
         self.present(vc, animated: true)
     }

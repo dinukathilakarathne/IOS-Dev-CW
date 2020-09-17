@@ -71,6 +71,7 @@ class LandingViewController: UIViewController {
         super.viewDidLoad()
         //setting controller delegate for passing data
         controller?.delegate = self
+        view.accessibilityIdentifier = "LoginView"
     }
     
     @objc func loginPressed(){
@@ -80,7 +81,7 @@ class LandingViewController: UIViewController {
         //passing data
         controller?.setEmail(email)
         controller?.setPassword(password)
-        controller?.loginButtonPressed()
+        _ = controller?.loginButtonPressed()
     }
 
 }

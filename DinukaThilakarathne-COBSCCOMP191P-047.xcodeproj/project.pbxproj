@@ -29,6 +29,9 @@
 		006329D924FBB2E000B418F2 /* Abel-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0003E5FA24FB6A5100661089 /* Abel-Regular.ttf */; };
 		006329DA24FBB2E500B418F2 /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0003E5F924FB6A5100661089 /* BebasNeue-Regular.ttf */; };
 		0064D9BD2509740E00485F2F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064D9BC2509740E00485F2F /* ImagePicker.swift */; };
+		006EA2382513509F0056518F /* SignUpScreenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EA2372513509F0056518F /* SignUpScreenTest.swift */; };
+		006EA24E2513614A0056518F /* DinukaThilakarathne_COBSCCOMP191P_047UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EA24D2513614A0056518F /* DinukaThilakarathne_COBSCCOMP191P_047UITests.swift */; };
+		006EA256251361770056518F /* LoginPageUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EA255251361770056518F /* LoginPageUITest.swift */; };
 		007FA91E24FCD2A40081DF69 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007FA91D24FCD2A40081DF69 /* Home.storyboard */; };
 		007FA92224FCD4100081DF69 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007FA92124FCD4100081DF69 /* Settings.storyboard */; };
 		007FA92524FCDCAD0081DF69 /* PresentStats.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007FA92424FCDCAD0081DF69 /* PresentStats.storyboard */; };
@@ -106,6 +109,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		006EA2502513614A0056518F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0003E59E24FB686400661089 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0003E5A524FB686400661089;
+			remoteInfo = "DinukaThilakarathne-COBSCCOMP191P-047";
+		};
 		0092D14D251081DD00D79787 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0003E59E24FB686400661089 /* Project object */;
@@ -140,6 +150,11 @@
 		0060B0FF250B610E003A2A82 /* Survey.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Survey.storyboard; sourceTree = "<group>"; };
 		0060B104250B6205003A2A82 /* SurveyQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyQuestion.swift; sourceTree = "<group>"; };
 		0064D9BC2509740E00485F2F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		006EA2372513509F0056518F /* SignUpScreenTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreenTest.swift; sourceTree = "<group>"; };
+		006EA24B2513614A0056518F /* DinukaThilakarathne-COBSCCOMP191P-047UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DinukaThilakarathne-COBSCCOMP191P-047UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		006EA24D2513614A0056518F /* DinukaThilakarathne_COBSCCOMP191P_047UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinukaThilakarathne_COBSCCOMP191P_047UITests.swift; sourceTree = "<group>"; };
+		006EA24F2513614A0056518F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		006EA255251361770056518F /* LoginPageUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageUITest.swift; sourceTree = "<group>"; };
 		007FA91D24FCD2A40081DF69 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		007FA92124FCD4100081DF69 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		007FA92424FCDCAD0081DF69 /* PresentStats.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PresentStats.storyboard; sourceTree = "<group>"; };
@@ -231,6 +246,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		006EA2482513614A0056518F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0092D145251081DD00D79787 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -247,6 +269,7 @@
 			children = (
 				0003E5A824FB686400661089 /* DinukaThilakarathne-COBSCCOMP191P-047 */,
 				0092D149251081DD00D79787 /* DinukaThilakarathne-COBSCCOMP191P-047Tests */,
+				006EA24C2513614A0056518F /* DinukaThilakarathne-COBSCCOMP191P-047UITests */,
 				0003E5A724FB686400661089 /* Products */,
 				741B47874813A128EEC4B59A /* Pods */,
 				44129D58A076A7E7DC2F4456 /* Frameworks */,
@@ -258,6 +281,7 @@
 			children = (
 				0003E5A624FB686400661089 /* DinukaThilakarathne-COBSCCOMP191P-047.app */,
 				0092D148251081DD00D79787 /* DinukaThilakarathne-COBSCCOMP191P-047Tests.xctest */,
+				006EA24B2513614A0056518F /* DinukaThilakarathne-COBSCCOMP191P-047UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -453,6 +477,16 @@
 			path = ImagePicker;
 			sourceTree = "<group>";
 		};
+		006EA24C2513614A0056518F /* DinukaThilakarathne-COBSCCOMP191P-047UITests */ = {
+			isa = PBXGroup;
+			children = (
+				006EA24D2513614A0056518F /* DinukaThilakarathne_COBSCCOMP191P_047UITests.swift */,
+				006EA24F2513614A0056518F /* Info.plist */,
+				006EA255251361770056518F /* LoginPageUITest.swift */,
+			);
+			path = "DinukaThilakarathne-COBSCCOMP191P-047UITests";
+			sourceTree = "<group>";
+		};
 		007FA91F24FCD3B30081DF69 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -540,6 +574,7 @@
 			isa = PBXGroup;
 			children = (
 				0092D14A251081DD00D79787 /* LandingPageTest.swift */,
+				006EA2372513509F0056518F /* SignUpScreenTest.swift */,
 				0092D14C251081DD00D79787 /* Info.plist */,
 			);
 			path = "DinukaThilakarathne-COBSCCOMP191P-047Tests";
@@ -814,6 +849,24 @@
 			productReference = 0003E5A624FB686400661089 /* DinukaThilakarathne-COBSCCOMP191P-047.app */;
 			productType = "com.apple.product-type.application";
 		};
+		006EA24A2513614A0056518F /* DinukaThilakarathne-COBSCCOMP191P-047UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 006EA2522513614A0056518F /* Build configuration list for PBXNativeTarget "DinukaThilakarathne-COBSCCOMP191P-047UITests" */;
+			buildPhases = (
+				006EA2472513614A0056518F /* Sources */,
+				006EA2482513614A0056518F /* Frameworks */,
+				006EA2492513614A0056518F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				006EA2512513614A0056518F /* PBXTargetDependency */,
+			);
+			name = "DinukaThilakarathne-COBSCCOMP191P-047UITests";
+			productName = "DinukaThilakarathne-COBSCCOMP191P-047UITests";
+			productReference = 006EA24B2513614A0056518F /* DinukaThilakarathne-COBSCCOMP191P-047UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		0092D147251081DD00D79787 /* DinukaThilakarathne-COBSCCOMP191P-047Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0092D14F251081DD00D79787 /* Build configuration list for PBXNativeTarget "DinukaThilakarathne-COBSCCOMP191P-047Tests" */;
@@ -847,6 +900,10 @@
 					0003E5A524FB686400661089 = {
 						CreatedOnToolsVersion = 11.6;
 					};
+					006EA24A2513614A0056518F = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 0003E5A524FB686400661089;
+					};
 					0092D147251081DD00D79787 = {
 						CreatedOnToolsVersion = 11.6;
 						TestTargetID = 0003E5A524FB686400661089;
@@ -868,6 +925,7 @@
 			targets = (
 				0003E5A524FB686400661089 /* DinukaThilakarathne-COBSCCOMP191P-047 */,
 				0092D147251081DD00D79787 /* DinukaThilakarathne-COBSCCOMP191P-047Tests */,
+				006EA24A2513614A0056518F /* DinukaThilakarathne-COBSCCOMP191P-047UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -913,6 +971,13 @@
 				0093230724FBBE22007427E6 /* RoundedTextField.xib in Resources */,
 				00C9D683250F50E9006627F9 /* Share.storyboard in Resources */,
 				00F945B72503DA4800E372EA /* NewsButton.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		006EA2492513614A0056518F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1071,17 +1136,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		006EA2472513614A0056518F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				006EA256251361770056518F /* LoginPageUITest.swift in Sources */,
+				006EA24E2513614A0056518F /* DinukaThilakarathne_COBSCCOMP191P_047UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0092D144251081DD00D79787 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0092D14B251081DD00D79787 /* LandingPageTest.swift in Sources */,
+				006EA2382513509F0056518F /* SignUpScreenTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		006EA2512513614A0056518F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0003E5A524FB686400661089 /* DinukaThilakarathne-COBSCCOMP191P-047 */;
+			targetProxy = 006EA2502513614A0056518F /* PBXContainerItemProxy */;
+		};
 		0092D14E251081DD00D79787 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0003E5A524FB686400661089 /* DinukaThilakarathne-COBSCCOMP191P-047 */;
@@ -1244,6 +1324,42 @@
 			};
 			name = Release;
 		};
+		006EA2532513614A0056518F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "DinukaThilakarathne-COBSCCOMP191P-047UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dinukat.lk.DinukaThilakarathne-COBSCCOMP191P-047UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "DinukaThilakarathne-COBSCCOMP191P-047";
+			};
+			name = Debug;
+		};
+		006EA2542513614A0056518F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "DinukaThilakarathne-COBSCCOMP191P-047UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dinukat.lk.DinukaThilakarathne-COBSCCOMP191P-047UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "DinukaThilakarathne-COBSCCOMP191P-047";
+			};
+			name = Release;
+		};
 		0092D150251081DD00D79787 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7FF5EC432359E44941A06852 /* Pods-DinukaThilakarathne-COBSCCOMP191P-047-DinukaThilakarathne-COBSCCOMP191P-047Tests.debug.xcconfig */;
@@ -1301,6 +1417,15 @@
 			buildConfigurations = (
 				0003E5D124FB686700661089 /* Debug */,
 				0003E5D224FB686700661089 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		006EA2522513614A0056518F /* Build configuration list for PBXNativeTarget "DinukaThilakarathne-COBSCCOMP191P-047UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				006EA2532513614A0056518F /* Debug */,
+				006EA2542513614A0056518F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

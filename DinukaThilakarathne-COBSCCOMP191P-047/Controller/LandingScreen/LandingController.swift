@@ -19,7 +19,7 @@ protocol LandingControllerDelegate {
 }
 
 protocol LoginCoordinator {
-    func loggedIn()
+    func loggedIn(_ status : Bool)
 }
 
 final class LandingController{
@@ -37,16 +37,19 @@ final class LandingController{
         db.delegate = self
     }
     
-    func loginButtonPressed(){
+    func loginButtonPressed() -> Bool{
         let email = self.email ?? ""
         let password = self.password ?? ""
         
         if email.isEmpty{
             delegate?.emailIsEmpty()
+            return false
         }else if password.isEmpty {
             delegate?.passwordIsEmpty()
+            return false
         }else {
-            logUser(email, password)
+            _ = logUser(email, password)
+            return true
         }
     }
     
@@ -61,8 +64,8 @@ final class LandingController{
     
     
     //method used for user authentication
-    func logUser(_ email : String, _ password : String){
-        
+    func logUser(_ email : String, _ password : String) -> Bool{
+        let isAuth = false
         isAuthenticating = true
         delegate?.isAuthenticating(true)
         let email = self.email ?? ""
@@ -80,8 +83,9 @@ final class LandingController{
             self?.db.getCurrentProfileDetails()
             UserDefaults().isLoggedIn = true
             self?.delegate?.showParentScreen()
-            self?.coordinator?.loggedIn()
+            self?.coordinator?.loggedIn(true)
         }
+        return isAuth
     }
     
     

@@ -92,9 +92,8 @@ class SettingsViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        setUI()
-////        controller.getCurrentProfileDetails()
-////        print("isAdmin \(UserDefaults().isAdmin)")
+        setUI()
+        controller.getCurrentProfileDetails()
     }
     
     @objc func loginPressed(){
@@ -126,7 +125,7 @@ class SettingsViewController: UIViewController {
             if !UserDefaults().isLoggedIn{
                 self.profileDetailsView.isHidden = true
                 self.profileDetailHeight.constant = 0
-                self.settingsPrimaryButton.roundButton.setTitle(L10n.login, for: .normal)
+                self.settingsPrimaryButton.roundButton.setTitle(L10n.iHaveAnAccount, for: .normal)
                 self.createAccountButton.isHidden = false
             }else{
                 self.profileDetailsView.isHidden = false
@@ -141,11 +140,9 @@ class SettingsViewController: UIViewController {
                 self.showSurveyResults.isHidden = true
             }else{
                 self.showSurveyResults.isHidden = false
-            }
-            
+            } 
         }
     }
-    
 }
 
 extension SettingsViewController : SettingsDelegate, LoginCoordinator{
@@ -154,7 +151,7 @@ extension SettingsViewController : SettingsDelegate, LoginCoordinator{
         setUI()
     }
     
-    func loggedIn() {
+    func loggedIn(_ status : Bool) {
         controller.getCurrentProfileDetails()
         if UserDefaults().isLoggedIn{
             self.settingsPrimaryButton.roundButton.removeTarget(self, action: nil, for: .allEvents)
@@ -205,8 +202,5 @@ extension SettingsViewController : SettingsDelegate, LoginCoordinator{
         self.setUI()
         self.settingsPrimaryButton.roundButton.addTarget(self, action: #selector(self.loginPressed), for: .touchUpInside)
         self.createAccountButton.addTarget(self, action: #selector(self.createAccountPressed), for: .touchUpInside)
-        
     }
-    
-    
 }

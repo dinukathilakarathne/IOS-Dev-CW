@@ -57,6 +57,7 @@ class SettingsController{
     
     func logoutButtonPressed(){
         UserDefaults().clearDefaults()
+        db.signOut()
         delegate?.loggedOut()
     }
     
