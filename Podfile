@@ -9,6 +9,9 @@ target 'DinukaThilakarathne-COBSCCOMP191P-047' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Core'
   pod "SwiftDefaults"
-  pod 'GeoFire'
+
+	target 'DinukaThilakarathne-COBSCCOMP191P-047Tests' do
+  	pod "SwiftDefaults"
+	end
 
 end

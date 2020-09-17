@@ -92,9 +92,9 @@ class SettingsViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setUI()
-        controller.getCurrentProfileDetails()
-        print("isAdmin \(UserDefaults().isAdmin)")
+//        setUI()
+////        controller.getCurrentProfileDetails()
+////        print("isAdmin \(UserDefaults().isAdmin)")
     }
     
     @objc func loginPressed(){
@@ -136,11 +136,13 @@ class SettingsViewController: UIViewController {
 
             }
             
+            print(UserDefaults().isAdmin)
             if !UserDefaults().isAdmin{
                 self.showSurveyResults.isHidden = true
             }else{
                 self.showSurveyResults.isHidden = false
             }
+            
         }
     }
     

@@ -47,6 +47,15 @@ class DatabaseController {
         }
     }
     
+    func signOut(){
+        let auth = Auth.auth()
+        do {
+            try auth.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out:\(signOutError)")
+        }
+    }
+    
     //getting profile details
     func getCurrentProfileDetails(){
         guard let uuid = Auth.auth().currentUser?.uid else{

@@ -59,6 +59,7 @@ final class LandingController{
         self.password = password
     }
     
+    
     //method used for user authentication
     func logUser(_ email : String, _ password : String){
         

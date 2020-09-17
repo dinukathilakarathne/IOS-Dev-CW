@@ -10,8 +10,6 @@
 		0003E5AA24FB686400661089 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0003E5A924FB686400661089 /* AppDelegate.swift */; };
 		0003E5AC24FB686400661089 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0003E5AB24FB686400661089 /* SceneDelegate.swift */; };
 		0003E5AE24FB686400661089 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0003E5AD24FB686400661089 /* LandingViewController.swift */; };
-		0003E5C124FB686700661089 /* DinukaThilakarathne_COBSCCOMP191P_047Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0003E5C024FB686700661089 /* DinukaThilakarathne_COBSCCOMP191P_047Tests.swift */; };
-		0003E5CC24FB686700661089 /* DinukaThilakarathne_COBSCCOMP191P_047UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0003E5CB24FB686700661089 /* DinukaThilakarathne_COBSCCOMP191P_047UITests.swift */; };
 		0003E5FE24FB6AB200661089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0003E5FD24FB6AB200661089 /* Assets.xcassets */; };
 		0003E60024FB6AC600661089 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0003E5FF24FB6AC600661089 /* Localizable.strings */; };
 		0003E60424FB72B700661089 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0003E60124FB72B700661089 /* Fonts.swift */; };
@@ -52,7 +50,7 @@
 		008241F3250B55F6005062C0 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008241F2250B55F5005062C0 /* Survey.swift */; };
 		0092D12F250F7F4500D79787 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092D12E250F7F4500D79787 /* ResultViewController.swift */; };
 		0092D133250FD70800D79787 /* StorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092D132250FD70800D79787 /* StorageController.swift */; };
-		0092D135250FFF8A00D79787 /* LoginUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092D134250FFF8A00D79787 /* LoginUnitTest.swift */; };
+		0092D14B251081DD00D79787 /* LandingPageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092D14A251081DD00D79787 /* LandingPageTest.swift */; };
 		0093230524FBBE17007427E6 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093230424FBBE17007427E6 /* RoundedTextField.swift */; };
 		0093230724FBBE22007427E6 /* RoundedTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0093230624FBBE22007427E6 /* RoundedTextField.xib */; };
 		0093230A24FBCC93007427E6 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093230924FBCC93007427E6 /* UILabel+Extension.swift */; };
@@ -103,18 +101,12 @@
 		00FE606224FB75F000D93505 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FE606124FB75F000D93505 /* LaunchScreen.storyboard */; };
 		00FE606524FB769500D93505 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FE606424FB769500D93505 /* RoundedButton.swift */; };
 		00FE606724FB76A300D93505 /* RoundedButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00FE606624FB76A300D93505 /* RoundedButton.xib */; };
+		1C9D00C5AF9BEE43C7C88DFA /* libPods-DinukaThilakarathne-COBSCCOMP191P-047-DinukaThilakarathne-COBSCCOMP191P-047Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FB6186805998C563C3C441C /* libPods-DinukaThilakarathne-COBSCCOMP191P-047-DinukaThilakarathne-COBSCCOMP191P-047Tests.a */; };
 		FA9956605AC484AAD7AE1174 /* libPods-DinukaThilakarathne-COBSCCOMP191P-047.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE49655CEB391FEC69EC558 /* libPods-DinukaThilakarathne-COBSCCOMP191P-047.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0003E5BD24FB686700661089 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0003E59E24FB686400661089 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0003E5A524FB686400661089;
-			remoteInfo = "DinukaThilakarathne-COBSCCOMP191P-047";
-		};
-		0003E5C824FB686700661089 /* PBXContainerItemProxy */ = {
+		0092D14D251081DD00D79787 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0003E59E24FB686400661089 /* Project object */;
 			proxyType = 1;
@@ -129,12 +121,6 @@
 		0003E5AB24FB686400661089 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../SceneDelegate.swift; sourceTree = "<group>"; };
 		0003E5AD24FB686400661089 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LandingViewController.swift; path = ../../LandingViewController.swift; sourceTree = "<group>"; };
 		0003E5B724FB686700661089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0003E5BC24FB686700661089 /* DinukaThilakarathne-COBSCCOMP191P-047Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DinukaThilakarathne-COBSCCOMP191P-047Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0003E5C024FB686700661089 /* DinukaThilakarathne_COBSCCOMP191P_047Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinukaThilakarathne_COBSCCOMP191P_047Tests.swift; sourceTree = "<group>"; };
-		0003E5C224FB686700661089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0003E5C724FB686700661089 /* DinukaThilakarathne-COBSCCOMP191P-047UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DinukaThilakarathne-COBSCCOMP191P-047UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0003E5CB24FB686700661089 /* DinukaThilakarathne_COBSCCOMP191P_047UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinukaThilakarathne_COBSCCOMP191P_047UITests.swift; sourceTree = "<group>"; };
-		0003E5CD24FB686700661089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0003E5F924FB6A5100661089 /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
 		0003E5FA24FB6A5100661089 /* Abel-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Abel-Regular.ttf"; sourceTree = "<group>"; };
 		0003E5FD24FB6AB200661089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -175,7 +161,9 @@
 		008241F2250B55F5005062C0 /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		0092D12E250F7F4500D79787 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		0092D132250FD70800D79787 /* StorageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageController.swift; sourceTree = "<group>"; };
-		0092D134250FFF8A00D79787 /* LoginUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUnitTest.swift; sourceTree = "<group>"; };
+		0092D148251081DD00D79787 /* DinukaThilakarathne-COBSCCOMP191P-047Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DinukaThilakarathne-COBSCCOMP191P-047Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0092D14A251081DD00D79787 /* LandingPageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageTest.swift; sourceTree = "<group>"; };
+		0092D14C251081DD00D79787 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0093230424FBBE17007427E6 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		0093230624FBBE22007427E6 /* RoundedTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundedTextField.xib; sourceTree = "<group>"; };
 		0093230924FBCC93007427E6 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
@@ -226,9 +214,12 @@
 		00FE606124FB75F000D93505 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00FE606424FB769500D93505 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		00FE606624FB76A300D93505 /* RoundedButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundedButton.xib; sourceTree = "<group>"; };
+		0FB6186805998C563C3C441C /* libPods-DinukaThilakarathne-COBSCCOMP191P-047-DinukaThilakarathne-COBSCCOMP191P-047Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DinukaThilakarathne-COBSCCOMP191P-047-DinukaThilakarathne-COBSCCOMP191P-047Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		459F37F47305922E8C4F7144 /* Pods-DinukaThilakarathne-COBSCCOMP191P-047.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinukaThilakarathne-COBSCCOMP191P-047.release.xcconfig"; path = "Target Support Files/Pods-DinukaThilakarathne-COBSCCOMP191P-047/Pods-DinukaThilakarathne-COBSCCOMP191P-047.release.xcconfig"; sourceTree = "<group>"; };
 		555B7629C41D41860B0522D8 /* Pods-DinukaThilakarathne-COBSCCOMP191P-047.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinukaThilakarathne-COBSCCOMP191P-047.debug.xcconfig"; path = "Target Support Files/Pods-DinukaThilakarathne-COBSCCOMP191P-047/Pods-DinukaThilakarathne-COBSCCOMP191P-047.debug.xcconfig"; sourceTree = "<group>"; };
 		6AE49655CEB391FEC69EC558 /* libPods-DinukaThilakarathne-COBSCCOMP191P-047.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DinukaThilakarathne-COBSCCOMP191P-047.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79BFAF66CE931A8153475FD9 /* Pods-DinukaThilakarathne-COBSCCOMP191P-047-DinukaThilakarathne-COBSCCOMP191P-047Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinukaThilakarathne-COBSCCOMP191P-047-DinukaThilakarathne-COBSCCOMP191P-047Tests.release.xcconfig"; path = "Target Support Files/Pods-DinukaThilakarathne-COBSCCOMP191P-047-DinukaThilakarathne-COBSCCOMP191P-047Tests/Pods-DinukaThilakarathne-COBSCCOMP191P-047-DinukaThilakarathne-COBSCCOMP191P-047Tests.release.xcconfig"; sourceTree = "<group>"; };
+		7FF5EC432359E44941A06852 /* Pods-DinukaThilakarathne-COBSCCOMP191P-047-DinukaThilakarathne-COBSCCOMP191P-047Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinukaThilakarathne-COBSCCOMP191P-047-DinukaThilakarathne-COBSCCOMP191P-047Tests.debug.xcconfig"; path = "Target Support Files/Pods-DinukaThilakarathne-COBSCCOMP191P-047-DinukaThilakarathne-COBSCCOMP191P-047Tests/Pods-DinukaThilakarathne-COBSCCOMP191P-047-DinukaThilakarathne-COBSCCOMP191P-047Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,17 +231,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0003E5B924FB686700661089 /* Frameworks */ = {
+		0092D145251081DD00D79787 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0003E5C424FB686700661089 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				1C9D00C5AF9BEE43C7C88DFA /* libPods-DinukaThilakarathne-COBSCCOMP191P-047-DinukaThilakarathne-COBSCCOMP191P-047Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,8 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				0003E5A824FB686400661089 /* DinukaThilakarathne-COBSCCOMP191P-047 */,
-				0003E5BF24FB686700661089 /* DinukaThilakarathne-COBSCCOMP191P-047Tests */,
-				0003E5CA24FB686700661089 /* DinukaThilakarathne-COBSCCOMP191P-047UITests */,
+				0092D149251081DD00D79787 /* DinukaThilakarathne-COBSCCOMP191P-047Tests */,
 				0003E5A724FB686400661089 /* Products */,
 				741B47874813A128EEC4B59A /* Pods */,
 				44129D58A076A7E7DC2F4456 /* Frameworks */,
@@ -273,8 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				0003E5A624FB686400661089 /* DinukaThilakarathne-COBSCCOMP191P-047.app */,
-				0003E5BC24FB686700661089 /* DinukaThilakarathne-COBSCCOMP191P-047Tests.xctest */,
-				0003E5C724FB686700661089 /* DinukaThilakarathne-COBSCCOMP191P-047UITests.xctest */,
+				0092D148251081DD00D79787 /* DinukaThilakarathne-COBSCCOMP191P-047Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -294,25 +277,6 @@
 				00B5F314250BDDE100267EEF /* References */,
 			);
 			path = "DinukaThilakarathne-COBSCCOMP191P-047";
-			sourceTree = "<group>";
-		};
-		0003E5BF24FB686700661089 /* DinukaThilakarathne-COBSCCOMP191P-047Tests */ = {
-			isa = PBXGroup;
-			children = (
-				0003E5C024FB686700661089 /* DinukaThilakarathne_COBSCCOMP191P_047Tests.swift */,
-				0092D134250FFF8A00D79787 /* LoginUnitTest.swift */,
-				0003E5C224FB686700661089 /* Info.plist */,
-			);
-			path = "DinukaThilakarathne-COBSCCOMP191P-047Tests";
-			sourceTree = "<group>";
-		};
-		0003E5CA24FB686700661089 /* DinukaThilakarathne-COBSCCOMP191P-047UITests */ = {
-			isa = PBXGroup;
-			children = (
-				0003E5CB24FB686700661089 /* DinukaThilakarathne_COBSCCOMP191P_047UITests.swift */,
-				0003E5CD24FB686700661089 /* Info.plist */,
-			);
-			path = "DinukaThilakarathne-COBSCCOMP191P-047UITests";
 			sourceTree = "<group>";
 		};
 		0003E5D924FB695F00661089 /* App */ = {
@@ -572,6 +536,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		0092D149251081DD00D79787 /* DinukaThilakarathne-COBSCCOMP191P-047Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0092D14A251081DD00D79787 /* LandingPageTest.swift */,
+				0092D14C251081DD00D79787 /* Info.plist */,
+			);
+			path = "DinukaThilakarathne-COBSCCOMP191P-047Tests";
+			sourceTree = "<group>";
+		};
 		0093230324FBBD75007427E6 /* TextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -803,6 +776,7 @@
 			isa = PBXGroup;
 			children = (
 				6AE49655CEB391FEC69EC558 /* libPods-DinukaThilakarathne-COBSCCOMP191P-047.a */,
+				0FB6186805998C563C3C441C /* libPods-DinukaThilakarathne-COBSCCOMP191P-047-DinukaThilakarathne-COBSCCOMP191P-047Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -812,6 +786,8 @@
 			children = (
 				555B7629C41D41860B0522D8 /* Pods-DinukaThilakarathne-COBSCCOMP191P-047.debug.xcconfig */,
 				459F37F47305922E8C4F7144 /* Pods-DinukaThilakarathne-COBSCCOMP191P-047.release.xcconfig */,
+				7FF5EC432359E44941A06852 /* Pods-DinukaThilakarathne-COBSCCOMP191P-047-DinukaThilakarathne-COBSCCOMP191P-047Tests.debug.xcconfig */,
+				79BFAF66CE931A8153475FD9 /* Pods-DinukaThilakarathne-COBSCCOMP191P-047-DinukaThilakarathne-COBSCCOMP191P-047Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -838,41 +814,25 @@
 			productReference = 0003E5A624FB686400661089 /* DinukaThilakarathne-COBSCCOMP191P-047.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0003E5BB24FB686700661089 /* DinukaThilakarathne-COBSCCOMP191P-047Tests */ = {
+		0092D147251081DD00D79787 /* DinukaThilakarathne-COBSCCOMP191P-047Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0003E5D324FB686700661089 /* Build configuration list for PBXNativeTarget "DinukaThilakarathne-COBSCCOMP191P-047Tests" */;
+			buildConfigurationList = 0092D14F251081DD00D79787 /* Build configuration list for PBXNativeTarget "DinukaThilakarathne-COBSCCOMP191P-047Tests" */;
 			buildPhases = (
-				0003E5B824FB686700661089 /* Sources */,
-				0003E5B924FB686700661089 /* Frameworks */,
-				0003E5BA24FB686700661089 /* Resources */,
+				E3150693E727D174DD214774 /* [CP] Check Pods Manifest.lock */,
+				0092D144251081DD00D79787 /* Sources */,
+				0092D145251081DD00D79787 /* Frameworks */,
+				0092D146251081DD00D79787 /* Resources */,
+				6181B044C07C2BB4925ED80D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0003E5BE24FB686700661089 /* PBXTargetDependency */,
+				0092D14E251081DD00D79787 /* PBXTargetDependency */,
 			);
 			name = "DinukaThilakarathne-COBSCCOMP191P-047Tests";
 			productName = "DinukaThilakarathne-COBSCCOMP191P-047Tests";
-			productReference = 0003E5BC24FB686700661089 /* DinukaThilakarathne-COBSCCOMP191P-047Tests.xctest */;
+			productReference = 0092D148251081DD00D79787 /* DinukaThilakarathne-COBSCCOMP191P-047Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		0003E5C624FB686700661089 /* DinukaThilakarathne-COBSCCOMP191P-047UITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0003E5D624FB686700661089 /* Build configuration list for PBXNativeTarget "DinukaThilakarathne-COBSCCOMP191P-047UITests" */;
-			buildPhases = (
-				0003E5C324FB686700661089 /* Sources */,
-				0003E5C424FB686700661089 /* Frameworks */,
-				0003E5C524FB686700661089 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0003E5C924FB686700661089 /* PBXTargetDependency */,
-			);
-			name = "DinukaThilakarathne-COBSCCOMP191P-047UITests";
-			productName = "DinukaThilakarathne-COBSCCOMP191P-047UITests";
-			productReference = 0003E5C724FB686700661089 /* DinukaThilakarathne-COBSCCOMP191P-047UITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -887,11 +847,7 @@
 					0003E5A524FB686400661089 = {
 						CreatedOnToolsVersion = 11.6;
 					};
-					0003E5BB24FB686700661089 = {
-						CreatedOnToolsVersion = 11.6;
-						TestTargetID = 0003E5A524FB686400661089;
-					};
-					0003E5C624FB686700661089 = {
+					0092D147251081DD00D79787 = {
 						CreatedOnToolsVersion = 11.6;
 						TestTargetID = 0003E5A524FB686400661089;
 					};
@@ -911,8 +867,7 @@
 			projectRoot = "";
 			targets = (
 				0003E5A524FB686400661089 /* DinukaThilakarathne-COBSCCOMP191P-047 */,
-				0003E5BB24FB686700661089 /* DinukaThilakarathne-COBSCCOMP191P-047Tests */,
-				0003E5C624FB686700661089 /* DinukaThilakarathne-COBSCCOMP191P-047UITests */,
+				0092D147251081DD00D79787 /* DinukaThilakarathne-COBSCCOMP191P-047Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -961,14 +916,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0003E5BA24FB686700661089 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0003E5C524FB686700661089 /* Resources */ = {
+		0092D146251081DD00D79787 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1000,6 +948,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6181B044C07C2BB4925ED80D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DinukaThilakarathne-COBSCCOMP191P-047-DinukaThilakarathne-COBSCCOMP191P-047Tests/Pods-DinukaThilakarathne-COBSCCOMP191P-047-DinukaThilakarathne-COBSCCOMP191P-047Tests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DinukaThilakarathne-COBSCCOMP191P-047-DinukaThilakarathne-COBSCCOMP191P-047Tests/Pods-DinukaThilakarathne-COBSCCOMP191P-047-DinukaThilakarathne-COBSCCOMP191P-047Tests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DinukaThilakarathne-COBSCCOMP191P-047-DinukaThilakarathne-COBSCCOMP191P-047Tests/Pods-DinukaThilakarathne-COBSCCOMP191P-047-DinukaThilakarathne-COBSCCOMP191P-047Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B4DC7F689C146DE7DAB2FAB0 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1015,6 +980,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DinukaThilakarathne-COBSCCOMP191P-047/Pods-DinukaThilakarathne-COBSCCOMP191P-047-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3150693E727D174DD214774 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DinukaThilakarathne-COBSCCOMP191P-047-DinukaThilakarathne-COBSCCOMP191P-047Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1084,35 +1071,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0003E5B824FB686700661089 /* Sources */ = {
+		0092D144251081DD00D79787 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0003E5C124FB686700661089 /* DinukaThilakarathne_COBSCCOMP191P_047Tests.swift in Sources */,
-				0092D135250FFF8A00D79787 /* LoginUnitTest.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0003E5C324FB686700661089 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0003E5CC24FB686700661089 /* DinukaThilakarathne_COBSCCOMP191P_047UITests.swift in Sources */,
+				0092D14B251081DD00D79787 /* LandingPageTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0003E5BE24FB686700661089 /* PBXTargetDependency */ = {
+		0092D14E251081DD00D79787 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0003E5A524FB686400661089 /* DinukaThilakarathne-COBSCCOMP191P-047 */;
-			targetProxy = 0003E5BD24FB686700661089 /* PBXContainerItemProxy */;
-		};
-		0003E5C924FB686700661089 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0003E5A524FB686400661089 /* DinukaThilakarathne-COBSCCOMP191P-047 */;
-			targetProxy = 0003E5C824FB686700661089 /* PBXContainerItemProxy */;
+			targetProxy = 0092D14D251081DD00D79787 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1167,10 +1140,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "DinukaThilakarathne-COBSCCOMP191P-047/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1221,9 +1196,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "DinukaThilakarathne-COBSCCOMP191P-047/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -1267,14 +1244,13 @@
 			};
 			name = Release;
 		};
-		0003E5D424FB686700661089 /* Debug */ = {
+		0092D150251081DD00D79787 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FF5EC432359E44941A06852 /* Pods-DinukaThilakarathne-COBSCCOMP191P-047-DinukaThilakarathne-COBSCCOMP191P-047Tests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "DinukaThilakarathne-COBSCCOMP191P-047Tests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1288,14 +1264,13 @@
 			};
 			name = Debug;
 		};
-		0003E5D524FB686700661089 /* Release */ = {
+		0092D151251081DD00D79787 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79BFAF66CE931A8153475FD9 /* Pods-DinukaThilakarathne-COBSCCOMP191P-047-DinukaThilakarathne-COBSCCOMP191P-047Tests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "DinukaThilakarathne-COBSCCOMP191P-047Tests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1306,44 +1281,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DinukaThilakarathne-COBSCCOMP191P-047.app/DinukaThilakarathne-COBSCCOMP191P-047";
-			};
-			name = Release;
-		};
-		0003E5D724FB686700661089 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "DinukaThilakarathne-COBSCCOMP191P-047UITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dinukat.lk.DinukaThilakarathne-COBSCCOMP191P-047UITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "DinukaThilakarathne-COBSCCOMP191P-047";
-			};
-			name = Debug;
-		};
-		0003E5D824FB686700661089 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "DinukaThilakarathne-COBSCCOMP191P-047UITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dinukat.lk.DinukaThilakarathne-COBSCCOMP191P-047UITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "DinukaThilakarathne-COBSCCOMP191P-047";
 			};
 			name = Release;
 		};
@@ -1368,20 +1305,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0003E5D324FB686700661089 /* Build configuration list for PBXNativeTarget "DinukaThilakarathne-COBSCCOMP191P-047Tests" */ = {
+		0092D14F251081DD00D79787 /* Build configuration list for PBXNativeTarget "DinukaThilakarathne-COBSCCOMP191P-047Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0003E5D424FB686700661089 /* Debug */,
-				0003E5D524FB686700661089 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0003E5D624FB686700661089 /* Build configuration list for PBXNativeTarget "DinukaThilakarathne-COBSCCOMP191P-047UITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0003E5D724FB686700661089 /* Debug */,
-				0003E5D824FB686700661089 /* Release */,
+				0092D150251081DD00D79787 /* Debug */,
+				0092D151251081DD00D79787 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
