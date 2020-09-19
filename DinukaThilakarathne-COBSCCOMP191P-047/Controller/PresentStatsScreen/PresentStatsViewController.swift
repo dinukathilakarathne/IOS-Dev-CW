@@ -69,6 +69,7 @@ class PresentStatsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
        startTimer()
+        setUI()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

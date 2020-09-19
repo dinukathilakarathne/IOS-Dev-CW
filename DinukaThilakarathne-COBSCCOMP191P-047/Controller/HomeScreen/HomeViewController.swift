@@ -83,6 +83,7 @@ class HomeViewController: UIViewController {
         
     }
     
+    //setting status based on latest temperature
     func setStatus(){
         if UserDefaults().recentTemperature >= AppConstants.maxTemperature{
             self.healthStatus.isAllowed = false
@@ -96,9 +97,11 @@ class HomeViewController: UIViewController {
     func setHealthStatus(){
         self.setStatus()
         if !UserDefaults().isLoggedIn{
+            print("false")
             self.healthStatus.isHidden = true
             self.healthStatus.heightAnchor.constraint(equalToConstant: 0).isActive = true
         }else{
+            print("false")
             self.healthStatus.isHidden = false
             self.healthStatus.heightAnchor.constraint(equalToConstant: 100).isActive = true
         }

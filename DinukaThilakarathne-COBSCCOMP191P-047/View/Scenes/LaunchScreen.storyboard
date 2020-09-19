@@ -28,7 +28,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COVID19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqx-eP-3Mn">
-                                <rect key="frame" x="134" y="755" width="146" height="57"/>
+                                <rect key="frame" x="115.5" y="760.5" width="183.5" height="51.5"/>
                                 <fontDescription key="fontDescription" name="Abel-Regular" family="Abel" pointSize="44"/>
                                 <color key="textColor" name="DefautTextColor"/>
                                 <nil key="highlightedColor"/>
