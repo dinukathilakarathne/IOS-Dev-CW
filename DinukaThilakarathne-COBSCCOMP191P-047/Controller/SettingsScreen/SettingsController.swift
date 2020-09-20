@@ -8,6 +8,7 @@
 
 import Foundation
 
+//delegate functions for settings page
 protocol SettingsDelegate {
     func contactUsPressed()
     func sharePressed()
@@ -64,6 +65,7 @@ class SettingsController{
     
 }
 
+//reloading profiles ui on data load
 extension SettingsController : DatabaseDelegate{
     func profileDetailsDidLoad() {
         delegate?.showProfileDetails()
